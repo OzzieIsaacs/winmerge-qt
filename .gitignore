@@ -54,3 +54,4 @@ build-src-Desktop-Vorgabe
 src/old
 ext/poco/cmake-build/
 ext/poco/cmake-build-debug/
+*.qm

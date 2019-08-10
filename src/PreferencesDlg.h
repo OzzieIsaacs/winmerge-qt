@@ -17,7 +17,7 @@
 #include "IDD_PROPPAGE_COMPARE.h"
 #include "PropEditor.h"
 #include "PropRegistry.h"
-#include "IDD_PROPPAGE_CODEPAGE.h"
+#include "PropCodepage.h"
 #include "IDD_PROPPAGE_COLORS_WINMERGE.h"
 #include "IDD_PROPPAGE_COLORS_TEXT.h"
 #include "IDD_PROPPAGE_COLORS_SYNTAX.h"
@@ -66,7 +66,7 @@ protected:
 	IDD_PROPPAGE_COMPARE *m_pageCompare;
 	QPropEditor *m_pageEditor;
 	QPropRegistry *m_pageSystem;
-	IDD_PROPPAGE_CODEPAGE *m_pageCodepage;
+	QPropCodepage *m_pageCodepage;
 	IDD_PROPPAGE_COLORS_WINMERGE *m_pageMergeColors;
 	IDD_PROPPAGE_COLORS_TEXT *m_pageTextColors;
 	IDD_PROPPAGE_COLORS_SYNTAX *m_pageSyntaxColors;

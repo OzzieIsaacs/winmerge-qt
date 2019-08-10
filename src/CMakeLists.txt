@@ -36,7 +36,7 @@ set ( SOURCES
         PreferencesDlg.cpp
         PropArchive.cpp
         PropBackups.cpp
-        IDD_PROPPAGE_CODEPAGE.cpp
+        PropCodepage.cpp
         IDD_PROPPAGE_COLORS_DIR.cpp
         IDD_PROPPAGE_COLORS_MARKER.cpp
         IDD_PROPPAGE_COLORS_SYNTAX.cpp
@@ -97,7 +97,7 @@ set ( MOC_HEADERS
         PreferencesDlg.h
         PropArchive.h
         PropBackups.h
-        IDD_PROPPAGE_CODEPAGE.h
+        PropCodepage.h
         IDD_PROPPAGE_COLORS_DIR.h
         IDD_PROPPAGE_COLORS_MARKER.h
         IDD_PROPPAGE_COLORS_SYNTAX.h
@@ -145,7 +145,7 @@ set ( UIS
         qt_ui/QPreferencesDlg.ui
         qt_ui/QPropArchive.ui
         qt_ui/QPropBackups.ui
-        qt_ui/IDD_PROPPAGE_CODEPAGE.ui
+        qt_ui/QPropCodepage.ui
         qt_ui/IDD_PROPPAGE_COLORS_DIR.ui
         qt_ui/IDD_PROPPAGE_COLORS_MARKER.ui
         qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui

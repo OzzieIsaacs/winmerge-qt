@@ -14,6 +14,7 @@
 #include <QString>
 #include <QCoreApplication>
 #include <QApplication>
+#include <QObject>
 #include "MainFrm.h"
 
 // Get user language description of error, if available
@@ -167,7 +168,7 @@ AboutInfo::AboutInfo()
 {
     CVersionInfo verinfo;
 	// version = strutils::format_string1("Version %1", );
-	version = QString("Version %1").arg(verinfo.GetProductVersion());
+	version = QString(QObject::tr("Version %1")).arg(verinfo.GetProductVersion());
 	private_build = verinfo.GetPrivateBuild();
 
     if (!private_build.isEmpty())
@@ -184,35 +185,37 @@ AboutInfo::AboutInfo()
 	{
 		version += "\n";
     }
-#ifdef _UNICODE
-	version += _T(" ");
-	version += _("Unicode");
+//ToDo: Is this right??
+#ifdef Q_COMPILER_UNICODE_STRINGS
+	version += " ";
+	version += QObject::tr("Unicode");
 #endif
 
-#if defined _M_IX86
+#if defined Q_PROCESSOR_X86_32
 	version += " ";
 	version += "x86";
-#elif defined _M_IA64
-	version += _T(" IA64");
-#elif defined _M_X64
+#elif defined Q_PROCESSOR_IA64
+	version += " IA64";
+#elif defined Q_PROCESSOR_X86_64
 	version += " ";
 	version += "X64";
 #endif
 
-#if defined _DEBUG
+#if defined QT_DEBUG
 	version += " (";
 	version += "Debug";
 	version += ")";
 #endif
 
-    copyright = ("WinMerge comes with ABSOLUTELY NO WARRANTY. This is free software and you are welcome to redistribute it under certain circumstances; see the GNU General Public License in the Help menu for details.");
+    copyright = QObject::tr("WinMerge comes with ABSOLUTELY NO WARRANTY. This is free software and you are welcome to redistribute it under certain circumstances; see the GNU General Public License in the Help menu for details.");
     copyright += ("\n");
     copyright += verinfo.GetLegalCopyright();
-    copyright += (" - All rights reserved.");
+    copyright += QObject::tr(" - All rights reserved.");
 
-    website = ("winmerge.org"); // WinMergeURL;
+    website = WinMergeURL;
 
-    developers = ("Developers:\nDean Grimm, Christian List, Kimmo Varis, Jochen Tucht, Tim Gerundt, Takashi Sawanaka, Gal Hammer, Alexander Skinner");
+    developers = QObject::tr("Developers:\n");
+    developers += "Dean Grimm, Christian List, Kimmo Varis, Jochen Tucht, Tim Gerundt, Takashi Sawanaka, Gal Hammer, Alexander Skinner";
 	developers.replace(", ","\n");
     // strutils::replace(developers, _T(", "), _T("\n"));
 }

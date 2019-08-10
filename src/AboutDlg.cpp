@@ -1,6 +1,7 @@
 #include "AboutDlg.h"
 #include "ui_QAboutDlg.h"
 #include "qlabelclick.h"
+#include <QPalette>
 // #include <cstring>
 
 
@@ -9,6 +10,14 @@ QAboutDlg::QAboutDlg(QWidget *parent) :
     ui(new Ui::QAboutDlg)
 {
 	ui->setupUi(this);
+
+	// Remove Title bar
+	this->setWindowFlags(windowFlags() | Qt::FramelessWindowHint);
+
+	// Set background to white
+	QPalette pal;
+	pal.setColor(QPalette::Background, Qt::white);
+	this->setPalette(pal);
 
 	// Signals and Slots
     connect(ui->IDOK, SIGNAL(clicked()), this, SLOT(close()));
@@ -23,6 +32,7 @@ QAboutDlg::QAboutDlg(QWidget *parent) :
     font.setPointSize(10);
     font.setFamily("Tahoma");
 
+    // Set values
     ui->IDC_STATIC->setFont(font);
     ui->IDC_VERSION->setFont(font);
 	ui->IDC_VERSION->setText(m_info.version);
@@ -54,7 +64,7 @@ void QAboutDlg::OnBnClickedOpenContributors()
 void QAboutDlg::OnClickedWWW()
 {
 	#ifdef __linux__
-		system(("xdg-open http://" + m_info.website.toStdString()).c_str());
+		system(("xdg-open " + m_info.website.toStdString()).c_str());
 	#else
 		ShellExecute(nullptr, _T("open"), m_info.website, nullptr, nullptr, SW_SHOWNORMAL );
 	//ShellExecute(nullptr, _T("open"), pNMLink->item.szUrl, nullptr, nullptr, SW_SHOWNORMAL);

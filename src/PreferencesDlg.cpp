@@ -10,7 +10,7 @@
 #include "PreferencesDlg.h"
 #include "ui_QPreferencesDlg.h"
 #include "PropBackups.h"
-#include "IDD_PROPPAGE_CODEPAGE.h"
+#include "PropCodepage.h"
 #include "IDD_PROPPAGE_COLORS_DIR.h"
 #include "IDD_PROPPAGE_COLORS_MARKER.h"
 #include "IDD_PROPPAGE_COLORS_SYNTAX.h"
@@ -56,7 +56,7 @@ QPreferencesDlg::QPreferencesDlg(QWidget *parent) :
 	m_pageBackups = new QPropBackups(this);
 	ui->IDOPTIONWIDGET->addWidget( m_pageBackups);
 	items += m_pageBackups->windowTitle();
-	m_pageCodepage = new IDD_PROPPAGE_CODEPAGE(this);
+	m_pageCodepage = new QPropCodepage(this);
 	ui->IDOPTIONWIDGET->addWidget( m_pageCodepage);
 	items +=m_pageCodepage->windowTitle();
 	/*QWidget *propcolordir = new IDD_PROPPAGE_COLORS_DIR(this);

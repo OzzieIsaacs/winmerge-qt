@@ -5,52 +5,36 @@
  */
 #pragma once
 
-#include "OptionsPanel.h"
+#ifndef IDD_PROPPAGE_CODEPAGE_H
+#define IDD_PROPPAGE_CODEPAGE_H
+#include <QDialog>
+#include <QSettings>
 
-class COptionsMgr;
-
-class PropCodepage : public OptionsPanel
+namespace Ui {
+class QPropCodepage;
+}
+class QPropCodepage : public QDialog
 {
-// Construction
+	Q_OBJECT
+
 public:
-	explicit PropCodepage(COptionsMgr *optionsMgr);
+	explicit QPropCodepage(QWidget *parent = nullptr);
+	~QPropCodepage();
 
 // Implement IOptionsPanel
 	virtual void ReadOptions();
 	virtual void WriteOptions();
 
-// Dialog Data
-	//{{AFX_DATA(PropCodepage)
-	enum { IDD = IDD_PROPPAGE_CODEPAGE };
-	CComboBox m_comboCustomCodepageValue;
-	CComboBox m_comboAutodetectType;
-	int		m_nCodepageSystem;
-	int		m_nCustomCodepageValue;
-	String	m_cCustomCodepageValue;
-	bool	m_bDetectCodepage;
-	bool	m_bDetectCodepage2;
-	int		m_nAutodetectType;
-	//}}AFX_DATA
-
-
-// Overrides
-	// ClassWizard generate virtual function overrides
-	//{{AFX_VIRTUAL(PropCodepage)
-	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-	//}}AFX_VIRTUAL
-
-// Implementation
-protected:
-	// Generated message map functions
-	//{{AFX_MSG(PropCodepage)
-	virtual BOOL OnInitDialog();
+private slots:
 	void GetEncodingCodePageFromNameString();
-	afx_msg void OnCpSystem();
-	afx_msg void OnCpCustom();
-	afx_msg void OnCpUi();
-	afx_msg void OnDetectCodepage2();
-	afx_msg void OnDetectAutodetecttype();
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+	void OnCpSystem();
+	void OnCpCustom();
+	void OnCpUi();
+	void OnDetectCodepage2();
+	void OnDetectAutodetecttype();
+
+private:
+	Ui::QPropCodepage *ui;
+	QSettings m_options;
 };
+#endif // IDD_PROPPAGE_CODEPAGE_H

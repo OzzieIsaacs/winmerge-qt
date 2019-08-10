@@ -6,20 +6,20 @@
 
 #include "VersionInfo.h"
 #include "../Version.h"
-#ifdef __linux__
+#ifdef Q_OS_LINUX
 #include <linux/limits.h>
 #include <stdint.h>
 #include "tchar.h"
 #ifndef  LOWORD
-	#define LOWORD(l)       ((unsigned short)(l))
+	#define LOWORD(l) ((unsigned short)(l))
 #endif
 
 #ifndef  HIWORD
-#  define HIWORD(l)       ((unsigned short)(((unsigned long)(l) >> 16) & 0xFFFF))
+	#define HIWORD(l) ((unsigned short)(((unsigned long)(l) >> 16) & 0xFFFF))
 #endif
 
 #define MAX_PATH PATH_MAX
-#elif _WIN32
+#elif Q_OS_WIN
 #include <windows.h>
 #include <strsafe.h>
 #endif
@@ -129,7 +129,7 @@ struct LANGUAGEANDCODEPAGE
  */
 CVersionInfo::CVersionInfo()
 {
-	TCHAR szFileName[MAX_PATH];
+	//TCHAR szFileName[MAX_PATH];
 	//GetModuleFileName(hModule, szFileName, MAX_PATH);
 	//m_strFileName = szFileName;
 	GetVersionInfo();

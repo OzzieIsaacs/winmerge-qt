@@ -1,4 +1,5 @@
 #include <QApplication>
+#include <QTranslator>
 #include "MainFrm.h"
 
 // Tests
@@ -29,6 +30,12 @@ int main(int argc, char *argv[])
     app.setOrganizationName("Thingamahoochie");
     app.setOrganizationDomain("Thingamahoochie");
     app.setApplicationName("WinmergeQt");
+
+    QTranslator t;
+
+    t.load(":/translations/german.qm");
+    app.installTranslator(&t);
+
 
     MainWindow window;
     window.show();

@@ -1,3 +1,4 @@
+
 /////////////////////////////////////////////////////////////////////////////
 //    WinMerge:  an interactive diff/merge utility
 //    Copyright (C) 1997-2000  Thingamahoochie Software
@@ -18,96 +19,83 @@
 //    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 //
 /////////////////////////////////////////////////////////////////////////////
-/** 
+/**
  * @file  PropCodepage.cpp
  *
  * @brief Implementation file for PropCodepage propertyheet
  *
  */
 
-#include "stdafx.h"
 #include "PropCodepage.h"
-#include "common/unicoder.h"
-#include "common/ExConverter.h"
+#include "ui_QPropCodepage.h"
+//#include "common/unicoder.h"
+//#include "common/ExConverter.h"
 #include "OptionsDef.h"
-#include "OptionsMgr.h"
-#include "OptionsPanel.h"
 #include "charsets.h"
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
-
-PropCodepage::PropCodepage(COptionsMgr *optionsMgr)
- : OptionsPanel(optionsMgr, PropCodepage::IDD)
-, m_nCodepageSystem(-1)
-, m_nCustomCodepageValue(0)
-, m_bDetectCodepage(false)
-, m_bDetectCodepage2(false)
-, m_nAutodetectType(50001)
+QPropCodepage::QPropCodepage(QWidget *parent) :
+	QDialog(parent),
+	ui(new Ui::QPropCodepage)
 {
+	ui->setupUi(this);
+	connect(ui->IDC_DETECT_AUTODETECTTYPE, SIGNAL(itemSelectionChanged()), this, SLOT(OnDetectAutodetecttype()));
+	connect(ui->IDC_CP_SYSTEM, SIGNAL(clicked()), this, SLOT(OnCpSystem()));
+	connect(ui->IDC_CP_CUSTOM, SIGNAL(clicked()), this, SLOT(OnCpCustom()));
+	connect(ui->IDC_DETECT_CODEPAGE2, SIGNAL(clicked()), this, SLOT(OnDetectCodepage2()));
+	connect(ui->IDC_CP_UI, SIGNAL(clicked()), this, SLOT(OnCpUi()));
+}
+QPropCodepage::~QPropCodepage()
+{
+	delete ui;
 }
 
-void PropCodepage::DoDataExchange(CDataExchange* pDX)
-{
-	CPropertyPage::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(PropCodepage)
-	DDX_Radio(pDX, IDC_CP_SYSTEM, m_nCodepageSystem);
-	DDX_Text(pDX, IDC_CUSTOM_CP_NUMBER, m_cCustomCodepageValue);
-	DDX_Check(pDX, IDC_DETECT_CODEPAGE, m_bDetectCodepage);
-	DDX_Check(pDX, IDC_DETECT_CODEPAGE2, m_bDetectCodepage2);
-	DDX_Control(pDX, IDC_CUSTOM_CP_NUMBER, m_comboCustomCodepageValue);
-	DDX_Control(pDX, IDC_DETECT_AUTODETECTTYPE, m_comboAutodetectType);
-	//}}AFX_DATA_MAP
-}
-
-
-BEGIN_MESSAGE_MAP(PropCodepage, CPropertyPage)
-	//{{AFX_MSG_MAP(PropCodepage)
-	ON_BN_CLICKED(IDC_CP_SYSTEM, OnCpSystem)
-	ON_BN_CLICKED(IDC_CP_CUSTOM, OnCpCustom)
-	ON_BN_CLICKED(IDC_DETECT_CODEPAGE2, OnDetectCodepage2)
-	ON_CBN_SELCHANGE(IDC_DETECT_AUTODETECTTYPE, OnDetectAutodetecttype)
-	ON_BN_CLICKED(IDC_CP_UI, OnCpUi)
-	//}}AFX_MSG_MAP
-END_MESSAGE_MAP()
-
-/** 
+/**
  * @brief Reads options values from storage to UI.
  */
-void PropCodepage::ReadOptions()
+void QPropCodepage::ReadOptions()
 {
-	m_nCodepageSystem = GetOptionsMgr()->GetInt(OPT_CP_DEFAULT_MODE);
-	m_nCustomCodepageValue = GetOptionsMgr()->GetInt(OPT_CP_DEFAULT_CUSTOM);
+	int CodePageDefault = m_options.value(OPT_CP_DEFAULT_MODE).toInt();
+	switch (CodePageDefault) {
+		case 0:
+			ui->IDC_CP_SYSTEM->setChecked(1);
+			break;
+		case 1:
+			ui->IDC_CP_UI->setChecked(1);
+			break;
+		case 2:
+			ui->IDC_CP_CUSTOM->setChecked(1);
+			break;
+	}
+
+	ui->IDC_CUSTOM_CP_NUMBER->setCurrentIndex(m_options.value(OPT_CP_DEFAULT_CUSTOM).toInt());
+	ui->IDC_DETECT_CODEPAGE->setChecked(m_options.value(OPT_CP_DETECT).toInt()& 1);
+	ui->IDC_DETECT_CODEPAGE2->setChecked((m_options.value(OPT_CP_DETECT).toInt()& 2) != 0);
+
+	int nAutodetectType = m_options.value(OPT_CP_DETECT).toInt();
+	if (nAutodetectType == 0)
+		nAutodetectType = 50001;
+
+	ui->IDC_DETECT_AUTODETECTTYPE->setCurrentIndex(nAutodetectType >> 16);
+
+	// m_nCodepageSystem = GetOptionsMgr()->GetInt(OPT_CP_DEFAULT_MODE);
+	/*m_nCustomCodepageValue = GetOptionsMgr()->GetInt(OPT_CP_DEFAULT_CUSTOM);
 	m_cCustomCodepageValue = strutils::to_str(m_nCustomCodepageValue);
 	m_bDetectCodepage = GetOptionsMgr()->GetInt(OPT_CP_DETECT) & 1;
 	m_bDetectCodepage2 = (GetOptionsMgr()->GetInt(OPT_CP_DETECT) & 2) != 0;
 	m_nAutodetectType = ((unsigned)GetOptionsMgr()->GetInt(OPT_CP_DETECT) >> 16);
 	if (m_nAutodetectType == 0)
-		m_nAutodetectType = 50001;
-}
-
-/** 
- * @brief Writes options values from UI to storage.
- */
-void PropCodepage::WriteOptions()
-{
-	GetOptionsMgr()->SaveOption(OPT_CP_DEFAULT_MODE, (int)m_nCodepageSystem);
-	GetEncodingCodePageFromNameString();
-	GetOptionsMgr()->SaveOption(OPT_CP_DEFAULT_CUSTOM, (int)m_nCustomCodepageValue);
-	GetOptionsMgr()->SaveOption(OPT_CP_DETECT, (m_bDetectCodepage ? 1 : 0) | (m_bDetectCodepage2 << 1) | (m_nAutodetectType << 16));
-}
-
-BOOL PropCodepage::OnInitDialog() 
-{
-	OptionsPanel::OnInitDialog();
-	
+		m_nAutodetectType = 50001;*/
 	// Enable/disable "Custom codepage" edit field
-	EnableDlgItem(IDC_CUSTOM_CP_NUMBER, IsDlgButtonChecked(IDC_CP_CUSTOM) == 1);
-	m_comboAutodetectType.EnableWindow(
-		IsDlgButtonChecked(IDC_DETECT_CODEPAGE2) == 1);
 
-	m_comboCustomCodepageValue.SetWindowText(strutils::to_str(m_nCustomCodepageValue).c_str());
+	// Init UI
+	ui->IDC_CUSTOM_CP_NUMBER->setEnabled(ui->IDC_CP_CUSTOM->isChecked());
+	// EnableDlgItem(IDC_CUSTOM_CP_NUMBER, IsDlgButtonChecked(IDC_CP_CUSTOM) == 1);
+	ui->IDC_DETECT_AUTODETECTTYPE->setEnabled(ui->IDC_DETECT_CODEPAGE2->isChecked());
+	/*m_comboAutodetectType.EnableWindow(
+			IsDlgButtonChecked(IDC_DETECT_CODEPAGE2) == 1);*/
+
+	// ToDo: Port
+	/*m_comboCustomCodepageValue.SetWindowText(strutils::to_str(m_nCustomCodepageValue).c_str());
 
 	IExconverter *pexconv = Exconverter::getInstance();
 	if (pexconv != nullptr)
@@ -115,7 +103,7 @@ BOOL PropCodepage::OnInitDialog()
 		std::vector<CodePageInfo> cpi = pexconv->enumCodePages();
 		for (size_t i = 0, j = 0; i < cpi.size(); i++)
 		{
-			if (cpi[i].codepage == 1200 /* UNICODE */)
+			if (cpi[i].codepage == 1200 /* UNICODE *//*)
 				continue;
 			String desc = strutils::format(_T("%05d - %s"), cpi[i].codepage, cpi[i].desc.c_str());
 			m_comboCustomCodepageValue.AddString(desc.c_str());
@@ -134,44 +122,83 @@ BOOL PropCodepage::OnInitDialog()
 			if (m_nAutodetectType == autodetectTypeList[i])
 				m_comboAutodetectType.SetCurSel(i);
 		}
+	}*/
+}
+
+/**
+ * @brief Writes options values from UI to storage.
+ */
+void QPropCodepage::WriteOptions()
+{
+	int nCodepage;
+	if (ui->IDC_CP_CUSTOM->isChecked())
+	{
+		nCodepage = 0;
+	}
+	if (ui->IDC_CP_UI->isChecked())
+	{
+		nCodepage = 1;
+	}
+	if (ui->IDC_CP_SYSTEM->isChecked())
+	{
+		nCodepage = 2;
 	}
 
-	return TRUE;  // return TRUE unless you set the focus to a control
-	              // EXCEPTION: OCX Property Pages should return FALSE
+	ui->IDC_DETECT_CODEPAGE2->setChecked((m_options.value(OPT_CP_DETECT).toInt()& 2) != 0);
+
+	m_options.setValue(OPT_CP_DEFAULT_MODE, nCodepage);
+	//GetOptionsMgr()->SaveOption(OPT_CP_DEFAULT_MODE, (int)m_nCodepageSystem);
+	GetEncodingCodePageFromNameString();
+	m_options.setValue(OPT_CP_DEFAULT_CUSTOM, ui->IDC_CUSTOM_CP_NUMBER->currentIndex());
+
+	int nAutodetectType = 0; //ui->IDC_CUSTOM_CP_NUMBER->itemData(ui->IDC_CUSTOM_CP_NUMBER->currentIndex()); ToDO: Fix
+	bool bDetectCodepage = ui->IDC_DETECT_CODEPAGE->isChecked();
+	bool bDetectCodepage2  = ui->IDC_DETECT_CODEPAGE2->isChecked();
+
+	m_options.setValue(OPT_CP_DETECT, (bDetectCodepage ? 1 : 0) | (bDetectCodepage2 << 1) | (nAutodetectType << 16));
+	// GetOptionsMgr()->SaveOption(OPT_CP_DEFAULT_CUSTOM, (int)m_nCustomCodepageValue);
+	// GetOptionsMgr()->SaveOption(OPT_CP_DETECT, (m_bDetectCodepage ? 1 : 0) | (m_bDetectCodepage2 << 1) | (m_nAutodetectType << 16));
 }
 
-void PropCodepage::OnCpSystem() 
+void QPropCodepage::OnCpSystem()
 {
-	EnableDlgItem(IDC_CUSTOM_CP_NUMBER, false);
+	ui->IDC_CUSTOM_CP_NUMBER->setEnabled(false);
+	// EnableDlgItem(IDC_CUSTOM_CP_NUMBER, false);
 }
 
-void PropCodepage::OnCpCustom() 
+void QPropCodepage::OnCpCustom()
 {
-	EnableDlgItem(IDC_CUSTOM_CP_NUMBER, true);
+	ui->IDC_CUSTOM_CP_NUMBER->setEnabled(true);
+	// EnableDlgItem(IDC_CUSTOM_CP_NUMBER, true);
 }
 
-void PropCodepage::OnDetectCodepage2() 
+void QPropCodepage::OnDetectCodepage2()
 {
-	m_comboAutodetectType.EnableWindow(
-		IsDlgButtonChecked(IDC_DETECT_CODEPAGE2) == 1);
+	ui->IDC_DETECT_AUTODETECTTYPE->setEnabled(ui->IDC_DETECT_CODEPAGE2->isChecked());
+	/*m_comboAutodetectType.EnableWindow(
+			IsDlgButtonChecked(IDC_DETECT_CODEPAGE2) == 1);*/
 }
 
-void PropCodepage::OnDetectAutodetecttype()
+void QPropCodepage::OnDetectAutodetecttype()
 {
-	m_nAutodetectType = static_cast<int>(m_comboAutodetectType.GetItemData(m_comboAutodetectType.GetCurSel()));	
+	// Todo: Port to Qt
+	//m_nAutodetectType = static_cast<int>(m_comboAutodetectType.GetItemData(m_comboAutodetectType.GetCurSel()));
 }
 
-void PropCodepage::OnCpUi() 
+void QPropCodepage::OnCpUi()
 {
-	EnableDlgItem(IDC_CUSTOM_CP_NUMBER, false);	
+	ui->IDC_CUSTOM_CP_NUMBER->setEnabled(false);
+	// EnableDlgItem(IDC_CUSTOM_CP_NUMBER, false);
 }
 
-void PropCodepage::GetEncodingCodePageFromNameString()
+void QPropCodepage::GetEncodingCodePageFromNameString()
 {
-	int nCustomCodepageValue = _ttol(m_cCustomCodepageValue.c_str());
+	// ToDo: Port
+	/*int nCustomCodepageValue = _ttol(m_cCustomCodepageValue.c_str());
 	if (nCustomCodepageValue == 0)
 		nCustomCodepageValue = GetEncodingCodePageFromName(ucr::toSystemCP(m_cCustomCodepageValue).c_str());
 	//if found a new codepage valid
 	if (nCustomCodepageValue)
-		m_nCustomCodepageValue = nCustomCodepageValue;
+		m_nCustomCodepageValue = nCustomCodepageValue;*/
 }
+

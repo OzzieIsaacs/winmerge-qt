@@ -7,5 +7,6 @@
         <file>res/new.png</file>
         <file>res/language.png</file>
         <file>res/splash.jpg</file>
+        <file>translations/german.qm</file>
     </qresource>
 </RCC>
