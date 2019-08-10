@@ -1,47 +1,42 @@
-/** 
+/**
  * @file  PropCompareImage.h
  *
  * @brief Declaration of PropCompareImage propertysheet
  */
 #pragma once
 
-#include "OptionsPanel.h"
-#include "UnicodeString.h"
+#ifndef IDD_PROPPAGE_COMPARE_IMAGE_H
+#define IDD_PROPPAGE_COMPARE_IMAGE_H
+#include <QDialog>
+#include <QString>
+#include <QSettings>
 
-class COptionsMgr;
-
-/**
- * @brief Property page to set image compare options for WinMerge.
- */
-class PropCompareImage : public OptionsPanel
+namespace Ui {
+class QPropCompareImage;
+}
+class QPropCompareImage : public QDialog
 {
-// Construction
-public:
-	explicit PropCompareImage(COptionsMgr *optionsMgr);
+	Q_OBJECT
 
-// Implement IOptionsPanel
+public:
+	explicit QPropCompareImage(QWidget *parent = nullptr);
+	~QPropCompareImage();
+
+	// Implement IOptionsPanel
 	virtual void ReadOptions();
 	virtual void WriteOptions();
 
 // Dialog Data
 	//{{AFX_DATA(PropCompareImage)
-	enum { IDD = IDD_PROPPAGE_COMPARE_IMAGE };
-	String m_sFilePatterns;
+	//enum { IDD = IDD_PROPPAGE_COMPARE_IMAGE };
+	// QString m_sFilePatterns;
 	//}}AFX_DATA
 
+private slots:
+	void OnDefaults();
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(PropCompareImage)
-	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-	//}}AFX_VIRTUAL
-
-// Implementation
-protected:
-	// Generated message map functions
-	//{{AFX_MSG(PropCompareImage)
-	afx_msg void OnDefaults();
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+private:
+	Ui::QPropCompareImage *ui;
+	QSettings m_options;
 };
+#endif // IDD_PROPPAGE_COMPARE_IMAGE_H

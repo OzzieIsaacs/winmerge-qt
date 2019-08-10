@@ -14,14 +14,13 @@
 #include "IDD_PROPPAGE_COLORS_DIR.h"
 #include "IDD_PROPPAGE_COLORS_MARKER.h"
 #include "IDD_PROPPAGE_COLORS_SYNTAX.h"
-#include "IDD_PROPPAGE_COLORS_TEXT.h"
+#include "PropTextColors.h"
 #include "IDD_PROPPAGE_COLORS_WINMERGE.h"
-#include "IDD_PROPPAGE_COMPARE.h"
+#include "PropCompare.h"
 #include "IDD_PROPPAGE_COMPARE_BINARY.h"
 #include "IDD_PROPPAGE_COMPARE_FOLDER.h"
-#include "IDD_PROPPAGE_COMPARE_IMAGE.h"
+#include "PropCompareImage.h"
 #include "PropEditor.h"
-#include "IDD_PROPPAGE_FILTER.h"
 #include "PropGeneral.h"
 #include "PropShell.h"
 #include "PropArchive.h"
@@ -68,30 +67,27 @@ QPreferencesDlg::QPreferencesDlg(QWidget *parent) :
 	m_pageSyntaxColors = new IDD_PROPPAGE_COLORS_SYNTAX(this);
 	ui->IDOPTIONWIDGET->addWidget( m_pageSyntaxColors);
 	items +=m_pageSyntaxColors->windowTitle();
-	m_pageTextColors = new IDD_PROPPAGE_COLORS_TEXT(this);
+	m_pageTextColors = new QPropTextColors(this);
 	ui->IDOPTIONWIDGET->addWidget( m_pageTextColors);
 	items +=m_pageTextColors->windowTitle();
 	m_pageMergeColors = new IDD_PROPPAGE_COLORS_WINMERGE(this);
 	ui->IDOPTIONWIDGET->addWidget( m_pageMergeColors);
 	items +=m_pageMergeColors->windowTitle();
-	/*QWidget *propcomapare = new IDD_PROPPAGE_COMPARE(this);
+	QWidget *propcomapare = new QPropCompare(this);
 	ui->IDOPTIONWIDGET->addWidget( propcomapare);
-	items +=propcomapare->windowTitle();*/
+	items +=propcomapare->windowTitle();
 	m_pageCompareBinary = new IDD_PROPPAGE_COMPARE_BINARY(this);
 	ui->IDOPTIONWIDGET->addWidget( m_pageCompareBinary);
 	items +=m_pageCompareBinary->windowTitle();
 	m_pageCompareFolder= new IDD_PROPPAGE_COMPARE_FOLDER(this);
 	ui->IDOPTIONWIDGET->addWidget( m_pageCompareFolder);
 	items +=m_pageCompareFolder->windowTitle();
-	m_pageCompareImage = new IDD_PROPPAGE_COMPARE_IMAGE(this);
+	m_pageCompareImage = new QPropCompareImage(this);
 	ui->IDOPTIONWIDGET->addWidget( m_pageCompareImage);
 	items +=m_pageCompareImage->windowTitle();
 	m_pageEditor = new QPropEditor(this);
 	ui->IDOPTIONWIDGET->addWidget( m_pageEditor);
 	items +=m_pageEditor->windowTitle();
-	/*QWidget *propfilter = new IDD_PROPPAGE_FILTER(this);
-	ui->IDOPTIONWIDGET->addWidget( propfilter);
-	items +=propfilter->windowTitle();*/
 	m_pageGeneral = new QPropGeneral(this);
 	ui->IDOPTIONWIDGET->addWidget( m_pageGeneral);
 	items +=m_pageGeneral->windowTitle();
@@ -196,7 +192,7 @@ void QPreferencesDlg::ReadOptions(bool bUpdate)
 	m_pageCompareBinary->ReadOptions();
 	m_pageCompareImage->ReadOptions();
 	m_pageEditor->ReadOptions();
-	//m_pageCodepage->ReadOptions();
+	m_pageCodepage->ReadOptions();
 	m_pageArchive->ReadOptions();
 	m_pageBackups->ReadOptions();
 	m_pageShell->ReadOptions();
@@ -239,7 +235,7 @@ void QPreferencesDlg::SaveOptions()
 	m_pageTextColors->WriteOptions();
 	//m_pageSyntaxColors->WriteOptions();
 	//m_pageMarkerColors->WriteOptions();
-	//m_pageCodepage->WriteOptions();
+	m_pageCodepage->WriteOptions();
 	m_pageArchive->WriteOptions();
 	m_pageBackups->WriteOptions();
 	m_pageShell->WriteOptions();

@@ -14,12 +14,12 @@
 
 #include <QDialog>
 #include "PropGeneral.h"
-#include "IDD_PROPPAGE_COMPARE.h"
+#include "PropCompare.h"
 #include "PropEditor.h"
 #include "PropRegistry.h"
 #include "PropCodepage.h"
 #include "IDD_PROPPAGE_COLORS_WINMERGE.h"
-#include "IDD_PROPPAGE_COLORS_TEXT.h"
+#include "PropTextColors.h"
 #include "IDD_PROPPAGE_COLORS_SYNTAX.h"
 #include "IDD_PROPPAGE_COLORS_MARKER.h"
 #include "PropArchive.h"
@@ -27,7 +27,7 @@
 #include "PropShell.h"
 #include "IDD_PROPPAGE_COMPARE_FOLDER.h"
 #include "IDD_PROPPAGE_COMPARE_BINARY.h"
-#include "IDD_PROPPAGE_COMPARE_IMAGE.h"
+#include "PropCompareImage.h"
 
 /*#include "PropertyPageHost.h"*/
 // #include <QWidget>
@@ -63,12 +63,12 @@ protected:
 	/* CPropertyPageHost m_pphost;*/
 
 	QPropGeneral *m_pageGeneral;
-	IDD_PROPPAGE_COMPARE *m_pageCompare;
+	QPropCompare *m_pageCompare;
 	QPropEditor *m_pageEditor;
 	QPropRegistry *m_pageSystem;
 	QPropCodepage *m_pageCodepage;
 	IDD_PROPPAGE_COLORS_WINMERGE *m_pageMergeColors;
-	IDD_PROPPAGE_COLORS_TEXT *m_pageTextColors;
+	QPropTextColors *m_pageTextColors;
 	IDD_PROPPAGE_COLORS_SYNTAX *m_pageSyntaxColors;
 	IDD_PROPPAGE_COLORS_MARKER *m_pageMarkerColors;
 	QPropArchive *m_pageArchive;
@@ -76,7 +76,7 @@ protected:
 	QPropShell *m_pageShell;
 	IDD_PROPPAGE_COMPARE_FOLDER *m_pageCompareFolder;
 	IDD_PROPPAGE_COMPARE_BINARY *m_pageCompareBinary;
-	IDD_PROPPAGE_COMPARE_IMAGE *m_pageCompareImage;
+	QPropCompareImage *m_pageCompareImage;
 
 	/*SyntaxColors *m_pSyntaxColors;
 

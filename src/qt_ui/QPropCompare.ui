@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_PROPPAGE_COMPARE</class>
-<widget class="QDialog" name="IDD_PROPPAGE_COMPARE">
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>QPropCompare</class>
+<widget class="QDialog" name="QPropCompare">
 <property name="geometry">
 <rect><x>0</x><y>0</y>
 <width>510</width><height>440</height></rect></property>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_PROPPAGE_COLORS_TEXT</class>
-<widget class="QDialog" name="IDD_PROPPAGE_COLORS_TEXT">
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>QPropTextColors</class>
+<widget class="QDialog" name="QPropTextColors">
 <property name="geometry">
 <rect><x>0</x><y>0</y>
 <width>510</width><height>314</height></rect></property>
-<property name="windowTitle"><string>Dialog</string></property>
+<property name="windowTitle"><string>Text Colors</string></property>
 <widget class="QGroupBox" name="IDC_CUSTOM_COLORS_GROUP">
 <property name="geometry">
 <rect><x>54</x><y>66</y><width>318</width><height>222</height></rect></property>
