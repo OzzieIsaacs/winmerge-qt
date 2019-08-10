@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_PROPPAGE_COLORS_SYNTAX</class>
+<widget class="QDialog" name="IDD_PROPPAGE_COLORS_SYNTAX">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>510</width><height>428</height></rect></property>
+<property name="windowTitle"><string>Dialog</string></property>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>0</x><y>40</y><width>140</width><height>20</height></rect></property>
+<property name="text"><string>Keywords:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>0</x><y>80</y><width>140</width><height>20</height></rect></property>
+<property name="text"><string>Function names:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>0</x><y>120</y><width>140</width><height>20</height></rect></property>
+<property name="text"><string>Comments:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>0</x><y>160</y><width>140</width><height>20</height></rect></property>
+<property name="text"><string>Numbers:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>0</x><y>200</y><width>140</width><height>20</height></rect></property>
+<property name="text"><string>Operators:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>0</x><y>240</y><width>140</width><height>20</height></rect></property>
+<property name="text"><string>Strings:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>0</x><y>280</y><width>140</width><height>20</height></rect></property>
+<property name="text"><string>Preprocessor:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>0</x><y>320</y><width>140</width><height>20</height></rect></property>
+<property name="text"><string>User 1:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>0</x><y>360</y><width>140</width><height>20</height></rect></property>
+<property name="text"><string>User 2:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>146</x><y>14</y><width>68</width><height>20</height></rect></property>
+<property name="text"><string>Text</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QPushButton" name="IDC_SCOLOR_KEYWORDS">
+<property name="geometry">
+<rect><x>166</x><y>38</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QCheckBox" name="IDC_SCOLOR_KEYWORDS_BOLD">
+<property name="geometry">
+<rect><x>220</x><y>42</y><width>110</width><height>20</height></rect></property>
+<property name="text"><string>Bold</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_SCOLOR_FUNCTIONS">
+<property name="geometry">
+<rect><x>166</x><y>78</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QCheckBox" name="IDC_SCOLOR_FUNCTIONS_BOLD">
+<property name="geometry">
+<rect><x>220</x><y>80</y><width>110</width><height>20</height></rect></property>
+<property name="text"><string>Bold</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_SCOLOR_COMMENTS">
+<property name="geometry">
+<rect><x>166</x><y>118</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QCheckBox" name="IDC_SCOLOR_COMMENTS_BOLD">
+<property name="geometry">
+<rect><x>220</x><y>120</y><width>110</width><height>20</height></rect></property>
+<property name="text"><string>Bold</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_SCOLOR_NUMBERS">
+<property name="geometry">
+<rect><x>166</x><y>158</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QCheckBox" name="IDC_SCOLOR_NUMBERS_BOLD">
+<property name="geometry">
+<rect><x>220</x><y>160</y><width>110</width><height>20</height></rect></property>
+<property name="text"><string>Bold</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_SCOLOR_OPERATORS">
+<property name="geometry">
+<rect><x>166</x><y>198</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QCheckBox" name="IDC_SCOLOR_OPERATORS_BOLD">
+<property name="geometry">
+<rect><x>220</x><y>200</y><width>110</width><height>20</height></rect></property>
+<property name="text"><string>Bold</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_SCOLOR_STRINGS">
+<property name="geometry">
+<rect><x>166</x><y>238</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QCheckBox" name="IDC_SCOLOR_STRINGS_BOLD">
+<property name="geometry">
+<rect><x>220</x><y>240</y><width>110</width><height>20</height></rect></property>
+<property name="text"><string>Bold</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_SCOLOR_PREPROCESSOR">
+<property name="geometry">
+<rect><x>166</x><y>278</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QCheckBox" name="IDC_SCOLOR_PREPROCESSOR_BOLD">
+<property name="geometry">
+<rect><x>220</x><y>280</y><width>110</width><height>20</height></rect></property>
+<property name="text"><string>Bold</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_SCOLOR_USER1">
+<property name="geometry">
+<rect><x>166</x><y>318</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QCheckBox" name="IDC_SCOLOR_USER1_BOLD">
+<property name="geometry">
+<rect><x>220</x><y>320</y><width>110</width><height>20</height></rect></property>
+<property name="text"><string>Bold</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_SCOLOR_USER2">
+<property name="geometry">
+<rect><x>166</x><y>358</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QCheckBox" name="IDC_SCOLOR_USER2_BOLD">
+<property name="geometry">
+<rect><x>220</x><y>360</y><width>110</width><height>20</height></rect></property>
+<property name="text"><string>Bold</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_SCOLORS_BDEFAULTS">
+<property name="geometry">
+<rect><x>324</x><y>396</y><width>140</width><height>28</height></rect></property>
+<property name="text"><string>Defaults</string></property>
+</widget>
+</widget><resources/><connections/></ui>

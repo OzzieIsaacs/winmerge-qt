@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_SHARED_FILTER</class>
+<widget class="QDialog" name="IDD_SHARED_FILTER">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>500</width><height>150</height></rect></property>
+<property name="windowTitle"><string>"Shared or Private Filter"
+</string></property>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>28</x><y>14</y><width>458</width><height>22</height></rect></property>
+<property name="text"><string>Which type of filter do you want to create?</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QRadioButton" name="IDC_SHARED">
+<property name="geometry">
+<rect><x>40</x><y>44</y><width>446</width><height>20</height></rect></property>
+<property name="text"><string>Shared Filter (for all users on this machine)</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_PRIVATE">
+<property name="geometry">
+<rect><x>40</x><y>74</y><width>446</width><height>20</height></rect></property>
+<property name="text"><string>Private Filter (only for current user)</string></property>
+</widget>
+<widget class="QPushButton" name="IDOK">
+<property name="geometry">
+<rect><x>130</x><y>110</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>OK</string></property>
+</widget>
+<widget class="QPushButton" name="IDCANCEL">
+<property name="geometry">
+<rect><x>270</x><y>110</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Cancel</string></property>
+</widget>
+</widget><resources/><connections/></ui>

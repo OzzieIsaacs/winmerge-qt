@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_COMPARE_STATISTICS</class>
+<widget class="QDialog" name="IDD_COMPARE_STATISTICS">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>514</width><height>348</height></rect></property>
+<property name="windowTitle"><string>"Compare Statistics"
+</string></property>
+<widget class="QGroupBox" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>30</y><width>372</width><height>80</height></rect></property>
+<property name="title"><string>Different</string></property>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>8</x><y>22</y><width>112</width><height>20</height></rect></property>
+<property name="text"><string>Text:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STAT_DIFFFILE">
+<property name="geometry">
+<rect><x>278</x><y>20</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Static</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>6</x><y>50</y><width>112</width><height>20</height></rect></property>
+<property name="text"><string>Binary:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STAT_DIFFBINARY">
+<property name="geometry">
+<rect><x>278</x><y>46</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Static</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+</widget>
+<widget class="QGroupBox" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>110</y><width>372</width><height>80</height></rect></property>
+<property name="title"><string>Unique</string></property>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>8</x><y>22</y><width>112</width><height>20</height></rect></property>
+<property name="text"><string>Left:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STAT_LUNIQFOLDER">
+<property name="geometry">
+<rect><x>158</x><y>20</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Static</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STAT_LUNIQFILE">
+<property name="geometry">
+<rect><x>278</x><y>20</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Static</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>8</x><y>48</y><width>112</width><height>20</height></rect></property>
+<property name="text"><string>Right:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STAT_RUNIQFOLDER">
+<property name="geometry">
+<rect><x>158</x><y>46</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Static</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STAT_RUNIQFILE">
+<property name="geometry">
+<rect><x>278</x><y>46</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Static</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+</widget>
+<widget class="QGroupBox" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>190</y><width>372</width><height>80</height></rect></property>
+<property name="title"><string>Identical</string></property>
+<widget class="QLabel" name="IDC_STAT_IDENTICFOLDER">
+<property name="geometry">
+<rect><x>158</x><y>20</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Static</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STAT_IDENTICFILE">
+<property name="geometry">
+<rect><x>278</x><y>20</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Static</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>6</x><y>48</y><width>112</width><height>20</height></rect></property>
+<property name="text"><string>Binary:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STAT_IDENTICBINARY">
+<property name="geometry">
+<rect><x>278</x><y>46</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Static</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>144</x><y>14</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Folders:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>262</x><y>14</y><width>78</width><height>20</height></rect></property>
+<property name="text"><string>Files:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>26</x><y>296</y><width>112</width><height>20</height></rect></property>
+<property name="text"><string>Total:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STAT_TOTALFOLDER">
+<property name="geometry">
+<rect><x>172</x><y>294</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Static</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STAT_TOTALFILE">
+<property name="geometry">
+<rect><x>292</x><y>294</y><width>76</width><height>20</height></rect></property>
+<property name="text"><string>Static</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QPushButton" name="IDOK">
+<property name="geometry">
+<rect><x>400</x><y>292</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Close</string></property>
+</widget>
+</widget><resources/><connections/></ui>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mMainWindow</class>
+ <widget class="QMainWindow" name="mMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WinMerge</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="gui.qrc">
+    <normaloff>:/res/icon.png</normaloff>:/res/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="mMenubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="mMenuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="mActionNew"/>
+    <addaction name="separator"/>
+    <addaction name="mActionOpenFiles"/>
+    <addaction name="mActionOpenDirs"/>
+    <addaction name="separator"/>
+    <addaction name="mActionExit"/>
+   </widget>
+   <widget class="QMenu" name="mMenuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="mActionAboutWinMerge"/>
+   </widget>
+   <widget class="QMenu" name="mMenuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <widget class="QMenu" name="mMenuToolbars">
+     <property name="title">
+      <string>Toolbars</string>
+     </property>
+     <addaction name="mActionToolBarMain"/>
+    </widget>
+    <addaction name="mMenuToolbars"/>
+    <addaction name="mActionStatusBar"/>
+    <addaction name="separator"/>
+    <addaction name="mActionLanguage"/>
+   </widget>
+   <addaction name="mMenuFile"/>
+   <addaction name="mMenuView"/>
+   <addaction name="mMenuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mToolBarMain">
+   <property name="windowTitle">
+    <string>Standard</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="mActionNew"/>
+   <addaction name="mActionOpenFiles"/>
+   <addaction name="mActionOpenDirs"/>
+  </widget>
+  <widget class="QStatusBar" name="mStatusBar"/>
+  <action name="mActionExit">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/res/exit.png</normaloff>:/res/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="mActionOpenDirs">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/res/open-directories.png</normaloff>:/res/open-directories.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open directories...</string>
+   </property>
+  </action>
+  <action name="mActionOpenFiles">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/res/open-files.png</normaloff>:/res/open-files.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open &amp;files...</string>
+   </property>
+  </action>
+  <action name="mActionNew">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/res/new.png</normaloff>:/res/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="mActionToolBarMain">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Standard</string>
+   </property>
+   <property name="toolTip">
+    <string>Show or hide the &quot;Standard&quot; toolbar</string>
+   </property>
+  </action>
+  <action name="mActionStatusBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Statusbar</string>
+   </property>
+   <property name="toolTip">
+    <string>Show or hide the statusbar</string>
+   </property>
+  </action>
+  <action name="mActionLanguage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/res/language.png</normaloff>:/res/language.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Language...</string>
+   </property>
+   <property name="toolTip">
+    <string>Select current language</string>
+   </property>
+  </action>
+  <action name="mActionAboutWinMerge">
+   <property name="text">
+    <string>&amp;About WinMerge</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="gui.qrc"/>
+ </resources>
+ <connections/>
+</ui>

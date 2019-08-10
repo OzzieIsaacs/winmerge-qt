@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_DIR_FILTER</class>
+<widget class="QDialog" name="IDD_DIR_FILTER">
+<property name="geometry">
+<rect><x>60</x><y>146</y>
+<width>586</width><height>148</height></rect></property>
+<property name="windowTitle"><string>"Find"
+</string></property>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>18</y><width>100</width><height>20</height></rect></property>
+<property name="text"><string>Fi&amp;nd what:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_EDIT_FINDTEXT">
+<property name="geometry">
+<rect><x>118</x><y>14</y><width>320</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QCheckBox" name="IDC_EDIT_WHOLE_WORD">
+<property name="geometry">
+<rect><x>14</x><y>54</y><width>280</width><height>20</height></rect></property>
+<property name="text"><string>Match &amp;whole word only</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_EDIT_MATCH_CASE">
+<property name="geometry">
+<rect><x>14</x><y>74</y><width>280</width><height>20</height></rect></property>
+<property name="text"><string>Match &amp;case</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_EDIT_REGEXP">
+<property name="geometry">
+<rect><x>14</x><y>94</y><width>280</width><height>20</height></rect></property>
+<property name="text"><string>Regular &amp;expression</string></property>
+</widget>
+<widget class="QPushButton" name="IDOK">
+<property name="geometry">
+<rect><x>452</x><y>14</y><width>120</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Ok</string></property>
+</widget>
+<widget class="QPushButton" name="IDCANCEL">
+<property name="geometry">
+<rect><x>452</x><y>48</y><width>120</width><height>28</height></rect></property>
+<property name="text"><string>Cancel</string></property>
+</widget>
+</widget><resources/><connections/></ui>

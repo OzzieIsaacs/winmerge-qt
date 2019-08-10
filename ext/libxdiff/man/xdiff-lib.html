@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Author" content="Davide Libenzi">
+  <meta name="GENERATOR" content="Mozilla 1.2">
+  <meta name="Keywords"
+ content="diff,patch,library,portable,file,difference,binary diff,binary patch,myers,macdonald">
+  <title>LibXDiff Home Page</title>
+</head>
+<body style="color: rgb(0, 0, 255);">
+<p style="font-family: monospace;" align="center"><b>LibXDiff</b><br>
+</p>
+<p style="font-family: monospace;" align="left">&nbsp;<br>
+The <b>LibXDiff</b> library implements basic and yet complete
+functionalities to create file differences/patches to both binary and
+text files. The library uses memory files as file abstraction to
+achieve
+both performance and portability. For binary files, <b>LibXDiff</b>
+implements both (with some modification) the algorithm described in <i>File
+System Support for Delta Compression</i> by <i>Joshua P. MacDonald</i>,
+and the algorithm described in <span style="font-style: italic;">Fingerprinting
+By Random Polynomials</span> by <span style="font-style: italic;">Michael
+O. Rabin</span>. While for text files it follows directives described
+in <i>An O(ND)
+Difference Algorithm and Its Variations</i> by <i>Eugene W. Myers</i>.
+Memory files used by the library are basically a collection of buffers
+that store the file content. There are two different requirements for
+memory files when passed to diff/patch functions. Text files for
+diff/patch functions require that a single line do not have to spawn
+across two different memory file blocks. Binary diff/patch functions
+require memory files to be compact. A compact memory files is a file
+whose content is stored inside a single block. Functionalities inside
+the library are available to satisfy these rules. Using the <b>XDL_MMF_ATOMIC</b>
+memory file flag it is possible to make writes to not split the written
+record across different blocks, while the functions <b>xdl_mmfile_iscompact</b>()
+, <b>xdl_mmfile_compact</b>() and <b>xdl_mmfile_writeallocate</b>()
+are usefull to test if the file is compact and to create a compacted
+version of the file itself. The text file differential output uses the
+raw unified output format, by omitting the file header since the result
+is always relative to a single compare operation (between two files).
+The output format of the binary patch file is proprietary (and binary)
+and it is basically a collection of copy and insert commands, like
+described inside the MacDonald paper. The library is compatible with
+almost every Unix implementation (configure script) and it is also
+compatible with Windows through custom (nmake) make files. Examples are
+available inside the <span style="font-style: italic;">test</span>
+subdirectory of the distribution tarball that show how to use the
+library. Also, inside the same subdirectory, a regression test in
+available that tests the library with random data by requiring a diff
+followed by a patch and comparing results. Regression tests ran
+successfully for days on my Linux, Solaris, FreeBSD and Windows boxes,
+and this makes me believe that the library itself is completely ready
+for production (despite the version number).<br>
+</p>
+<p style="font-family: monospace;" align="left"><br>
+</p>
+<p style="text-align: center; font-family: monospace;"><b>Documentation<br>
+</b></p>
+<div style="text-align: left; font-family: monospace;"><br>
+The <span style="font-weight: bold;">LibXDiff</span> library man page
+is available : <a href="xdiff.html">HTML</a>&nbsp;&nbsp;&nbsp;<a
+ href="xdiff.txt">TXT</a>&nbsp;&nbsp;&nbsp; <a href="xdiff.pdf">PDF<br>
+</a><br>
+<br>
+</div>
+<p style="font-family: monospace;" align="center"><b>License
+and Software</b></p>
+<p style="font-family: monospace;" align="left"><span
+ style="font-weight: bold;">LibXDiff</span>&nbsp;
+is made available through the <a
+ href="http://www.gnu.org/copyleft/lesser.html">GNU LGPL</a> license
+together with the complete sources. Please read carefully the <a
+ href="http://www.gnu.org/copyleft/lesser.html">license</a> before
+using
+the software. The latest library package is available here :</p>
+<p style="font-family: monospace;" align="left"><a
+ href="http://www.xmailserver.org/libxdiff-0.23.tar.gz">Version
+0.23</a></p>
+<p style="font-family: monospace;" align="left"><br>
+</p>
+<p style="text-align: center; font-family: monospace;"><b>Links And Docs<br>
+</b></p>
+<div style="text-align: left; font-family: monospace;"><a
+ href="http://freshmeat.net/projects/xdiff-lib">LibXDiff FreshMeat Home
+Page</a><a href="http://www.gnu.org/software/diffutils/diffutils.html"><br>
+GNU DiffUtil</a><br>
+<a href="diff2.pdf"><span style="font-style: italic;">An O(ND)
+Difference Algorithm and Its Variations</span> by <i>Eugene W. Myers</i></a><br>
+<a href="xdfs.pdf"><i>File System Support for Delta Compression</i> by <i>Joshua
+P. MacDonald</i></a><br>
+<a href="rabin.pdf"><i>Fingerprinting By Random Polynomials</i> by <i>Michael
+O. Rabin</i></a><br>
+<a href="rabin_impl.pdf"><i>Fingerprinting Using Polynomial</i> by <i>Calvin
+Chan</i> and <i>Hahua Lu</i></a><br>
+<a href="rabin_apps.pdf"><i>Some Applications of Rabin's Fingerprinting
+Method</i> by <i>Andrei Z. Broder</i></a><br>
+<br>
+<br>
+<br>
+<a href="davide.html">Back Home</a><br>
+<br>
+<br>
+</div>
+</body>
+</html>

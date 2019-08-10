@@ -1,0 +1,56 @@
+syntax: glob
+*.bak
+*.orig
+
+# Visual Studio/QtCreator user files
+*.user
+
+# Generated Windows project/solution files
+*.vcproj
+*.sln
+
+# Windows build/temp files
+*.obj
+*.lib
+*.dll
+*.ilk
+*.pdb
+*.exe
+*.ncb
+*.suo
+*.idb
+
+# Linux build files
+*.o
+*.Po
+*.Plo
+*.lo
+*.la
+*.a
+
+syntax: regexp
+~$
+Makefile$
+Makefile.Release
+Makefile.Debug
+
+# GUI generated files
+gui/temp
+gui/debug
+gui/release
+gui/qrc_gui.cpp
+
+# GUI binary
+gui/winmerge
+
+#build directories
+bin/
+build/
+debug/
+release/
+.idea/
+src/cmake-build-debug
+build-src-Desktop-Vorgabe
+src/old
+ext/poco/cmake-build/
+ext/poco/cmake-build-debug/

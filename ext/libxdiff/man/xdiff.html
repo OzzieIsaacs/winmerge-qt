@@ -1,0 +1,1109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><HEAD><TITLE>Man page of LibXDiff</TITLE>
+</HEAD><BODY text="#0000FF" bgcolor="#FFFFFF" style="font-family: monospace;">
+<H1>LibXDiff</H1>
+Section: File Differential Library (3)<BR>Updated: 0.23<BR><A HREF="#index">Index</A>
+<A HREF="/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+<P>
+xdl_set_allocator, xdl_malloc, xdl_free, xdl_realloc, xdl_init_mmfile, xdl_free_mmfile,
+xdl_mmfile_iscompact, xdl_seek_mmfile, xdl_read_mmfile, xdl_write_mmfile, xdl_writem_mmfile,
+xdl_mmfile_writeallocate, xdl_mmfile_ptradd, xdl_mmfile_first, xdl_mmfile_next, xdl_mmfile_size, xdl_mmfile_cmp,
+xdl_mmfile_compact, xdl_diff, xdl_patch, xdl_merge3, xdl_bdiff_mb, xdl_bdiff, xdl_rabdiff_mb, xdl_rabdiff,
+xdl_bdiff_tgsize, xdl_bpatch - File Differential Library support functions
+<P>
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<PRE>
+<B>#include &lt;<A HREF="file:///usr/include/xdiff.h">xdiff.h</A>&gt;</B>
+
+<B>int xdl_set_allocator(memallocator_t const *</B><I>malt</I><B>);</B>
+<B>void *xdl_malloc(unsigned int </B><I>size</I><B>);</B>
+<B>void xdl_free(void *</B><I>ptr</I><B>);</B>
+<B>void *xdl_realloc(void *</B><I>ptr</I><B>, unsigned int </B><I>nsize</I><B>);</B>
+<B>int xdl_init_mmfile(mmfile_t *</B><I>mmf</I><B>, long </B><I>bsize</I><B>, unsigned long </B><I>flags</I><B>);</B>
+<B>void xdl_free_mmfile(mmfile_t *</B><I>mmf</I><B>);</B>
+<B>int xdl_mmfile_iscompact(mmfile_t *</B><I>mmf</I><B>);</B>
+<B>int xdl_seek_mmfile(mmfile_t *</B><I>mmf</I><B>, long </B><I>off</I><B>);</B>
+<B>long xdl_read_mmfile(mmfile_t *</B><I>mmf</I><B>, void *</B><I>data</I><B>, long </B><I>size</I><B>);</B>
+<B>long xdl_write_mmfile(mmfile_t *</B><I>mmf</I><B>, void const *</B><I>data</I><B>, long </B><I>size</I><B>);</B>
+<B>long xdl_writem_mmfile(mmfile_t *</B><I>mmf</I><B>, mmbuffer_t *</B><I>mb</I><B>, int </B><I>nbuf</I><B>);</B>
+<B>void *xdl_mmfile_writeallocate(mmfile_t *</B><I>mmf</I><B>, long </B><I>size</I><B>);</B>
+<B>long xdl_mmfile_ptradd(mmfile_t *</B><I>mmf</I><B>, char *</B><I>ptr</I><B>, long </B><I>size</I><B>, unsigned long </B><I>flags</I><B>);</B>
+<B>void *xdl_mmfile_first(mmfile_t *</B><I>mmf</I><B>, long *</B><I>size</I><B>);</B>
+<B>void *xdl_mmfile_next(mmfile_t *</B><I>mmf</I><B>, long *</B><I>size</I><B>);</B>
+<B>long xdl_mmfile_size(mmfile_t *</B><I>mmf</I><B>);</B>
+<B>int xdl_mmfile_cmp(mmfile_t *</B><I>mmf1</I><B>, mmfile_t *</B><I>mmf2</I><B>);</B>
+<B>int xdl_mmfile_compact(mmfile_t *</B><I>mmfo</I><B>, mmfile_t *</B><I>mmfc</I><B>, long </B><I>bsize</I><B>, unsigned long </B><I>flags</I><B>);</B>
+<B>int xdl_diff(mmfile_t *</B><I>mmf1</I><B>, mmfile_t *</B><I>mmf2</I><B>, xpparam_t const *</B><I>xpp</I><B>, xdemitconf_t const *</B><I>xecfg</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+<B>int xdl_patch(mmfile_t *</B><I>mmf</I><B>, mmfile_t *</B><I>mmfp</I><B>, int </B><I>mode</I><B>, xdemitcb_t *</B><I>ecb</I><B>, xdemitcb_t *</B><I>rjecb</I><B>);</B>
+<B>int xdl_merge3(mmfile_t *</B><I>mmfo</I><B>, mmfile_t *</B><I>mmf1</I><B>, mmfile_t *</B><I>mmf2</I><B>, xdemitcb_t *</B><I>ecb</I><B>, xdemitcb_t *</B><I>rjecb</I><B>);</B>
+<B>int xdl_bdiff_mb(mmbuffer_t *</B><I>mmb1</I><B>, mmbuffer_t *</B><I>mmb2</I><B>, bdiffparam_t const *</B><I>bdp</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+<B>int xdl_bdiff(mmfile_t *</B><I>mmf1</I><B>, mmfile_t *</B><I>mmf2</I><B>, bdiffparam_t const *</B><I>bdp</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+<B>int xdl_rabdiff_mb(mmbuffer_t *</B><I>mmb1</I><B>, mmbuffer_t *</B><I>mmb2</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+<B>int xdl_rabdiff(mmfile_t *</B><I>mmf1</I><B>, mmfile_t *</B><I>mmf2</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+<B>long xdl_bdiff_tgsize(mmfile_t *</B><I>mmfp</I><B>);</B>
+<B>int xdl_bpatch(mmfile_t *</B><I>mmf</I><B>, mmfile_t *</B><I>mmfp</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+
+</PRE><A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+The
+<B>LibXDiff</B>
+
+library implements basic and yet complete functionalities to create
+file differences/patches to both binary and text files. The library
+uses memory files as file abstraction to achieve both performance and
+portability. For binary files,
+<B>LibXDiff</B>
+
+implements both (with some modification) the algorithm described in
+<I>File System Support for Delta Compression</I> by <I>Joshua P. MacDonald</I>,
+
+and the method described in
+<I>Fingerprinting by Random Polynomials</I> by <I>Michael O. Rabin</I>.
+
+While for text files it follows directives described in
+<I>An O(ND) Difference Algorithm and Its Variations</I> by <I>Eugene W. Myers</I>.
+
+Memory files used by the library are basically a collection of buffers
+that store the file content. There are two different requirements for memory
+files when passed to diff/patch functions. Text files for diff/patch functions
+require that a single line do not have to spawn across two different memory
+file blocks. Binary diff/patch functions require memory files to be compact.
+A compact memory files is a file whose content is stored inside a single block.
+Functionalities inside the library are available to satisfy these rules.
+Using the
+<B>XDL_MMF_ATOMIC</B>
+
+memory file flag it is possible to make writes to not split the written
+record across different blocks, while the functions
+<B>xdl_mmfile_iscompact</B>()
+
+,
+<B>xdl_mmfile_compact</B>()
+
+and
+<B>xdl_mmfile_writeallocate</B>()
+
+are usefull to test if the file is compact and to create a compacted version
+of the file itself. The text file differential output uses the raw unified output
+format, by omitting the file header since the result is always relative to
+a single compare operation (between two files). The output format of the binary
+patch file is proprietary (and binary) and it is basically a collection of
+copy and insert commands, like described inside the MacDonald paper.
+<P>
+<P>
+<A NAME="lbAE">&nbsp;</A>
+<H3>Functions</H3>
+
+The following functions are defined:
+<DL COMPACT>
+<DT><B>int xdl_set_allocator(memallocator_t const *</B><I>malt</I><B>);</B>
+
+<DD>
+<P>
+The
+<B>LibXDiff</B>
+
+library enable the user to set its own memory allocator, that will be used
+for all the following memory requests. The allocator must be set before
+to start calling the
+<B>LibXDiff</B>
+
+library with a call to
+<B>xdl_set_allocator</B>().
+
+The memory allocator structure contains the following members:
+<PRE>
+
+        typedef struct s_memallocator {
+                void *priv;
+                void *(*malloc)(void *priv, unsigned int size);
+                void (*free)(void *priv, void *ptr);
+                void *(*realloc)(void *priv, void *ptr, unsigned int nsize);
+        } memallocator_t;
+
+</PRE>
+
+The
+<B>malloc</B>()
+
+function pointer will be used by
+<B>LibXDiff</B>
+
+to request a memory block of
+<I>size</I>
+
+bytes. The
+<B>free</B>()
+
+function pointer will be called to free a previously allocated block
+<I>ptr</I>
+
+, while the
+<B>realloc</B>()
+
+will be used to resize the
+<I>ptr</I>
+
+to a new
+<I>nsize</I>
+
+size in bytes. The
+<B>priv</B>
+
+structure member will be passed to the
+<B>malloc</B>(),<B>free</B>(),<B>realloc</B>()
+
+functions as first parameter. The
+<B>LibXDiff</B>
+
+user must call
+<B>xdl_set_allocator</B>()
+
+before starting using the library, otherwise
+<B>LibXDiff</B>
+
+functions will fail due to the lack of memory allocation support.
+A typical initialization sequence for
+<B>POSIX</B>
+
+systems will use the standard
+<B><A HREF="/cgi-bin/man/man2html?3+malloc">malloc</A></B>(3),
+
+<B><A HREF="/cgi-bin/man/man2html?3+free">free</A></B>(3),
+
+<B><A HREF="/cgi-bin/man/man2html?3+realloc">realloc</A></B>(3)
+
+and will look like:
+<PRE>
+
+        void *wrap_malloc(void *priv, unsigned int size) {
+                return malloc(size);
+        }
+
+        void wrap_free(void *priv, void *ptr) {
+                free(ptr);
+        }
+
+        void *wrap_realloc(void *priv, void *ptr, unsigned int size) {
+                return realloc(ptr, size);
+        }
+
+        void my_init_xdiff(void) {
+                memallocator_t malt;
+
+                malt.priv = NULL;
+                malt.malloc = wrap_malloc;
+                malt.free = wrap_free;
+                malt.realloc = wrap_realloc;
+                xdl_set_allocator(&amp;malt);
+        }
+
+</PRE>
+
+<P>
+<DT><B>void *xdl_malloc(unsigned int </B><I>size</I><B>);</B>
+
+<DD>
+<P>
+Allocates a memory block of
+<I>size</I>
+
+bytes using the
+<B>LibXDiff</B>
+
+memory allocator. The user can specify its own allocator using the
+<B>xdl_set_allocator</B>()
+
+function. The
+<B>xdl_malloc</B>()
+
+return a pointer to the newly allocated block, or
+<B>NULL</B>
+
+in case of failure.
+<P>
+<DT><B>void xdl_free(void *</B><I>ptr</I><B>);</B>
+
+<DD>
+<P>
+Free a previously allocated memory block pointed by
+<I>ptr</I>.
+
+The
+<I>ptr</I>
+
+block must has been allocated using either
+<B>xdl_malloc</B>()
+
+or
+<B>xdl_realloc</B>().
+
+<P>
+<DT><B>void *xdl_realloc(void *</B><I>ptr</I><B>, unsigned int </B><I>nsize</I><B>);</B>
+
+<DD>
+<P>
+Resizes the memory block pointed by
+<I>ptr</I>
+
+to a new size
+<I>nsize</I>.
+
+Return the resized block if successful, or
+<B>NULL</B>
+
+in case the reallocation fails. After a successful reallocation, the old
+<I>ptr</I>
+
+block is to be considered no more valid.
+<P>
+<DT><B>int xdl_init_mmfile(mmfile_t *</B><I>mmf</I><B>, long </B><I>bsize</I><B>, unsigned long </B><I>flags</I><B>);</B>
+
+<DD>
+<P>
+Initialize the memory file
+<I>mmf</I>
+
+by requiring an internal block size of
+<I>bsize</I>.
+
+The
+<I>flags</I>
+
+parameter is a combination of the following flags :
+<BR>
+
+<DT><DD>
+<B>XDL_MMF_ATOMIC</B>
+
+Writes on the memory file will be atomic. That is, the data will not be split
+on two or more different blocks.
+<P>
+Once an
+<B>xdl_init_mmfile</B>()
+
+succeeded, a matching
+<B>xdl_free_mmfile</B>()
+
+must be called when the user has done using the memory file, otherwise serious
+memory leaks will happen.
+The function return 0 if succeed or -1 if an error is encountered.
+<P>
+<DT><B>void xdl_free_mmfile(mmfile_t *</B><I>mmf</I><B>);</B>
+
+<DD>
+<P>
+Free all the data associated with the
+<I>mmf</I>
+
+memory file.
+<P>
+<DT><B>int xdl_mmfile_iscompact(mmfile_t *</B><I>mmf</I><B>);</B>
+
+<DD>
+<P>
+Returns an integer different from 0 if the
+<I>mmf</I>
+
+memory file is compact, 0 otherwise. A compact memory file is one that have
+the whole content stored inside a single block.
+<P>
+<DT><B>int xdl_seek_mmfile(mmfile_t *</B><I>mmf</I><B>, long </B><I>off</I><B>);</B>
+
+<DD>
+<P>
+Set the current data pointer of the memory file
+<I>mmf</I>
+
+to the specified offset
+<I>off</I>
+
+from the beginning of the file itself. Returns 0 if successful or -1 if an error
+happened.
+<P>
+<DT><B>long xdl_read_mmfile(mmfile_t *</B><I>mmf</I><B>, void *</B><I>data</I><B>, long </B><I>size</I><B>);</B>
+
+<DD>
+<P>
+Request to read
+<I>size</I>
+
+bytes from the memory file
+<I>mmf</I>
+
+by storing the data inside the
+<I>data</I>
+
+buffer. Returns the number of bytes read into the
+<I>data</I>
+
+buffer. The amount of data read can be lower than the specified
+<I>size</I>.
+
+The function returns -1 if an error happened.
+<P>
+<DT><B>long xdl_write_mmfile(mmfile_t *</B><I>mmf</I><B>, void const *</B><I>data</I><B>, long </B><I>size</I><B>);</B>
+
+<DD>
+<P>
+Request to write
+<I>size</I>
+
+bytes from the specified buffer
+<I>data</I>
+
+into the memory file
+<I>mmf</I>.
+
+If the memory file has been created using the
+<B>XDL_MMF_ATOMIC</B>
+
+flag, the write request will not be split across different blocks.
+Note that all write operations done on memory files do append data at the end
+the file, and writes in the middle of it are allowed. This is because the library
+memory file abstraction does not need this functionality to be available.
+The function returns the number of bytes written or a number lower than
+<I>size</I>
+
+if an error happened.
+<P>
+<DT><B>long xdl_writem_mmfile(mmfile_t *</B><I>mmf</I><B>, mmbuffer_t *</B><I>mb</I><B>, int </B><I>nbuf</I><B>);</B>
+
+<DD>
+<P>
+Request to sequentially write
+<I>nbuf</I>
+
+memory buffers passed inside the array
+<I>mb</I>
+
+into the memory file
+<I>mmf</I>.
+
+The memory buffer structure is defined as :
+<PRE>
+
+        typedef struct s_mmbuffer {
+                char *ptr;
+                long size;
+        } mmbuffer_t;
+
+</PRE>
+
+The
+<I>ptr</I>
+
+field is a pointer to the user data, whose size is specified inside the
+<I>size</I>
+
+structure field. The function returns the total number of bytes written
+or a lower number if an error happened.
+<P>
+<DT><B>void *xdl_mmfile_writeallocate(mmfile_t *</B><I>mmf</I><B>, long </B><I>size</I><B>);</B>
+
+<DD>
+<P>
+The function request to allocate a write buffer of
+<I>size</I>
+
+bytes in the
+<I>mmf</I>
+
+memory file and returns the pointer to the allocated buffer. The user will
+have the responsibility to store
+<I>size</I>
+
+bytes (no more, no less) inside the memory region pointed to by the returned pointer.
+The files size will grow of
+<I>size</I>
+
+bytes as a consequence of this operation. The function will return
+<B>NULL</B>
+
+if an error happened.
+<P>
+<DT><B>long xdl_mmfile_ptradd(mmfile_t *</B><I>mmf</I><B>, char *</B><I>ptr</I><B>, long </B><I>size</I><B>, unsigned long </B><I>flags</I><B>);</B>
+
+<DD>
+<P>
+The function adds a user specified block to the end of the memory file
+<I>mmf</I>.
+
+The block first byte is pointed to by
+<I>ptr</I>
+
+and its length is
+<I>size</I>
+
+bytes. The
+<I>flags</I>
+
+parameter can be used to specify attributes of the user memory block. Currently
+supported attributes are:
+<BR>
+
+<DT><DD>
+<B>XDL_MMB_READONLY</B>
+
+Specify that the added memory block must be treated as read-only, and
+every attempt to write on it should result in a failure of the memory file
+writing functions.
+<P>
+The purpose of this function is basically to avoid copying memory around,
+by helping the library to not drain the CPU cache. The function returns
+<I>size</I>
+
+in case of success, or -1 in case of error.
+<P>
+<DT><B>void *xdl_mmfile_first(mmfile_t *</B><I>mmf</I><B>, long *</B><I>size</I><B>);</B>
+
+<DD>
+<P>
+The function is used to return the first block of the
+<I>mmf</I>
+
+memory file block chain. The
+<I>size</I>
+
+parameter will receive the size of the block, while the function will return
+the pointer the the first byte of the block itself. The function returns
+<B>NULL</B>
+
+if the file is empty.
+<P>
+<DT><B>void *xdl_mmfile_next(mmfile_t *</B><I>mmf</I><B>, long *</B><I>size</I><B>);</B>
+
+<DD>
+<P>
+The function is used to return the next block of the
+<I>mmf</I>
+
+memory file block chain. The
+<I>size</I>
+
+parameter will receive the size of the block, while the function will return
+the pointer the the first byte of the block itself. The function returns
+<B>NULL</B>
+
+if the current block is the last one of the chain.
+<P>
+<DT><B>long xdl_mmfile_size(mmfile_t *</B><I>mmf</I><B>);</B>
+
+<DD>
+<P>
+The function returns the size of the specified memory file
+<I>mmf</I>.
+
+<P>
+<DT><B>int xdl_mmfile_cmp(mmfile_t *</B><I>mmf1</I><B>, mmfile_t *</B><I>mmf2</I><B>);</B>
+
+<DD>
+<P>
+Request to compare two memory files
+<I>mmf1</I> and <I>mmf2</I>
+
+and returns 0 if files are identical, or a value different from 0 if
+files are different.
+<P>
+<DT><B>int xdl_mmfile_compact(mmfile_t *</B><I>mmfo</I><B>, mmfile_t *</B><I>mmfc</I><B>, long </B><I>bsize</I><B>, unsigned long </B><I>flags</I><B>);</B>
+
+<DD>
+<P>
+Request to create a compact version of the memory file
+<I>mmfo</I>
+
+into the (uninitialized) memory file
+<I>mmfc</I>.
+
+The
+<I>bsize</I>
+
+parameter specify the requested block size and
+<I>flags</I>
+
+specify flags to be used to create the new
+<I>mmfc</I>
+
+memory file (see
+<B>xdl_init_mmfile</B>()
+
+). The function returns 0 if succedded or -1 if an error happened.
+<P>
+<DT><B>int xdl_diff(mmfile_t *</B><I>mmf1</I><B>, mmfile_t *</B><I>mmf2</I><B>, xpparam_t const *</B><I>xpp</I><B>, xdemitconf_t const *</B><I>xecfg</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+
+<DD>
+<P>
+Request to create the difference between the two text memory files
+<I>mmf1</I> and <I>mmf2</I>.
+
+The
+<I>mmf1</I>
+
+memory files is considered the &quot;old&quot; file while
+<I>mmf2</I>
+
+is considered the &quot;new&quot; file. So the function will create a patch file
+that once applied to
+<I>mmf1</I>
+
+will give
+<I>mmf2</I>
+
+as result. Files
+<I>mmf1</I> and <I>mmf2</I>
+
+must be atomic from a line point of view (or, as an extreme, compact), that
+means that a single test line cannot spread among different memory file blocks.
+The
+<I>xpp</I>
+
+parameter is a pointer to a structure :
+<PRE>
+
+        typedef struct s_xpparam {
+                unsigned long flags;
+        } xpparam_t;
+
+</PRE>
+
+that is used to specify parameters to be used by the file differential algorithm.
+The
+<I>flags</I>
+
+field is a combination of the following flags :
+<P>
+<DT><DD>
+<B>XDF_NEED_MINIMAL</B>
+
+Requires the minimal edit script to be found by the algorithm (may be slow).
+<P>
+The
+<I>xecfg</I>
+
+parameter point to a structure :
+<PRE>
+
+        typedef struct s_xdemitconf {
+                long ctxlen;
+        } xdemitconf_t;
+
+</PRE>
+
+that is used to configure the algorithm responsible of the creation the the
+differential file from an edit script. The
+<I>ctxlen</I>
+
+field is used to specify the amount of context to be emitted inside the
+differential file (the value 3 is suggested for normal operations).
+The parameter
+<I>ecb</I>
+
+is a pointer to a structure :
+<PRE>
+
+        typedef struct s_xdemitcb {
+                void *priv;
+                int (*outf)(void *, mmbuffer_t *, int);
+        } xdemitcb_t;
+
+</PRE>
+
+that is used by the differential file creation algorithm to emit the created
+data. The
+<I>priv</I>
+
+field is an opaque pointer to a user specified data, while the
+<I>outf</I>
+
+field point to a callback function that is called internally to emit algorithm
+generated data rappresenting the differential file. The first parameter of the
+callback is the same
+<I>priv</I>
+
+field specified inside the
+<B>xdemitcb_t</B>
+
+structure. The second parameter point to an array of
+<B>mmbuffer_t</B>
+
+(see above for a definition of the structure) whose element count is specified
+inside the last parameter of the callback itself. The callback will always be
+called with entire records (lines) and never a record (line) will be emitted
+using two different callback calls. This is important because if the called will
+use another memory file to store the result, by creating the target memory file with
+<B>XDL_MMF_ATOMIC</B>
+
+will guarantee the &quot;atomicity&quot; of the memory file itself.
+The function returns 0 if succeeded or -1 if an error occurred.
+<P>
+<DT><B>int xdl_patch(mmfile_t *</B><I>mmf</I><B>, mmfile_t *</B><I>mmfp</I><B>, int </B><I>mode</I><B>, xdemitcb_t *</B><I>ecb</I><B>, xdemitcb_t *</B><I>rjecb</I><B>);</B>
+
+<DD>
+<P>
+Request to patch the memory file
+<I>mmf</I>
+
+using the patch file stored in
+<I>mmfp</I>.
+
+The
+<I>mmf</I>
+
+memory file
+<B>is not</B>
+
+changed during the operation and can be considered as read only.
+The
+<I>mode</I>
+
+parameter can be one of the following values :
+<DT><DD>
+<B>XDL_PATCH_NORMAL</B>
+
+Perform standard patching like if the patch memory file
+<I>mmfp</I>
+
+has been created using
+<I>mmf</I>
+
+as &quot;old&quot; file.
+<DT><DD>
+<B>XDL_PATCH_REVERSE</B>
+
+Apply the reverse patch. That means that the
+<I>mmf</I>
+
+memory file has to be considered as if it was specified as &quot;new&quot; file during
+the differential operation (
+<B>xdl_diff</B>()
+
+). The result of the operation will then be the file content that was used
+as &quot;old&quot; file during the differential operation.
+<P>
+The following flags can be specified (by or-ing them) to one of the above:
+<DT><DD>
+<B>XDL_PATCH_IGNOREBSPACE</B>
+
+Ignore the whitespace at the beginning and the end of the line.
+<P>
+The
+<I>ecb</I>
+
+will be used by the patch algorithm to create the result file while the
+<I>rjecb</I>
+
+will be used to emit all differential chunks that cannot be applied.
+Like explained above, callbacks are always called with entire records to guarantee
+atomicity of the resulting output.
+The function returns 0 if succeeded without performing any fuzzy hunk detection,
+a positive value if it secceeded with fuzzy hunk detection or -1 if an error occurred
+during the patch operation.
+<P>
+<DT><B>int xdl_merge3(mmfile_t *</B><I>mmfo</I><B>, mmfile_t *</B><I>mmf1</I><B>, mmfile_t *</B><I>mmf2</I><B>, xdemitcb_t *</B><I>ecb</I><B>, xdemitcb_t *</B><I>rjecb</I><B>);</B>
+
+<DD>
+<P>
+Merges three files together. The
+<I>mmfo</I>
+
+file is the original one, while
+<I>mmf1</I> and <I>mmf2</I>
+
+are two modified versions of
+<I>mmfo</I>.
+
+The function works by creating a differential between
+<I>mmfo</I> and <I>mmf2</I>
+
+and by applying the resulting patch to
+<I>mmf1</I>.
+
+Because of this sequence,
+<I>mmf1</I>
+
+changes will be privileged against the ones of
+<I>mmf2</I>.
+
+The
+<I>ecb</I>
+
+will be used by the patch algorithm to create the result file while the
+<I>rjecb</I>
+
+will be used to emit all differential chunks that cannot be applied.
+Like explained above, callbacks are always called with entire records to guarantee
+atomicity of the resulting output.
+The function returns 0 if succeeded or -1 if an error occurred during the patch operation.
+<P>
+<DT><B>int xdl_bdiff(mmfile_t *</B><I>mmf1</I><B>, mmfile_t *</B><I>mmf2</I><B>, bdiffparam_t const *</B><I>bdp</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+
+<DD>
+<P>
+Request to create the difference between the two text memory files
+<I>mmf1</I> and <I>mmf2</I>.
+
+The
+<I>mmf1</I>
+
+memory files is considered the &quot;old&quot; file while
+<I>mmf2</I>
+
+is considered the &quot;new&quot; file. So the function will create a patch file
+that once applied to
+<I>mmf1</I>
+
+will give
+<I>mmf2</I>
+
+as result. Files
+<I>mmf1</I> and <I>mmf2</I>
+
+must be compact to make it easy and faster to perform the difference operation.
+Functions are available to check for compactness (
+<B>xdl_mmfile_iscompact</B>()
+
+) and to make compact a non-compact file (
+<B>xdl_mmfile_compact</B>()
+
+). An example of how to create a compact memory file (described inside the test
+subdirectory) is :
+<PRE>
+
+        int xdlt_load_mmfile(char const *fname, mmfile_t *mf, int binmode) {
+                char cc;
+                int fd;
+                long size, bsize;
+                char *blk;
+
+                if (xdl_init_mmfile(mf, XDLT_STD_BLKSIZE, XDL_MMF_ATOMIC) &lt; 0)
+                        return -1;
+                if ((fd = open(fname, O_RDONLY)) == -1) {
+                        perror(fname);
+                        xdl_free_mmfile(mf);
+                        return -1;
+                }
+                if ((size = bsize = lseek(fd, 0, SEEK_END)) &gt; 0 &amp;&amp; !binmode) {
+                        if (lseek(fd, -1, SEEK_END) != (off_t) -1 &amp;&amp;
+                            read(fd, &amp;cc, 1) &amp;&amp; cc != '\n')
+                                bsize++;
+                }
+                lseek(fd, 0, SEEK_SET);
+                if (!(blk = (char *) xdl_mmfile_writeallocate(mf, bsize))) {
+                        xdl_free_mmfile(mf);
+                        close(fd);
+                        return -1;
+                }
+                if (read(fd, blk, (size_t) size) != (size_t) size) {
+                        perror(fname);
+                        xdl_free_mmfile(mf);
+                        close(fd);
+                        return -1;
+                }
+                close(fd);
+                if (bsize &gt; size)
+                        blk[size] = '\n';
+                return 0;
+        }
+
+</PRE>
+
+The
+<I>bdp</I>
+
+parameter points to a structure :
+<PRE>
+
+        typedef struct s_bdiffparam {
+                long bsize;
+        } bdiffparam_t;
+
+</PRE>
+
+that is used to pass information to the binary file differential algorithm.
+The
+<I>bsize</I>
+
+parameter specify the size of the block that will be used to decompose
+<I>mmf1</I>
+
+during the block classification phase of the algorithm (see MacDonald paper).
+Suggested values go from 16 to 64, with a preferred power of two characteristic.
+The
+<I>ecb</I>
+
+parameter is used to pass the emission callback to the algorithm responsible
+of the output file creation.
+The function returns 0 if succeede or -1 if an error is occurred.
+<P>
+<DT><B>int xdl_bdiff_mb(mmbuffer_t *</B><I>mmb1</I><B>, mmbuffer_t *</B><I>mmb2</I><B>, bdiffparam_t const *</B><I>bdp</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+
+<DD>
+<P>
+Same as
+<B>xdl_bdiff</B>()
+
+but it works on memory buffer directly. The
+<B>xdl_bdiff</B>()
+
+is implemented internally with a
+<B>xdl_bdiff_mb</B>()
+
+after having setup the two memory buffers from the passed memory files (that must be compact,
+as described above). The memory buffer structure is defined as :
+<PRE>
+
+        typedef struct s_mmbuffer {
+                char *ptr;
+                long size;
+        } mmbuffer_t;
+
+</PRE>
+
+An empty memory buffer is specified by setting the
+<I>ptr</I>
+
+member as
+<B>NULL</B>
+
+and the
+<I>size</I>
+
+member as zero. The reason of having this function is to avoid the memory file
+preparation, that might involve copying memory from other sources. Using
+the
+<B>xdl_bdiff_mb</B>(),
+
+the caller can setup the two memory buffer by using, for example,
+<B><A HREF="/cgi-bin/man/man2html?2+mmap">mmap</A></B>(2),
+
+and hence avoiding unnecessary memory copies. The other parameters and the return value
+of the function
+<B>xdl_bdiff_mb</B>()
+
+are the same as the ones already described in
+<B>xdl_bdiff</B>().
+
+<P>
+<DT><B>int xdl_rabdiff(mmfile_t *</B><I>mmf1</I><B>, mmfile_t *</B><I>mmf2</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+
+<DD>
+<P>
+Request to create the difference between the two text memory files
+<I>mmf1</I> and <I>mmf2</I>
+
+using the Rabin's polynomial fingerprinting algorithm. This algorithm typically
+performs faster and produces smaller deltas, when compared to the XDelta-like one.
+The
+<I>mmf1</I>
+
+memory files is considered the &quot;old&quot; file while
+<I>mmf2</I>
+
+is considered the &quot;new&quot; file. So the function will create a patch file
+that once applied to
+<I>mmf1</I>
+
+will give
+<I>mmf2</I>
+
+as result. Files
+<I>mmf1</I> and <I>mmf2</I>
+
+must be compact to make it easy and faster to perform the difference operation.
+Functions are available to check for compactness (
+<B>xdl_mmfile_iscompact</B>()
+
+) and to make compact a non-compact file (
+<B>xdl_mmfile_compact</B>()
+
+). The
+<I>ecb</I>
+
+parameter is used to pass the emission callback to the algorithm responsible
+of the output file creation.
+The function returns 0 if succeede or -1 if an error is occurred.
+<P>
+<DT><B>int xdl_rabdiff_mb(mmbuffer_t *</B><I>mmb1</I><B>, mmbuffer_t *</B><I>mmb2</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+
+<DD>
+<P>
+Same as
+<B>xdl_rabdiff</B>()
+
+but it works on memory buffer directly. The memory buffer structure is defined as :
+<PRE>
+
+        typedef struct s_mmbuffer {
+                char *ptr;
+                long size;
+        } mmbuffer_t;
+
+</PRE>
+
+An empty memory buffer is specified by setting the
+<I>ptr</I>
+
+member as
+<B>NULL</B>
+
+and the
+<I>size</I>
+
+member as zero. The reason of having this function is to avoid the memory file
+preparation, that might involve copying memory from other sources. Using
+the
+<B>xdl_rabdiff_mb</B>(),
+
+the caller can setup the two memory buffer by using, for example,
+<B><A HREF="/cgi-bin/man/man2html?2+mmap">mmap</A></B>(2),
+
+and hence avoiding unnecessary memory copies. The other parameters and the return value
+of the function
+<B>xdl_rabdiff_mb</B>()
+
+are the same as the ones already described in
+<B>xdl_rabdiff</B>().
+
+<P>
+<DT><B>long xdl_bdiff_tgsize(mmfile_t *</B><I>mmfp</I><B>);</B>
+
+<DD>
+<P>
+Given a binary memory file patch, it returns the size that the result file
+will have once the patch is applied to the target file. It can be used to
+pre-allocate (or write-allocate) a memory block to store the patch result
+so that a compact file will be available at the end of the operation. The
+function returns the requested size, or -1 if an error occurred during the operation.
+<P>
+<DT><B>int xdl_bpatch(mmfile_t *</B><I>mmf</I><B>, mmfile_t *</B><I>mmfp</I><B>, xdemitcb_t *</B><I>ecb</I><B>);</B>
+
+<DD>
+<P>
+Request to patch the binary memory file
+<I>mmf</I>
+
+using the binary patch file stored in
+<I>mmfp</I>.
+
+The
+<I>mmf</I>
+
+memory file
+<B>is not</B>
+
+changed during the operation and can be considered as read only. The binary
+patch algorithm has no notion of context, so the patch operation cannot be
+partial (either success or failure). The
+<I>ecb</I>
+
+parameter contain the callabck (see above for description) used by the binary
+patch algorithm to emit the result file. The function returns 0 if succeeded
+or -1 if an error occurred during the patch operation.
+<P>
+</DL>
+<A NAME="lbAF">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+Two papers drove the content of this library and these are :
+<BR>
+
+<DL COMPACT>
+<DT>o<DD>
+<I>File System Support for Delta Compression</I> by <I>Joshua P. MacDonald</I>
+
+<B><A HREF="http://www.xmailserver.org/xdfs.pdf">http://www.xmailserver.org/xdfs.pdf</A></B>
+
+<BR>
+
+<DT>o<DD>
+<I>Fingerprinting by Random Polynomials</I> by <I>Michael O. Rabin</I>
+
+<B><A HREF="http://www.xmailserver.org/rabin.pdf">http://www.xmailserver.org/rabin.pdf</A></B>
+
+<BR>
+
+<DT>o<DD>
+<I>An O(ND) Difference Algorithm and Its Variations</I> by <I>Eugene W. Myers</I>
+
+<B><A HREF="http://www.xmailserver.org/diff2.pdf">http://www.xmailserver.org/diff2.pdf</A></B>
+
+</DL>
+<P>
+
+<P>
+Also usefull information can be looked up inside the
+<B>diffutil</B>
+
+GNU package :
+<P>
+<B><A HREF="http://www.gnu.org/software/diffutils/diffutils.html">http://www.gnu.org/software/diffutils/diffutils.html</A></B>
+
+<P>
+<A NAME="lbAG">&nbsp;</A>
+<H2>LICENSE</H2>
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+A copy of the license is available at :
+<P>
+<B><A HREF="http://www.gnu.org/copyleft/lesser.html">http://www.gnu.org/copyleft/lesser.html</A></B>
+
+<P>
+<A NAME="lbAH">&nbsp;</A>
+<H2>AUTHOR</H2>
+
+Developed by Davide Libenzi
+&lt;<B><A HREF="mailto:davidel@xmailserver.org">davidel@xmailserver.org</A></B>&gt;
+
+<P>
+<A NAME="lbAI">&nbsp;</A>
+<H2>AVAILABILITY</H2>
+
+The latest version of
+<B>LibXDiff</B>
+
+can be found at :
+<P>
+<B><A HREF="http://www.xmailserver.org/xdiff-lib.html">http://www.xmailserver.org/xdiff-lib.html</A></B>
+
+<P>
+<A NAME="lbAJ">&nbsp;</A>
+<H2>BUGS</H2>
+
+There are no known bugs.  Bug reports and comments to Davide Libenzi
+&lt;<B><A HREF="mailto:davidel@xmailserver.org">davidel@xmailserver.org</A></B>&gt;
+
+<P>
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DL>
+<DT><A HREF="#lbAE">Functions</A><DD>
+</DL>
+<DT><A HREF="#lbAF">SEE ALSO</A><DD>
+<DT><A HREF="#lbAG">LICENSE</A><DD>
+<DT><A HREF="#lbAH">AUTHOR</A><DD>
+<DT><A HREF="#lbAI">AVAILABILITY</A><DD>
+<DT><A HREF="#lbAJ">BUGS</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:26:59 GMT, November 12, 2008
+</BODY>
+</HTML>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_WMGOTO</class>
+<widget class="QDialog" name="IDD_WMGOTO">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>420</width><height>160</height></rect></property>
+<property name="windowTitle"><string>"Go To"
+</string></property>
+<widget class="QGroupBox" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>54</y><width>114</width><height>90</height></rect></property>
+<property name="title"><string>File</string></property>
+<widget class="QRadioButton" name="IDC_WMGOTO_FILELEFT">
+<property name="geometry">
+<rect><x>12</x><y>22</y><width>96</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Left</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_WMGOTO_FILEMIDDLE">
+<property name="geometry">
+<rect><x>12</x><y>42</y><width>94</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Middle</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_WMGOTO_FILERIGHT">
+<property name="geometry">
+<rect><x>12</x><y>62</y><width>94</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Right</string></property>
+</widget>
+</widget>
+<widget class="QGroupBox" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>138</x><y>54</y><width>156</width><height>90</height></rect></property>
+<property name="title"><string>Goto what</string></property>
+<widget class="QRadioButton" name="IDC_WMGOTO_TOLINE">
+<property name="geometry">
+<rect><x>14</x><y>22</y><width>136</width><height>20</height></rect></property>
+<property name="text"><string>Li&amp;ne</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_WMGOTO_TODIFF">
+<property name="geometry">
+<rect><x>14</x><y>42</y><width>136</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Difference</string></property>
+</widget>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>18</y><width>72</width><height>20</height></rect></property>
+<property name="text"><string>G&amp;oto:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QTextEdit" name="IDC_WMGOTO_PARAM">
+<property name="geometry">
+<rect><x>90</x><y>14</y><width>204</width><height>28</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+<widget class="QPushButton" name="IDOK">
+<property name="geometry">
+<rect><x>306</x><y>14</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Go To</string></property>
+</widget>
+<widget class="QPushButton" name="IDCANCEL">
+<property name="geometry">
+<rect><x>306</x><y>48</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Cancel</string></property>
+</widget>
+</widget><resources/><connections/></ui>

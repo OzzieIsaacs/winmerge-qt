@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_EDIT_REPLACE</class>
+<widget class="QDialog" name="IDD_EDIT_REPLACE">
+<property name="geometry">
+<rect><x>72</x><y>88</y>
+<width>648</width><height>192</height></rect></property>
+<property name="windowTitle"><string>"Replace"
+</string></property>
+<widget class="QGroupBox" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>298</x><y>80</y><width>180</width><height>72</height></rect></property>
+<property name="title"><string>Replace in</string></property>
+<widget class="QRadioButton" name="IDC_EDIT_SCOPE_SELECTION">
+<property name="geometry">
+<rect><x>10</x><y>22</y><width>160</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Selection</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_EDIT_SCOPE_WHOLE_FILE">
+<property name="geometry">
+<rect><x>10</x><y>42</y><width>160</width><height>20</height></rect></property>
+<property name="text"><string>Wh&amp;ole file</string></property>
+</widget>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>18</y><width>140</width><height>20</height></rect></property>
+<property name="text"><string>Fi&amp;nd what:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_EDIT_FINDTEXT">
+<property name="geometry">
+<rect><x>160</x><y>14</y><width>320</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>48</y><width>140</width><height>20</height></rect></property>
+<property name="text"><string>Re&amp;place with:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_EDIT_REPLACE_WITH">
+<property name="geometry">
+<rect><x>160</x><y>44</y><width>320</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QCheckBox" name="IDC_EDIT_WHOLE_WORD">
+<property name="geometry">
+<rect><x>14</x><y>84</y><width>280</width><height>20</height></rect></property>
+<property name="text"><string>Match &amp;whole word only</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_EDIT_MATCH_CASE">
+<property name="geometry">
+<rect><x>14</x><y>108</y><width>280</width><height>20</height></rect></property>
+<property name="text"><string>Match &amp;case</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_EDIT_REGEXP">
+<property name="geometry">
+<rect><x>14</x><y>132</y><width>280</width><height>20</height></rect></property>
+<property name="text"><string>Regular &amp;expression</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_EDIT_SCOPE_DONT_WRAP">
+<property name="geometry">
+<rect><x>14</x><y>156</y><width>280</width><height>32</height></rect></property>
+<property name="text"><string>&amp;Don't wrap end of file</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_EDIT_SKIP">
+<property name="geometry">
+<rect><x>494</x><y>14</y><width>140</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Find Next</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_EDIT_REPLACE">
+<property name="geometry">
+<rect><x>494</x><y>48</y><width>140</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Replace</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_EDIT_REPLACE_ALL">
+<property name="geometry">
+<rect><x>494</x><y>82</y><width>140</width><height>28</height></rect></property>
+<property name="text"><string>Replace &amp;All</string></property>
+</widget>
+<widget class="QPushButton" name="IDCANCEL">
+<property name="geometry">
+<rect><x>494</x><y>116</y><width>140</width><height>28</height></rect></property>
+<property name="text"><string>Cancel</string></property>
+</widget>
+</widget><resources/><connections/></ui>

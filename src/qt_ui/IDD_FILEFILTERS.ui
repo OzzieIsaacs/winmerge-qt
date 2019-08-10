@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_FILEFILTERS</class>
+<widget class="QDialog" name="IDD_FILEFILTERS">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>712</width><height>270</height></rect></property>
+<property name="windowTitle"><string>"Filefilters"
+</string></property>
+<widget class="QPushButton" name="IDC_FILTERFILE_TEST_BTN">
+<property name="geometry">
+<rect><x>14</x><y>228</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Test</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_FILTERFILE_INSTALL">
+<property name="geometry">
+<rect><x>274</x><y>228</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Install...</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_FILTERFILE_NEWBTN">
+<property name="geometry">
+<rect><x>384</x><y>228</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>New...</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_FILTERFILE_EDITBTN">
+<property name="geometry">
+<rect><x>492</x><y>228</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Edit...</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_FILTERFILE_DELETEBTN">
+<property name="geometry">
+<rect><x>600</x><y>228</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Delete...</string></property>
+</widget>
+</widget><resources/><connections/></ui>

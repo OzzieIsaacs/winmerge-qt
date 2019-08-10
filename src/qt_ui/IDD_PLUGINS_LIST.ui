@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_PLUGINS_LIST</class>
+<widget class="QDialog" name="IDD_PLUGINS_LIST">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>740</width><height>422</height></rect></property>
+<property name="windowTitle"><string>"Plugins"
+</string></property>
+<widget class="QCheckBox" name="IDC_PLUGINS_ENABLE">
+<property name="geometry">
+<rect><x>14</x><y>14</y><width>532</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Enable plugins</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_PLUGIN_SETTINGS">
+<property name="geometry">
+<rect><x>340</x><y>380</y><width>150</width><height>28</height></rect></property>
+<property name="text"><string>P&amp;lugin Settings...</string></property>
+</widget>
+<widget class="QPushButton" name="IDOK">
+<property name="geometry">
+<rect><x>508</x><y>380</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>OK</string></property>
+</widget>
+<widget class="QPushButton" name="IDCANCEL">
+<property name="geometry">
+<rect><x>626</x><y>380</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Cancel</string></property>
+</widget>
+</widget><resources/><connections/></ui>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_SAVECLOSING</class>
+<widget class="QDialog" name="IDD_SAVECLOSING">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>524</width><height>434</height></rect></property>
+<property name="windowTitle"><string>"Save modified files?"
+</string></property>
+<widget class="QGroupBox" name="IDC_SAVECLOSING_LEFTFRAME">
+<property name="geometry">
+<rect><x>14</x><y>14</y><width>496</width><height>110</height></rect></property>
+<property name="title"><string>Left side file</string></property>
+<widget class="QTextEdit" name="IDC_SAVECLOSING_LEFTFILE">
+<property name="geometry">
+<rect><x>18</x><y>24</y><width>460</width><height>28</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+<widget class="QRadioButton" name="IDC_SAVECLOSING_SAVELEFT">
+<property name="geometry">
+<rect><x>18</x><y>58</y><width>460</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Save changes</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_SAVECLOSING_DISCARDLEFT">
+<property name="geometry">
+<rect><x>18</x><y>78</y><width>460</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Discard changes</string></property>
+</widget>
+</widget>
+<widget class="QGroupBox" name="IDC_SAVECLOSING_MIDDLEFRAME">
+<property name="geometry">
+<rect><x>14</x><y>140</y><width>496</width><height>110</height></rect></property>
+<property name="title"><string>Middle side file</string></property>
+<widget class="QTextEdit" name="IDC_SAVECLOSING_MIDDLEFILE">
+<property name="geometry">
+<rect><x>18</x><y>24</y><width>460</width><height>28</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+<widget class="QRadioButton" name="IDC_SAVECLOSING_SAVEMIDDLE">
+<property name="geometry">
+<rect><x>18</x><y>58</y><width>460</width><height>20</height></rect></property>
+<property name="text"><string>Sa&amp;ve changes</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_SAVECLOSING_DISCARDMIDDLE">
+<property name="geometry">
+<rect><x>18</x><y>78</y><width>460</width><height>20</height></rect></property>
+<property name="text"><string>Disca&amp;rd changes</string></property>
+</widget>
+</widget>
+<widget class="QGroupBox" name="IDC_SAVECLOSING_RIGHTFRAME">
+<property name="geometry">
+<rect><x>14</x><y>266</y><width>496</width><height>110</height></rect></property>
+<property name="title"><string>Right side file</string></property>
+<widget class="QTextEdit" name="IDC_SAVECLOSING_RIGHTFILE">
+<property name="geometry">
+<rect><x>18</x><y>24</y><width>460</width><height>28</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+<widget class="QRadioButton" name="IDC_SAVECLOSING_SAVERIGHT">
+<property name="geometry">
+<rect><x>18</x><y>58</y><width>460</width><height>20</height></rect></property>
+<property name="text"><string>S&amp;ave changes</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_SAVECLOSING_DISCARDRIGHT">
+<property name="geometry">
+<rect><x>18</x><y>78</y><width>460</width><height>20</height></rect></property>
+<property name="text"><string>Dis&amp;card changes</string></property>
+</widget>
+</widget>
+<widget class="QPushButton" name="IDC_SAVECLOSING_DISCARDALL">
+<property name="geometry">
+<rect><x>14</x><y>390</y><width>150</width><height>28</height></rect></property>
+<property name="text"><string>Disca&amp;rd All</string></property>
+</widget>
+<widget class="QPushButton" name="IDOK">
+<property name="geometry">
+<rect><x>298</x><y>390</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>OK</string></property>
+</widget>
+<widget class="QPushButton" name="IDCANCEL">
+<property name="geometry">
+<rect><x>410</x><y>390</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Cancel</string></property>
+</widget>
+</widget><resources/><connections/></ui>

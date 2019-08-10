@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_PROPPAGE_COLORS_TEXT</class>
+<widget class="QDialog" name="IDD_PROPPAGE_COLORS_TEXT">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>510</width><height>314</height></rect></property>
+<property name="windowTitle"><string>Dialog</string></property>
+<widget class="QGroupBox" name="IDC_CUSTOM_COLORS_GROUP">
+<property name="geometry">
+<rect><x>54</x><y>66</y><width>318</width><height>222</height></rect></property>
+<property name="title"><string>Custom text colors</string></property>
+<widget class="QLabel" name="IDC_WHITESPACE_COLOR_LABEL">
+<property name="geometry">
+<rect><x>6</x><y>54</y><width>92</width><height>20</height></rect></property>
+<property name="text"><string>Whitespace:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_TEXT_COLOR_LABEL">
+<property name="geometry">
+<rect><x>6</x><y>90</y><width>122</width><height>20</height></rect></property>
+<property name="text"><string>Regular text:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_SELECTION_COLOR_LABEL">
+<property name="geometry">
+<rect><x>6</x><y>126</y><width>122</width><height>20</height></rect></property>
+<property name="text"><string>Selection:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_BACKGROUND_COLUMN_LABEL">
+<property name="geometry">
+<rect><x>138</x><y>22</y><width>100</width><height>20</height></rect></property>
+<property name="text"><string>Background</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_TEXT_COLUMN_LABEL">
+<property name="geometry">
+<rect><x>236</x><y>22</y><width>58</width><height>20</height></rect></property>
+<property name="text"><string>Text</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QPushButton" name="IDC_WHITESPACE_BKGD_COLOR">
+<property name="geometry">
+<rect><x>172</x><y>54</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QPushButton" name="IDC_REGULAR_BKGD_COLOR">
+<property name="geometry">
+<rect><x>172</x><y>90</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QPushButton" name="IDC_SELECTION_BKGD_COLOR">
+<property name="geometry">
+<rect><x>172</x><y>126</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QPushButton" name="IDC_SELECTION_TEXT_COLOR">
+<property name="geometry">
+<rect><x>256</x><y>126</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QPushButton" name="IDC_REGULAR_TEXT_COLOR">
+<property name="geometry">
+<rect><x>256</x><y>90</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QLabel" name="IDC_MARGIN_COLOR_LABEL">
+<property name="geometry">
+<rect><x>6</x><y>162</y><width>122</width><height>20</height></rect></property>
+<property name="text"><string>Margin:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QPushButton" name="IDC_MARGIN_BKGD_COLOR">
+<property name="geometry">
+<rect><x>172</x><y>162</y><width>34</width><height>28</height></rect></property>
+</widget>
+</widget>
+<widget class="QCheckBox" name="IDC_DEFAULT_STANDARD_COLORS">
+<property name="geometry">
+<rect><x>50</x><y>28</y><width>322</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Use customized text colors</string></property>
+</widget>
+</widget><resources/><connections/></ui>

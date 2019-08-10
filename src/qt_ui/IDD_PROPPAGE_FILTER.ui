@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_PROPPAGE_FILTER</class>
+<widget class="QDialog" name="IDD_PROPPAGE_FILTER">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>730</width><height>376</height></rect></property>
+<property name="windowTitle"><string>Linefilters</string></property>
+<widget class="QCheckBox" name="IDC_IGNOREREGEXP">
+<property name="geometry">
+<rect><x>14</x><y>14</y><width>702</width><height>30</height></rect></property>
+<property name="text"><string>Enable Line Filters</string></property>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>56</y><width>702</width><height>20</height></rect></property>
+<property name="text"><string>Regular Expressions (one per line):</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QPushButton" name="IDC_LFILTER_ADDBTN">
+<property name="geometry">
+<rect><x>14</x><y>334</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>New</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_LFILTER_EDITBTN">
+<property name="geometry">
+<rect><x>124</x><y>334</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Edit</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_LFILTER_REMOVEBTN">
+<property name="geometry">
+<rect><x>232</x><y>334</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Remove</string></property>
+</widget>
+</widget><resources/><connections/></ui>

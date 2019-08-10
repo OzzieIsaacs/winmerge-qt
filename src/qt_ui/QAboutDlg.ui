@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QAboutDlg</class>
+ <widget class="QDialog" name="QAboutDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>564</width>
+    <height>436</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>&quot;About WinMerge&quot;
+</string>
+  </property>
+  <widget class="QLabel" name="IDC_ABOUTBOX_ICON">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>550</width>
+     <height>430</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhMultiLine</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="IDC_STATIC">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>120</y>
+     <width>400</width>
+     <height>240</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhMultiLine</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="IDC_VERSION">
+   <property name="geometry">
+    <rect>
+     <x>355</x>
+     <y>295</y>
+     <width>161</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhMultiLine</set>
+   </property>
+   <property name="text">
+    <string>Version 1.0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="IDC_COMPANY">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>310</y>
+     <width>520</width>
+     <height>84</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhMultiLine</set>
+   </property>
+   <property name="text">
+    <string>[VERSION COPYRIGHT GOES HERE]</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="IDOK">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>400</y>
+     <width>130</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="IDC_OPEN_CONTRIBUTORS">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>400</y>
+     <width>130</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Contributors</string>
+   </property>
+  </widget>
+  <widget class="qlabelclick" name="IDC_WWW">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>404</y>
+     <width>220</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Visit the WinMerge HomePage!</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

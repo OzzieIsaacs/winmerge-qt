@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QPreferencesDlg</class>
+ <widget class="QDialog" name="QPreferencesDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>757</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>&quot;Options&quot;
+</string>
+  </property>
+  <widget class="QPushButton" name="IDOK">
+   <property name="geometry">
+    <rect>
+     <x>414</x>
+     <y>514</y>
+     <width>100</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="IDCANCEL">
+   <property name="geometry">
+    <rect>
+     <x>522</x>
+     <y>514</y>
+     <width>100</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="IDC_TREEOPT_HELP">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>514</y>
+     <width>100</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="IDC_CATEGORIES">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>14</y>
+     <width>192</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhMultiLine</set>
+   </property>
+   <property name="text">
+    <string> Categories</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="IDC_TREEOPT_IMPORT">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>514</y>
+     <width>100</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Import...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="IDC_TREEOPT_EXPORT">
+   <property name="geometry">
+    <rect>
+     <x>124</x>
+     <y>514</y>
+     <width>100</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Export...</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="IDPROPLIST">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>191</width>
+     <height>441</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="IDOPTIONWIDGET">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>20</y>
+     <width>521</width>
+     <height>461</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

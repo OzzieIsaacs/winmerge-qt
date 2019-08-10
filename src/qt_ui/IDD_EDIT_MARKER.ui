@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_EDIT_MARKER</class>
+<widget class="QDialog" name="IDD_EDIT_MARKER">
+<property name="geometry">
+<rect><x>60</x><y>146</y>
+<width>592</width><height>348</height></rect></property>
+<property name="windowTitle"><string>"Markers"
+</string></property>
+<widget class="QCheckBox" name="IDC_EDIT_MARKERS_ENABLED">
+<property name="geometry">
+<rect><x>12</x><y>8</y><width>270</width><height>20</height></rect></property>
+<property name="text"><string>Enable &amp;Markers</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_EDIT_MARKER_NEW">
+<property name="geometry">
+<rect><x>480</x><y>30</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>New</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_EDIT_MARKER_DELETE">
+<property name="geometry">
+<rect><x>480</x><y>60</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Delete</string></property>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>176</y><width>136</width><height>20</height></rect></property>
+<property name="text"><string>Fi&amp;nd what:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_EDIT_FINDTEXT">
+<property name="geometry">
+<rect><x>156</x><y>172</y><width>320</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>202</y><width>136</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Background color:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_EDIT_MARKER_BGCOLORIDX">
+<property name="geometry">
+<rect><x>156</x><y>202</y><width>320</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QCheckBox" name="IDC_EDIT_WHOLE_WORD">
+<property name="geometry">
+<rect><x>14</x><y>232</y><width>270</width><height>20</height></rect></property>
+<property name="text"><string>Match &amp;whole word only</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_EDIT_MATCH_CASE">
+<property name="geometry">
+<rect><x>14</x><y>252</y><width>270</width><height>20</height></rect></property>
+<property name="text"><string>Match &amp;case</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_EDIT_REGEXP">
+<property name="geometry">
+<rect><x>14</x><y>272</y><width>270</width><height>20</height></rect></property>
+<property name="text"><string>Regular &amp;expression</string></property>
+</widget>
+<widget class="QPushButton" name="IDOK">
+<property name="geometry">
+<rect><x>276</x><y>308</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Ok</string></property>
+</widget>
+<widget class="QPushButton" name="ID_APPLY_NOW">
+<property name="geometry">
+<rect><x>378</x><y>308</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Apply</string></property>
+</widget>
+<widget class="QPushButton" name="IDCANCEL">
+<property name="geometry">
+<rect><x>480</x><y>308</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Cancel</string></property>
+</widget>
+</widget><resources/><connections/></ui>

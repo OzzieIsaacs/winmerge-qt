@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_GENERATE_PATCH</class>
+<widget class="QDialog" name="IDD_GENERATE_PATCH">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>680</width><height>380</height></rect></property>
+<property name="windowTitle"><string>"Patch Generator"
+</string></property>
+<widget class="QGroupBox" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>162</y><width>284</width><height>92</height></rect></property>
+<property name="title"><string>&amp;Format</string></property>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>12</x><y>28</y><width>92</width><height>20</height></rect></property>
+<property name="text"><string>St&amp;yle:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_DIFF_STYLE">
+<property name="geometry">
+<rect><x>112</x><y>22</y><width>160</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>12</x><y>56</y><width>92</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Context:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_DIFF_CONTEXT">
+<property name="geometry">
+<rect><x>112</x><y>54</y><width>160</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+</widget>
+<widget class="QGroupBox" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>310</x><y>162</y><width>246</width><height>92</height></rect></property>
+<property name="title"><string>W&amp;hitespaces</string></property>
+<widget class="QRadioButton" name="IDC_DIFF_WHITESPACE_COMPARE">
+<property name="geometry">
+<rect><x>14</x><y>22</y><width>220</width><height>20</height></rect></property>
+<property name="text"><string>Com&amp;pare</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_DIFF_WHITESPACE_IGNORE">
+<property name="geometry">
+<rect><x>14</x><y>42</y><width>220</width><height>20</height></rect></property>
+<property name="text"><string>I&amp;gnore changes</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_DIFF_WHITESPACE_IGNOREALL">
+<property name="geometry">
+<rect><x>14</x><y>62</y><width>220</width><height>20</height></rect></property>
+<property name="text"><string>Ig&amp;nore all</string></property>
+</widget>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>20</y><width>72</width><height>20</height></rect></property>
+<property name="text"><string>File&amp;1:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_DIFF_FILE1">
+<property name="geometry">
+<rect><x>96</x><y>14</y><width>460</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QPushButton" name="IDC_DIFF_BROWSE_FILE1">
+<property name="geometry">
+<rect><x>566</x><y>14</y><width>104</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Browse...</string></property>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>54</y><width>72</width><height>20</height></rect></property>
+<property name="text"><string>File&amp;2:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_DIFF_FILE2">
+<property name="geometry">
+<rect><x>96</x><y>48</y><width>460</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QPushButton" name="IDC_DIFF_BROWSE_FILE2">
+<property name="geometry">
+<rect><x>566</x><y>48</y><width>104</width><height>28</height></rect></property>
+<property name="text"><string>Br&amp;owse...</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_DIFF_SWAPFILES">
+<property name="geometry">
+<rect><x>566</x><y>82</y><width>104</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Swap</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_DIFF_APPENDFILE">
+<property name="geometry">
+<rect><x>96</x><y>102</y><width>460</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Append to existing file</string></property>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>132</y><width>74</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Result:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_DIFF_FILERESULT">
+<property name="geometry">
+<rect><x>96</x><y>126</y><width>460</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QPushButton" name="IDC_DIFF_BROWSE_RESULT">
+<property name="geometry">
+<rect><x>566</x><y>126</y><width>104</width><height>28</height></rect></property>
+<property name="text"><string>Bro&amp;wse...</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_DIFF_WHITESPACE_IGNOREBLANKS">
+<property name="geometry">
+<rect><x>14</x><y>268</y><width>284</width><height>20</height></rect></property>
+<property name="text"><string>Ignor&amp;e blank lines</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_DIFF_CASESENSITIVE">
+<property name="geometry">
+<rect><x>14</x><y>290</y><width>284</width><height>20</height></rect></property>
+<property name="text"><string>Case sensi&amp;tive</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_DIFF_IGNOREEOL">
+<property name="geometry">
+<rect><x>14</x><y>312</y><width>442</width><height>20</height></rect></property>
+<property name="text"><string>Igno&amp;re carriage return differences (Windows/Unix/Mac)</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_DIFF_INCLCMDLINE">
+<property name="geometry">
+<rect><x>310</x><y>268</y><width>340</width><height>20</height></rect></property>
+<property name="text"><string>Inclu&amp;de command line</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_DIFF_OPENTOEDITOR">
+<property name="geometry">
+<rect><x>310</x><y>290</y><width>340</width><height>20</height></rect></property>
+<property name="text"><string>Open to e&amp;xternal editor</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_DIFF_DEFAULTS">
+<property name="geometry">
+<rect><x>14</x><y>340</y><width>140</width><height>28</height></rect></property>
+<property name="text"><string>Defaults</string></property>
+</widget>
+<widget class="QPushButton" name="IDOK">
+<property name="geometry">
+<rect><x>460</x><y>340</y><width>104</width><height>28</height></rect></property>
+<property name="text"><string>OK</string></property>
+</widget>
+<widget class="QPushButton" name="IDCANCEL">
+<property name="geometry">
+<rect><x>566</x><y>340</y><width>104</width><height>28</height></rect></property>
+<property name="text"><string>Cancel</string></property>
+</widget>
+</widget><resources/><connections/></ui>

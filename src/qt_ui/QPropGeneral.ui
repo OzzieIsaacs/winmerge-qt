@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QPropGeneral</class>
+ <widget class="QDialog" name="QPropGeneral">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>510</width>
+    <height>444</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>General</string>
+  </property>
+  <widget class="QCheckBox" name="IDC_SCROLL_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>12</y>
+     <width>480</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Automatically &amp;scroll to first difference</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="IDC_ESC_CLOSES_WINDOW">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>36</y>
+     <width>480</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cl&amp;ose windows with ESC</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="IDC_VERIFY_OPEN_PATHS">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>60</y>
+     <width>480</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;Automatically verify paths in Open-dialog</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="IDC_SINGLE_INSTANCE">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>84</y>
+     <width>480</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>All&amp;ow only one instance to run</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="IDC_ASK_MULTIWINDOW_CLOSE">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>108</y>
+     <width>480</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>As&amp;k when closing multiple windows</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="IDC_PRESERVE_FILETIME">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>132</y>
+     <width>480</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;Preserve file time in file compare</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="IDC_STARTUP_FOLDER_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>156</y>
+     <width>480</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Show &quot;&quot;Select Files or Folders&quot;&quot; Dialog on Startup</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="IDC_CLOSE_WITH_OK">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>180</y>
+     <width>480</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close &quot;&quot;Select Files or Folders&quot;&quot; Dialog on clicking OK button</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="IDC_AUTOCOMPLETE">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>220</y>
+     <width>480</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhMultiLine</set>
+   </property>
+   <property name="text">
+    <string>O&amp;pen-dialog Auto-Completion:</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="IDC_AUTO_COMPLETE_SOURCE">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>244</y>
+     <width>75</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QComboBox::AdjustToContents</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="IDC_LANGUAGE">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>280</y>
+     <width>160</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhMultiLine</set>
+   </property>
+   <property name="text">
+    <string>Language:</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="IDC_LANGUAGE_LIST">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>304</y>
+     <width>75</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QComboBox::AdjustToContents</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

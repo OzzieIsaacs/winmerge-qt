@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_CONFIRM_COPY</class>
+<widget class="QDialog" name="IDD_CONFIRM_COPY">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>570</width><height>200</height></rect></property>
+<property name="windowTitle"><string>"Confirm Copy"
+</string></property>
+<widget class="QLabel" name="IDC_FLDCONFIRM_QUERY">
+<property name="geometry">
+<rect><x>90</x><y>14</y><width>466</width><height>20</height></rect></property>
+<property name="text"><string>Are you sure you want to copy XXX items?</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_FLDCONFIRM_FROM_TEXT">
+<property name="geometry">
+<rect><x>92</x><y>38</y><width>462</width><height>20</height></rect></property>
+<property name="text"><string>From left</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QTextEdit" name="IDC_FLDCONFIRM_FROM_PATH">
+<property name="geometry">
+<rect><x>90</x><y>58</y><width>466</width><height>28</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+<widget class="QLabel" name="IDC_FLDCONFIRM_TO_TEXT">
+<property name="geometry">
+<rect><x>92</x><y>96</y><width>460</width><height>20</height></rect></property>
+<property name="text"><string>To right</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QTextEdit" name="IDC_FLDCONFIRM_TO_PATH">
+<property name="geometry">
+<rect><x>92</x><y>116</y><width>464</width><height>28</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+<widget class="QPushButton" name="IDYES">
+<property name="geometry">
+<rect><x>348</x><y>158</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Yes</string></property>
+</widget>
+<widget class="QPushButton" name="IDNO">
+<property name="geometry">
+<rect><x>456</x><y>158</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>No</string></property>
+</widget>
+</widget><resources/><connections/></ui>

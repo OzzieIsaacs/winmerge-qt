@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_TEST_FILTER</class>
+<widget class="QDialog" name="IDD_TEST_FILTER">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>498</width><height>284</height></rect></property>
+<property name="windowTitle"><string>"Test Filter"
+</string></property>
+<widget class="QLabel" name="IDC_HEADER">
+<property name="geometry">
+<rect><x>14</x><y>14</y><width>180</width><height>20</height></rect></property>
+<property name="text"><string>Testing filter ...</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_HEADER_FILTER_NAME">
+<property name="geometry">
+<rect><x>200</x><y>12</y><width>284</width><height>20</height></rect></property>
+<property name="text"><string>(filter name)</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_PROMPT_LABEL">
+<property name="geometry">
+<rect><x>14</x><y>42</y><width>180</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Enter text to test:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QTextEdit" name="IDC_TEST_TEXT">
+<property name="geometry">
+<rect><x>200</x><y>38</y><width>284</width><height>24</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+<widget class="QCheckBox" name="IDC_IS_DIRECTORY">
+<property name="geometry">
+<rect><x>14</x><y>72</y><width>184</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Folder Name</string></property>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>98</y><width>68</width><height>20</height></rect></property>
+<property name="text"><string>Result:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QTextEdit" name="IDC_RESULTS">
+<property name="geometry">
+<rect><x>14</x><y>118</y><width>470</width><height>114</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+<widget class="QPushButton" name="IDC_TEST_BTN">
+<property name="geometry">
+<rect><x>266</x><y>242</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Test</string></property>
+</widget>
+<widget class="QPushButton" name="IDCANCEL">
+<property name="geometry">
+<rect><x>384</x><y>242</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Close</string></property>
+</widget>
+</widget><resources/><connections/></ui>

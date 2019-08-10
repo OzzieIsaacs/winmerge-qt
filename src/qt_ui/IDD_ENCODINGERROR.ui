@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_ENCODINGERROR</class>
+<widget class="QDialog" name="IDD_ENCODINGERROR">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>900</width><height>110</height></rect></property>
+<property name="windowTitle"><string>IDD_ENCODINGERROR</string></property>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>18</y><width>600</width><height>36</height></rect></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QPushButton" name="IDOK">
+<property name="geometry">
+<rect><x>776</x><y>58</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>OK</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_FILEENCODING">
+<property name="geometry">
+<rect><x>14</x><y>58</y><width>240</width><height>28</height></rect></property>
+<property name="text"><string>&amp;File Encoding...</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_PLUGIN">
+<property name="geometry">
+<rect><x>268</x><y>58</y><width>240</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Edit with Unpacker...</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_HEXVIEW">
+<property name="geometry">
+<rect><x>522</x><y>58</y><width>240</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Hex View</string></property>
+</widget>
+</widget><resources/><connections/></ui>

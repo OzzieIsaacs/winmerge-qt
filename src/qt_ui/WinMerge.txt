@@ -1,0 +1,105 @@
+﻿WinMerge configuration log
+--------------------------
+Saved to: D:\Desktop\WinMerge\WinMerge.txt
+* Please add this information (or attach this file)
+* when reporting bugs.
+Module names prefixed with tilda (~) are currently loaded in WinMerge process.
+
+
+Version information:
+ WinMerge.exe: 2.14.0.0
+ Build config:  UNICODE  _UNICODE 
+ Command Line:  none
+ Windows: [? WindowsNT 6.2] Professional  (Build 9200)
+~COMCTL32.dll         dllversion=6.16 dllbuild=10586
+~shlwapi.dll          dllversion=10.00 dllbuild=10586
+~MergeLang.dll        version=2.14 build=0000
+ ShellExtension.dll   version=0.00 build=0000
+ ShellExtensionU.dll  version=0.00 build=0000
+ ShellExtensionX64.dll version=1.16 build=0008
+
+WinMerge configuration:
+ Compare settings:
+  Ignore blank lines: No
+  Ignore case: No
+  Ignore carriage return differences: Yes
+  Whitespace compare: Compare all
+  Detect moved blocks: No
+  Compare method: 0
+  Stop after first diff: No
+
+ Other settings:
+  Automatic rescan: No
+  Simple EOL: Yes
+  Automatic scroll to 1st difference: No
+  Backup original file: No
+
+ Folder compare:
+  Identical files: No
+  Different files: Yes
+  Left Unique files: No
+  Right Unique files: Yes
+  Binary files: No
+  Skipped files: No
+  Tree-mode enabled: No
+
+ File compare:
+  Preserve filetimes: No
+  Match similar lines: Yes
+
+ Editor settings:
+  View Whitespace: No
+  Merge Mode enabled: No
+  Show linenumbers: No
+  Wrap lines: No
+  Syntax Highlight: Yes
+  Tab size: 4
+  Insert tabs: Yes
+
+ Font:
+  Font facename: Courier New
+  Font charset: 0 (Ansi)
+
+System settings:
+ codepage settings:
+  ANSI codepage: 1252
+  OEM codepage: 850
+ Locale (Thread):
+  Def ANSI codepage: 1252
+  Def OEM codepage: 850
+  Country: Germany
+  Language: German
+  Language code: 0407
+  ISO Language code: de
+ Locale (User):
+  Def ANSI codepage: 1252
+  Def OEM codepage: 850
+  Country: Germany
+  Language: German
+  Language code: 0407
+  ISO Language code: de
+ Locale (System):
+  Def ANSI codepage: 1252
+  Def OEM codepage: 850
+  Country: Germany
+  Language: German
+  Language code: 0407
+  ISO Language code: de
+ Detect codepage automatically for RC and HTML files: Yes
+ unicoder codepage: 1252
+
+Plugins:
+ Plugins enabled: No
+ Unpackers: 
+ Prediffers: 
+ Editor scripts: 
+
+Archive support:
+ Enable: 1
+ 7-Zip software installed on your computer: 0.00
+  Codecs:
+  Formats:
+ 7-Zip components for standalone operation: 0.00
+  Codecs:
+  Formats:
+ Merge7z plugins on path:

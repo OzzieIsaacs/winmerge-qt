@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>QPropBackups</class>
+<widget class="QDialog" name="QPropBackups">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>510</width><height>444</height></rect></property>
+<property name="windowTitle"><string>Backup Files</string></property>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>12</y><width>444</width><height>20</height></rect></property>
+<property name="text"><string>Create backup files in:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QCheckBox" name="IDC_BACKUP_FOLDERCMP">
+<property name="geometry">
+<rect><x>34</x><y>36</y><width>424</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Folder compare</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_BACKUP_FILECMP">
+<property name="geometry">
+<rect><x>34</x><y>60</y><width>424</width><height>20</height></rect></property>
+<property name="text"><string>Fil&amp;e compare</string></property>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>84</y><width>444</width><height>20</height></rect></property>
+<property name="text"><string>Create backup files into:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QRadioButton" name="IDC_BACKUP_ORIGFOLD">
+<property name="geometry">
+<rect><x>34</x><y>108</y><width>424</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Original file's folder</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_BACKUP_GLOBALFOLD">
+<property name="geometry">
+<rect><x>34</x><y>132</y><width>424</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Global backup folder:</string></property>
+</widget>
+<widget class="QTextEdit" name="IDC_BACKUP_FOLDER">
+<property name="geometry">
+<rect><x>58</x><y>156</y><width>330</width><height>28</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+<widget class="QPushButton" name="IDC_BACKUP_BROWSE">
+<property name="geometry">
+<rect><x>398</x><y>156</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Browse...</string></property>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>192</y><width>444</width><height>20</height></rect></property>
+<property name="text"><string>Backup filename:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QCheckBox" name="IDC_BACKUP_APPEND_BAK">
+<property name="geometry">
+<rect><x>34</x><y>216</y><width>424</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Append .bak -extension</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_BACKUP_APPEND_TIME">
+<property name="geometry">
+<rect><x>34</x><y>240</y><width>424</width><height>20</height></rect></property>
+<property name="text"><string>A&amp;ppend timestamp</string></property>
+</widget>
+</widget><resources/><connections/></ui>

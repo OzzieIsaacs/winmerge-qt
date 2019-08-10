@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_PROPPAGE_COLORS_MARKER</class>
+<widget class="QDialog" name="IDD_PROPPAGE_COLORS_MARKER">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>510</width><height>314</height></rect></property>
+<property name="windowTitle"><string>Dialog</string></property>
+<widget class="QGroupBox" name="IDC_MARKER_COLORS_GROUP">
+<property name="geometry">
+<rect><x>54</x><y>66</y><width>318</width><height>222</height></rect></property>
+<property name="title"><string>Marker colors</string></property>
+<widget class="QLabel" name="IDC_MARKER0_COLOR_LABEL">
+<property name="geometry">
+<rect><x>6</x><y>54</y><width>132</width><height>20</height></rect></property>
+<property name="text"><string>Search Marker:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_MARKER1_COLOR_LABEL">
+<property name="geometry">
+<rect><x>6</x><y>90</y><width>158</width><height>20</height></rect></property>
+<property name="text"><string>User Defined Marker1:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_MARKER2_COLOR_LABEL">
+<property name="geometry">
+<rect><x>6</x><y>126</y><width>158</width><height>20</height></rect></property>
+<property name="text"><string>User Defined Marker2:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_MARKER3_COLOR_LABEL">
+<property name="geometry">
+<rect><x>6</x><y>162</y><width>158</width><height>20</height></rect></property>
+<property name="text"><string>User Defined Marker3:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_BACKGROUND_COLUMN_LABEL">
+<property name="geometry">
+<rect><x>138</x><y>22</y><width>100</width><height>20</height></rect></property>
+<property name="text"><string>Background</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QPushButton" name="IDC_MARKER0_BKGD_COLOR">
+<property name="geometry">
+<rect><x>172</x><y>54</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QPushButton" name="IDC_MARKER1_BKGD_COLOR">
+<property name="geometry">
+<rect><x>172</x><y>90</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QPushButton" name="IDC_MARKER2_BKGD_COLOR">
+<property name="geometry">
+<rect><x>172</x><y>126</y><width>34</width><height>28</height></rect></property>
+</widget>
+<widget class="QPushButton" name="IDC_MARKER3_BKGD_COLOR">
+<property name="geometry">
+<rect><x>172</x><y>162</y><width>34</width><height>28</height></rect></property>
+</widget>
+</widget>
+</widget><resources/><connections/></ui>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_DIRCOLS</class>
+<widget class="QDialog" name="IDD_DIRCOLS">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>614</width><height>326</height></rect></property>
+<property name="windowTitle"><string>"Display Columns"
+</string></property>
+<widget class="QPushButton" name="IDC_UP">
+<property name="geometry">
+<rect><x>302</x><y>16</y><width>110</width><height>28</height></rect></property>
+<property name="text"><string>Move &amp;Up</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_DOWN">
+<property name="geometry">
+<rect><x>302</x><y>52</y><width>110</width><height>28</height></rect></property>
+<property name="text"><string>Move &amp;Down</string></property>
+</widget>
+<widget class="QTextEdit" name="IDC_COLDLG_DESC">
+<property name="geometry">
+<rect><x>302</x><y>160</y><width>290</width><height>100</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+<widget class="QPushButton" name="IDC_COLDLG_DEFAULTS">
+<property name="geometry">
+<rect><x>14</x><y>286</y><width>140</width><height>28</height></rect></property>
+<property name="text"><string>Defaults</string></property>
+</widget>
+<widget class="QPushButton" name="IDOK">
+<property name="geometry">
+<rect><x>394</x><y>286</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>OK</string></property>
+</widget>
+<widget class="QPushButton" name="IDCANCEL">
+<property name="geometry">
+<rect><x>502</x><y>286</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Cancel</string></property>
+</widget>
+</widget><resources/><connections/></ui>

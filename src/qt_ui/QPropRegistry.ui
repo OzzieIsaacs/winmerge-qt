@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QPropRegistry</class>
+ <widget class="QDialog" name="QPropRegistry">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>510</width>
+    <height>440</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>System</string>
+  </property>
+  <widget class="QGroupBox" name="IDC_STATIC_TEMPFILES_GROUP">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>180</y>
+     <width>482</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Temporary files folder</string>
+   </property>
+   <widget class="QRadioButton" name="IDC_TMPFOLDER_SYSTEM">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>24</y>
+      <width>398</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S&amp;ystem's temp folder</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="IDC_TMPFOLDER_CUSTOM">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>48</y>
+      <width>438</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>C&amp;ustom folder:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="IDC_TMPFOLDER_NAME">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>72</y>
+      <width>322</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="IDC_TMPFOLDER_BROWSE">
+    <property name="geometry">
+     <rect>
+      <x>374</x>
+      <y>72</y>
+      <width>100</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Br&amp;owse...</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QCheckBox" name="IDC_USE_RECYCLE_BIN">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>12</y>
+     <width>444</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;Send deleted files to Recycle Bin</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="IDC_STATIC_EDITOR">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>36</y>
+     <width>444</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhMultiLine</set>
+   </property>
+   <property name="text">
+    <string>&amp;External editor:</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="IDC_EXT_EDITOR_PATH">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>60</y>
+     <width>374</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; width:600px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans Mono'; font-weight:600; color:#008000;&quot;&gt;You can specify the following parameters to the path:&lt;br/&gt;$file: Path name of the current file&lt;br/&gt;$linenum: Line number of the current cursor position&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="IDC_EXT_EDITOR_BROWSE">
+   <property name="geometry">
+    <rect>
+     <x>398</x>
+     <y>60</y>
+     <width>100</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;Browse...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="IDC_STATIC_FILTER">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>108</y>
+     <width>332</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhMultiLine</set>
+   </property>
+   <property name="text">
+    <string>&amp;Filter folder:</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="IDC_FILTER_USER_PATH">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>132</y>
+     <width>374</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="IDC_FILTER_USER_BROWSE">
+   <property name="geometry">
+    <rect>
+     <x>398</x>
+     <y>132</y>
+     <width>100</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>B&amp;rowse...</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

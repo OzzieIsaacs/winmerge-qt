@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>QPropEditor</class>
+<widget class="QDialog" name="QPropEditor">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>510</width><height>430</height></rect></property>
+<property name="windowTitle"><string>Editor</string></property>
+<widget class="QGroupBox" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>84</y><width>482</width><height>144</height></rect></property>
+<property name="title"><string>Tabs</string></property>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>24</y><width>402</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Tab size:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QTextEdit" name="IDC_TAB_EDIT">
+<property name="geometry">
+<rect><x>34</x><y>48</y><width>36</width><height>24</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+<widget class="QRadioButton" name="IDC_PROP_INSERT_TABS">
+<property name="geometry">
+<rect><x>14</x><y>84</y><width>402</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Insert Tabs</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_PROP_INSERT_SPACES">
+<property name="geometry">
+<rect><x>14</x><y>108</y><width>402</width><height>20</height></rect></property>
+<property name="text"><string>Insert &amp;Spaces</string></property>
+</widget>
+</widget>
+<widget class="QGroupBox" name="IDC_LINE_COLORING_GROUP">
+<property name="geometry">
+<rect><x>14</x><y>228</y><width>482</width><height>204</height></rect></property>
+<property name="title"><string>Line Difference Coloring</string></property>
+<widget class="QCheckBox" name="IDC_VIEW_LINE_DIFFERENCES">
+<property name="geometry">
+<rect><x>14</x><y>24</y><width>402</width><height>20</height></rect></property>
+<property name="text"><string>View line differences</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_EDITOR_CHARLEVEL">
+<property name="geometry">
+<rect><x>34</x><y>48</y><width>388</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Character level</string></property>
+</widget>
+<widget class="QRadioButton" name="IDC_EDITOR_WORDLEVEL">
+<property name="geometry">
+<rect><x>34</x><y>72</y><width>388</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Word-level:</string></property>
+</widget>
+<widget class="QComboBox" name="IDC_BREAK_TYPE">
+<property name="geometry">
+<rect><x>62</x><y>96</y><width>366</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>34</x><y>132</y><width>388</width><height>20</height></rect></property>
+<property name="text"><string>W&amp;ord break characters:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QTextEdit" name="IDC_BREAK_CHARS">
+<property name="geometry">
+<rect><x>34</x><y>156</y><width>396</width><height>28</height></rect></property>
+<property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property></widget>
+</widget>
+<widget class="QCheckBox" name="IDC_HILITE_CHECK">
+<property name="geometry">
+<rect><x>14</x><y>12</y><width>430</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Highlight syntax</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_AUTOMRESCAN_CHECK">
+<property name="geometry">
+<rect><x>14</x><y>36</y><width>430</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Automatic rescan</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_MIXED_EOL">
+<property name="geometry">
+<rect><x>14</x><y>60</y><width>430</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Preserve original EOL chars</string></property>
+</widget>
+</widget><resources/><connections/></ui>

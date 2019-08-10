@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_DIRCMP_REPORT</class>
+<widget class="QDialog" name="IDD_DIRCMP_REPORT">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>536</width><height>194</height></rect></property>
+<property name="windowTitle"><string>"Folder Compare Report"
+</string></property>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>14</y><width>200</width><height>20</height></rect></property>
+<property name="text"><string>Report &amp;File:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_REPORT_FILE">
+<property name="geometry">
+<rect><x>14</x><y>34</y><width>394</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QPushButton" name="IDC_REPORT_BROWSEFILE">
+<property name="geometry">
+<rect><x>422</x><y>36</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Browse...</string></property>
+</widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>74</y><width>100</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Style:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QComboBox" name="IDC_REPORT_STYLECOMBO">
+<property name="geometry">
+<rect><x>120</x><y>70</y><width>288</width><height>22</height></rect></property>
+<property name="sizeAdjustPolicy"><enum>QComboBox::AdjustToContents</enum></property></widget>
+<widget class="QCheckBox" name="IDC_REPORT_INCLUDEFILECMPREPORT">
+<property name="geometry">
+<rect><x>14</x><y>106</y><width>266</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Include File Compare Report</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_REPORT_COPYCLIPBOARD">
+<property name="geometry">
+<rect><x>14</x><y>138</y><width>266</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Copy to Clipboard</string></property>
+</widget>
+<widget class="QPushButton" name="IDOK">
+<property name="geometry">
+<rect><x>314</x><y>152</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>OK</string></property>
+</widget>
+<widget class="QPushButton" name="IDCANCEL">
+<property name="geometry">
+<rect><x>422</x><y>152</y><width>100</width><height>28</height></rect></property>
+<property name="text"><string>Cancel</string></property>
+</widget>
+</widget><resources/><connections/></ui>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>IDD_DIRCOMP_PROGRESS</class>
+<widget class="QDialog" name="IDD_DIRCOMP_PROGRESS">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>512</width><height>120</height></rect></property>
+<property name="windowTitle"><string>IDD_DIRCOMP_PROGRESS</string></property>
+<widget class="QPushButton" name="IDC_COMPARISON_STOP">
+<property name="geometry">
+<rect><x>368</x><y>18</y><width>130</width><height>28</height></rect></property>
+<property name="text"><string>Stop</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_COMPARISON_PAUSE">
+<property name="geometry">
+<rect><x>226</x><y>18</y><width>130</width><height>28</height></rect></property>
+<property name="text"><string>Pause</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_COMPARISON_CONTINUE">
+<property name="geometry">
+<rect><x>226</x><y>18</y><width>130</width><height>28</height></rect></property>
+<property name="text"><string>Continue</string></property>
+</widget>
+<widget class="QLabel" name="IDC_ITEMSCOMPARED">
+<property name="geometry">
+<rect><x>190</x><y>58</y><width>60</width><height>20</height></rect></property>
+<property name="text"><string>0</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_ITEMSTOTAL">
+<property name="geometry">
+<rect><x>190</x><y>38</y><width>60</width><height>20</height></rect></property>
+<property name="text"><string>0</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>14</y><width>196</width><height>20</height></rect></property>
+<property name="text"><string>Comparing items...</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>58</y><width>170</width><height>20</height></rect></property>
+<property name="text"><string>Items compared:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>38</y><width>170</width><height>20</height></rect></property>
+<property name="text"><string>Items total:</string></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+<widget class="QLabel" name="IDC_PATH_COMPARING">
+<property name="geometry">
+<rect><x>274</x><y>58</y><width>222</width><height>20</height></rect></property>
+<property name="inputMethodHints"><set>Qt::ImhMultiLine</set></property><property name="wordWrap"><bool>true</bool></property></widget>
+</widget><resources/><connections/></ui>

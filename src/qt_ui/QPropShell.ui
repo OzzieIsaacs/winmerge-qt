@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><ui version="4.0"><class>QPropShell</class>
+<widget class="QDialog" name="QPropShell">
+<property name="geometry">
+<rect><x>0</x><y>0</y>
+<width>510</width><height>444</height></rect></property>
+<property name="windowTitle"><string>Shell Integration</string></property>
+<widget class="QGroupBox" name="IDC_STATIC">
+<property name="geometry">
+<rect><x>14</x><y>12</y><width>476</width><height>224</height></rect></property>
+<property name="title"><string>Explorer</string></property>
+<widget class="QCheckBox" name="IDC_EXPLORER_ADVANCED">
+<property name="geometry">
+<rect><x>40</x><y>48</y><width>420</width><height>20</height></rect></property>
+<property name="text"><string>E&amp;nable advanced menu</string></property>
+</widget>
+<widget class="QCheckBox" name="IDC_EXPLORER_CONTEXT">
+<property name="geometry">
+<rect><x>20</x><y>24</y><width>440</width><height>20</height></rect></property>
+<property name="text"><string>&amp;Add to context menu</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_REGISTER_SHELLEXTENSION">
+<property name="geometry">
+<rect><x>20</x><y>84</y><width>440</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Register shell extension</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_UNREGISTER_SHELLEXTENSION">
+<property name="geometry">
+<rect><x>20</x><y>116</y><width>440</width><height>28</height></rect></property>
+<property name="text"><string>&amp;Unregister shell extension</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_REGISTER_SHELLEXTENSION_PERUSER">
+<property name="geometry">
+<rect><x>20</x><y>148</y><width>440</width><height>28</height></rect></property>
+<property name="text"><string>Register shell extension for current user &amp;only</string></property>
+</widget>
+<widget class="QPushButton" name="IDC_UNREGISTER_SHELLEXTENSION_PERUSER">
+<property name="geometry">
+<rect><x>20</x><y>180</y><width>440</width><height>28</height></rect></property>
+<property name="text"><string>Unregister shell extension for current user on&amp;ly</string></property>
+</widget>
+</widget>
+</widget><resources/><connections/></ui>
