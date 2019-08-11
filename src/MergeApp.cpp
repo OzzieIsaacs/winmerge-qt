@@ -1,5 +1,7 @@
 #ifdef __linux__
 #include <cerrno>
+#include <iostream>
+#define TRACE(ARG) std::cout << #ARG << std::endl; ARG
 #else
 #include "StdAfx.h"
 
@@ -15,6 +17,8 @@
 #include <QCoreApplication>
 #include <QApplication>
 #include <QObject>
+#include <QMessageBox>
+#include <QTime>
 #include "MainFrm.h"
 
 // Get user language description of error, if available
@@ -48,41 +52,24 @@ QString GetSysError(int nerr /* =-1 */)
 	return str;
 }
 
-/**
- * @brief Get Options Manager.
- * @return Pointer to OptionsMgr.
- */
-
-COptionsMgr * GetOptionsMgr()
-{
-	// COptionsMgr *test = MainWindow::getInstance().GetMergeOptionsMgr();
-	//QList alfea = QApplication::instance()->findChildren<MainWindow *>();
-	// int i = QApplication::instance()->findChildren<QMainWindow *>("QMainWindow").size();
-	//COptionsMgr *alfa = QApplication::instance()->findChild<MainWindow *>()->GetMergeOptionsMgr();
-	//return i;// QApplication::instance()->findChildren<MainWindow *>().first()->GetMergeOptionsMgr();
-	// MainWindow* mainWindow = MainWindow::getInstance();
-	// return mainWindow->GetMergeOptionsMgr();
-	// return test;
-
-	//CMergeApp *pApp = static_cast<CMergeApp *>(AfxGetApp());
-	//return pApp->GetMergeOptionsMgr();
-}
-/*
-// Send message to log and debug window
-void LogErrorString(const String& sz)
-{
-	if (sz.empty()) return;
-	CString now = COleDateTime::GetCurrentTime().Format();
-	TRACE(_T("%s: %s\n"), (LPCTSTR)now, sz.c_str());
-}
 
 // Send message to log and debug window
+void LogErrorString(const QString& sz)
+{
+	if (sz.isEmpty()) return;
+	// ToDO: Check if formatstring is necessary
+	QString now = QTime::currentTime().toString();
+	//CString now = COleDateTime::GetCurrentTime().Format();
+	TRACE((QString("%s: %s").arg(now, sz)).toStdString());
+}
+
+/// Send message to log and debug window
 void LogErrorStringUTF8(const std::string& sz)
 {
 	if (sz.empty()) return;
-	String str = ucr::toTString(sz);
-	CString now = COleDateTime::GetCurrentTime().Format();
-	TRACE(_T("%s: %s\n"), (LPCTSTR)now, str.c_str());
+	QString str = QString::fromStdString(sz);
+	QString now = QTime::currentTime().toString();
+	TRACE((QString("%s: %s").arg(now, str)).toStdString());
 }
 
 /**
@@ -94,75 +81,65 @@ void LogErrorStringUTF8(const std::string& sz)
 {
 	return theApp.LoadString(id);
 }
+*/
 
-String tr(const std::string &str)
-{
-	String translated_str;
-	theApp.TranslateString(str, translated_str);
-	return translated_str;
+
+namespace AppMsgBox {
+
+	/*namespace detail {
+		int convert_to_winflags(int flags) {
+			int newflags = 0;
+
+			if ((flags & (YES | NO | CANCEL)) == (YES | NO | CANCEL)) newflags |= MB_YESNOCANCEL;
+			else if ((flags & (YES | NO)) == (YES | NO)) newflags |= MB_YESNO;
+			else if ((flags & (OK | CANCEL)) == (OK | CANCEL)) newflags |= MB_OKCANCEL;
+			else if ((flags & OK) == OK) newflags |= MB_OK;
+
+			if (flags & YES_TO_ALL) newflags |= MB_YES_TO_ALL;
+			if (flags & DONT_DISPLAY_AGAIN) newflags |= MB_DONT_DISPLAY_AGAIN;
+
+			return newflags;
+		}
+
+		int convert_resp(int resp) {
+			switch (resp) {
+				case IDOK:
+					return OK;
+				case IDCANCEL:
+					return CANCEL;
+				case IDNO:
+					return NO;
+				case IDYES:
+					return YES;
+				case IDYESTOALL:
+					return YES_TO_ALL;
+				default:
+					return OK;
+			}
+		}
+	}*/
+
+	int error(const QString &msg, int type=0) {
+		return QMessageBox::critical(nullptr, QObject::tr("Error"), msg);
+		//return detail::convert_resp(AfxMessageBox(msg.c_str(), detail::convert_to_winflags(type) | MB_ICONSTOP));
+	}
+
+	int warning(const QString &msg, int type=0) {
+		return QMessageBox::warning(nullptr, QObject::tr("Warning"), msg);
+		//return detail::convert_resp(AfxMessageBox(msg.c_str(), detail::convert_to_winflags(type) | MB_ICONWARNING));
+	}
+
+	int information(const QString &msg, int type=0) {
+		return QMessageBox::information(nullptr, QObject::tr("Information"), msg);
+		// return detail::convert_resp(AfxMessageBox(msg.c_str(), detail::convert_to_winflags(type) | MB_ICONINFORMATION));
+	}
+
 }
 
-void AppErrorMessageBox(const String& msg)
+void AppErrorMessageBox(const QString& msg)
 {
 	AppMsgBox::error(msg);
 }
-
-namespace AppMsgBox
-{
-
-namespace detail
-{
-	int convert_to_winflags(int flags)
-	{
-		int newflags = 0;
-
-		if ((flags & (YES | NO | CANCEL)) == (YES | NO | CANCEL)) newflags |= MB_YESNOCANCEL;
-		else if ((flags & (YES | NO)) == (YES | NO)) newflags |= MB_YESNO;
-		else if ((flags & (OK | CANCEL)) == (OK | CANCEL)) newflags |= MB_OKCANCEL;
-		else if ((flags & OK) == OK) newflags |= MB_OK;
-	
-		if (flags & YES_TO_ALL) newflags |= MB_YES_TO_ALL;
-		if (flags & DONT_DISPLAY_AGAIN) newflags |= MB_DONT_DISPLAY_AGAIN;
-
-		return newflags;
-	}
-
-	int convert_resp(int resp)
-	{
-		switch (resp)
-		{
-		case IDOK:
-			return OK;
-		case IDCANCEL:
-			return CANCEL;
-		case IDNO:
-			return NO;
-		case IDYES:
-			return YES;
-		case IDYESTOALL:
-			return YES_TO_ALL;
-		default:
-			return OK;
-		}
-	}
-}*/
-/*
-int error(const String& msg, int type)
-{
-	return detail::convert_resp(AfxMessageBox(msg.c_str(), detail::convert_to_winflags(type) | MB_ICONSTOP));
-}
-
-int warning(const String& msg, int type)
-{
-	return detail::convert_resp(AfxMessageBox(msg.c_str(), detail::convert_to_winflags(type) | MB_ICONWARNING));
-}
-
-int information(const String& msg, int type)
-{
-	return detail::convert_resp(AfxMessageBox(msg.c_str(), detail::convert_to_winflags(type) | MB_ICONINFORMATION));
-}
-
-}*/
 
 AboutInfo::AboutInfo()
 {
@@ -217,5 +194,4 @@ AboutInfo::AboutInfo()
     developers = QObject::tr("Developers:\n");
     developers += "Dean Grimm, Christian List, Kimmo Varis, Jochen Tucht, Tim Gerundt, Takashi Sawanaka, Gal Hammer, Alexander Skinner";
 	developers.replace(", ","\n");
-    // strutils::replace(developers, _T(", "), _T("\n"));
 }

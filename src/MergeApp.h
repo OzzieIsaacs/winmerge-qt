@@ -1,12 +1,5 @@
 #pragma once
 #include <QString>
-// #include "OptionsMgr.h"
-
-// #include "Common/UnicodeString.h"
-
-/*#define _(x) tr(x)
-#define N_(x) (x)*/
-
 
 struct AboutInfo
 {
@@ -17,5 +10,3 @@ struct AboutInfo
     QString private_build;
     QString website;
 };
-
-// COptionsMgr * GetOptionsMgr();

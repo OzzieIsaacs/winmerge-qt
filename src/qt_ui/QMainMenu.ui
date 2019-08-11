@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QMainMenu</class>
+ <widget class="QMenuBar" name="QMainMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>27</height>
+   </rect>
+  </property>
+  <widget class="QMenu" name="mMenuFile">
+   <property name="title">
+    <string>&amp;File</string>
+   </property>
+   <addaction name="ID_FILE_NEW"/>
+   <addaction name="ID_FILE_NEW3"/>
+   <addaction name="ID_FILE_OPEN"/>
+   <addaction name="ID_FILE_OPENCONFLICT"/>
+   <addaction name="separator"/>
+   <addaction name="ID_FILE_OPENPROJECT"/>
+   <addaction name="ID_FILE_SAVEPROJECT"/>
+   <addaction name="separator"/>
+   <addaction name="ID_FILE_PROJECT_MRU_FIRST"/>
+   <addaction name="separator"/>
+   <addaction name="mActionOpenFiles"/>
+   <addaction name="mActionOpenDirs"/>
+   <addaction name="separator"/>
+   <addaction name="ID_APP_EXIT"/>
+  </widget>
+  <widget class="QMenu" name="mMenuEdit">
+   <property name="title">
+    <string>&amp;Edit</string>
+   </property>
+   <addaction name="ID_OPTIONS"/>
+  </widget>
+  <widget class="QMenu" name="mMenuTools">
+   <property name="title">
+    <string>&amp;Tools</string>
+   </property>
+   <addaction name="ID_TOOLS_FILTERS"/>
+   <addaction name="ID_TOOLS_GENERATEPATCH"/>
+  </widget>
+  <widget class="QMenu" name="mMenuWindow">
+   <property name="title">
+    <string>&amp;Window</string>
+   </property>
+   <addaction name="ID_FILE_CLOSE"/>
+   <addaction name="ID_WINDOW_CLOSEALL"/>
+   <addaction name="separator"/>
+   <addaction name="ID_WINDOW_CHANGE_PANE"/>
+   <addaction name="separator"/>
+   <addaction name="ID_WINDOW_TILE_HORZ"/>
+   <addaction name="ID_WINDOW_TILE_VERT"/>
+   <addaction name="ID_WINDOW_CASCADE"/>
+  </widget>
+  <widget class="QMenu" name="mMenuPlugins">
+   <property name="title">
+    <string>&amp;Plugins</string>
+   </property>
+   <addaction name="ID_PLUGINS_LIST"/>
+   <addaction name="separator"/>
+   <addaction name="ID_PREDIFFER_MANUAL"/>
+   <addaction name="ID_PREDIFFER_AUTO"/>
+   <addaction name="separator"/>
+   <addaction name="ID_UNPACK_MANUAL"/>
+   <addaction name="ID_UNPACK_AUTO"/>
+   <addaction name="separator"/>
+   <addaction name="ID_POPUP_OPEN_WITH_UNPACKER"/>
+   <addaction name="separator"/>
+   <addaction name="ID_RELOAD_PLUGINS"/>
+  </widget>
+  <widget class="QMenu" name="mMenuHelp">
+   <property name="title">
+    <string>&amp;Help</string>
+   </property>
+   <addaction name="ID_HELP_CONTENTS"/>
+   <addaction name="separator"/>
+   <addaction name="ID_HELP_RELEASENOTES"/>
+   <addaction name="ID_HELP_TRANSLATIONS"/>
+   <addaction name="mConfiguration"/>
+   <addaction name="separator"/>
+   <addaction name="ID_HELP_GNULICENSE"/>
+   <addaction name="ID_APP_ABOUT"/>
+  </widget>
+  <widget class="QMenu" name="mMenuView">
+   <property name="title">
+    <string>&amp;View</string>
+   </property>
+   <widget class="QMenu" name="mMenuToolbars">
+    <property name="title">
+     <string>Toolbar</string>
+    </property>
+    <addaction name="ID_TOOLBAR_NONE"/>
+    <addaction name="ID_TOOLBAR_SMALL"/>
+    <addaction name="ID_TOOLBAR_BIG"/>
+    <addaction name="ID_TOOLBAR_HUGE"/>
+   </widget>
+   <addaction name="mMenuToolbars"/>
+   <addaction name="ID_VIEW_STATUS_BAR"/>
+   <addaction name="ID_VIEW_TAB_BAR"/>
+  </widget>
+  <action name="ID_APP_EXIT">
+   <property name="icon">
+    <iconset resource="../gui.qrc">
+     <normaloff>:/res/exit.png</normaloff>:/res/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="mActionOpenDirs">
+   <property name="icon">
+    <iconset resource="../gui.qrc">
+     <normaloff>:/res/open-directories.png</normaloff>:/res/open-directories.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open directories...</string>
+   </property>
+  </action>
+  <action name="mActionOpenFiles">
+   <property name="icon">
+    <iconset resource="../gui.qrc">
+     <normaloff>:/res/open-files.png</normaloff>:/res/open-files.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open &amp;files...</string>
+   </property>
+  </action>
+  <action name="ID_FILE_NEW">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../gui.qrc">
+     <normaloff>:/res/new.png</normaloff>:/res/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_FILE_OPEN">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="open-directories.png" resource="../gui.qrc">
+     <normaloff>:/res/open-directories.png</normaloff>:/res/open-directories.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_FILE_OPENCONFLICT">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/res/open_conflict.bmp</normaloff>:/res/open_conflict.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>Open Conflic&amp;t File...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_FILE_OPENPROJECT">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Open Project...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_FILE_SAVEPROJECT">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Sa&amp;ve Project...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_FILE_PROJECT_MRU_FIRST">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Recent Projects</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="mActionSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="document-save">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="mActionUndo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="edit-undo">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="mActionRedo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="edit-redo">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="mActionGoUp">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="go-top">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Go up</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="mActionGoDown">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="go-bottom">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Go down</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_OPTIONS">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Options...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="mSelectFont">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Select Font...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="mSelectStandardFont">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Select Standard Font</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="mToolbar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Toolbar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="mStatusbar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Statusbar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_VIEW_TAB_BAR">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Ta&amp;b Bar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="mLanguage">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Language</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_TOOLS_FILTERS">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Filters...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_TOOLS_GENERATEPATCH">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Generate Patch...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_PLUGINS_LIST">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>P&amp;lugin Settings...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_PREDIFFER_MANUAL">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Ma&amp;nual Prediffer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_PREDIFFER_AUTO">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>A&amp;utomatic Prediffer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_UNPACK_MANUAL">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Manual Unpacking</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_UNPACK_AUTO">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Automatic Unpacking</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_POPUP_OPEN_WITH_UNPACKER">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Edit with Unpacker...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_RELOAD_PLUGINS">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Reload plugins</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_FILE_CLOSE">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Cl&amp;ose</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_WINDOW_CLOSEALL">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Clo&amp;se all</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_WINDOW_CHANGE_PANE">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Change &amp;Pane</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_WINDOW_TILE_HORZ">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tile &amp;Horizontally</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_WINDOW_TILE_VERT">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tile &amp;Vertically</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ID_WINDOW_CASCADE">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Cascade</string>
+   </property>
+  </action>
+  <action name="ID_HELP_RELEASENOTES">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>R&amp;elease Notes</string>
+   </property>
+  </action>
+  <action name="ID_HELP_CONTENTS">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Winmerge Help</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="ID_HELP_TRANSLATIONS">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Translations</string>
+   </property>
+  </action>
+  <action name="mConfiguration">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>C&amp;onfiguration</string>
+   </property>
+  </action>
+  <action name="mArchiveSupport">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Archive-Support deactivated</string>
+   </property>
+  </action>
+  <action name="ID_HELP_GNULICENSE">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;GNU General Public License</string>
+   </property>
+  </action>
+  <action name="ID_TOOLBAR_NONE">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;None</string>
+   </property>
+   <property name="toolTip">
+    <string>Show or hide the &quot;Standard&quot; toolbar</string>
+   </property>
+  </action>
+  <action name="ID_VIEW_STATUS_BAR">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Statusbar</string>
+   </property>
+   <property name="toolTip">
+    <string>Show or hide the statusbar</string>
+   </property>
+  </action>
+  <action name="ID_APP_ABOUT">
+   <property name="text">
+    <string>&amp;About WinMerge...</string>
+   </property>
+  </action>
+  <action name="ID_FILE_NEW3">
+   <property name="text">
+    <string>New (&amp;3 panes)</string>
+   </property>
+  </action>
+  <action name="action_None">
+   <property name="text">
+    <string>&amp;None</string>
+   </property>
+  </action>
+  <action name="ID_TOOLBAR_SMALL">
+   <property name="text">
+    <string>&amp;Small</string>
+   </property>
+  </action>
+  <action name="ID_TOOLBAR_BIG">
+   <property name="text">
+    <string>&amp;Big</string>
+   </property>
+  </action>
+  <action name="ID_TOOLBAR_HUGE">
+   <property name="text">
+    <string>Huge</string>
+   </property>
+  </action>
+  <addaction name="mMenuFile"/>
+  <addaction name="mMenuEdit"/>
+  <addaction name="mMenuView"/>
+  <addaction name="mMenuTools"/>
+  <addaction name="mMenuPlugins"/>
+  <addaction name="mMenuWindow"/>
+  <addaction name="mMenuHelp"/>
+ </widget>
+ <resources>
+  <include location="../gui.qrc"/>
+ </resources>
+ <connections/>
+</ui>

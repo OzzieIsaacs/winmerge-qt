@@ -58,9 +58,8 @@ set ( SOURCES
         IDD_WMGOTO.cpp
         main.cpp
         MainFrm.cpp
+        MainMenu.cpp
         MergeApp.cpp
-        Common/OptionsMgr.h
-        Common/OptionsMgr.cpp
         Common/varprop.h
         Common/varprop.cpp
         OptionsDef.h
@@ -107,6 +106,7 @@ set ( MOC_HEADERS
         PropCompareBinary.h
         PropCompareFolder.h
         PropCompareImage.h
+        MainMenu.h
         PropEditor.h
         IDD_PROPPAGE_FILTER.h
         PropGeneral.h
@@ -166,6 +166,7 @@ set ( UIS
         qt_ui/IDD_TEST_FILTER.ui
         qt_ui/IDD_WMGOTO.ui
         qt_ui/mainwindow.ui
+        qt_ui/QMainMenu.ui
         #opendialog.ui
         #openfilesdialog.ui
         )

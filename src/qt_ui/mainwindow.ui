@@ -14,7 +14,7 @@
    <string>WinMerge</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="../gui.qrc">
     <normaloff>:/res/icon.png</normaloff>:/res/icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -51,109 +51,6 @@
      <height>27</height>
     </rect>
    </property>
-   <widget class="QMenu" name="mMenuFile">
-    <property name="title">
-     <string>&amp;File</string>
-    </property>
-    <addaction name="mActionNew"/>
-    <addaction name="mActionOpen"/>
-    <addaction name="mActionOpenConflict"/>
-    <addaction name="separator"/>
-    <addaction name="ID_FILE_OPENPROJECT"/>
-    <addaction name="mProjectSave"/>
-    <addaction name="separator"/>
-    <addaction name="mRecentProject"/>
-    <addaction name="separator"/>
-    <addaction name="mActionOpenFiles"/>
-    <addaction name="mActionOpenDirs"/>
-    <addaction name="separator"/>
-    <addaction name="mActionExit"/>
-   </widget>
-   <widget class="QMenu" name="mMenuEdit">
-    <property name="title">
-     <string>&amp;Edit</string>
-    </property>
-    <addaction name="ID_OPTIONS"/>
-   </widget>
-   <widget class="QMenu" name="mMenuTools">
-    <property name="title">
-     <string>&amp;Tools</string>
-    </property>
-    <addaction name="mFilter"/>
-    <addaction name="mGeneratePatch"/>
-   </widget>
-   <widget class="QMenu" name="mMenuWindow">
-    <property name="title">
-     <string>&amp;Window</string>
-    </property>
-    <addaction name="mWindowClose"/>
-    <addaction name="mCloseAll"/>
-    <addaction name="separator"/>
-    <addaction name="mSelectClipping"/>
-    <addaction name="mArrangeBelow"/>
-    <addaction name="mArrangeSideBySide"/>
-    <addaction name="mArrangeOverlap"/>
-   </widget>
-   <widget class="QMenu" name="mMenuPlugins">
-    <property name="title">
-     <string>&amp;Plugins</string>
-    </property>
-    <addaction name="mPluginList"/>
-    <addaction name="separator"/>
-    <addaction name="mManualPrediffer"/>
-    <addaction name="mAutomaticPrediffer"/>
-    <addaction name="separator"/>
-    <addaction name="mManualUnArchive"/>
-    <addaction name="mAutomaticUnArchive"/>
-    <addaction name="separator"/>
-    <addaction name="mUnarchivework"/>
-    <addaction name="separator"/>
-    <addaction name="mReloadPlugins"/>
-   </widget>
-   <widget class="QMenu" name="mMenuHelp">
-    <property name="title">
-     <string>&amp;Help</string>
-    </property>
-    <addaction name="mActionHelp"/>
-    <addaction name="separator"/>
-    <addaction name="ID_HELP_RELEASENOTES"/>
-    <addaction name="ID_HELP_TRANSLATIONS"/>
-    <addaction name="mConfiguration"/>
-    <addaction name="mArchiveSupport"/>
-    <addaction name="separator"/>
-    <addaction name="ID_HELP_GNULICENSE"/>
-    <addaction name="mActionAboutWinMerge"/>
-   </widget>
-   <widget class="QMenu" name="mMenuView">
-    <property name="title">
-     <string>&amp;View</string>
-    </property>
-    <widget class="QMenu" name="mMenuToolbars">
-     <property name="title">
-      <string>Toolbars</string>
-     </property>
-     <addaction name="mActionToolBarMain"/>
-    </widget>
-    <addaction name="mSelectFont"/>
-    <addaction name="mSelectStandardFont"/>
-    <addaction name="separator"/>
-    <addaction name="mToolbar"/>
-    <addaction name="mStatusbar"/>
-    <addaction name="mTabbar"/>
-    <addaction name="separator"/>
-    <addaction name="mLanguage"/>
-    <addaction name="mMenuToolbars"/>
-    <addaction name="mActionStatusBar"/>
-    <addaction name="separator"/>
-    <addaction name="mActionLanguage"/>
-   </widget>
-   <addaction name="mMenuFile"/>
-   <addaction name="mMenuEdit"/>
-   <addaction name="mMenuView"/>
-   <addaction name="mMenuTools"/>
-   <addaction name="mMenuPlugins"/>
-   <addaction name="mMenuWindow"/>
-   <addaction name="mMenuHelp"/>
   </widget>
   <widget class="QToolBar" name="mToolBarMain">
    <property name="windowTitle">
@@ -185,7 +82,7 @@
   <widget class="QStatusBar" name="mStatusBar"/>
   <action name="mActionExit">
    <property name="icon">
-    <iconset>
+    <iconset resource="../gui.qrc">
      <normaloff>:/res/exit.png</normaloff>:/res/exit.png</iconset>
    </property>
    <property name="text">
@@ -197,7 +94,7 @@
   </action>
   <action name="mActionOpenDirs">
    <property name="icon">
-    <iconset>
+    <iconset resource="../gui.qrc">
      <normaloff>:/res/open-directories.png</normaloff>:/res/open-directories.png</iconset>
    </property>
    <property name="text">
@@ -206,7 +103,7 @@
   </action>
   <action name="mActionOpenFiles">
    <property name="icon">
-    <iconset>
+    <iconset resource="../gui.qrc">
      <normaloff>:/res/open-files.png</normaloff>:/res/open-files.png</iconset>
    </property>
    <property name="text">
@@ -218,7 +115,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="../gui.qrc">
      <normaloff>:/res/new.png</normaloff>:/res/new.png</iconset>
    </property>
    <property name="text">
@@ -233,7 +130,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset theme="open-directories.png">
+    <iconset theme="open-directories.png" resource="../gui.qrc">
      <normaloff>:/res/open-directories.png</normaloff>:/res/open-directories.png</iconset>
    </property>
    <property name="text">
@@ -296,7 +193,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-save"/>
+    <iconset theme="document-save">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Save</string>
@@ -310,7 +208,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-undo"/>
+    <iconset theme="edit-undo">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Undo</string>
@@ -324,7 +223,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-redo"/>
+    <iconset theme="edit-redo">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Redo</string>
@@ -338,7 +238,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="go-top"/>
+    <iconset theme="go-top">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Go up</string>
@@ -352,7 +253,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="go-bottom"/>
+    <iconset theme="go-bottom">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Go down</string>
@@ -690,7 +592,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="../gui.qrc">
      <normaloff>:/res/language.png</normaloff>:/res/language.png</iconset>
    </property>
    <property name="text">
@@ -707,7 +609,7 @@
   </action>
  </widget>
  <resources>
-  <include location="gui.qrc"/>
+  <include location="../gui.qrc"/>
  </resources>
  <connections/>
 </ui>

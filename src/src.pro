@@ -75,6 +75,7 @@ FORMS = qt_ui/QAboutDlg.ui \
         qt_ui/IDD_TEST_FILTER.ui \
         qt_ui/IDD_WMGOTO.ui \
         qt_ui/mainwindow.ui \
+        qt_ui/QMainMenu.ui \
         #opendialog.ui \
         #openfilesdialog.ui \
 
@@ -136,6 +137,7 @@ HEADERS += AboutDlg.h \
             PathContext.h \
             OptionsDef.h \
             Common/varprop.h \
+            MainMenu.h \
 
 
 SOURCES += AboutDlg.cpp \
@@ -190,7 +192,8 @@ SOURCES += AboutDlg.cpp \
             Common/varprop.cpp \
             OptionsDef.cpp \
             paths.cpp \
-            PathContext.cpp
+            PathContext.cpp \
+            MainMenu.cpp \
     
 
 # Link with libxdiff - need to select library name to link with first
