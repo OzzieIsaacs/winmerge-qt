@@ -9,6 +9,8 @@
 #ifndef IDD_PROPPAGE_EDITOR_H
 #define IDD_PROPPAGE_EDITOR_H
 #include <QDialog>
+#include <QSettings>
+
 namespace Ui {
 class QPropEditor;
 }
@@ -25,17 +27,16 @@ public:
 	virtual void WriteOptions();
 
 private slots:
-// Implementation methods
+	// Implementation methods
 	void LoadBreakTypeStrings();
 	//void UpdateDataToWindow() { UpdateData(false); }
 	//void UpdateDataFromWindow() { UpdateData(true); }
 	void UpdateLineDiffControls();
-
-private:
-	Ui::QPropEditor *ui;
-	bool OnInitDialog();
 	void OnLineDiffControlClicked();
 	void OnEnKillfocusTabEdit();
 
+private:
+	Ui::QPropEditor *ui;
+	QSettings m_options;
 };
 #endif // IDD_PROPPAGE_EDITOR_H

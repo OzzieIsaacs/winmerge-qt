@@ -1,53 +1,53 @@
-/** 
+/**
  * @file  PropSyntaxColors.h
  *
  * @brief Declaration file for PropSyntaxColors propertyheet
  *
  */
+
 #pragma once
 
-#include "ColorButton.h"
-#include "OptionsPanel.h"
-#include "SyntaxColors.h"
+#ifndef IDD_PROPPAGE_COLORS_SYNTAX_H
+#define IDD_PROPPAGE_COLORS_SYNTAX_H
+// #include "SyntaxColors.h"
 #include <array>
+#include <QDialog>
+#include <QSettings>
 
-const int NumCustomColors = 16;
-
-class PropSyntaxColors : public OptionsPanel
+namespace Ui {
+class QPropSyntaxColors;
+}
+class QPropSyntaxColors : public QDialog
 {
-	DECLARE_DYNAMIC(PropSyntaxColors)
+	Q_OBJECT
 
-// Construction & Destruction
 public:
-	PropSyntaxColors(COptionsMgr *optionsMgr, SyntaxColors *pColors);
+	explicit QPropSyntaxColors(QWidget *parent = nullptr);
+	~QPropSyntaxColors();
 
-// Implement IOptionsPanel
+	// Implement IOptionsPanel
 	virtual void ReadOptions();
 	virtual void WriteOptions();
 
-// Dialog Data
-public:
-
-private:
-	enum { IDD = IDD_PROPPAGE_COLORS_SYNTAX };
-
-protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-	template<unsigned colorIndex>
-	afx_msg void OnBnClickedEcolor();
-	afx_msg void OnBnClickedEcolorsBdefaults();
-	template<unsigned ctlId, unsigned colorIndex>
-	afx_msg void OnBnClickedBoldButton();
+private slots:
+	/* template<unsigned colorIndex>				// ToDo: !??
+	void OnBnClickedEcolor();
+	void OnBnClickedEcolorsBdefaults();
+	template<unsigned ctlId, unsigned colorIndex> // ToDo: !??
+	void OnBnClickedBoldButton();*/
 
 	void BrowseColorAndSave(unsigned colorIndex);
-	int GetCheckVal(UINT nColorIndex);
+	int GetCheckVal(unsigned int nColorIndex);
 
-	DECLARE_MESSAGE_MAP()
-	
 private:
-	std::array<CColorButton, COLORINDEX_LAST + 1> m_colorButtons;
+	Ui::QPropSyntaxColors *ui;
+	QSettings m_options;
+
+	/*std::array<CColorButton, COLORINDEX_LAST + 1> m_colorButtons;
 	std::array<int, COLORINDEX_LAST + 1> m_nBolds;
 
 	SyntaxColors *m_pTempColors;
-	std::array<COLORREF, 16> m_cCustColors;
+	std::array<COLORREF, 16> m_cCustColors;*/
+
 };
+#endif // IDD_PROPPAGE_COLORS_SYNTAX_H

@@ -30,13 +30,16 @@ public:
 	bool m_bContextAdded;
 	bool m_bContextAdvanced;
 
+private slots:
+	// Implementation methods
+	void OnAddToExplorer();
+	void OnRegisterShellExtension();
+	void OnUnregisterShellExtension();
+
 private:
 	Ui::QPropShell *ui;
 	QSettings m_options;
 
-	void OnAddToExplorer();
-	void OnRegisterShellExtension();
-	void OnUnregisterShellExtension();
 	//void OnTimer(UINT_PTR nIDEvent);
 
 	void GetContextRegValues();

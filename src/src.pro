@@ -54,16 +54,16 @@ FORMS = qt_ui/QAboutDlg.ui \
         qt_ui/QPreferencesDlg.ui \
         qt_ui/QPropArchive.ui \
         qt_ui/QPropBackups.ui \
-        qt_ui/IDD_PROPPAGE_CODEPAGE.ui \
+        qt_ui/QPropCodepage.ui \
         qt_ui/IDD_PROPPAGE_COLORS_DIR.ui \
-        qt_ui/IDD_PROPPAGE_COLORS_MARKER.ui \
-        qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui \
-        qt_ui/IDD_PROPPAGE_COLORS_TEXT.ui \
-        qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui \
-        qt_ui/IDD_PROPPAGE_COMPARE.ui \
-        qt_ui/IDD_PROPPAGE_COMPARE_BINARY.ui \
-        qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui \
-        qt_ui/IDD_PROPPAGE_COMPARE_IMAGE.ui \
+        qt_ui/QPropMarkerColors.ui \
+        qt_ui/QPropSyntaxColors.ui \
+        qt_ui/QPropTextColors.ui \
+        qt_ui/QPropMergeColors.ui \
+        qt_ui/QPropCompare.ui \
+        qt_ui/QPropCompareBinary.ui \
+        qt_ui/QPropCompareFolder.ui \
+        qt_ui/QPropCompareImage.ui \
         qt_ui/QPropEditor.ui \
         qt_ui/IDD_PROPPAGE_FILTER.ui \
         qt_ui/QPropGeneral.ui \
@@ -78,8 +78,8 @@ FORMS = qt_ui/QAboutDlg.ui \
         #opendialog.ui \
         #openfilesdialog.ui \
 
-TRANSLATIONS = translations/gui_en_US.ts \
-               translations/gui_de_DE.ts \
+#TRANSLATIONS = translations/gui_en_US.ts \
+#               translations/gui_de_DE.ts \
 
 include($$PWD/../lib/lib.pri)
 
@@ -104,16 +104,16 @@ HEADERS += AboutDlg.h \
             PreferencesDlg.h \
             PropArchive.h \
             PropBackups.h \
-            IDD_PROPPAGE_CODEPAGE.h \
+            PropCodepage.h \
             IDD_PROPPAGE_COLORS_DIR.h \
-            IDD_PROPPAGE_COLORS_MARKER.h \
-            IDD_PROPPAGE_COLORS_SYNTAX.h \
-            IDD_PROPPAGE_COLORS_TEXT.h \
-            IDD_PROPPAGE_COLORS_WINMERGE.h \
-            IDD_PROPPAGE_COMPARE.h \
-            IDD_PROPPAGE_COMPARE_BINARY.h \
-            IDD_PROPPAGE_COMPARE_FOLDER.h \
-            IDD_PROPPAGE_COMPARE_IMAGE.h \
+            PropMarkerColors.h \
+            PropSyntaxColors.h \
+            PropTextColors.h \
+            PropMergeColors.h \
+            PropCompare.h \
+            PropCompareBinary.h \
+            PropCompareFolder.h \
+            PropCompareImage.h \
             PropEditor.h \
             IDD_PROPPAGE_FILTER.h \
             PropGeneral.h \
@@ -159,16 +159,16 @@ SOURCES += AboutDlg.cpp \
             PreferencesDlg.cpp \
             PropArchive.cpp \
             PropBackups.cpp \
-            IDD_PROPPAGE_CODEPAGE.cpp \
+            PropCodepage.cpp \
             IDD_PROPPAGE_COLORS_DIR.cpp \
-            IDD_PROPPAGE_COLORS_MARKER.cpp \
-            IDD_PROPPAGE_COLORS_SYNTAX.cpp \
-            IDD_PROPPAGE_COLORS_TEXT.cpp \
-            IDD_PROPPAGE_COLORS_WINMERGE.cpp \
-            IDD_PROPPAGE_COMPARE.cpp \
-            IDD_PROPPAGE_COMPARE_BINARY.cpp \
-            IDD_PROPPAGE_COMPARE_FOLDER.cpp \
-            IDD_PROPPAGE_COMPARE_IMAGE.cpp \
+            PropMarkerColors.cpp \
+            PropSyntaxColors.cpp \
+            PropTextColors.cpp \
+            PropMergeColors.cpp \
+            PropCompare.cpp \
+            PropCompareBinary.cpp \
+            PropCompareFolder.cpp \
+            PropCompareImage.cpp \
             PropEditor.cpp \
             IDD_PROPPAGE_FILTER.cpp \
             PropGeneral.cpp \
@@ -213,37 +213,37 @@ win32 {
 
 unix:LIBS += -L../ext/libxdiff -llibxdiff
 
-unix:!macx: LIBS += -L$$PWD/../ext/poco/cmake-build-debug/lib/ -lPocoFoundationd
+unix:!macx: LIBS += -L$$PWD/../ext/poco/lib/ -lPocoFoundationd
 
 INCLUDEPATH += $$PWD/../ext/poco/cmake-build-debug
 DEPENDPATH += $$PWD/../ext/poco/cmake-build-debug
 
-unix:!macx: PRE_TARGETDEPS += $$PWD/../ext/poco/cmake-build-debug/lib/libPocoFoundationd.a
+unix:!macx: PRE_TARGETDEPS += $$PWD/../ext/poco/lib/libPocoFoundationd.a
 
-unix:!macx: LIBS += -L$$PWD/../ext/poco/cmake-build-debug/lib/ -lPocoJSONd
-
-INCLUDEPATH += $$PWD/../ext/poco/cmake-build-debug
-DEPENDPATH += $$PWD/../ext/poco/cmake-build-debug
-
-unix:!macx: PRE_TARGETDEPS += $$PWD/../ext/poco/cmake-build-debug/lib/libPocoJSONd.a
-
-unix:!macx: LIBS += -L$$PWD/../ext/poco/cmake-build-debug/lib/ -lPocoNetd
+unix:!macx: LIBS += -L$$PWD/../ext/poco/lib/ -lPocoJSONd
 
 INCLUDEPATH += $$PWD/../ext/poco/cmake-build-debug
 DEPENDPATH += $$PWD/../ext/poco/cmake-build-debug
 
-unix:!macx: PRE_TARGETDEPS += $$PWD/../ext/poco/cmake-build-debug/lib/libPocoNetd.a
+unix:!macx: PRE_TARGETDEPS += $$PWD/../ext/poco/lib/libPocoJSONd.a
 
-unix:!macx: LIBS += -L$$PWD/../ext/poco/cmake-build-debug/lib/ -lPocoUtild
-
-INCLUDEPATH += $$PWD/../ext/poco/cmake-build-debug
-DEPENDPATH += $$PWD/../ext/poco/cmake-build-debug
-
-unix:!macx: PRE_TARGETDEPS += $$PWD/../ext/poco/cmake-build-debug/lib/libPocoUtild.a
-
-unix:!macx: LIBS += -L$$PWD/../ext/poco/cmake-build-debug/lib/ -lPocoXMLd
+unix:!macx: LIBS += -L$$PWD/../ext/poco/lib/ -lPocoNetd
 
 INCLUDEPATH += $$PWD/../ext/poco/cmake-build-debug
 DEPENDPATH += $$PWD/../ext/poco/cmake-build-debug
 
-unix:!macx: PRE_TARGETDEPS += $$PWD/../ext/poco/cmake-build-debug/lib/libPocoXMLd.a
+unix:!macx: PRE_TARGETDEPS += $$PWD/../ext/poco/lib/libPocoNetd.a
+
+unix:!macx: LIBS += -L$$PWD/../ext/poco/lib/ -lPocoUtild
+
+INCLUDEPATH += $$PWD/../ext/poco/cmake-build-debug
+DEPENDPATH += $$PWD/../ext/poco/cmake-build-debug
+
+unix:!macx: PRE_TARGETDEPS += $$PWD/../ext/poco/lib/libPocoUtild.a
+
+unix:!macx: LIBS += -L$$PWD/../ext/poco/lib/ -lPocoXMLd
+
+INCLUDEPATH += $$PWD/../ext/poco/cmake-build-debug
+DEPENDPATH += $$PWD/../ext/poco/cmake-build-debug
+
+unix:!macx: PRE_TARGETDEPS += $$PWD/../ext/poco/lib/libPocoXMLd.a

@@ -38,13 +38,13 @@ set ( SOURCES
         PropBackups.cpp
         PropCodepage.cpp
         IDD_PROPPAGE_COLORS_DIR.cpp
-        IDD_PROPPAGE_COLORS_MARKER.cpp
-        IDD_PROPPAGE_COLORS_SYNTAX.cpp
+        PropMarkerColors.cpp
+        PropSyntaxColors.cpp
         PropTextColors.cpp
-        IDD_PROPPAGE_COLORS_WINMERGE.cpp
+        PropMergeColors.cpp
         PropCompare.cpp
-        IDD_PROPPAGE_COMPARE_BINARY.cpp
-        IDD_PROPPAGE_COMPARE_FOLDER.cpp
+        PropCompareBinary.cpp
+        PropCompareFolder.cpp
         PropCompareImage.cpp
         PropEditor.cpp
         IDD_PROPPAGE_FILTER.cpp
@@ -99,13 +99,13 @@ set ( MOC_HEADERS
         PropBackups.h
         PropCodepage.h
         IDD_PROPPAGE_COLORS_DIR.h
-        IDD_PROPPAGE_COLORS_MARKER.h
-        IDD_PROPPAGE_COLORS_SYNTAX.h
+        PropMarkerColors.h
+        PropSyntaxColors.h
         PropTextColors.h
-        IDD_PROPPAGE_COLORS_WINMERGE.h
+        PropMergeColors.h
         PropCompare.h
-        IDD_PROPPAGE_COMPARE_BINARY.h
-        IDD_PROPPAGE_COMPARE_FOLDER.h
+        PropCompareBinary.h
+        PropCompareFolder.h
         PropCompareImage.h
         PropEditor.h
         IDD_PROPPAGE_FILTER.h
@@ -147,13 +147,13 @@ set ( UIS
         qt_ui/QPropBackups.ui
         qt_ui/QPropCodepage.ui
         qt_ui/IDD_PROPPAGE_COLORS_DIR.ui
-        qt_ui/IDD_PROPPAGE_COLORS_MARKER.ui
-        qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui
+        qt_ui/QPropMarkerColors.ui
+        qt_ui/QPropSyntaxColors.ui
         qt_ui/QPropTextColors.ui
-        qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui
+        qt_ui/QPropMergeColors.ui
         qt_ui/QPropCompare.ui
-        qt_ui/IDD_PROPPAGE_COMPARE_BINARY.ui
-        qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui
+        qt_ui/QPropCompareBinary.ui
+        qt_ui/QPropCompareFolder.ui
         qt_ui/QPropCompareImage.ui
         qt_ui/QPropEditor.ui
         qt_ui/IDD_PROPPAGE_FILTER.ui

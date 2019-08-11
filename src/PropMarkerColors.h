@@ -1,4 +1,4 @@
-/** 
+/**
  * @file  PropMarkerColors.h
  *
  * @brief Declaration file for PropMarkerColors propertyheet
@@ -6,56 +6,39 @@
  */
 #pragma once
 
-#include "ColorButton.h"
-#include "OptionsPanel.h"
+#ifndef IDD_PROPPAGE_COLORS_MARKER_H
+#define IDD_PROPPAGE_COLORS_MARKER_H
+#include <QDialog>
+#include <QSettings>
 #include <array>
+//#include "ColorButton.h"
 
-class COptionsMgr;
-class SyntaxColors;
-
-/** @brief Property page for colors options; used in options property sheet */
-class PropMarkerColors : public OptionsPanel
+namespace Ui {
+class QPropMarkerColors;
+}
+class QPropMarkerColors : public QDialog
 {
+	Q_OBJECT
 
-// Construction
 public:
+	explicit QPropMarkerColors(QWidget *parent = nullptr);
+	~QPropMarkerColors();
 
-	PropMarkerColors(COptionsMgr *optionsMgr, SyntaxColors *pColors);
-
-// Implement IOptionsPanel
+	// Implement IOptionsPanel
 	virtual void ReadOptions();
 	virtual void WriteOptions();
 
-// Dialog Data
+private slots:
+	//typedef enum { SET_DEFAULTS, READ_OPTIONS, LOAD_COLORS } OPERATION;
+
+	//void BrowseColorAndSave(CColorButton & colorButton, int colorIndex);
+	//void SerializeColorsToFromScreen(OPERATION op);
+	// void SerializeColorToFromScreen(OPERATION op, CColorButton & btn, int colorIndex);
+	//void OnMarkerColors(unsigned int nID);
+
 private:
+	Ui::QPropMarkerColors *ui;
+	QSettings m_options;
 
-	SyntaxColors *m_pTempColors;
-	std::array<COLORREF, 16> m_cCustColors;
-
-	//{{AFX_DATA(PropMarkerColors)
-	enum { IDD = IDD_PROPPAGE_COLORS_MARKER };
-	CColorButton    m_btnMarkerColors[4];
-	//}}AFX_DATA
-
-	// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(PropMarkerColors)
-	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-	//}}AFX_VIRTUAL
-
-// Implementation
-protected:
-
-	typedef enum { SET_DEFAULTS, READ_OPTIONS, LOAD_COLORS } OPERATION;
-
-	void BrowseColorAndSave(CColorButton & colorButton, int colorIndex);
-	void SerializeColorsToFromScreen(OPERATION op);
-	void SerializeColorToFromScreen(OPERATION op, CColorButton & btn, int colorIndex);
-
-	// Generated message map functions
-	//{{AFX_MSG(PropMarkerColors)
-	afx_msg void OnMarkerColors(UINT nID);
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
 };
+#endif // IDD_PROPPAGE_COLORS_MARKER_H

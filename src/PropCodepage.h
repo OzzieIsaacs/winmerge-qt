@@ -31,7 +31,7 @@ private slots:
 	void OnCpCustom();
 	void OnCpUi();
 	void OnDetectCodepage2();
-	void OnDetectAutodetecttype();
+	void OnDetectAutodetecttype(const QString&);
 
 private:
 	Ui::QPropCodepage *ui;

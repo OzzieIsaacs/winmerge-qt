@@ -20,7 +20,8 @@ QPropEditor::QPropEditor(QWidget *parent) :
 	connect(ui->IDC_VIEW_LINE_DIFFERENCES, SIGNAL(clicked()), this, SLOT(OnLineDiffControlClicked()));
 	connect(ui->IDC_EDITOR_CHARLEVEL, SIGNAL(clicked()), this, SLOT(OnLineDiffControlClicked()));
 	connect(ui->IDC_EDITOR_WORDLEVEL, SIGNAL(clicked()), this, SLOT(OnLineDiffControlClicked()));
-	connect(ui->IDC_TAB_EDIT, SIGNAL(clicked()), this, SLOT(OnEnKillfocusTabEdit()));
+	//ToDo: Implement Focus out handling
+	//connect(ui->IDC_TAB_EDIT, SIGNAL(focusOutEvent()), this, SLOT(OnEnKillfocusTabEdit()));
 }
 QPropEditor::~QPropEditor()
 {

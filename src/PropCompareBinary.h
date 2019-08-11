@@ -1,50 +1,35 @@
-/** 
+/**
  * @file  PropCompareBinary.h
  *
  * @brief Declaration of PropCompareBinary propertysheet
  */
-#pragma once
-
-#include "OptionsPanel.h"
-#include "UnicodeString.h"
-
-class COptionsMgr;
-
-/**
- * @brief Property page to set image compare options for WinMerge.
- */
-class PropCompareBinary : public OptionsPanel
+#ifndef IDD_PROPPAGE_COMPARE_BINARY_H
+#define IDD_PROPPAGE_COMPARE_BINARY_H
+#include <QDialog>
+#include <QSettings>
+namespace Ui {
+class QPropCompareBinary;
+}
+class QPropCompareBinary : public QDialog
 {
-// Construction
-public:
-	explicit PropCompareBinary(COptionsMgr *optionsMgr);
+	Q_OBJECT
 
-// Implement IOptionsPanel
+public:
+	explicit QPropCompareBinary(QWidget *parent = nullptr);
+	~QPropCompareBinary();
+
+	// Implement IOptionsPanel
 	virtual void ReadOptions();
 	virtual void WriteOptions();
 
-// Dialog Data
-	//{{AFX_DATA(PropCompareBinary)
-	enum { IDD = IDD_PROPPAGE_COMPARE_BINARY };
-	String m_sFilePatterns;
-	//}}AFX_DATA
+private slots:
+	void OnViewSettings();
+	void OnBinaryMode();
+	void OnCharacterSet();
+	void OnDefaults();
 
-
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(PropCompareBinary)
-	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-	//}}AFX_VIRTUAL
-
-// Implementation
-protected:
-	// Generated message map functions
-	//{{AFX_MSG(PropCompareBinary)
-	afx_msg void OnViewSettings();
-	afx_msg void OnBinaryMode();
-	afx_msg void OnCharacterSet();
-	afx_msg void OnDefaults();
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+private:
+	Ui::QPropCompareBinary *ui;
+	QSettings m_options;
 };
+#endif // IDD_PROPPAGE_COMPARE_BINARY_H

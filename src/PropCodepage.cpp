@@ -38,7 +38,7 @@ QPropCodepage::QPropCodepage(QWidget *parent) :
 	ui(new Ui::QPropCodepage)
 {
 	ui->setupUi(this);
-	connect(ui->IDC_DETECT_AUTODETECTTYPE, SIGNAL(itemSelectionChanged()), this, SLOT(OnDetectAutodetecttype()));
+	connect(ui->IDC_DETECT_AUTODETECTTYPE, SIGNAL(currentIndexChanged(const QString&)), this, SLOT(OnDetectAutodetecttype(const QString&)));
 	connect(ui->IDC_CP_SYSTEM, SIGNAL(clicked()), this, SLOT(OnCpSystem()));
 	connect(ui->IDC_CP_CUSTOM, SIGNAL(clicked()), this, SLOT(OnCpCustom()));
 	connect(ui->IDC_DETECT_CODEPAGE2, SIGNAL(clicked()), this, SLOT(OnDetectCodepage2()));
@@ -179,7 +179,7 @@ void QPropCodepage::OnDetectCodepage2()
 			IsDlgButtonChecked(IDC_DETECT_CODEPAGE2) == 1);*/
 }
 
-void QPropCodepage::OnDetectAutodetecttype()
+void QPropCodepage::OnDetectAutodetecttype(const QString& val)
 {
 	// Todo: Port to Qt
 	//m_nAutodetectType = static_cast<int>(m_comboAutodetectType.GetItemData(m_comboAutodetectType.GetCurSel()));

@@ -79,7 +79,7 @@ protected:
 	void UpdateTextColorButtonsState();
 	void SetColorScheme(int scheme);
 
-	std::array<COLORREF, CustomColorsAmount> m_cCustColors;
+	//std::array<COLORREF, CustomColorsAmount> m_cCustColors;
 
 	// Generated message map functions
 	//{{AFX_MSG(PropMergeColors)

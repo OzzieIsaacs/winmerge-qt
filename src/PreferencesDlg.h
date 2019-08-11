@@ -18,15 +18,15 @@
 #include "PropEditor.h"
 #include "PropRegistry.h"
 #include "PropCodepage.h"
-#include "IDD_PROPPAGE_COLORS_WINMERGE.h"
+#include "PropMergeColors.h"
 #include "PropTextColors.h"
-#include "IDD_PROPPAGE_COLORS_SYNTAX.h"
-#include "IDD_PROPPAGE_COLORS_MARKER.h"
+#include "PropSyntaxColors.h"
+#include "PropMarkerColors.h"
 #include "PropArchive.h"
 #include "PropBackups.h"
 #include "PropShell.h"
-#include "IDD_PROPPAGE_COMPARE_FOLDER.h"
-#include "IDD_PROPPAGE_COMPARE_BINARY.h"
+#include "PropCompareFolder.h"
+#include "PropCompareBinary.h"
 #include "PropCompareImage.h"
 
 /*#include "PropertyPageHost.h"*/
@@ -67,15 +67,15 @@ protected:
 	QPropEditor *m_pageEditor;
 	QPropRegistry *m_pageSystem;
 	QPropCodepage *m_pageCodepage;
-	IDD_PROPPAGE_COLORS_WINMERGE *m_pageMergeColors;
+	QPropMergeColors *m_pageMergeColors;
 	QPropTextColors *m_pageTextColors;
-	IDD_PROPPAGE_COLORS_SYNTAX *m_pageSyntaxColors;
-	IDD_PROPPAGE_COLORS_MARKER *m_pageMarkerColors;
+	QPropSyntaxColors *m_pageSyntaxColors;
+	QPropMarkerColors *m_pageMarkerColors;
 	QPropArchive *m_pageArchive;
 	QPropBackups *m_pageBackups;
 	QPropShell *m_pageShell;
-	IDD_PROPPAGE_COMPARE_FOLDER *m_pageCompareFolder;
-	IDD_PROPPAGE_COMPARE_BINARY *m_pageCompareBinary;
+	QPropCompareFolder *m_pageCompareFolder;
+	QPropCompareBinary *m_pageCompareBinary;
 	QPropCompareImage *m_pageCompareImage;
 
 	/*SyntaxColors *m_pSyntaxColors;
