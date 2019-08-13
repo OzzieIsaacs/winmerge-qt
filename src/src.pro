@@ -79,7 +79,7 @@ FORMS = qt_ui/QAboutDlg.ui \
         #opendialog.ui \
         #openfilesdialog.ui \
 
-#TRANSLATIONS = translations/gui_en_US.ts \
+TRANSLATIONS = translations/german.ts \
 #               translations/gui_de_DE.ts \
 
 include($$PWD/../lib/lib.pri)

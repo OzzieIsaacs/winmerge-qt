@@ -16,7 +16,7 @@ QMainMenu::QMainMenu(QWidget *parent) :
 	connect(ui->ID_APP_EXIT, SIGNAL(triggered()), parent, SLOT(close()));
 	connect(ui->ID_FILE_OPENPROJECT, SIGNAL(triggered()), parent, SLOT(OnFileOpenProject()));
 	connect(ui->ID_OPTIONS, SIGNAL(triggered()), parent, SLOT(OnOptions()));
-
+	connect(ui->ID_FILE_OPEN, SIGNAL(triggered()), parent, SLOT(OnFileOpen()));
 }
 QMainMenu::~QMainMenu()
 {

@@ -1013,448 +1013,6 @@
     </message>
 </context>
 <context>
-    <name>IDD_PROPPAGE_COLORS_MARKER</name>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_MARKER.ui" line="6"/>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_MARKER.ui" line="10"/>
-        <source>Marker colors</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_MARKER.ui" line="14"/>
-        <source>Search Marker:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_MARKER.ui" line="19"/>
-        <source>User Defined Marker1:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_MARKER.ui" line="24"/>
-        <source>User Defined Marker2:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_MARKER.ui" line="29"/>
-        <source>User Defined Marker3:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_MARKER.ui" line="34"/>
-        <source>Background</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>IDD_PROPPAGE_COLORS_SYNTAX</name>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="6"/>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="10"/>
-        <source>Keywords:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="15"/>
-        <source>Function names:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="20"/>
-        <source>Comments:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="25"/>
-        <source>Numbers:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="30"/>
-        <source>Operators:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="35"/>
-        <source>Strings:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="40"/>
-        <source>Preprocessor:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="45"/>
-        <source>User 1:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="50"/>
-        <source>User 2:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="55"/>
-        <source>Text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="64"/>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="73"/>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="82"/>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="91"/>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="100"/>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="109"/>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="118"/>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="127"/>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="136"/>
-        <source>Bold</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_SYNTAX.ui" line="141"/>
-        <source>Defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>IDD_PROPPAGE_COLORS_TEXT</name>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_TEXT.ui" line="6"/>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_TEXT.ui" line="10"/>
-        <source>Custom text colors</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_TEXT.ui" line="14"/>
-        <source>Whitespace:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_TEXT.ui" line="19"/>
-        <source>Regular text:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_TEXT.ui" line="24"/>
-        <source>Selection:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_TEXT.ui" line="29"/>
-        <source>Background</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_TEXT.ui" line="34"/>
-        <source>Text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_TEXT.ui" line="59"/>
-        <source>Margin:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_TEXT.ui" line="69"/>
-        <source>&amp;Use customized text colors</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>IDD_PROPPAGE_COLORS_WINMERGE</name>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="6"/>
-        <source>Colors</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="10"/>
-        <source>Background</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="15"/>
-        <source>Deleted</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="20"/>
-        <source>Text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="25"/>
-        <source>Difference:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="46"/>
-        <source>Selected Difference:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="67"/>
-        <source>Ignored Difference:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="88"/>
-        <source>Moved:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="109"/>
-        <source>Selected Moved:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="130"/>
-        <source>Same As The Next (3 panes):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="151"/>
-        <source>Same As The Next (Selected):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="172"/>
-        <source>Word Difference:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="193"/>
-        <source>Selected Word Diff:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="214"/>
-        <source>GitHub/Bitbucket</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COLORS_WINMERGE.ui" line="219"/>
-        <source>Defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>IDD_PROPPAGE_COMPARE</name>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="6"/>
-        <source>Compare</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="10"/>
-        <source>Whitespace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="14"/>
-        <source>&amp;Compare</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="19"/>
-        <source>&amp;Ignore change</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="24"/>
-        <source>I&amp;gnore all</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="30"/>
-        <source>Comments</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="34"/>
-        <source>Filter Comments</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="40"/>
-        <source>Ignore blan&amp;k lines</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="45"/>
-        <source>Ignore &amp;case</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="50"/>
-        <source>Igno&amp;re carriage return differences (Windows/Unix/Mac)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="55"/>
-        <source>Ignore codepage &amp;differences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="60"/>
-        <source>E&amp;nable moved block detection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="65"/>
-        <source>&amp;Match similar lines</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="70"/>
-        <source>Diff &amp;algorithm (Experimental):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="79"/>
-        <source>Enable indent &amp;heuristic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE.ui" line="84"/>
-        <source>Defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>IDD_PROPPAGE_COMPARE_BINARY</name>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_BINARY.ui" line="6"/>
-        <source>Binary Compare</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_BINARY.ui" line="10"/>
-        <source>Frhed settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_BINARY.ui" line="14"/>
-        <source>View &amp;Settings...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_BINARY.ui" line="19"/>
-        <source>&amp;Binary Mode...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_BINARY.ui" line="24"/>
-        <source>&amp;Character Set...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_BINARY.ui" line="30"/>
-        <source>Binary File &amp;Patterns:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_BINARY.ui" line="39"/>
-        <source>Defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>IDD_PROPPAGE_COMPARE_FOLDER</name>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="6"/>
-        <source>Folder compare</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="10"/>
-        <source>&amp;Compare method:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="19"/>
-        <source>S&amp;top after first difference</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="24"/>
-        <source>Ign&amp;ore time differences less than 3 seconds</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="29"/>
-        <source>&amp;Include unique subfolders contents</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="34"/>
-        <source>&amp;Include Subfolders</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="39"/>
-        <source>&amp;Automatically expand all subfolders</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="44"/>
-        <source>Ignore &amp;Reparse Points</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="49"/>
-        <source>&amp;Quick compare limit (MB):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="58"/>
-        <source>&amp;Binary compare limit (MB):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="67"/>
-        <source>&amp;Number of compare threads (a negative value implies addition of the number of available CPU cores):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_FOLDER.ui" line="76"/>
-        <source>Defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>IDD_PROPPAGE_COMPARE_IMAGE</name>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_IMAGE.ui" line="6"/>
-        <source>Image</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_IMAGE.ui" line="10"/>
-        <source>Image File &amp;Patterns:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/IDD_PROPPAGE_COMPARE_IMAGE.ui" line="19"/>
-        <source>Defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>IDD_PROPPAGE_FILTER</name>
     <message>
         <location filename="../qt_ui/IDD_PROPPAGE_FILTER.ui" line="6"/>
@@ -1745,334 +1303,294 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="56"/>
-        <source>&amp;File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/mainwindow.ui" line="74"/>
-        <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/mainwindow.ui" line="80"/>
-        <source>&amp;Tools</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/mainwindow.ui" line="87"/>
-        <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/mainwindow.ui" line="99"/>
-        <source>&amp;Plugins</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/mainwindow.ui" line="115"/>
-        <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/mainwindow.ui" line="129"/>
-        <source>&amp;View</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/mainwindow.ui" line="133"/>
-        <source>Toolbars</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qt_ui/mainwindow.ui" line="160"/>
+        <location filename="../qt_ui/mainwindow.ui" line="57"/>
         <source>Standard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="192"/>
+        <location filename="../qt_ui/mainwindow.ui" line="89"/>
         <source>&amp;Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="195"/>
+        <location filename="../qt_ui/mainwindow.ui" line="92"/>
         <source>Ctrl+Q</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="204"/>
+        <location filename="../qt_ui/mainwindow.ui" line="101"/>
         <source>&amp;Open directories...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="213"/>
+        <location filename="../qt_ui/mainwindow.ui" line="110"/>
         <source>Open &amp;files...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="225"/>
+        <location filename="../qt_ui/mainwindow.ui" line="122"/>
         <source>&amp;New</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="228"/>
-        <location filename="../qt_ui/mainwindow.ui" line="243"/>
-        <location filename="../qt_ui/mainwindow.ui" line="258"/>
-        <location filename="../qt_ui/mainwindow.ui" line="269"/>
-        <location filename="../qt_ui/mainwindow.ui" line="280"/>
-        <location filename="../qt_ui/mainwindow.ui" line="291"/>
-        <location filename="../qt_ui/mainwindow.ui" line="305"/>
-        <location filename="../qt_ui/mainwindow.ui" line="319"/>
-        <location filename="../qt_ui/mainwindow.ui" line="333"/>
-        <location filename="../qt_ui/mainwindow.ui" line="347"/>
-        <location filename="../qt_ui/mainwindow.ui" line="361"/>
-        <location filename="../qt_ui/mainwindow.ui" line="372"/>
-        <location filename="../qt_ui/mainwindow.ui" line="383"/>
-        <location filename="../qt_ui/mainwindow.ui" line="394"/>
-        <location filename="../qt_ui/mainwindow.ui" line="405"/>
-        <location filename="../qt_ui/mainwindow.ui" line="416"/>
-        <location filename="../qt_ui/mainwindow.ui" line="427"/>
-        <location filename="../qt_ui/mainwindow.ui" line="438"/>
-        <location filename="../qt_ui/mainwindow.ui" line="449"/>
-        <location filename="../qt_ui/mainwindow.ui" line="460"/>
-        <location filename="../qt_ui/mainwindow.ui" line="471"/>
-        <location filename="../qt_ui/mainwindow.ui" line="482"/>
-        <location filename="../qt_ui/mainwindow.ui" line="493"/>
-        <location filename="../qt_ui/mainwindow.ui" line="504"/>
-        <location filename="../qt_ui/mainwindow.ui" line="515"/>
-        <location filename="../qt_ui/mainwindow.ui" line="526"/>
-        <location filename="../qt_ui/mainwindow.ui" line="537"/>
-        <location filename="../qt_ui/mainwindow.ui" line="548"/>
-        <location filename="../qt_ui/mainwindow.ui" line="559"/>
-        <location filename="../qt_ui/mainwindow.ui" line="570"/>
-        <location filename="../qt_ui/mainwindow.ui" line="581"/>
-        <location filename="../qt_ui/mainwindow.ui" line="592"/>
+        <location filename="../qt_ui/mainwindow.ui" line="125"/>
+        <location filename="../qt_ui/mainwindow.ui" line="140"/>
+        <location filename="../qt_ui/mainwindow.ui" line="155"/>
+        <location filename="../qt_ui/mainwindow.ui" line="166"/>
+        <location filename="../qt_ui/mainwindow.ui" line="177"/>
+        <location filename="../qt_ui/mainwindow.ui" line="188"/>
+        <location filename="../qt_ui/mainwindow.ui" line="203"/>
+        <location filename="../qt_ui/mainwindow.ui" line="218"/>
+        <location filename="../qt_ui/mainwindow.ui" line="233"/>
+        <location filename="../qt_ui/mainwindow.ui" line="248"/>
+        <location filename="../qt_ui/mainwindow.ui" line="263"/>
+        <location filename="../qt_ui/mainwindow.ui" line="274"/>
+        <location filename="../qt_ui/mainwindow.ui" line="285"/>
+        <location filename="../qt_ui/mainwindow.ui" line="296"/>
+        <location filename="../qt_ui/mainwindow.ui" line="307"/>
+        <location filename="../qt_ui/mainwindow.ui" line="318"/>
+        <location filename="../qt_ui/mainwindow.ui" line="329"/>
+        <location filename="../qt_ui/mainwindow.ui" line="340"/>
+        <location filename="../qt_ui/mainwindow.ui" line="351"/>
+        <location filename="../qt_ui/mainwindow.ui" line="362"/>
+        <location filename="../qt_ui/mainwindow.ui" line="373"/>
+        <location filename="../qt_ui/mainwindow.ui" line="384"/>
+        <location filename="../qt_ui/mainwindow.ui" line="395"/>
+        <location filename="../qt_ui/mainwindow.ui" line="406"/>
+        <location filename="../qt_ui/mainwindow.ui" line="417"/>
+        <location filename="../qt_ui/mainwindow.ui" line="428"/>
+        <location filename="../qt_ui/mainwindow.ui" line="439"/>
+        <location filename="../qt_ui/mainwindow.ui" line="450"/>
+        <location filename="../qt_ui/mainwindow.ui" line="461"/>
+        <location filename="../qt_ui/mainwindow.ui" line="472"/>
+        <location filename="../qt_ui/mainwindow.ui" line="483"/>
+        <location filename="../qt_ui/mainwindow.ui" line="494"/>
         <source>Ctrl+N</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="240"/>
+        <location filename="../qt_ui/mainwindow.ui" line="137"/>
         <source>&amp;Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="255"/>
+        <location filename="../qt_ui/mainwindow.ui" line="152"/>
         <source>&amp;Open conflict file...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="266"/>
+        <location filename="../qt_ui/mainwindow.ui" line="163"/>
         <source>&amp;Open Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="277"/>
+        <location filename="../qt_ui/mainwindow.ui" line="174"/>
         <source>&amp;Save Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="288"/>
+        <location filename="../qt_ui/mainwindow.ui" line="185"/>
         <source>&amp;Recent Projects</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="302"/>
+        <location filename="../qt_ui/mainwindow.ui" line="200"/>
         <source>&amp;Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="316"/>
+        <location filename="../qt_ui/mainwindow.ui" line="215"/>
         <source>&amp;Undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="330"/>
+        <location filename="../qt_ui/mainwindow.ui" line="230"/>
         <source>&amp;Redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="344"/>
+        <location filename="../qt_ui/mainwindow.ui" line="245"/>
         <source>&amp;Go up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="358"/>
+        <location filename="../qt_ui/mainwindow.ui" line="260"/>
         <source>&amp;Go down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="369"/>
+        <location filename="../qt_ui/mainwindow.ui" line="271"/>
         <source>&amp;Options...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="380"/>
+        <location filename="../qt_ui/mainwindow.ui" line="282"/>
         <source>&amp;Select Font...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="391"/>
+        <location filename="../qt_ui/mainwindow.ui" line="293"/>
         <source>&amp;Select Standard Font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="402"/>
+        <location filename="../qt_ui/mainwindow.ui" line="304"/>
         <source>&amp;Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="413"/>
-        <location filename="../qt_ui/mainwindow.ui" line="682"/>
+        <location filename="../qt_ui/mainwindow.ui" line="315"/>
+        <location filename="../qt_ui/mainwindow.ui" line="584"/>
         <source>&amp;Statusbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="424"/>
+        <location filename="../qt_ui/mainwindow.ui" line="326"/>
         <source>&amp;Tabbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="435"/>
+        <location filename="../qt_ui/mainwindow.ui" line="337"/>
         <source>&amp;Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="446"/>
+        <location filename="../qt_ui/mainwindow.ui" line="348"/>
         <source>&amp;Filter...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="457"/>
+        <location filename="../qt_ui/mainwindow.ui" line="359"/>
         <source>&amp;Generate Patch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="468"/>
+        <location filename="../qt_ui/mainwindow.ui" line="370"/>
         <source>&amp;Plugin List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="479"/>
+        <location filename="../qt_ui/mainwindow.ui" line="381"/>
         <source>&amp;Manual Prediffer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="490"/>
+        <location filename="../qt_ui/mainwindow.ui" line="392"/>
         <source>&amp;Automatic Prediffer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="501"/>
+        <location filename="../qt_ui/mainwindow.ui" line="403"/>
         <source>&amp;Manual Unarchiver</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="512"/>
+        <location filename="../qt_ui/mainwindow.ui" line="414"/>
         <source>&amp;Automatic Unarchiver</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="523"/>
+        <location filename="../qt_ui/mainwindow.ui" line="425"/>
         <source>&amp;Edit with Unarchiver</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="534"/>
+        <location filename="../qt_ui/mainwindow.ui" line="436"/>
         <source>&amp;Reload Plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="545"/>
+        <location filename="../qt_ui/mainwindow.ui" line="447"/>
         <source>&amp;Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="556"/>
+        <location filename="../qt_ui/mainwindow.ui" line="458"/>
         <source>&amp;Close all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="567"/>
+        <location filename="../qt_ui/mainwindow.ui" line="469"/>
         <source>&amp;Select Clipping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="578"/>
+        <location filename="../qt_ui/mainwindow.ui" line="480"/>
         <source>&amp;Arrange below</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="589"/>
+        <location filename="../qt_ui/mainwindow.ui" line="491"/>
         <source>&amp;Arrange side by side</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="600"/>
+        <location filename="../qt_ui/mainwindow.ui" line="502"/>
         <source>&amp;RArrange overlapping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="608"/>
+        <location filename="../qt_ui/mainwindow.ui" line="510"/>
         <source>&amp;Release Notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="616"/>
+        <location filename="../qt_ui/mainwindow.ui" line="518"/>
         <source>&amp;Winmerge Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="619"/>
+        <location filename="../qt_ui/mainwindow.ui" line="521"/>
         <source>F1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="627"/>
+        <location filename="../qt_ui/mainwindow.ui" line="529"/>
         <source>&amp;Translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="635"/>
+        <location filename="../qt_ui/mainwindow.ui" line="537"/>
         <source>&amp;Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="643"/>
+        <location filename="../qt_ui/mainwindow.ui" line="545"/>
         <source>&amp;Archive-Support deactivated</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="651"/>
+        <location filename="../qt_ui/mainwindow.ui" line="553"/>
         <source>&amp;GNU General Licence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="665"/>
+        <location filename="../qt_ui/mainwindow.ui" line="567"/>
         <source>&amp;Standard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="668"/>
+        <location filename="../qt_ui/mainwindow.ui" line="570"/>
         <source>Show or hide the &quot;Standard&quot; toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="685"/>
+        <location filename="../qt_ui/mainwindow.ui" line="587"/>
         <source>Show or hide the statusbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="697"/>
+        <location filename="../qt_ui/mainwindow.ui" line="599"/>
         <source>&amp;Language...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="700"/>
+        <location filename="../qt_ui/mainwindow.ui" line="602"/>
         <source>Select current language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qt_ui/mainwindow.ui" line="705"/>
+        <location filename="../qt_ui/mainwindow.ui" line="607"/>
         <source>&amp;About WinMerge</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2108,6 +1626,397 @@
         <location filename="../qt_ui/QAboutDlg.ui" line="133"/>
         <source>Visit the WinMerge HomePage!</source>
         <translation>Besuchen Sie die WinMerge HomePage!</translation>
+    </message>
+</context>
+<context>
+    <name>QMainMenu</name>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="15"/>
+        <source>&amp;File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="34"/>
+        <source>&amp;Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="40"/>
+        <source>&amp;Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="47"/>
+        <source>&amp;Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="60"/>
+        <source>&amp;Plugins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="76"/>
+        <source>&amp;Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="89"/>
+        <source>&amp;View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="93"/>
+        <source>Toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="110"/>
+        <source>E&amp;xit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="113"/>
+        <source>Ctrl+Q</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="122"/>
+        <source>&amp;Open directories...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="131"/>
+        <source>Open &amp;files...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="143"/>
+        <source>&amp;New</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="146"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="161"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="176"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="187"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="198"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="209"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="224"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="239"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="254"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="269"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="284"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="295"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="306"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="317"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="328"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="339"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="350"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="361"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="372"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="383"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="394"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="405"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="416"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="427"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="438"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="449"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="460"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="471"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="482"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="493"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="504"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="515"/>
+        <source>Ctrl+N</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="158"/>
+        <source>&amp;Open...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="173"/>
+        <source>Open Conflic&amp;t File...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="184"/>
+        <source>&amp;Open Project...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="195"/>
+        <source>Sa&amp;ve Project...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="206"/>
+        <source>&amp;Recent Projects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="221"/>
+        <source>&amp;Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="236"/>
+        <source>&amp;Undo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="251"/>
+        <source>&amp;Redo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="266"/>
+        <source>&amp;Go up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="281"/>
+        <source>&amp;Go down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="292"/>
+        <source>&amp;Options...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="303"/>
+        <source>&amp;Select Font...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="314"/>
+        <source>&amp;Select Standard Font</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="325"/>
+        <source>&amp;Toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="336"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="605"/>
+        <source>&amp;Statusbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="347"/>
+        <source>Ta&amp;b Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="358"/>
+        <source>&amp;Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="369"/>
+        <source>&amp;Filters...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="380"/>
+        <source>&amp;Generate Patch...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="391"/>
+        <source>P&amp;lugin Settings...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="402"/>
+        <source>Ma&amp;nual Prediffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="413"/>
+        <source>A&amp;utomatic Prediffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="424"/>
+        <source>&amp;Manual Unpacking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="435"/>
+        <source>&amp;Automatic Unpacking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="446"/>
+        <source>&amp;Edit with Unpacker...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="457"/>
+        <source>&amp;Reload plugins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="468"/>
+        <source>Cl&amp;ose</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="479"/>
+        <source>Clo&amp;se all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="490"/>
+        <source>Change &amp;Pane</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="501"/>
+        <source>Tile &amp;Horizontally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="512"/>
+        <source>Tile &amp;Vertically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="523"/>
+        <source>&amp;Cascade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="531"/>
+        <source>R&amp;elease Notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="539"/>
+        <source>&amp;Winmerge Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="542"/>
+        <source>F1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="550"/>
+        <source>&amp;Translations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="558"/>
+        <source>C&amp;onfiguration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="566"/>
+        <source>&amp;Archive-Support deactivated</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="574"/>
+        <source>&amp;GNU General Public License</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="588"/>
+        <location filename="../qt_ui/QMainMenu.ui" line="623"/>
+        <source>&amp;None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="591"/>
+        <source>Show or hide the &quot;Standard&quot; toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="608"/>
+        <source>Show or hide the statusbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="613"/>
+        <source>&amp;About WinMerge...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="618"/>
+        <source>New (&amp;3 panes)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="628"/>
+        <source>&amp;Small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="633"/>
+        <source>&amp;Big</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QMainMenu.ui" line="638"/>
+        <source>Huge</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="../MainFrm.cpp" line="1305"/>
+        <location filename="../MergeApp.cpp" line="133"/>
+        <source>Information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MainFrm.cpp" line="1305"/>
+        <source>You are now entering Merge Mode. If you want to turn off Merge Mode, press F9 key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MergeApp.cpp" line="123"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MergeApp.cpp" line="128"/>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MergeApp.cpp" line="148"/>
+        <source>Version %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MergeApp.cpp" line="168"/>
+        <source>Unicode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MergeApp.cpp" line="187"/>
+        <source>WinMerge comes with ABSOLUTELY NO WARRANTY. This is free software and you are welcome to redistribute it under certain circumstances; see the GNU General Public License in the Help menu for details.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MergeApp.cpp" line="190"/>
+        <source> - All rights reserved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../MergeApp.cpp" line="194"/>
+        <source>Developers:
+</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2222,6 +2131,281 @@
     <message>
         <location filename="../qt_ui/QPropBackups.ui" line="59"/>
         <source>A&amp;ppend timestamp</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QPropCodepage</name>
+    <message>
+        <location filename="../qt_ui/QPropCodepage.ui" line="14"/>
+        <source>Codepage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCodepage.ui" line="26"/>
+        <source>Default Codepage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCodepage.ui" line="41"/>
+        <source>Select the default codepage assumed when loading non-Unicode files:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCodepage.ui" line="57"/>
+        <source>System codepage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCodepage.ui" line="70"/>
+        <source>According to WinMerge User Interface</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCodepage.ui" line="83"/>
+        <source>Custom codepage:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCodepage.ui" line="110"/>
+        <source>Detect codepage info for these files: .html, .rc, .xml \nneed to restart session</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCodepage.ui" line="123"/>
+        <source>Detect codepage for text files using mlang.dll\nneed to restart session</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QPropCompare</name>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="6"/>
+        <source>Compare</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="10"/>
+        <source>Whitespace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="14"/>
+        <source>&amp;Compare</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="19"/>
+        <source>&amp;Ignore change</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="24"/>
+        <source>I&amp;gnore all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="30"/>
+        <source>Comments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="34"/>
+        <source>Filter Comments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="40"/>
+        <source>Ignore blan&amp;k lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="45"/>
+        <source>Ignore &amp;case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="50"/>
+        <source>Igno&amp;re carriage return differences (Windows/Unix/Mac)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="55"/>
+        <source>Ignore codepage &amp;differences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="60"/>
+        <source>E&amp;nable moved block detection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="65"/>
+        <source>&amp;Match similar lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="70"/>
+        <source>Diff &amp;algorithm (Experimental):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="79"/>
+        <source>Enable indent &amp;heuristic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompare.ui" line="84"/>
+        <source>Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QPropCompareBinary</name>
+    <message>
+        <location filename="../qt_ui/QPropCompareBinary.ui" line="14"/>
+        <source>Binary Compare</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareBinary.ui" line="26"/>
+        <source>Shared settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareBinary.ui" line="38"/>
+        <source>View &amp;Settings...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareBinary.ui" line="51"/>
+        <source>&amp;Binary Mode...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareBinary.ui" line="64"/>
+        <source>&amp;Character Set...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareBinary.ui" line="81"/>
+        <source>Binary File &amp;Patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareBinary.ui" line="116"/>
+        <source>Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QPropCompareFolder</name>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="14"/>
+        <source>Folder compare</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="29"/>
+        <source>Compare method:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="58"/>
+        <source>S&amp;top after first difference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="71"/>
+        <source>Ign&amp;ore time differences less than 3 seconds</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="84"/>
+        <source>&amp;Include unique subfolders contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="97"/>
+        <source>&amp;Include Subfolders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="110"/>
+        <source>&amp;Automatically expand all subfolders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="123"/>
+        <source>Ignore &amp;Reparse Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="139"/>
+        <source>Quick compare limit (MB):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="177"/>
+        <source>Binary compare limit (MB):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="215"/>
+        <source>Number of compare threads (a negative value implies addition of the number of available CPU cores):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareFolder.ui" line="250"/>
+        <source>Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PropCompareFolder.cpp" line="24"/>
+        <source>Full Contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PropCompareFolder.cpp" line="25"/>
+        <source>Quick Contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PropCompareFolder.cpp" line="26"/>
+        <source>Binary Contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PropCompareFolder.cpp" line="27"/>
+        <source>Modified Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PropCompareFolder.cpp" line="28"/>
+        <source>Modified Date and Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PropCompareFolder.cpp" line="29"/>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QPropCompareImage</name>
+    <message>
+        <location filename="../qt_ui/QPropCompareImage.ui" line="14"/>
+        <source>Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareImage.ui" line="29"/>
+        <source>Image File &amp;Patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropCompareImage.ui" line="64"/>
+        <source>Defaults</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2352,6 +2536,122 @@
     </message>
 </context>
 <context>
+    <name>QPropMarkerColors</name>
+    <message>
+        <location filename="../qt_ui/QPropMarkerColors.ui" line="6"/>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMarkerColors.ui" line="10"/>
+        <source>Marker colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMarkerColors.ui" line="14"/>
+        <source>Search Marker:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMarkerColors.ui" line="19"/>
+        <source>User Defined Marker1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMarkerColors.ui" line="24"/>
+        <source>User Defined Marker2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMarkerColors.ui" line="29"/>
+        <source>User Defined Marker3:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMarkerColors.ui" line="34"/>
+        <source>Background</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QPropMergeColors</name>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="14"/>
+        <source>Colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="29"/>
+        <source>Background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="48"/>
+        <source>Deleted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="67"/>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="86"/>
+        <source>Difference:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="145"/>
+        <source>Selected Difference:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="204"/>
+        <source>Ignored Difference:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="263"/>
+        <source>Moved:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="322"/>
+        <source>Selected Moved:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="381"/>
+        <source>Same As The Next (3 panes):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="440"/>
+        <source>Same As The Next (Selected):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="499"/>
+        <source>Word Difference:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="558"/>
+        <source>Selected Word Diff:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="614"/>
+        <source>GitHub/Bitbucket</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropMergeColors.ui" line="627"/>
+        <source>Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QPropRegistry</name>
     <message>
         <location filename="../qt_ui/QPropRegistry.ui" line="14"/>
@@ -2449,6 +2749,130 @@
     <message>
         <location filename="../qt_ui/QPropShell.ui" line="39"/>
         <source>Unregister shell extension for current user on&amp;ly</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QPropSyntaxColors</name>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="14"/>
+        <source>Syntax Colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="29"/>
+        <source>Keywords:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="48"/>
+        <source>Function names:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="67"/>
+        <source>Comments:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="86"/>
+        <source>Numbers:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="105"/>
+        <source>Operators:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="124"/>
+        <source>Strings:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="143"/>
+        <source>Preprocessor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="162"/>
+        <source>User 1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="181"/>
+        <source>User 2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="200"/>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="226"/>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="249"/>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="272"/>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="295"/>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="318"/>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="341"/>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="364"/>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="387"/>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="410"/>
+        <source>Bold</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropSyntaxColors.ui" line="423"/>
+        <source>Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QPropTextColors</name>
+    <message>
+        <location filename="../qt_ui/QPropTextColors.ui" line="6"/>
+        <source>Text Colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropTextColors.ui" line="10"/>
+        <source>Custom text colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropTextColors.ui" line="14"/>
+        <source>Whitespace:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropTextColors.ui" line="19"/>
+        <source>Regular text:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropTextColors.ui" line="24"/>
+        <source>Selection:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropTextColors.ui" line="29"/>
+        <source>Background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropTextColors.ui" line="34"/>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropTextColors.ui" line="59"/>
+        <source>Margin:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qt_ui/QPropTextColors.ui" line="69"/>
+        <source>&amp;Use customized text colors</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

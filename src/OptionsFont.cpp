@@ -4,10 +4,10 @@
  * @brief Implementation for Options::Font class.
  */
 #include "OptionsFont.h"
-#include "unicoder.h"
+//#include "unicoder.h"
 #include "ExConverter.h"
 #include "OptionsDef.h"
-#include "OptionsMgr.h"
+#include "QOptionsMgr.h"
 #include <cassert>
 
 namespace Options { namespace Font {
@@ -38,7 +38,7 @@ void InitializeLogFont(LOGFONT &logfont, int lfHeight, int lfCharSet, int lfPitc
  * @brief Initialize the in-memory Options::Font structure (and possibly the related Registry entries)
  * for both File-Contents and Directory-Tree windows.
  */
-void SetDefaults(COptionsMgr *pOptionsMgr)
+void SetDefaults(QOptionsMgr *pOptionsMgr)
 {
 	HDC hDC = GetDC(nullptr);
 	const int logPixelsY = GetDeviceCaps(hDC, LOGPIXELSY);
@@ -113,7 +113,7 @@ void SetDefaults(COptionsMgr *pOptionsMgr)
 	ReleaseDC(nullptr, hDC);
 }
 
-LOGFONT Load(const COptionsMgr *pOptionsMgr, const String& name)
+LOGFONT Load(const QOptionsMgr *pOptionsMgr, const QString& name)
 {
 	// Build a new LOGFONT with values from the 'actual' values of the in-memory Options::Font table.
 	// The Registry is not accessed.
@@ -140,7 +140,7 @@ LOGFONT Load(const COptionsMgr *pOptionsMgr, const String& name)
 	return lfnew;
 }
 
-void Save(COptionsMgr *pOptionsMgr, const String& name, const LOGFONT* lf, bool bUseCustom)
+void Save(QOptionsMgr *pOptionsMgr, const QString& name, const LOGFONT* lf, bool bUseCustom)
 {
 	// Store LOGFONT values into both the 'actual' value of the in-memory Options::Font table, and 
 	// into the appropriate Registry entries.
@@ -163,7 +163,7 @@ void Save(COptionsMgr *pOptionsMgr, const String& name, const LOGFONT* lf, bool 
 	ReleaseDC(nullptr, hDC);
 }
 
-void Reset(COptionsMgr *pOptionsMgr, const String& name)
+void Reset(QOptionsMgr *pOptionsMgr, const QString& name)
 {
 	// Resets the in-memory Options::Font 'actual' values to be original 'default' values.
 	// The Registry values are not modified, except to turn off the OPT_FONT_USECUSTOM 

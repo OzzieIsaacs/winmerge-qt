@@ -3,6 +3,13 @@ project(winmerge_gui)
 
 set(CMAKE_CXX_STANDARD 14)
 
+include_directories(.)
+include_directories(../lib)
+include_directories(../ext/libxdiff/xdiff)
+include_directories(SYSTEM Common)
+include_directories(SYSTEM diffutils/src)
+include_directories(SYSTEM diffutils)
+
 set ( SOURCES
         Common/VersionInfo.cpp
         Common/VersionInfo.h
@@ -69,10 +76,19 @@ set ( SOURCES
         paths.cpp
         paths.h
         PathContext.h
+        OptionsDiffOptions.cpp
+        OptionsDiffOptions.h
+        OptionsDiffColors.cpp
+        OptionsDiffColors.h
+        # CompareOptions.cpp
+        CompareOptions.h
+        diffutils/src/diff.h
+        diffutils/src/system.h
+        diffutils/config.h
         // PathContext.cpp
         # opendialog.cpp
         # openfilesdialog.cpp
-        qlabelclick.cpp)
+        qlabelclick.cpp QOptionsMgr.cpp QOptionsMgr.h)
 
 set ( MOC_HEADERS
         AboutDlg.h
@@ -191,10 +207,6 @@ find_package(Poco REQUIRED Foundation Net )
 # include( ${QT_USE_FILE} )
 add_definitions( ${QT_DEFINITIONS} )
 
-include_directories(.)
-include_directories(../lib)
-include_directories(../ext/libxdiff/xdiff)
-include_directories(SYSTEM Common)
 
 # Next, using precompiler, compiler and linker
 
@@ -202,6 +214,13 @@ include_directories(SYSTEM Common)
 QT5_ADD_RESOURCES( RES_SOURCES ${RESOURCES} )
 QT5_WRAP_UI( UI_HEADERS ${UIS} )
 QT5_WRAP_CPP( MOC_SRCS ${MOC_HEADERS} )
+
+add_custom_command(
+        OUTPUT  ${CMAKE_SOURCE_DIR}/translations/german.qm
+        COMMAND COMMAND lupdate -verbose src.pro
+        COMMAND lrelease src.pro
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+)
 
 add_executable( winmerge_gui ${SOURCES} ${MOC_SRCS} ${RES_SOURCES} ${UI_HEADERS} version.rc)
 

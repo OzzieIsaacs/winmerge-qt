@@ -32,6 +32,9 @@
 #include "OptionsInit.h"
 #include "paths.h"
 #include "MainMenu.h"
+#include "OptionsDef.h"
+#include <QMessageBox>
+#include "resource.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -76,13 +79,12 @@ ui(new Ui::MainWindow)
 	ui->listWidget->addItem("IDD_TEST_FILTER");
 	ui->listWidget->addItem("IDD_WMGOTO");
 
-
 	// Parse command-line arguments.
 	/*MergeCmdLineInfo cmdInfo(GetCommandLine());
 	if (cmdInfo.m_bNoPrefs)
 		m_pOptions->SetSerializing(false); // Turn off serializing to registry.
 	*/
-	Options::Init();
+	Options::Init(&m_options);
 	/*
 	Options::Init(m_pOptions.get()); // Implementation in OptionsInit.cpp
 	ApplyCommandLineConfigOptions(cmdInfo);
@@ -221,12 +223,13 @@ ui(new Ui::MainWindow)
 
 	strdiff::Init(); // String diff init
 	strdiff::SetBreakChars(GetOptionsMgr()->GetString(OPT_BREAK_SEPARATORS).c_str());
-
-	m_bMergingMode = GetOptionsMgr()->GetBool(OPT_MERGE_MODE);
+	*/
+	// m_bMergingMode = GetOptionsMgr()->GetBool(OPT_MERGE_MODE);
+	m_bMergingMode = m_options.value(OPT_MERGE_MODE).toBool();
 
 	// Initialize i18n (multiple language) support
 
-	m_pLangDlg->InitializeLanguage((WORD)GetOptionsMgr()->GetInt(OPT_SELECTED_LANGUAGE));
+	/*m_pLangDlg->InitializeLanguage((WORD)GetOptionsMgr()->GetInt(OPT_SELECTED_LANGUAGE));
 
 	m_mainThreadScripts = new CAssureScriptsForThread;
 
@@ -278,22 +281,23 @@ ui(new Ui::MainWindow)
 	}
 	m_pMainWnd = pMainFrame;
 
-	// Init menus -- hMenuDefault is for MainFrame
-	pMainFrame->m_hMenuDefault = pMainFrame->NewDefaultMenu();
+	// Init menus -- hMenuDefault is for MainFrame*/
+	ui->mMenubar = NewDefaultMenu();
+	// pMainFrame->m_hMenuDefault = pMainFrame->NewDefaultMenu();
 
 	// Set the menu
 	// Note : for Windows98 compatibility, use FromHandle and not Attach/Detach
-	CMenu * pNewMenu = CMenu::FromHandle(pMainFrame->m_hMenuDefault);
+	/*CMenu * pNewMenu = CMenu::FromHandle(pMainFrame->m_hMenuDefault);
 	pMainFrame->MDISetMenu(pNewMenu, nullptr);
 
 	// The main window has been initialized, so activate and update it.
 	pMainFrame->ActivateFrame(cmdInfo.m_nCmdShow);
-	pMainFrame->UpdateWindow();
+	pMainFrame->UpdateWindow();*/
 
 	// Since this function actually opens paths for compare it must be
 	// called after initializing CMainFrame!
-	bool bContinue = true;
-	if (!ParseArgsAndDoOpen(cmdInfo, pMainFrame) && bCommandLineInvoke)
+	// bool bContinue = true;
+	/*if (!ParseArgsAndDoOpen(cmdInfo, pMainFrame) && bCommandLineInvoke)
 		bContinue = false;
 
 	if (hMutex != nullptr)
@@ -303,13 +307,13 @@ ui(new Ui::MainWindow)
 	if (!bContinue)
 	{
 		pMainFrame->PostMessage(WM_CLOSE, 0, 0);
-	}
+	}*/
 
 #ifdef TEST_WINMERGE
 	WinMergeTest::TestAll();
 #endif
 
-	return bContinue;*/
+	//return bContinue;
 
 }
 
@@ -624,7 +628,7 @@ void MainWindow::ShowHelp() // LPCTSTR helpLocation /*= nullptr*/)
  */
 void MainWindow::SetNeedIdleTimer()
 {
-	// m_bNeedIdleTimer = true;
+	m_bNeedIdleTimer = true;
 }
 
 bool MainWindow::IsReallyIdle() const
@@ -1275,7 +1279,7 @@ void MainWindow::SetupTempPath()
  */
 bool MainWindow::GetMergingMode() const
 {
-	//return m_bMergingMode;
+	return m_bMergingMode;
 }
 
 /**
@@ -1283,8 +1287,9 @@ bool MainWindow::GetMergingMode() const
  */
 void MainWindow::SetMergingMode(bool bMergingMode)
 {
-	/*m_bMergingMode = bMergingMode;
-	GetOptionsMgr()->SaveOption(OPT_MERGE_MODE, m_bMergingMode);*/
+	m_bMergingMode = bMergingMode;
+	m_options.setValue(OPT_MERGE_MODE,m_bMergingMode);
+	//GetOptionsMgr()->SaveOption(OPT_MERGE_MODE, m_bMergingMode);
 }
 
 /**
@@ -1295,9 +1300,11 @@ void MainWindow::OnMergingMode()
 {
 	bool bMergingMode = GetMergingMode();
 
-	/*if (!bMergingMode)
-		LangMessageBox(IDS_MERGE_MODE, MB_ICONINFORMATION | MB_DONT_DISPLAY_AGAIN);
-	SetMergingMode(!bMergingMode);*/
+	// ToDo Display don't show again
+	if (!bMergingMode)
+		QMessageBox::information(nullptr, QObject::tr("Information"), QObject::tr("You are now entering Merge Mode. If you want to turn off Merge Mode, press F9 key"));
+		//LangMessageBox(IDS_MERGE_MODE, MB_ICONINFORMATION | MB_DONT_DISPLAY_AGAIN);
+	SetMergingMode(!bMergingMode);
 }
 
 /**
@@ -1703,16 +1710,16 @@ HMENU CMainFrame::GetPrediffersSubmenu(HMENU mainMenu)
  * @param [in] view Menu view either MENU_DEFAULT, MENU_MERGEVIEW or MENU_DIRVIEW.
  * @param [in] ID Menu's resource ID.
  * @return Menu for the view.
- *//*
-HMENU CMainFrame::NewMenu(int view, int ID)
+ */
+QMenuBar MainWindow::NewMenu(int view, int ID)
 {
 	int menu_view, index;
-	if (m_pMenus[view] == nullptr)
+	/*if (m_pMenus[view] == nullptr)
 	{
 		m_pMenus[view].reset(new BCMenu());
 		if (m_pMenus[view] == nullptr)
 			return nullptr;
-	}
+	}*/
 
 	switch (view)
 	{
@@ -1728,7 +1735,7 @@ HMENU CMainFrame::NewMenu(int view, int ID)
 			break;
 	};
 
-	if (!m_pMenus[view]->LoadMenu(ID))
+	/*if (!m_pMenus[view]->LoadMenu(ID))
 	{
 		ASSERT(false);
 		return nullptr;
@@ -1752,59 +1759,57 @@ HMENU CMainFrame::NewMenu(int view, int ID)
 
 	m_pMenus[view]->LoadToolbar(IDR_MAINFRAME);
 
-	theApp.TranslateMenu(m_pMenus[view]->m_hMenu);
-
-	return (m_pMenus[view]->Detach());
+	return (m_pMenus[view]->Detach());*/
 
 }
 /**
 * @brief Create new default (CMainFrame) menu.
 */
-//HMENU CMainFrame::NewDefaultMenu(int ID /*=0*/)
-/*{
+QMenuBar* MainWindow::NewDefaultMenu(int ID /*=0*/)
+{
 	if (ID == 0)
 		ID = IDR_MAINFRAME;
-	return NewMenu( MENU_DEFAULT, ID );
+	return new QMainMenu(this); // NewMenu( MENU_DEFAULT, ID );
 }
 
 /**
  * @brief Create new File compare (CMergeEditView) menu.
- *//*
-HMENU CMainFrame::NewMergeViewMenu()
+ */
+QMenuBar* MainWindow::NewMergeViewMenu()
 {
-	return NewMenu( MENU_MERGEVIEW, IDR_MERGEDOCTYPE);
+	return new QMainMenu(this); //NewMenu( MENU_MERGEVIEW, IDR_MERGEDOCTYPE);
 }
 
 /**
  * @brief Create new Dir compare (CDirView) menu
- *//*
-HMENU CMainFrame::NewDirViewMenu()
+ */
+QMenuBar* MainWindow::NewDirViewMenu()
 {
-	return NewMenu(MENU_DIRVIEW, IDR_DIRDOCTYPE );
+	return new QMainMenu(this); //NewMenu(MENU_DIRVIEW, IDR_DIRDOCTYPE );
 }
 
 /**
  * @brief Create new File compare (CHexMergeView) menu.
- *//*
-HMENU CMainFrame::NewHexMergeViewMenu()
+ */
+QMenuBar* MainWindow::NewHexMergeViewMenu()
 {
-	return NewMenu( MENU_HEXMERGEVIEW, IDR_MERGEDOCTYPE);
+	return new QMainMenu(this); // NewMenu( MENU_HEXMERGEVIEW, IDR_MERGEDOCTYPE);
 }
 
 /**
  * @brief Create new Image compare (CImgMergeView) menu.
- *//*
-HMENU CMainFrame::NewImgMergeViewMenu()
+ */
+QMenuBar* MainWindow::NewImgMergeViewMenu()
 {
-	return NewMenu( MENU_IMGMERGEVIEW, IDR_MERGEDOCTYPE);
+	return new QMainMenu(this); // NewMenu( MENU_IMGMERGEVIEW, IDR_MERGEDOCTYPE);
 }
 
 /**
  * @brief Create new File compare (COpenView) menu.
- *//*
-HMENU CMainFrame::NewOpenViewMenu()
+ */
+QMenuBar* MainWindow::NewOpenViewMenu()
 {
-	return NewMenu( MENU_OPENVIEW, IDR_MAINFRAME);
+	return new QMainMenu(this); // NewMenu( MENU_OPENVIEW, IDR_MAINFRAME);
 }
 
 /**
@@ -1865,10 +1870,11 @@ void CMainFrame::OnInitMenuPopup(CMenu* pPopupMenu, UINT nIndex, BOOL bSysMenu)
 
 /////////////////////////////////////////////////////////////////////////////
 // CMainFrame message handlers
-
-void CMainFrame::OnFileOpen()
+*/
+void  MainWindow::OnFileOpen()
 {
-	DoFileOpen();
+	// ToDo: Port
+	//DoFileOpen();
 }
 
 /**
@@ -3171,10 +3177,10 @@ void CMainFrame::OnActivateApp(BOOL bActive, HTASK hTask)
 			PostMessage(WM_USER+1);
 	}
 }
-
-BOOL CMainFrame::CreateToolbar()
+*/
+bool MainWindow::CreateToolbar()
 {
-	if (!m_wndToolBar.CreateEx(this) ||
+	/*if (!m_wndToolBar.CreateEx(this) ||
 		!m_wndToolBar.LoadToolBar(IDR_MAINFRAME))
 	{
 		return FALSE;
@@ -3208,13 +3214,14 @@ BOOL CMainFrame::CreateToolbar()
 		CMDIFrameWnd::ShowControlBar(&m_wndToolBar, false, 0);
 	}
 
-	return TRUE;
+	return TRUE;*/
 }
 
-/** @brief Load toolbar images from the resource. *//*
-void CMainFrame::LoadToolbarImages()
+/** @brief Load toolbar images from the resource. */
+void MainWindow::LoadToolbarImages()
 {
-	const int toolbarSize = 16 << GetOptionsMgr()->GetInt(OPT_TOOLBAR_SIZE);
+
+	/*const int toolbarSize = 16 << m_options.value(OPT_TOOLBAR_SIZE).toInt(); // GetOptionsMgr()->GetInt(OPT_TOOLBAR_SIZE);
 	CToolBarCtrl& BarCtrl = m_wndToolBar.GetToolBarCtrl();
 
 	m_ToolbarImages[TOOLBAR_IMAGES_ENABLED].DeleteImageList();
@@ -3241,7 +3248,7 @@ void CMainFrame::LoadToolbarImages()
 	REBARBANDINFO rbbi = { sizeof REBARBANDINFO };
 	rbbi.fMask = RBBIM_CHILDSIZE;
 	rbbi.cyMinChild = sizeButton.cy;
-	m_wndReBar.GetReBarCtrl().SetBandInfo(0, &rbbi);
+	m_wndReBar.GetReBarCtrl().SetBandInfo(0, &rbbi);*/
 }
 
 
@@ -3282,27 +3289,31 @@ void CMainFrame::OnUpdateFrameTitle(BOOL bAddToTitle)
 		m_wndTabBar.UpdateTabs();
 }
 
-/** @brief Show none/small/big/huge toolbar. *//*
-void CMainFrame::OnToolbarSize(UINT id)
+/** @brief Show none/small/big/huge toolbar. */
+void MainWindow::OnToolbarSize(unsigned int id)
 {
 	if (id == ID_TOOLBAR_NONE)
 	{
-		GetOptionsMgr()->SaveOption(OPT_SHOW_TOOLBAR, false);
-		CMDIFrameWnd::ShowControlBar(&m_wndToolBar, false, 0);
+		m_options.setValue(OPT_SHOW_TOOLBAR, false);
+		// GetOptionsMgr()->SaveOption(OPT_SHOW_TOOLBAR, false);
+		// CMDIFrameWnd::ShowControlBar(&m_wndToolBar, false, 0);
 	}
 	else
 	{
-		GetOptionsMgr()->SaveOption(OPT_SHOW_TOOLBAR, true);
-		GetOptionsMgr()->SaveOption(OPT_TOOLBAR_SIZE, id - ID_TOOLBAR_SMALL);
+		m_options.setValue(OPT_SHOW_TOOLBAR, true);
+		//GetOptionsMgr()->SaveOption(OPT_SHOW_TOOLBAR, true);
+		m_options.setValue(OPT_TOOLBAR_SIZE, id - ID_TOOLBAR_SMALL);
+		//GetOptionsMgr()->SaveOption(OPT_TOOLBAR_SIZE, id - ID_TOOLBAR_SMALL);
 
+		// ToDo: Toolbar
 		LoadToolbarImages();
 
-		CMDIFrameWnd::ShowControlBar(&m_wndToolBar, true, 0);
+		//CMDIFrameWnd::ShowControlBar(&m_wndToolBar, true, 0);
 	}
 }
 
 /** @brief Show none/small/big/huge toolbar. *//*
-void CMainFrame::OnUpdateToolbarSize(CCmdUI *pCmdUI)
+void MainWindow::OnUpdateToolbarSize(CCmdUI *pCmdUI)
 {
 	if (!GetOptionsMgr()->GetBool(OPT_SHOW_TOOLBAR))
 		pCmdUI->SetRadio(pCmdUI->m_nID == ID_TOOLBAR_NONE);
@@ -3386,24 +3397,6 @@ bool CMainFrame::AskCloseConfirmation()
 	return (ret == IDYES);
 }
 
-/**
- * @brief Shows the release notes for user.
- * This function opens release notes HTML document into browser.
- *//*
-void CMainFrame::OnHelpReleasenotes()
-{
-	const String sPath = paths::ConcatPath(env::GetProgPath(), RelNotes);
-	ShellExecute(nullptr, _T("open"), sPath.c_str(), nullptr, nullptr, SW_SHOWNORMAL);
-}
-
-/**
- * @brief Shows the translations page.
- * This function opens translations page URL into browser.
- *//*
-void CMainFrame::OnHelpTranslations()
-{
-	ShellExecute(nullptr, _T("open"), TranslationsUrl, nullptr, nullptr, SW_SHOWNORMAL);
-}
 
 /**
  * @brief Called when user selects File/Open Conflict...

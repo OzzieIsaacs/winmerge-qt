@@ -5,7 +5,6 @@
  */
 #pragma once
 
-// #include "UnicodeString.h"
 #include <QString>
 
 
@@ -153,7 +152,7 @@ const QString OPT_CLR_SELECTED_WORDDIFF_DELETED ("Settings/SelectedWordDifferenc
 // The selected word difference text color
 const QString OPT_CLR_SELECTED_WORDDIFF_TEXT ("Settings/SelectedWordDifferenceTextColor");
 // Whether to use default (theme) text colors
-const QString OPT_CLR_DEFAULOPT_TEXOPT_COLORING ("Settings/DefaultTextColoring");
+const QString OPT_CLR_DEFAULT_TEXT_COLORING ("Settings/DefaultTextColoring");
 
 // Compare options
 const QString OPT_CMP_IGNORE_WHITESPACE ("Settings/IgnoreSpace");

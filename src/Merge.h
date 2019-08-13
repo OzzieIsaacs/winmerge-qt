@@ -51,7 +51,7 @@ class FilterCommentsManager;
 // See Merge.cpp for the implementation of this class
 //
 
-enum { IDLE_TIMER = 9754 };
+
 
 /** 
  * @brief WinMerge application class

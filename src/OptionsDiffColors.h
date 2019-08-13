@@ -1,7 +1,13 @@
 #pragma once
 
-#ifdef Q_OS_WIN
-#include <windows.h>
+//#ifdef Q_OS_WIN
+//#include <windows.h>
+//#endif
+
+#include "QOptionsMgr.h"
+
+#ifndef COLORREF
+#define COLORREF unsigned long
 #endif
 /** 
  * @brief Color settings.
@@ -41,8 +47,8 @@ class COptionsMgr;
 
 namespace Options { namespace DiffColors {
 
-void SetDefaults(COptionsMgr *pOptionsMgr);
-void Load(const COptionsMgr *pOptionsMgr, COLORSETTINGS& colors);
-void Save(COptionsMgr *pOptionsMgr, const COLORSETTINGS& colors);
+void SetDefaults(QOptionsMgr *pOptionsMgr);
+void Load(const QOptionsMgr *pOptionsMgr, COLORSETTINGS& colors);
+void Save(QOptionsMgr *pOptionsMgr, const COLORSETTINGS& colors);
 
 }}

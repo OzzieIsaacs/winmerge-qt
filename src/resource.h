@@ -3,7 +3,7 @@
 // Used by Merge.rc
 //
 #define IDR_MAINFRAME                   100
-#define IDB_TOOLBAR_ENABLED8BIT         100  // = IDR_MAINFRAME
+/*#define IDB_TOOLBAR_ENABLED8BIT         100  // = IDR_MAINFRAME
 #define IDR_MERGEPROJECT                101
 #define IDR_POPUP_EDITOR_HEADERBAR      102
 #define IDR_POPUP_PLUGINS_SETTINGS      103
@@ -40,7 +40,7 @@
 #define IDD_DIRCMP_REPORT               226
 #define IDD_SHARED_FILTER               227
 #define IDD_PROP_ARCHIVE                228
-#define IDD_COMPARE_STATISTICS          229
+//#define IDD_COMPARE_STATISTICS          229
 #define IDD_COMPARE_STATISTICS3         230
 #define IDD_LOAD_SAVE_CODEPAGE          231
 #define IDD_TEST_FILTER                 232
@@ -103,7 +103,7 @@
 #define IDB_RIGHT_TO_BROWSE             360
 #define IDB_MOVE_LEFT_TO_BROWSE         361
 #define IDB_MOVE_MIDDLE_TO_BROWSE       362
-#define IDB_MOVE_RIGHT_TO_BROWSE        363
+#define IDB_MOVE_RIGHT_TO_BROWSE        363*/
 #define IDB_TOOLBAR_ENABLED32           365
 #define IDB_VIEW_ZOOMIN                 366
 #define IDB_VIEW_ZOOMOUT                367
@@ -120,7 +120,7 @@
 #define IDB_TOOLBAR_ENABLED             378
 #define IDB_TOOLBAR_ENABLED_MASK        379
 #define IDB_TOOLBAR_ENABLED_MASK32      380
-#define IDI_FOLDER                      500
+/*#define IDI_FOLDER                      500
 #define IDI_LFOLDER                     501
 #define IDI_MFOLDER                     502
 #define IDI_RFOLDER                     503
@@ -1118,12 +1118,12 @@
 #define IDS_COLORSCHEME_VERILOG         33185
 #define IDS_COLORSCHEME_VHDL            33186
 #define IDS_COLORSCHEME_XML             33187
-#define ID_COLORSCHEME_LAST             33187 // = IDS_COLORSCHEME_XML
+#define ID_COLORSCHEME_LAST             33187 // = IDS_COLORSCHEME_XML*/
 #define ID_TOOLBAR_NONE                 33194
 #define ID_TOOLBAR_SMALL                33195
 #define ID_TOOLBAR_BIG                  33196
 #define ID_TOOLBAR_HUGE                 33197
-#define ID_VIEW_RESIZE_PANES            33198
+/*#define ID_VIEW_RESIZE_PANES            33198
 #define ID_VIEW_ZOOMIN                  33199
 #define ID_VIEW_ZOOMOUT                 33200
 #define ID_VIEW_ZOOMNORMAL              33202
@@ -1229,7 +1229,7 @@
 #define ID_FILE_PROJECT_MRU_FIRST       33545
 #define ID_FILE_PROJECT_MRU_LAST        33644
 #define IDS_CREATE_FOLDER               33645
-#define IDS_CREATE_FOLDER_ERROR         33646
+#define IDS_CREATE_FOLDER_ERROR         33646*/
 
 // Next default values for new objects
 // 
