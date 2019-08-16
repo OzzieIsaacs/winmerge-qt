@@ -10,7 +10,7 @@
 #include "OptionsDiffOptions.h"
 #include "QOptionsMgr.h"
 #include "OptionsDiffColors.h"
-//#include "OptionsFont.h"
+#include "OptionsFont.h"
 /*#include "DiffWrapper.h" // CMP_CONTENT
 #include "paths.h"
 #include "Environment.h"
@@ -27,15 +27,6 @@ static void CopyFromLMtoCU(HKEY lmKey, HKEY cuKey, LPCTSTR valname);*/
 
 namespace Options
 {
-
-
-void setInitalValue(QSettings& Settings,QString key, QVariant default_value)
-{
-	if (!Settings.contains(key))
-	{
-		Settings.setValue(key,default_value);
-	}
-}
 
 /**
  * @brief Initialise options and set default values.
@@ -211,7 +202,7 @@ void Init(QOptionsMgr* pOptions)
 
 	Options::DiffOptions::SetDefaults(pOptions);
 	Options::DiffColors::SetDefaults(pOptions);
-	//Options::Font::SetDefaults(pOptions);
+	Options::Font::SetDefaults(pOptions);
 }
 
 }

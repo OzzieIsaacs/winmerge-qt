@@ -6,6 +6,7 @@
 #include "Common/tchar.h"
 #include <memory>
 #include "QOptionsMgr.h"
+#include "MergeCmdLineInfo.h"
 // #include <QMenuBar>
 
 class COptionsMgr;
@@ -76,6 +77,7 @@ protected:
 	void UpdateCodepageModule();
 	bool IsProjectFile(const QString& filepath) const;
 	bool LoadAndOpenProjectFile(const QString& sFilepath, const QString& sReportFile = "");
+	void ApplyCommandLineConfigOptions(MergeCmdLineInfo & cmdInfo);
 
 	enum
 	{

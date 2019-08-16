@@ -29,9 +29,9 @@
 
 #include "MergeCmdLineInfo.h"
 #include "Constants.h"
-#include "Paths.h"
+#include "paths.h"
 #include "OptionsDef.h"
-#include "unicoder.h"
+#include <map>
 
 // MergeCmdLineInfo
 
@@ -42,51 +42,30 @@
  * @param [out] flag Tells whether param is the name of a flag.
  * @return Points to the remaining portion of the command line.
  */
-const TCHAR *MergeCmdLineInfo::EatParam(const TCHAR *p, String &param, bool *flag /*= nullptr*/)
+void MergeCmdLineInfo::EatParam(const QString& p, QString &param, bool *flag /*= nullptr*/)
 {
-	if (p != nullptr && *(p += _tcsspn(p, _T(" \t\r\n"))) == _T('\0'))
-		p = nullptr;
-	const TCHAR *q = p;
-	if (q != nullptr)
-	{
-		TCHAR c = *q;
-		bool quoted = false;
-		do
-		{
-			if (c == _T('"'))
-				quoted = !quoted;
-			c = *++q;
-		} while (c != _T('\0') && (quoted ||
-			c != _T(' ') && c != _T('\t') && c != _T('\r') && c != _T('\n')));
+	bool parameter = false;
+	param = p.trimmed();
+
+	if (param.at(0) == "\"" or param.at(0) == "'"){
+		param.remove(0,1);
 	}
-	if (q > p && flag)
-	{
-		if (*p == _T('-') || *p == _T('/'))
-		{
-			*flag = true;
-			++p;
-			for (const TCHAR *i = q; i >= p; --i)
-				if (*i == ':')
-				{
-					q = i;
-					break;
-				}
-		}
-		else
-		{
-			*flag = false;
-			flag = nullptr;
-		}
+	if (param.at(param.length()-1) == "\"" or param.at(param.length()-1) == "'"){
+		param.chop(1);
 	}
-	param.assign(p ? p : _T(""), q - p);
-	if (q > p && flag != nullptr)
-	{
-		param = strutils::makelower(param);
+
+	if (param.at(0) == "-" && flag){
+		param = param.remove(0,1).toLower();
+		parameter = true;
 	}
-	// Strip any leading or trailing whitespace or quotes
-	param.erase(0, param.find_first_not_of(_T(" \t\r\n\"")));
-	param.erase(param.find_last_not_of(_T(" \t\r\n\"")) + 1);
-	return q;
+	if (flag){
+		*flag = parameter;
+	}
+}
+
+void MergeCmdLineInfo::SetOption(const QString& option, const QString& key){
+	QString val("1");
+	SetOption(option, key, &val);
 }
 
 /**
@@ -96,39 +75,39 @@ const TCHAR *MergeCmdLineInfo::EatParam(const TCHAR *p, String &param, bool *fla
  * @param [in] value Default value in case none is specified.
  * @return Points to the remaining portion of the command line.
  */
-const TCHAR *MergeCmdLineInfo::SetOption(const TCHAR *q, const String& key, const TCHAR *value)
+void MergeCmdLineInfo::SetOption(const QString& q, const QString& key,QString *value)
 {
-	String s;
-	if (*q == _T(':'))
+	QString s;
+	if (q.at(0) == QString(':'))
 	{
-		q = EatParam(q, s);
-		value = s.c_str() + 1;
+		EatParam(q, s);
+		*value = s.remove(0,1);
 	}
-	m_Options.insert_or_assign(key, value);
-	return q;
+	m_Options.insert_or_assign(key, "!");
 }
 
-const TCHAR *MergeCmdLineInfo::SetConfig(const TCHAR *q)
+void MergeCmdLineInfo::SetConfig(const QString& q)
 {
-	String s;
-	if (*q == ':')
-		++q;
-	q = EatParam(q, s);
-	size_t pos = s.find_first_of('=');
-	if (pos != String::npos)
+	QString s;
+	if (q.at(0) == QString(':'))
 	{
-		String key = s.substr(0, pos);
-		String value = s.c_str() + pos + 1;
+		EatParam(q, s);
+		s.remove(0,1);
+	}
+	size_t pos = s.indexOf('=');
+	if (pos != std::string::npos)
+	{
+		QString key = s.left(pos);
+		QString value = s.remove(pos, pos + 1);
 		m_Options.insert_or_assign(key, value);
 	}
-	return q;
 }
 
 /**
  * @brief MergeCmdLineParser's constructor.
  * @param [in] q Points to the beginning of the command line.
  */
-MergeCmdLineInfo::MergeCmdLineInfo(const TCHAR *q):
+MergeCmdLineInfo::MergeCmdLineInfo(QStringList q):
 	m_nCmdShow(SHOWNORMAL),
 	m_bEscShutdown(false),
 	m_bExitIfNoDiff(Disabled),
@@ -142,9 +121,9 @@ MergeCmdLineInfo::MergeCmdLineInfo(const TCHAR *q):
 	m_dwMiddleFlags(FFILEOPEN_NONE),
 	m_dwRightFlags(FFILEOPEN_NONE)
 {
-	String exeName;
-	q = EatParam(q, exeName);
-	ParseWinMergeCmdLine(q);
+	QString exeName = q.at(0);
+	q.removeFirst();
+	ParseWinMergeCmdLine(&q);
 }
 
 /**
@@ -153,9 +132,9 @@ MergeCmdLineInfo::MergeCmdLineInfo(const TCHAR *q):
  * are converted if needed, shortcuts expanded etc.
  * @param [in] path Path string to add.
  */
-void MergeCmdLineInfo::AddPath(const String &path)
+void MergeCmdLineInfo::AddPath(const QString &path)
 {
-	String param(path);
+	QString param(path);
 
 	// Set flag indicating path is from command line
 	const size_t ord = m_Files.GetSize();
@@ -170,12 +149,12 @@ void MergeCmdLineInfo::AddPath(const String &path)
 	{
 		// Convert paths given in Linux-style ('/' as separator) given from
 		// Cygwin to Windows style ('\' as separator)
-		strutils::replace(param, _T("/"), _T("\\"));
+		// param.replace("/","\\");
 
 		// If shortcut, expand it first
-		if (paths::IsShortcut(param))
-			param = paths::ExpandShortcut(param);
-		param = paths::GetLongPath(param);
+		/*if (paths::IsShortcut(param))
+			param = paths::ExpandShortcut(param);*/
+		param = paths::CanonicalPath(param);
 		m_Files.SetPath(m_Files.GetSize(), param);
 	}
 	else
@@ -188,204 +167,205 @@ void MergeCmdLineInfo::AddPath(const String &path)
  * @brief Parse native WinMerge command line.
  * @param [in] p Points into the command line.
  */
-void MergeCmdLineInfo::ParseWinMergeCmdLine(const TCHAR *q)
+void MergeCmdLineInfo::ParseWinMergeCmdLine(QStringList* q)
 {
-	String param;
+	QString param;
 	bool flag;
 
-	while ((q = EatParam(q, param, &flag)) != 0)
+	for (int i = 0; i < q->size(); ++i)
 	{
+		EatParam(q->at(i), param, &flag);
 		if (!flag)
 		{
 			// Its not a flag so it is a path
 			AddPath(param);
 		}
-		else if (param == _T("?"))
+		else if (param == QString("?"))
 		{
 			// -? to show common command line arguments.
 			m_bShowUsage = true;
 		}
-		else if (param == _T("o"))
+		else if (param == QString("o"))
 		{
 			// -o "outputfilename"
-			q = EatParam(q, m_sOutputpath);
+			EatParam(q->at(++i), m_sOutputpath);
 		}
-		else if (param == _T("or"))
+		else if (param == QString("or"))
 		{
 			// -or "reportfilename"
-			q = EatParam(q, m_sReportFile);
+			EatParam(q->at(++i), m_sReportFile);
 		}
-		else if (param == _T("dl"))
+		else if (param == QString("dl"))
 		{
 			// -dl "desc" - description for left file
-			q = EatParam(q, m_sLeftDesc);
+			EatParam(q->at(++i), m_sLeftDesc);
 		}
-		else if (param == _T("dm"))
+		else if (param == QString("dm"))
 		{
 			// -dr "desc" - description for middle file
-			q = EatParam(q, m_sMiddleDesc);
+			EatParam(q->at(++i), m_sMiddleDesc);
 		}
-		else if (param == _T("dr"))
+		else if (param == QString("dr"))
 		{
 			// -dr "desc" - description for right file
-			q = EatParam(q, m_sRightDesc);
+			EatParam(q->at(++i), m_sRightDesc);
 		}
-		else if (param == _T("e"))
+		else if (param == QString("e"))
 		{
 			// -e to allow closing with single esc press
 			m_bEscShutdown = true;
 		}
-		else if (param == _T("f"))
+		else if (param == QString("f"))
 		{
 			// -f "mask" - file filter mask ("*.h *.cpp")
-			q = EatParam(q, m_sFileFilter);
+			EatParam(q->at(++i), m_sFileFilter);
 		}
-		else if (param == _T("r"))
+		else if (param == QString("r"))
 		{
 			// -r to compare recursively
 			m_bRecurse = true;
 		}
-		else if (param == _T("s"))
+		else if (param == QString("s"))
 		{
 			// -s to allow only one instance
 			m_bSingleInstance = true;
 		}
-		else if (param == _T("noninteractive"))
+		else if (param == QString("noninteractive"))
 		{
 			// -noninteractive to suppress message boxes & close with result code
 			m_bNonInteractive = true;
 		}
-		else if (param == _T("noprefs"))
+		else if (param == QString("noprefs"))
 		{
 			// -noprefs means do not load or remember options (preferences)
 			m_bNoPrefs = true;
 		}
-		else if (param == _T("minimize"))
+		else if (param == QString("minimize"))
 		{
 			// -minimize means minimize the main window.
 			m_nCmdShow = MINIMIZE;
 		}
-		else if (param == _T("maximize"))
+		else if (param == QString("maximize"))
 		{
 			// -maximize means maximize the main window.
 			m_nCmdShow = MAXIMIZE;
 		}
-		else if (param == _T("prediffer"))
+		else if (param == QString("prediffer"))
 		{
 			// Get prediffer if specified (otherwise prediffer will be blank, which is default)
-			q = EatParam(q, m_sPreDiffer);
+			EatParam(q->at(++i), m_sPreDiffer);
 		}
-		else if (param == _T("wl"))
+		else if (param == QString("wl"))
 		{
 			// -wl to open left path as read-only
 			m_dwLeftFlags |= FFILEOPEN_READONLY;
 		}
-		else if (param == _T("wm"))
+		else if (param == QString("wm"))
 		{
 			// -wm to open middle path as read-only
 			m_dwMiddleFlags |= FFILEOPEN_READONLY;
 		}
-		else if (param == _T("wr"))
+		else if (param == QString("wr"))
 		{
 			// -wr to open right path as read-only
 			m_dwRightFlags |= FFILEOPEN_READONLY;
 		}
-		else if (param == _T("ul"))
+		else if (param == QString("ul"))
 		{
 			// -ul to not add left path to MRU
 			m_dwLeftFlags |= FFILEOPEN_NOMRU;
 		}
-		else if (param == _T("um"))
+		else if (param == QString("um"))
 		{
 			// -um to not add middle path to MRU
 			m_dwMiddleFlags |= FFILEOPEN_NOMRU;
 		}
-		else if (param == _T("ur"))
+		else if (param == QString("ur"))
 		{
 			// -ur to not add right path to MRU
 			m_dwRightFlags |= FFILEOPEN_NOMRU;
 		}
-		else if (param == _T("u") || param == _T("ub"))
+		else if (param == QString("u") || param == QString("ub"))
 		{
 			// -u or -ub (deprecated) to add neither right nor left path to MRU
 			m_dwLeftFlags |= FFILEOPEN_NOMRU;
 			m_dwMiddleFlags |= FFILEOPEN_NOMRU;
 			m_dwRightFlags |= FFILEOPEN_NOMRU;
 		}
-		else if (param == _T("fl"))
+		else if (param == QString("fl"))
 		{
 			// -fl to set focus to the left panbe
 			m_dwLeftFlags |= FFILEOPEN_SETFOCUS;
 		}
-		else if (param == _T("fm"))
+		else if (param == QString("fm"))
 		{
 			// -fm to set focus to the middle pane
 			m_dwMiddleFlags |= FFILEOPEN_SETFOCUS;
 		}
-		else if (param == _T("fr"))
+		else if (param == QString("fr"))
 		{
 			// -fr to set focus to the right pane
 			m_dwRightFlags |= FFILEOPEN_SETFOCUS;
 		}
-		else if (param == _T("al"))
+		else if (param == QString("al"))
 		{
 			// -al to auto-merge at the left pane
 			m_dwLeftFlags |= FFILEOPEN_AUTOMERGE;
 		}
-		else if (param == _T("am"))
+		else if (param == QString("am"))
 		{
 			// -am to auto-merge at the middle pane
 			m_dwMiddleFlags |= FFILEOPEN_AUTOMERGE;
 		}
-		else if (param == _T("ar"))
+		else if (param == QString("ar"))
 		{
 			// -ar to auto-merge at the right pane
 			m_dwRightFlags |= FFILEOPEN_AUTOMERGE;
 		}
-		else if (param == _T("x"))
+		else if (param == QString("x"))
 		{
 			// -x to close application if files are identical.
 			m_bExitIfNoDiff = Exit;
 		}
-		else if (param == _T("xq"))
+		else if (param == QString("xq"))
 		{
 			// -xn to close application if files are identical without showing
 			// any messages
 			m_bExitIfNoDiff = ExitQuiet;
 		}
-		else if (param == _T("cp"))
+		else if (param == QString("cp"))
 		{
-			String codepage;
-			q = EatParam(q, codepage);
-			m_nCodepage = atoi(ucr::toUTF8(codepage).c_str());
+			QString codepage;
+			EatParam(q->at(++i), codepage);
+			//m_nCodepage = atoi(ucr::toUTF8(codepage).c_str()); // ToDo: Port
 		}
-		else if (param == _T("ignorews"))
+		else if (param == QString("ignorews"))
 		{
-			q = SetOption(q, OPT_CMP_IGNORE_WHITESPACE);
+			SetOption(q->at(++i), OPT_CMP_IGNORE_WHITESPACE);
 		}
-		else if (param == _T("ignoreblanklines"))
+		else if (param == QString("ignoreblanklines"))
 		{
-			q = SetOption(q, OPT_CMP_IGNORE_BLANKLINES);
+			SetOption(q->at(++i), OPT_CMP_IGNORE_BLANKLINES);
 		}
-		else if (param == _T("ignorecase"))
+		else if (param == QString("ignorecase"))
 		{
-			q = SetOption(q, OPT_CMP_IGNORE_CASE);
+			SetOption(q->at(++i), OPT_CMP_IGNORE_CASE);
 		}
-		else if (param == _T("ignoreeol"))
+		else if (param == QString("ignoreeol"))
 		{
-			q = SetOption(q, OPT_CMP_IGNORE_EOL);
+			SetOption(q->at(++i), OPT_CMP_IGNORE_EOL);
 		}
-		else if (param == _T("ignorecodepage"))
+		else if (param == QString("ignorecodepage"))
 		{
-			q = SetOption(q, OPT_CMP_IGNORE_CODEPAGE);
+			SetOption(q->at(++i), OPT_CMP_IGNORE_CODEPAGE);
 		}
-		else if (param == _T("cfg") || param == _T("config"))
+		else if (param == QString("cfg") || param == ("config"))
 		{
-			q = SetConfig(q);
+			SetConfig(q->at(++i));
 		}
 		else
 		{
-			m_sErrorMessages.push_back(_T("Unknown option '/") + param + _T("'"));
+			m_sErrorMessages.push_back(("Unknown option '-") + param + ("'"));
 		}
 	}
 	// If "compare file dir" make it "compare file dir\file".

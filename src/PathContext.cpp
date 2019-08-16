@@ -145,9 +145,9 @@ int PathContext::GetSize() const
 void PathContext::RemoveAll()
 {
 	m_nFiles = 0;
-	m_path[0].SetPath((""));
-	m_path[1].SetPath((""));
-	m_path[2].SetPath((""));
+	m_path[0].SetPath(QString(""));
+	m_path[1].SetPath(QString(""));
+	m_path[2].SetPath(QString(""));
 }
 
 /**

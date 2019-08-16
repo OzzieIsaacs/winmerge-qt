@@ -38,7 +38,7 @@ bool CreateIfNeeded(const QString& szPath);
 PATH_EXISTENCE GetPairComparability(const PathContext & paths, bool (*IsArchiveFile)(const QString&) = nullptr);
 bool IsDirectory(const QString& path);
 bool IsShortcut(const QString& inPath);
-QString ExpandShortcut(const QString &inFile);
+QString CanonicalPath(const QString &inFile);
 QString ConcatPath(const QString & path, const QString & subpath);
 QString GetParentPath(const QString& path);
 QString GetLastSubdir(const QString & path);

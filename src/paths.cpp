@@ -140,7 +140,7 @@ QString FindExtension(const QString& path)
  * case and they are left intact. Since C:\ is a valid path but C: is not.
  * @param [in,out] sPath Path to strip.
  */
-void normalize(QString & sPath)
+void normalize(QString& sPath)
 {
 	size_t len = sPath.length();
 	if (!len)
@@ -210,6 +210,7 @@ static bool GetDirName(const QString& sDir, QString& sName)
 QString GetLongPath(const QString& szPath, bool bExpandEnvs)
 {
 	QString sPath = szPath;
+	return sPath;
 	// ToDo: Port
 	/*size_t len = sPath.length();
 	if (len < 1)
@@ -440,9 +441,17 @@ PATH_EXISTENCE GetPairComparability(const PathContext & paths, bool (*IsArchiveF
  * @param [in] inPath Path to check;
  * @return true if the path points to shortcut, false otherwise.
  */
-bool IsShortcut(const QString& inPath)
-{
-	// ToDo: Port
+ bool IsShortcut(const QString& inPath)
+ {
+	QFileInfo path(inPath);
+	return path.isSymLink();
+	/*if (path.exists() && path.completeSuffix() == QString(("lnk"))){
+		return true;
+	}
+	else
+	{
+		return false;
+	}*/
 	/*const TCHAR ShortcutExt[] = _T(".lnk");
 	TCHAR ext[_MAX_EXT] = {0};
 	_tsplitpath_s(inPath.c_str(), nullptr, 0, nullptr, 0, nullptr, 0, ext, _MAX_EXT);
@@ -455,7 +464,7 @@ bool IsShortcut(const QString& inPath)
 bool IsDirectory(const QString &path)
 {
 	// ToDo: Port
-	//return !!PathIsDirectory(path);
+	// return !!PathIsDirectory(path);
 }
 
 //////////////////////////////////////////////////////////////////
@@ -472,16 +481,18 @@ bool IsDirectory(const QString &path)
  * @param [in] inFile Shortcut to expand.
  * @return Full path or empty string if error happened.
  */
-QString ExpandShortcut(const QString &inFile)
+//QString ExpandShortcut(const QString &inFile)
+QString CanonicalPath(const QString &inFile)
 {
-	/*assert(inFile != _T(""));
+	assert(inFile != (""));
 
 	// No path, nothing to return
-	if (inFile == _T(""))
-		return _T("");
+	if (inFile == (""))
+		return ("");
 
-	QString outFile;
-	IShellLink* psl;
+	QFileInfo outFile(inFile);
+	return outFile.canonicalFilePath();
+	/*IShellLink* psl;
 	HRESULT hres;
 
 	// Create instance for shell link
@@ -772,13 +783,16 @@ QString GetPathOnly(const QString& fullpath)
 
 bool IsURLorCLSID(const QString& path)
 {
-	//return (path.find(_T("://")) != String::npos || path.find(_T("::{")) != String::npos);
+	return (path.indexOf("://") != std::string::npos || path.indexOf("::{") != std::string::npos);
 }
 
 bool IsDecendant(const QString& path, const QString& ancestor)
 {
-	/*return path.length() > ancestor.length() &&
-		   strutils::compare_nocase(String(path.c_str(), path.c_str() + ancestor.length()), ancestor) == 0;*/
+	QString str(path);
+	str.truncate(ancestor.length());
+	// ToDo Check original code looks strange
+	//  ... && strutils::compare_nocase(String(path.c_str(), path.c_str() + ancestor.length()), ancestor) == 0;
+	return path.length() > ancestor.length() && str.toLower() == ancestor.toLower();
 }
 
 /*static void replace_char(TCHAR *s, int target, int repl)

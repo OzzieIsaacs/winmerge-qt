@@ -5,8 +5,8 @@
  */
 
 #include "ExConverter.h"
-#include <windows.h>
-#include <mlang.h>
+//#include <windows.h>
+//#include <mlang.h>
 #include <memory>
 #include <list>
 #define POCO_NO_UNWINDOWS 1
@@ -18,10 +18,10 @@
 #endif
 
 #if defined(__GNUC__)
-const IID IID_IMultiLanguage2 = {0xDCCFC164, 0x2B38, 0x11d2, {0xB7, 0xEC, 0x00, 0xC0, 0x4F, 0x8F, 0x5D, 0x9A}};
+//const IID IID_IMultiLanguage2 = {0xDCCFC164, 0x2B38, 0x11d2, {0xB7, 0xEC, 0x00, 0xC0, 0x4F, 0x8F, 0x5D, 0x9A}};
 #endif 
 
-extern "C" typedef HRESULT (__stdcall *DllGetClassObjectFunc)(const CLSID &, const IID &, void **); 
+//extern "C" typedef HRESULT (__stdcall *DllGetClassObjectFunc)(const CLSID &, const IID &, void **);
 
 class CExconverterMLang: public IExconverter {
 private:

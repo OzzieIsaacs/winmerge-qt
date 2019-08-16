@@ -1,13 +1,13 @@
 #pragma once
 
-#include "UnicodeString.h"
+//#include "UnicodeString.h"
 #include <vector>
 
 struct CodePageInfo
 {
 	int codepage;
-	String desc;
-    String fixedWidthFont;
+	QString desc;
+    QString fixedWidthFont;
     char bGDICharset;
 };
 
@@ -20,8 +20,8 @@ struct IExconverter
 	virtual void clearCookie() = 0;
 	virtual int detectInputCodepage(int autodetectType, int defcodepage, const char *data, size_t size) = 0;
 	virtual std::vector<CodePageInfo> enumCodePages() = 0;
-	virtual bool getCodepageFromCharsetName(const String& sCharsetName, int& codepage) = 0;
-	virtual bool getCodepageDescription(int codepage, String& sCharsetName) = 0;
+	virtual bool getCodepageFromCharsetName(const QString& sCharsetName, int& codepage) = 0;
+	virtual bool getCodepageDescription(int codepage, QString& sCharsetName) = 0;
 	virtual bool isValidCodepage(int codepage) = 0;
 	virtual bool getCodePageInfo(int codePage, CodePageInfo *pCodePageInfo) = 0;
 };

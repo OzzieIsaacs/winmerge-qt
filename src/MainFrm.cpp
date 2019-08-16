@@ -35,6 +35,8 @@
 #include "OptionsDef.h"
 #include <QMessageBox>
 #include "resource.h"
+#include <QApplication>
+// #include "MergeCmdLineInfo.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -80,17 +82,17 @@ ui(new Ui::MainWindow)
 	ui->listWidget->addItem("IDD_WMGOTO");
 
 	// Parse command-line arguments.
-	/*MergeCmdLineInfo cmdInfo(GetCommandLine());
+	MergeCmdLineInfo cmdInfo(QCoreApplication::arguments()); //QStringListGetCommandLine());
 	if (cmdInfo.m_bNoPrefs)
-		m_pOptions->SetSerializing(false); // Turn off serializing to registry.
-	*/
+		m_options.SetSerializing(false); // Turn off serializing to registry.*/
+
 	Options::Init(&m_options);
-	/*
-	Options::Init(m_pOptions.get()); // Implementation in OptionsInit.cpp
+	//Options::Init(m_pOptions.get()); // Implementation in OptionsInit.cpp
 	ApplyCommandLineConfigOptions(cmdInfo);
 	if (cmdInfo.m_sErrorMessages.size() > 0)
 	{
-		if (AttachConsole(ATTACH_PARENT_PROCESS))
+		// ToDo: Output error values
+		/*if (AttachConsole(ATTACH_PARENT_PROCESS))
 		{
 			DWORD dwWritten;
 			for (auto& msg : cmdInfo.m_sErrorMessages)
@@ -99,7 +101,7 @@ ui(new Ui::MainWindow)
 				WriteConsole(GetStdHandle(STD_OUTPUT_HANDLE), line.c_str(), static_cast<DWORD>(line.length()), &dwWritten, nullptr);
 			}
 			FreeConsole();
-		}
+		}*/
 	}
 
 	// Initialize temp folder
@@ -111,13 +113,13 @@ ui(new Ui::MainWindow)
 
 	// WinMerge registry settings are stored under HKEY_CURRENT_USER/Software/Thingamahoochie
 	// This is the name of the company of the original author (Dean Grimm)
-	SetRegistryKey(_T("Thingamahoochie"));
+	//SetRegistryKey(_T("Thingamahoochie"));
 
-	bool bSingleInstance = GetOptionsMgr()->GetBool(OPT_SINGLE_INSTANCE) ||
+	bool bSingleInstance = m_options.value(OPT_SINGLE_INSTANCE).toBool() ||
 						   (true == cmdInfo.m_bSingleInstance);
 
 	// Create exclusion mutex name
-	TCHAR szDesktopName[MAX_PATH] = _T("Win9xDesktop");
+	/*TCHAR szDesktopName[MAX_PATH] = _T("Win9xDesktop");
 	DWORD dwLengthNeeded;
 	GetUserObjectInformation(GetThreadDesktop(GetCurrentThreadId()), UOI_NAME,
 							 szDesktopName, sizeof(szDesktopName), &dwLengthNeeded);
@@ -684,27 +686,27 @@ void MainWindow::InitializeFileFilters()
 	m_pGlobalFileFilter->LoadAllFileFilters();*/
 }
 
-/*void MainWindow::ApplyCommandLineConfigOptions(MergeCmdLineInfo& cmdInfo)
+void MainWindow::ApplyCommandLineConfigOptions(MergeCmdLineInfo& cmdInfo)
 {
-	/*if (cmdInfo.m_bNoPrefs)
-		m_pOptions->SetSerializing(false); // Turn off serializing to registry.
+	if (cmdInfo.m_bNoPrefs)
+		m_options.SetSerializing(false); // Turn off serializing to registry.
 
 	for (const auto& it : cmdInfo.m_Options)
 	{
-		if (m_pOptions->Set(it.first, it.second) == COption::OPT_NOTFOUND)
+		if (m_options.Set(it.first, it.second) == QOptionsMgr::OPT_NOTFOUND)
 		{
-			String longname = m_pOptions->ExpandShortName(it.first);
-			if (!longname.empty())
+			QString longname = m_options.ExpandShortName(it.first);
+			if (!longname.isEmpty())
 			{
-				m_pOptions->Set(longname, it.second);
+				m_options.setValue(longname, it.second);
 			}
 			else
 			{
-				cmdInfo.m_sErrorMessages.push_back(strutils::format_string1(_T("Invalid key '%1' specified in /config option"), it.first));
+				cmdInfo.m_sErrorMessages.push_back(QString("Invalid key '%1' specified in /config option").arg(it.first));
 			}
 		}
 	}
-}*/
+}
 
 /** @brief Read command line arguments and open files for comparison.
  *

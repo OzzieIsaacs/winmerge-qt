@@ -5,20 +5,21 @@
  */
 #include "OptionsFont.h"
 //#include "unicoder.h"
-#include "ExConverter.h"
+//#include "ExConverter.h"
 #include "OptionsDef.h"
 #include "QOptionsMgr.h"
 #include <cassert>
 
-namespace Options { namespace Font {
+namespace Options {
+	namespace Font {
 
 /**
  * @brief Initialize basic default values in a LOGFONT structure. 
  * A helper function for SetDefaults(); it should not be used otherwise.
  */
-void InitializeLogFont(LOGFONT &logfont, int lfHeight, int lfCharSet, int lfPitchAndFamily, String lfFaceName)
+void InitializeLogFont(QFont &logfont, int lfHeight, int lfCharSet, int lfPitchAndFamily, QString lfFaceName)
 {
-	logfont.lfHeight = lfHeight;
+	/*logfont.lfHeight = lfHeight;
 	logfont.lfWidth = 0;
 	logfont.lfEscapement = 0;
 	logfont.lfOrientation = 0;
@@ -31,7 +32,7 @@ void InitializeLogFont(LOGFONT &logfont, int lfHeight, int lfCharSet, int lfPitc
 	logfont.lfClipPrecision = CLIP_STROKE_PRECIS;
 	logfont.lfQuality = DRAFT_QUALITY;
 	logfont.lfPitchAndFamily = static_cast<BYTE>(lfPitchAndFamily);
-	lstrcpyn(logfont.lfFaceName, lfFaceName.c_str(), (sizeof(logfont.lfFaceName)/sizeof(logfont.lfFaceName[0])) );
+	lstrcpyn(logfont.lfFaceName, lfFaceName.c_str(), (sizeof(logfont.lfFaceName)/sizeof(logfont.lfFaceName[0])) );*/
 }
 
 /**
@@ -40,15 +41,15 @@ void InitializeLogFont(LOGFONT &logfont, int lfHeight, int lfCharSet, int lfPitc
  */
 void SetDefaults(QOptionsMgr *pOptionsMgr)
 {
-	HDC hDC = GetDC(nullptr);
-	const int logPixelsY = GetDeviceCaps(hDC, LOGPIXELSY);
+	//HDC hDC = GetDC(nullptr);
+	//const int logPixelsY = GetDeviceCaps(hDC, LOGPIXELSY);
 
 	// *****
 	// File-Contents windows use fixed-width fonts.  Here we discover the 
 	// correct default fontname from the system code page, if possible.  The 
 	// default size is 12 points.  If a fontname cannot be found (why?),   
 	// "Courier New" will be used for the fontname.
-	LOGFONT fontFile = {0};
+	/*LOGFONT fontFile = {0};
 	const int pointsFile = 12;
 
 	CodePageInfo cpi = {0};
@@ -75,8 +76,8 @@ void SetDefaults(QOptionsMgr *pOptionsMgr)
 		fontDir = ncm.lfMenuFont;
 		if (abs(fontDir.lfHeight) > abs(lfHeight))
 			fontDir.lfHeight = lfHeight;
-		if (wcscmp(fontDir.lfFaceName, L"Meiryo") == 0 || wcscmp(fontDir.lfFaceName, L"\U000030e1\U000030a4\U000030ea\U000030aa"/* "Meiryo" in Japanese */) == 0)
-			wcscpy_s(fontDir.lfFaceName, L"Meiryo UI");
+		if (wcscmp(fontDir.lfFaceName, L"Meiryo") == 0 || wcscmp(fontDir.lfFaceName, L"\U000030e1\U000030a4\U000030ea\U000030aa"/* "Meiryo" in Japanese *///) == 0)
+			/*wcscpy_s(fontDir.lfFaceName, L"Meiryo UI");
 	}
 	else
 	{	
@@ -110,14 +111,14 @@ void SetDefaults(QOptionsMgr *pOptionsMgr)
 		pOptionsMgr->InitOption(name + OPT_FONT_PITCHANDFAMILY, thisFont.lfPitchAndFamily);
 		pOptionsMgr->InitOption(name + OPT_FONT_FACENAME, ucr::toTString(thisFont.lfFaceName));
 	}
-	ReleaseDC(nullptr, hDC);
+	ReleaseDC(nullptr, hDC);*/
 }
 
-LOGFONT Load(const QOptionsMgr *pOptionsMgr, const QString& name)
+QFont* Load(const QOptionsMgr *pOptionsMgr, const QString& name)
 {
 	// Build a new LOGFONT with values from the 'actual' values of the in-memory Options::Font table.
 	// The Registry is not accessed.
-	LOGFONT lfnew = { 0 };
+	/*LOGFONT lfnew = { 0 };
 	HDC hDC = GetDC(nullptr);
 	lfnew.lfHeight = -MulDiv(pOptionsMgr->GetInt(name + OPT_FONT_POINTSIZE), GetDeviceCaps(hDC, LOGPIXELSY), 72);
 	if (lfnew.lfHeight == 0)
@@ -137,30 +138,30 @@ LOGFONT Load(const QOptionsMgr *pOptionsMgr, const QString& name)
 	lstrcpyn(lfnew.lfFaceName,
 		pOptionsMgr->GetString(name + OPT_FONT_FACENAME).c_str(), sizeof(lfnew.lfFaceName)/sizeof(lfnew.lfFaceName[0]));
 	ReleaseDC(nullptr, hDC);
-	return lfnew;
+	return lfnew;*/
 }
 
-void Save(QOptionsMgr *pOptionsMgr, const QString& name, const LOGFONT* lf, bool bUseCustom)
+void Save(QOptionsMgr *pOptionsMgr, const QString& name, const QFont* lf, bool bUseCustom)
 {
 	// Store LOGFONT values into both the 'actual' value of the in-memory Options::Font table, and 
 	// into the appropriate Registry entries.
-	HDC hDC = GetDC(nullptr);
-	pOptionsMgr->SaveOption(name + OPT_FONT_USECUSTOM, bUseCustom);
-	pOptionsMgr->SaveOption(name + OPT_FONT_POINTSIZE, -MulDiv(lf->lfHeight, 72, GetDeviceCaps(hDC, LOGPIXELSY)));
-	pOptionsMgr->SaveOption(name + OPT_FONT_HEIGHT, lf->lfHeight);
-	pOptionsMgr->SaveOption(name + OPT_FONT_ESCAPEMENT, lf->lfEscapement);
-	pOptionsMgr->SaveOption(name + OPT_FONT_ORIENTATION, lf->lfOrientation);
-	pOptionsMgr->SaveOption(name + OPT_FONT_WEIGHT, lf->lfWeight);
-	pOptionsMgr->SaveOption(name + OPT_FONT_ITALIC, lf->lfItalic != 0);
-	pOptionsMgr->SaveOption(name + OPT_FONT_UNDERLINE, lf->lfUnderline != 0);
-	pOptionsMgr->SaveOption(name + OPT_FONT_STRIKEOUT, lf->lfStrikeOut != 0);
-	pOptionsMgr->SaveOption(name + OPT_FONT_CHARSET, lf->lfCharSet);
-	pOptionsMgr->SaveOption(name + OPT_FONT_OUTPRECISION, lf->lfOutPrecision);
-	pOptionsMgr->SaveOption(name + OPT_FONT_CLIPPRECISION, lf->lfClipPrecision);
-	pOptionsMgr->SaveOption(name + OPT_FONT_QUALITY, lf->lfQuality);
-	pOptionsMgr->SaveOption(name + OPT_FONT_PITCHANDFAMILY, (int)lf->lfPitchAndFamily);
-	pOptionsMgr->SaveOption(name + OPT_FONT_FACENAME, lf->lfFaceName);
-	ReleaseDC(nullptr, hDC);
+	// HDC hDC = GetDC(nullptr);
+	pOptionsMgr->setValue(name + OPT_FONT_USECUSTOM, bUseCustom);
+	/*pOptionsMgr->setValue(name + OPT_FONT_POINTSIZE, -MulDiv(lf->lfHeight, 72, GetDeviceCaps(hDC, LOGPIXELSY)));
+	pOptionsMgr->setValue(name + OPT_FONT_HEIGHT, lf->lfHeight);
+	pOptionsMgr->setValue(name + OPT_FONT_ESCAPEMENT, lf->lfEscapement);
+	pOptionsMgr->setValue(name + OPT_FONT_ORIENTATION, lf->lfOrientation);
+	pOptionsMgr->setValue(name + OPT_FONT_WEIGHT, lf->lfWeight);
+	pOptionsMgr->setValue(name + OPT_FONT_ITALIC, lf->lfItalic != 0);
+	pOptionsMgr->setValue(name + OPT_FONT_UNDERLINE, lf->lfUnderline != 0);
+	pOptionsMgr->setValue(name + OPT_FONT_STRIKEOUT, lf->lfStrikeOut != 0);
+	pOptionsMgr->setValue(name + OPT_FONT_CHARSET, lf->lfCharSet);
+	pOptionsMgr->setValue(name + OPT_FONT_OUTPRECISION, lf->lfOutPrecision);
+	pOptionsMgr->setValue(name + OPT_FONT_CLIPPRECISION, lf->lfClipPrecision);
+	pOptionsMgr->setValue(name + OPT_FONT_QUALITY, lf->lfQuality);
+	pOptionsMgr->setValue(name + OPT_FONT_PITCHANDFAMILY, (int)lf->lfPitchAndFamily);
+	pOptionsMgr->setValue(name + OPT_FONT_FACENAME, lf->lfFaceName);*/
+	//ReleaseDC(nullptr, hDC);
 }
 
 void Reset(QOptionsMgr *pOptionsMgr, const QString& name)
@@ -168,7 +169,7 @@ void Reset(QOptionsMgr *pOptionsMgr, const QString& name)
 	// Resets the in-memory Options::Font 'actual' values to be original 'default' values.
 	// The Registry values are not modified, except to turn off the OPT_FONT_USECUSTOM 
 	// Registry entry.
-	pOptionsMgr->SaveOption(name + OPT_FONT_USECUSTOM, false);
+	pOptionsMgr->setValue(name + OPT_FONT_USECUSTOM, false);
 	pOptionsMgr->Reset(name + OPT_FONT_POINTSIZE);
 	pOptionsMgr->Reset(name + OPT_FONT_HEIGHT);
 	pOptionsMgr->Reset(name + OPT_FONT_ESCAPEMENT);

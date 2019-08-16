@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(winmerge_gui)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 include_directories(.)
 include_directories(../lib)
@@ -81,7 +81,11 @@ set ( SOURCES
         OptionsDiffColors.cpp
         OptionsDiffColors.h
         # CompareOptions.cpp
+        OptionsFont.h
+        OptionsFont.cpp
         CompareOptions.h
+        MergeCmdLineInfo.h
+        MergeCmdLineInfo.cpp
         diffutils/src/diff.h
         diffutils/src/system.h
         diffutils/config.h

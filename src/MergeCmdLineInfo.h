@@ -33,6 +33,8 @@
 #include "PathContext.h"
 #include <map>
 #include "tchar.h"
+#include <QStringList>
+#include "QOptionsMgr.h"
 
 /** 
  * @brief WinMerge's command line handler.
@@ -42,7 +44,7 @@
 class MergeCmdLineInfo
 {
 public:
-	explicit MergeCmdLineInfo(const TCHAR *);
+	explicit MergeCmdLineInfo(QStringList );
 
 public:
 
@@ -75,29 +77,31 @@ public:
 	unsigned m_dwMiddleFlags; /**< Middle side file's behavior options. */
 	unsigned m_dwRightFlags; /**< Right side file's behavior options. */
 
-	String m_sLeftDesc; /**< Left side file's description. */
-	String m_sMiddleDesc; /**< Middle side file's description. */
-	String m_sRightDesc; /**< Right side file's description. */
+	QString m_sLeftDesc; /**< Left side file's description. */
+	QString m_sMiddleDesc; /**< Middle side file's description. */
+	QString m_sRightDesc; /**< Right side file's description. */
 
-	String m_sFileFilter; /**< File filter mask. */
-	String m_sPreDiffer; /**< Pre-differ name. */
+	QString m_sFileFilter; /**< File filter mask. */
+	QString m_sPreDiffer; /**< Pre-differ name. */
 
-	String m_sOutputpath;
-	String m_sReportFile;
+	QString m_sOutputpath;
+	QString m_sReportFile;
 
 	PathContext m_Files; /**< Files (or directories) to compare. */
 
-	std::map<String, String> m_Options;
+	std::map<QString, QString> m_Options;
 
-	std::vector<String> m_sErrorMessages;
+	std::vector<QString> m_sErrorMessages;
 
 private:
 
-	static const TCHAR *EatParam(const TCHAR *, String &, bool *flag = nullptr);
-	const TCHAR *SetOption(const TCHAR *, const String& key, const TCHAR *value = _T("1"));
-	const TCHAR *SetConfig(const TCHAR *);
-	void ParseWinMergeCmdLine(const TCHAR *);
-	void AddPath(const String &path);
+	void EatParam(const QString &, QString &, bool *flag = nullptr);
+	void SetOption(const QString& option, const QString& key, QString* value);
+	void SetOption(const QString& option, const QString& key);
+	void SetConfig(const QString& option);
+
+	void ParseWinMergeCmdLine(QStringList* q);
+	void AddPath(const QString &path);
 
 	/** Operator= is not implemented. */
 	MergeCmdLineInfo& operator=(const MergeCmdLineInfo& rhs);
