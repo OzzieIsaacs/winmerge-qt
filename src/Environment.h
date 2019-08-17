@@ -5,26 +5,27 @@
  */
 #pragma once
 
-#include "UnicodeString.h"
+// #include "UnicodeString.h"
+#include <QString>
 
 namespace env
 {
 
-void SetTemporaryPath(const String& path);
-String GetTemporaryPath();
-String GetTemporaryFileName(const String& lpPathName, const String& lpPrefixString,
+void SetTemporaryPath(const QString& path);
+QString GetTemporaryPath();
+QString GetTemporaryFileName(const QString& lpPathName, const QString& lpPrefixString,
 		int * pnerr = nullptr);
-String GetTempChildPath();
-void SetProgPath(const String& path);
-String GetProgPath();
+QString GetTempChildPath();
+void SetProgPath(const QString& path);
+QString GetProgPath();
 
-String GetWindowsDirectory();
-String GetMyDocuments();
-String GetSystemTempPath();
+QString GetWindowsDirectory();
+QString GetMyDocuments();
+QString GetSystemTempPath();
 
-String GetPerInstanceString(const String& name);
+QString GetPerInstanceString(const QString& name);
 
-bool LoadRegistryFromFile(const String& sRegFilePath);
-bool SaveRegistryToFile(const String& sRegFilePath, const String& sRegDir);
+bool LoadRegistryFromFile(const QString& sRegFilePath);
+bool SaveRegistryToFile(const QString& sRegFilePath, const QString& sRegDir);
 
 }

@@ -23,17 +23,18 @@
 
 #include <vector>
 #include <memory>
-#include "UnicodeString.h"
-#include "DirItem.h"
+// #include "UnicodeString.h"
+#include <QString>
+// #include "DirItem.h"
 
-class FileFilterMgr;
-class FilterList;
-struct FileFilter;
+// class FileFilterMgr; ToDo revert
+// class FilterList;
+// struct FileFilter;
 
 /**
  * @brief File extension of file filter files.
  */
-const TCHAR FileFilterExt[] = _T(".flt");
+const QString FileFilterExt(".flt");
 
 /**
  * @brief Helper structure for UI and management of filters.
@@ -45,54 +46,54 @@ const TCHAR FileFilterExt[] = _T(".flt");
  */
 struct FileFilterInfo
 {
-	String name; 			/**< Name of filter */
-	String description; 	/**< Description of filter (shown in UI) */
-	String fullpath;		/**< Full path to filter file */
-	DirItem fileinfo;		/**< For tracking if file has been modified */
+	QString name; 			/**< Name of filter */
+	QString description; 	/**< Description of filter (shown in UI) */
+	QString fullpath;		/**< Full path to filter file */
+	// DirItem fileinfo;		/**< For tracking if file has been modified */ ToDo revert
 };
 
 /// Interface for testing files & directories for exclusion, as diff traverses file tree
 class IDiffFilter
 {
 public:
-	virtual bool includeFile(const String& szFileName) const = 0;
-	virtual bool includeDir(const String& szDirName) const = 0;
-	bool includeFile(const String& szFileName1, const String& szFileName2) const
+	virtual bool includeFile(const QString& szFileName) const = 0;
+	virtual bool includeDir(const QString& szDirName) const = 0;
+	bool includeFile(const QString& szFileName1, const QString& szFileName2) const
 	{
-		if (!szFileName1.empty())
+		if (!szFileName1.isEmpty())
 			return includeFile(szFileName1);
-		else if (!szFileName2.empty())
+		else if (!szFileName2.isEmpty())
 			return includeFile(szFileName2);
 		else
 			return false;
 	}
-	bool includeFile(const String& szFileName1, const String& szFileName2, const String& szFileName3) const
+	bool includeFile(const QString& szFileName1, const QString& szFileName2, const QString& szFileName3) const
 	{
-		if (!szFileName1.empty())
+		if (!szFileName1.isEmpty())
 			return includeFile(szFileName1);
-		else if (!szFileName2.empty())
+		else if (!szFileName2.isEmpty())
 			return includeFile(szFileName2);
-		else if (!szFileName3.empty())
+		else if (!szFileName3.isEmpty())
 			return includeFile(szFileName3);
 		else
 			return false;
 	}
-	bool includeDir(const String& szDirName1, const String& szDirName2) const
+	bool includeDir(const QString& szDirName1, const QString& szDirName2) const
 	{
-		if (!szDirName1.empty())
+		if (!szDirName1.isEmpty())
 			return includeDir(szDirName1);
-		else if (!szDirName2.empty())
+		else if (!szDirName2.isEmpty())
 			return includeDir(szDirName2);
 		else
 			return false;
 	}
-	bool includeDir(const String& szDirName1, const String& szDirName2, const String& szDirName3) const
+	bool includeDir(const QString& szDirName1, const QString& szDirName2, const QString& szDirName3) const
 	{
-		if (!szDirName1.empty())
+		if (!szDirName1.isEmpty())
 			return includeDir(szDirName1);
-		else if (!szDirName2.empty())
+		else if (!szDirName2.isEmpty())
 			return includeDir(szDirName2);
-		else if (!szDirName3.empty())
+		else if (!szDirName3.isEmpty())
 			return includeDir(szDirName3);
 		else
 			return false;
@@ -121,41 +122,42 @@ public:
 	FileFilterHelper();
 	~FileFilterHelper();
 
-	String GetGlobalFilterPathWithCreate() const;
-	String GetUserFilterPathWithCreate() const;
+	QString GetGlobalFilterPathWithCreate() const;
+	QString GetUserFilterPathWithCreate() const;
 
-	FileFilterMgr * GetManager() const;
-	void SetFileFilterPath(const String& szFileFilterPath);
-	void GetFileFilters(std::vector<FileFilterInfo> * filters, String & selected) const;
-	String GetFileFilterName(const String& filterPath) const;
-	String GetFileFilterPath(const String& filterName) const;
-	void SetUserFilterPath(const String & filterPath);
+	// FileFilterMgr * GetManager() const; todo revert
+	void SetFileFilterPath(const QString& szFileFilterPath);
+	void GetFileFilters(std::vector<FileFilterInfo> * filters, QString & selected) const;
+	QString GetFileFilterName(const QString& filterPath) const;
+	QString GetFileFilterPath(const QString& filterName) const;
+	void SetUserFilterPath(const QString & filterPath);
 
 	void ReloadUpdatedFilters();
 	void LoadAllFileFilters();
 
-	void LoadFileFilterDirPattern(const String& dir, const String& szPattern);
+	void LoadFileFilterDirPattern(const QString& dir, const QString& szPattern);
 
 	void UseMask(bool bUseMask);
-	void SetMask(const String& strMask);
+	void SetMask(const QString& strMask);
 
 	bool IsUsingMask() const;
-	String GetFilterNameOrMask() const;
-	bool SetFilter(const String &filter);
+	QString GetFilterNameOrMask() const;
+	bool SetFilter(const QString &filter);
 
-	bool includeFile(const String& szFileName) const;
-	bool includeDir(const String& szDirName) const;
+	bool includeFile(const QString& szFileName) const;
+	bool includeDir(const QString& szDirName) const;
 
 protected:
-	String ParseExtensions(const String &extensions) const;
+	QString ParseExtensions(const QString &extensions) const;
 
 private:
-	std::unique_ptr<FilterList> m_pMaskFilter;       /*< Filter for filemasks (*.cpp) */
-	FileFilter * m_currentFilter;     /*< Currently selected filefilter */
-	std::unique_ptr<FileFilterMgr> m_fileFilterMgr;  /*< Associated FileFilterMgr */
-	String m_sFileFilterPath;        /*< Path to current filter */
-	String m_sMask;   /*< File mask (if defined) "*.cpp *.h" etc */
+	// toDo revert
+	//std::unique_ptr<FilterList> m_pMaskFilter;       /*< Filter for filemasks (*.cpp) */
+	//FileFilter * m_currentFilter;     /*< Currently selected filefilter */
+	//std::unique_ptr<FileFilterMgr> m_fileFilterMgr;  /*< Associated FileFilterMgr */
+	QString m_sFileFilterPath;        /*< Path to current filter */
+	QString m_sMask;   /*< File mask (if defined) "*.cpp *.h" etc */
 	bool m_bUseMask;   /*< If `true` file mask is used, filter otherwise */
-	String m_sGlobalFilterPath;    /*< Path for shared filters */
-	String m_sUserSelFilterPath;     /*< Path for user's private filters */
+	QString m_sGlobalFilterPath;    /*< Path for shared filters */
+	QString m_sUserSelFilterPath;     /*< Path for user's private filters */
 };

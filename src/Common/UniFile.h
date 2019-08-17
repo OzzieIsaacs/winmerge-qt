@@ -8,7 +8,7 @@
  */
 #pragma once
 
-#include "unicoder.h"
+// #include "unicoder.h"
 
 namespace Poco { class SharedMemory; }
 
@@ -24,20 +24,20 @@ public:
 	 */
 	struct UniError
 	{
-		String desc; // valid if apiname empty
+		QString desc; // valid if apiname empty
 
 		UniError();
 		bool HasError() const;
 		void ClearError();
-		String GetError() const;
+		QString GetError() const;
 	};
 
 	virtual ~UniFile() { }
-	virtual bool OpenReadOnly(const String& filename) = 0;
+	virtual bool OpenReadOnly(const QString& filename) = 0;
 	virtual void Close() = 0;
 	virtual bool IsOpen() const = 0;
 
-	virtual String GetFullyQualifiedPath() const = 0;
+	virtual QString GetFullyQualifiedPath() const = 0;
 	virtual const UniError & GetLastUniError() const = 0;
 
 	virtual bool IsUnicode() = 0;
@@ -45,17 +45,17 @@ public:
 	virtual bool HasBom() const = 0;
 	virtual void SetBom(bool bom) = 0;
 
-	virtual ucr::UNICODESET GetUnicoding() const = 0;
-	virtual void SetUnicoding(ucr::UNICODESET unicoding) = 0;
+	// virtual ucr::UNICODESET GetUnicoding() const = 0;
+	// virtual void SetUnicoding(ucr::UNICODESET unicoding) = 0;
 	virtual int GetCodepage() const = 0;
 	virtual void SetCodepage(int codepage) = 0;
 
 public:
-	virtual bool ReadString(String & line, bool * lossy) = 0;
-	virtual bool ReadString(String & line, String & eol, bool * lossy) = 0;
+	virtual bool ReadString(QString & line, bool * lossy) = 0;
+	virtual bool ReadString(QString & line, QString & eol, bool * lossy) = 0;
 	virtual int GetLineNumber() const = 0;
 	virtual int64_t GetPosition() const = 0;
-	virtual bool WriteString(const String & line) = 0;
+	virtual bool WriteString(const QString & line) = 0;
 
 	struct txtstats
 	{
@@ -81,17 +81,17 @@ public:
 	UniLocalFile();
 	void Clear();
 
-	virtual String GetFullyQualifiedPath() const { return m_filepath; }
+	virtual QString GetFullyQualifiedPath() const { return m_filepath; }
 	virtual const UniError & GetLastUniError() const { return m_lastError; }
 
-	virtual ucr::UNICODESET GetUnicoding() const { return m_unicoding; }
-	virtual void SetUnicoding(ucr::UNICODESET unicoding) { m_unicoding = unicoding; }
+	//virtual ucr::UNICODESET GetUnicoding() const { return m_unicoding; }
+	// virtual void SetUnicoding(ucr::UNICODESET unicoding) { m_unicoding = unicoding; }
 	virtual int GetCodepage() const { return m_codepage; }
 	virtual void SetCodepage(int codepage) { 
 		m_codepage = codepage;
 		switch (m_codepage)
 		{
-		case ucr::CP_UCS2LE:
+		/*case ucr::CP_UCS2LE:
 			m_unicoding = ucr::UCS2LE;
 			m_charsize = 2;
 			break;
@@ -106,7 +106,7 @@ public:
 		default:
 			m_charsize = 1;
 			m_unicoding = ucr::NONE;
-			break;
+			break;*/
 		}
 	}
 
@@ -117,16 +117,16 @@ public:
 
 protected:
 	virtual bool DoGetFileStatus();
-	virtual void LastErrorCustom(const String& desc);
+	virtual void LastErrorCustom(const QString& desc);
 
 protected:
 	int m_statusFetched; // 0 not fetched, -1 error, +1 success
 	int64_t m_filesize;
-	String m_filepath;
-	String m_filename;
+	QString m_filepath;
+	QString m_filename;
 	int m_lineno; // current 0-based line of m_current
 	UniError m_lastError;
-	ucr::UNICODESET m_unicoding;
+	// ucr::UNICODESET m_unicoding;
 	int m_charsize; // 2 for UCS-2, else 1
 	int m_codepage; // only valid if m_unicoding==ucr::NONE;
 	txtstats m_txtstats;
@@ -153,9 +153,9 @@ public:
 
 	virtual bool GetFileStatus();
 
-	virtual bool OpenReadOnly(const String& filename);
-	virtual bool Open(const String& filename);
-	virtual bool Open(const String& filename, AccessMode mode);
+	virtual bool OpenReadOnly(const QString& filename);
+	virtual bool Open(const QString& filename);
+	virtual bool Open(const QString& filename, AccessMode mode);
 	void Close();
 	virtual bool IsOpen() const;
 
@@ -164,14 +164,14 @@ public:
 	virtual void SetBom(bool bom);
 
 public:
-	virtual bool ReadString(String & line, bool * lossy);
-	virtual bool ReadString(String & line, String & eol, bool * lossy);
+	virtual bool ReadString(QString & line, bool * lossy);
+	virtual bool ReadString(QString & line, QString & eol, bool * lossy);
 	virtual int64_t GetPosition() const { return m_current - m_base; }
-	virtual bool WriteString(const String & line);
+	virtual bool WriteString(const QString & line);
 
 // Implementation methods
 protected:
-	virtual bool DoOpen(const String& filename, AccessMode mode);
+	virtual bool DoOpen(const QString& filename, AccessMode mode);
 
 // Implementation data
 private:
@@ -194,10 +194,10 @@ public:
 
 	virtual bool GetFileStatus();
 
-	virtual bool OpenReadOnly(const String& filename);
-	virtual bool OpenCreate(const String& filename);
-	virtual bool OpenCreateUtf8(const String& filename);
-	virtual bool Open(const String& filename, const String& mode);
+	virtual bool OpenReadOnly(const QString& filename);
+	virtual bool OpenCreate(const QString& filename);
+	virtual bool OpenCreateUtf8(const QString& filename);
+	virtual bool Open(const QString& filename, const QString& mode);
 	void Close();
 
 	virtual bool IsOpen() const;
@@ -207,23 +207,23 @@ public:
 	virtual void SetBom(bool bom);
 
 protected:
-	virtual bool ReadString(String & line, bool * lossy);
-	virtual bool ReadString(String & line, String & eol, bool * lossy);
+	virtual bool ReadString(QString & line, bool * lossy);
+	virtual bool ReadString(QString & line, QString & eol, bool * lossy);
 
 public:
 	virtual int64_t GetPosition() const;
 
 	virtual int WriteBom();
-	virtual bool WriteString(const String & line);
+	virtual bool WriteString(const QString & line);
 
 // Implementation methods
 protected:
-	virtual bool DoOpen(const String& filename, const String& mode);
-	virtual void LastErrorCustom(const String& desc);
+	virtual bool DoOpen(const QString& filename, const QString& mode);
+	virtual void LastErrorCustom(const QString& desc);
 
 // Implementation data
 private:
 	FILE * m_fp;
 	int64_t m_data; // offset after any initial BOM
-	ucr::buffer m_ucrbuff;
+	// ucr::buffer m_ucrbuff;
 };

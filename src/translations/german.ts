@@ -7132,13 +7132,13 @@ Aktualisieren (F5)</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../MainFrm.cpp" line="1306"/>
+        <location filename="../MainFrm.cpp" line="1308"/>
         <location filename="../MergeApp.cpp" line="133"/>
         <source>Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MainFrm.cpp" line="1306"/>
+        <location filename="../MainFrm.cpp" line="1308"/>
         <source>You are now entering Merge Mode. If you want to turn off Merge Mode, press F9 key</source>
         <translation type="unfinished"></translation>
     </message>

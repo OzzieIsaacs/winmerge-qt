@@ -24,7 +24,7 @@
 #include <Poco/Glob.h>
 #include <Poco/DirectoryIterator.h>
 #include <Poco/RegularExpression.h>
-#include "UnicodeString.h"
+// #include "UnicodeString.h"
 #include "FileFilter.h"
 #include "UniFile.h"
 #include "paths.h"
@@ -35,7 +35,7 @@ using Poco::Glob;
 using Poco::icompare;
 using Poco::RegularExpression;
 
-static void AddFilterPattern(vector<FileFilterElementPtr> *filterList, String & str);
+static void AddFilterPattern(vector<FileFilterElementPtr> *filterList, QString & str);
 
 /**
  * @brief Destructor, frees all filters.
@@ -50,7 +50,7 @@ FileFilterMgr::~FileFilterMgr()
  * @param [in] szFilterFile Filter file to load.
  * @return FILTER_OK if succeeded or one of FILTER_RETVALUE values on error.
  */
-int FileFilterMgr::AddFilter(const String& szFilterFile)
+int FileFilterMgr::AddFilter(const QString& szFilterFile)
 {
 	int errorcode = FILTER_OK;
 	FileFilter * pFilter = LoadFilterFile(szFilterFile, errorcode);
@@ -65,16 +65,16 @@ int FileFilterMgr::AddFilter(const String& szFilterFile)
  * @param [in] szPattern Pattern for filters to load filters, for example "*.flt".
  * @param [in] szExt File-extension of filter files.
  */
-void FileFilterMgr::LoadFromDirectory(const String& dir, const String& szPattern, const String& szExt)
+void FileFilterMgr::LoadFromDirectory(const QString& dir, const QString& szPattern, const QString& szExt)
 {
-	const std::string u8ext = ucr::toUTF8(szExt);
+	const std::string u8ext = szExt.toStdString();
 	const size_t extlen = u8ext.length();
 
 	try
 	{
-		DirectoryIterator it(ucr::toUTF8(dir));
+		DirectoryIterator it(dir.toStdString());
 		DirectoryIterator end;
-		Glob glb(ucr::toUTF8(szPattern));
+		Glob glb(szPattern.toStdString());
 	
 		for (; it != end; ++it)
 		{
@@ -93,7 +93,7 @@ void FileFilterMgr::LoadFromDirectory(const String& dir, const String& szPattern
 					return;
 			}
 
-			String filterpath = paths::ConcatPath(dir, ucr::toTString(filename));
+			QString filterpath = paths::ConcatPath(dir, QString::fromStdString(filename));
 			AddFilter(filterpath);
 		}
 	}
@@ -107,13 +107,13 @@ void FileFilterMgr::LoadFromDirectory(const String& dir, const String& szPattern
  *
  * @param [in] szFilterFile Filename of filter to remove.
  */
-void FileFilterMgr::RemoveFilter(const String& szFilterFile)
+void FileFilterMgr::RemoveFilter(const QString& szFilterFile)
 {
 	// Note that m_filters.GetSize can change during loop
 	vector<FileFilterPtr>::iterator iter = m_filters.begin();
 	while (iter != m_filters.end())
 	{
-		if (strutils::compare_nocase((*iter)->fullpath, szFilterFile) == 0)
+		if ((*iter)->fullpath.toLower() == szFilterFile.toLower())
 		{
 			m_filters.erase(iter);
 			break;
@@ -136,29 +136,29 @@ void FileFilterMgr::DeleteAllFilters()
  * @param [in] filterList List where pattern is added.
  * @param [in] str Temporary variable (ie, it may be altered)
  */
-static void AddFilterPattern(vector<FileFilterElementPtr> *filterList, String & str)
+static void AddFilterPattern(vector<FileFilterElementPtr> *filterList, QString & str)
 {
-	const String& commentLeader = _T("##"); // Starts comment
-	str = strutils::trim_ws_begin(str);
+	const QString& commentLeader = "##"; // Starts comment
+	str = str.trimmed(); // = strutils::trim_ws_begin(str);
 
 	// Ignore lines beginning with '##'
-	size_t pos = str.find(commentLeader);
+	size_t pos = str.indexOf(commentLeader);
 	if (pos == 0)
 		return;
 
 	// Find possible comment-separator '<whitespace>##'
-	while (pos != std::string::npos && !(str[pos - 1] == ' ' || str[pos - 1] == '\t'))
-		pos = str.find(commentLeader, pos + 1);
+	while (pos != std::string::npos && !(str.at(pos - 1) == ' ' || str.at(pos - 1) == '\t'))
+		pos = str.indexOf(commentLeader, pos + 1);
 
 	// Remove comment and whitespaces before it
 	if (pos != std::string::npos)
-		str = str.substr(0, pos);
-	str = strutils::trim_ws_end(str);
-	if (str.empty())
+		str = str.left(pos);
+	str = str.trimmed(); // strutils::trim_ws_end(str);
+	if (str.isEmpty())
 		return;
 
 	int re_opts = RegularExpression::RE_CASELESS;
-	std::string regexString = ucr::toUTF8(str);
+	std::string regexString = str.toStdString();
 	re_opts |= RegularExpression::RE_UTF8;
 	try
 	{
@@ -177,7 +177,7 @@ static void AddFilterPattern(vector<FileFilterElementPtr> *filterList, String & 
  * @param [out] error Error-code if loading failed (returned `nullptr`).
  * @return Pointer to new filter, or `nullptr` if error (check error code too).
  */
-FileFilter * FileFilterMgr::LoadFilterFile(const String& szFilepath, int & error)
+FileFilter * FileFilterMgr::LoadFilterFile(const QString& szFilepath, int & error)
 {
 	UniMemFile file;
 	if (!file.OpenReadOnly(szFilepath))
@@ -188,59 +188,65 @@ FileFilter * FileFilterMgr::LoadFilterFile(const String& szFilepath, int & error
 
 	file.ReadBom(); // in case it is a Unicode file, let UniMemFile handle BOM
 
-	String fileName;
+	QString fileName;
 	paths::SplitFilename(szFilepath, nullptr, &fileName, nullptr);
 	FileFilter *pfilter = new FileFilter;
 	pfilter->fullpath = szFilepath;
 	pfilter->name = fileName; // Filename is the default name
 
-	String sLine;
+	QString sLine;
 	bool lossy = false;
 	bool bLinesLeft = true;
 	do
 	{
 		// Returns false when last line is read
-		String tmpLine;
+		QString tmpLine;
 		bLinesLeft = file.ReadString(tmpLine, &lossy);
-		sLine = tmpLine;
-		sLine = strutils::trim_ws(sLine);
+		sLine = tmpLine.trimmed();
+		// sLine.trimmed(); //);sLine = strutils::trim_ws(
 
-		if (0 == sLine.compare(0, 5, _T("name:"), 5))
+		//if (0 == sLine.compare(0, 5, ("name:"), 5))
+		if (sLine.left(5) == ("name:"))
 		{
 			// specifies display name
-			String str = sLine.substr(5);
-			str = strutils::trim_ws_begin(str);
-			if (!str.empty())
+			QString str = sLine.left(5);
+			// str = strutils::trim_ws_begin(str);
+			str.trimmed();
+			if (!str.isEmpty())
 				pfilter->name = str;
 		}
-		else if (0 == sLine.compare(0, 5, _T("desc:"), 5))
+		else if (sLine.left(5) == ("desc:"))
+		// else if (0 == sLine.compare(0, 5, ("desc:"), 5))
 		{
 			// specifies display name
-			String str = sLine.substr(5);
-			str = strutils::trim_ws_begin(str);
-			if (!str.empty())
+			QString str = sLine.left(5);
+			str = str.trimmed(); // str = strutils::trim_ws_begin(str);
+			if (!str.isEmpty())
 				pfilter->description = str;
 		}
-		else if (0 == sLine.compare(0, 4, _T("def:"), 4))
+		else if (sLine.left(4) == ("def:"))
+		// else if (0 == sLine.compare(0, 4, ("def:"), 4))
 		{
 			// specifies default
-			String str = sLine.substr(4);
-			str = strutils::trim_ws_begin(str);
-			if (str == _T("0") || str == _T("no") || str == _T("exclude"))
+			QString str = sLine.left(4);
+			str = str.trimmed(); //str = strutils::trim_ws_begin(str);
+			if (str == ("0") || str == ("no") || str == ("exclude"))
 				pfilter->default_include = false;
-			else if (str == _T("1") || str == _T("yes") || str == _T("include"))
+			else if (str == ("1") || str == ("yes") || str == ("include"))
 				pfilter->default_include = true;
 		}
-		else if (0 == sLine.compare(0, 2, _T("f:"), 2))
+		else if (sLine.left(2) == ("f:"))
+		// else if (0 == sLine.compare(0, 2, ("f:"), 2))
 		{
 			// file filter
-			String str = sLine.substr(2);
+			QString str = sLine.left(2);
 			AddFilterPattern(&pfilter->filefilters, str);
 		}
-		else if (0 == sLine.compare(0, 2, _T("d:"), 2))
+		else if (sLine.left(2) == ("d:"))
+		// else if (0 == sLine.compare(0, 2, ("d:"), 2))
 		{
 			// directory filter
-			String str = sLine.substr(2);
+			QString str = sLine.left(2);
 			AddFilterPattern(&pfilter->dirfilters, str);
 		}
 	} while (bLinesLeft);
@@ -255,12 +261,13 @@ FileFilter * FileFilterMgr::LoadFilterFile(const String& szFilepath, int & error
  * @return Pointer to found filefilter or `nullptr`;
  * @note We just do a linear search, because this is seldom called
  */
-FileFilter * FileFilterMgr::GetFilterByPath(const String& szFilterPath)
+FileFilter * FileFilterMgr::GetFilterByPath(const QString& szFilterPath)
 {
 	vector<FileFilterPtr>::const_iterator iter = m_filters.begin();
 	while (iter != m_filters.end())
 	{
-		if (strutils::compare_nocase((*iter)->fullpath, szFilterPath) == 0)
+		//if (strutils::compare_nocase((*iter)->fullpath, szFilterPath) == 0)
+		if ((*iter)->fullpath.toLower() == szFilterPath.toLower())
 			return (*iter).get();
 		++iter;
 	}
@@ -275,13 +282,13 @@ FileFilter * FileFilterMgr::GetFilterByPath(const String& szFilterPath)
  * @return true if string passes
  * @note Matching stops when first match is found.
  */
-bool TestAgainstRegList(const vector<FileFilterElementPtr> *filterList, const String& szTest)
+bool TestAgainstRegList(const vector<FileFilterElementPtr> *filterList, const QString& szTest)
 {
 	if (filterList->size() == 0)
 		return false;
 
 	std::string compString;
-	ucr::toUTF8(szTest, compString);
+	compString = szTest.toStdString();
 	vector<FileFilterElementPtr>::const_iterator iter = filterList->begin();
 	while (iter != filterList->end())
 	{
@@ -313,7 +320,7 @@ bool TestAgainstRegList(const vector<FileFilterElementPtr> *filterList, const St
  * @return true if file passes the filter
  */
 bool FileFilterMgr::TestFileNameAgainstFilter(const FileFilter * pFilter,
-	const String& szFileName) const
+	const QString& szFileName) const
 {
 	if (pFilter == nullptr)
 		return true;
@@ -334,7 +341,7 @@ bool FileFilterMgr::TestFileNameAgainstFilter(const FileFilter * pFilter,
  * @return true if directory name passes the filter
  */
 bool FileFilterMgr::TestDirNameAgainstFilter(const FileFilter * pFilter,
-	const String& szDirName) const
+	const QString& szDirName) const
 {
 	if (pFilter == nullptr)
 		return true;
@@ -349,7 +356,7 @@ bool FileFilterMgr::TestDirNameAgainstFilter(const FileFilter * pFilter,
  * @param [in] i Index of filter.
  * @return Name of filter in given index.
  */
-String FileFilterMgr::GetFilterName(int i) const
+QString FileFilterMgr::GetFilterName(int i) const
 {
 	return m_filters[i]->name; 
 }
@@ -359,7 +366,7 @@ String FileFilterMgr::GetFilterName(int i) const
  * @param [in] pFilter Filter to get name for.
  * @return Given filter's name.
  */
-String FileFilterMgr::GetFilterName(const FileFilter *pFilter) const
+QString FileFilterMgr::GetFilterName(const FileFilter *pFilter) const
 {
 	return pFilter->name; 
 }
@@ -370,7 +377,7 @@ String FileFilterMgr::GetFilterName(const FileFilter *pFilter) const
  * @param [in] i Index of filter.
  * @return Description of filter in given index.
  */
-String FileFilterMgr::GetFilterDesc(int i) const
+QString FileFilterMgr::GetFilterDesc(int i) const
 {
 	return m_filters[i]->description; 
 }
@@ -380,7 +387,7 @@ String FileFilterMgr::GetFilterDesc(int i) const
  * @param [in] pFilter Filter to get description for.
  * @return Given filter's description.
  */
-String FileFilterMgr::GetFilterDesc(const FileFilter *pFilter) const
+QString FileFilterMgr::GetFilterDesc(const FileFilter *pFilter) const
 {
 	return pFilter->description;
 }
@@ -391,7 +398,7 @@ String FileFilterMgr::GetFilterDesc(const FileFilter *pFilter) const
  * @param [in] i Index of filter.
  * @return Full path of filter in given index.
  */
-String FileFilterMgr::GetFilterPath(int i) const
+QString FileFilterMgr::GetFilterPath(int i) const
 {
 	return m_filters[i]->fullpath;
 }
@@ -402,7 +409,7 @@ String FileFilterMgr::GetFilterPath(int i) const
  * @param [in] pFilter Pointer to filter.
  * @return Full path of filter.
  */
-String FileFilterMgr::GetFullpath(FileFilter * pfilter) const
+QString FileFilterMgr::GetFullpath(FileFilter * pfilter) const
 {
 	return pfilter->fullpath;
 }
@@ -448,7 +455,7 @@ int FileFilterMgr::ReloadFilterFromDisk(FileFilter * pfilter)
  * @param [in] szFullPath Full path to filter file to reload.
  * @return FILTER_OK when succeeds or one of FILTER_RETVALUE values when fails.
  */
-int FileFilterMgr::ReloadFilterFromDisk(const String& szFullPath)
+int FileFilterMgr::ReloadFilterFromDisk(const QString& szFullPath)
 {
 	int errorcode = FILTER_OK;
 	FileFilter * filter = GetFilterByPath(szFullPath);

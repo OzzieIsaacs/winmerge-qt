@@ -5,7 +5,8 @@
  */
 #pragma once
 
-#include "UnicodeString.h"
+#include <QString>
+// #include "UnicodeString.h"
 
 /**
  * @brief A class that contains file version information.
@@ -24,6 +25,6 @@ public:
 	bool IsCleared() const { return m_fileVersionMS == 0xffffffff && m_fileVersionLS == 0xffffffff; };
 	void SetFileVersion(unsigned versionMS, unsigned versionLS);
 	void SetFileVersionNone() { m_fileVersionMS = 0xffffffff; m_fileVersionLS = 0xfffffffe; };
-	String GetFileVersionString() const;
+	QString GetFileVersionString() const;
 	uint64_t GetFileVersionQWORD() const { return (static_cast<uint64_t>(m_fileVersionMS) << 32) + m_fileVersionLS; };
 };

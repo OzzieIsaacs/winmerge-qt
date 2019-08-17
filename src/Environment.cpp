@@ -6,16 +6,21 @@
 
 #define POCO_NO_UNWINDOWS 1
 #include "Environment.h"
-#include <windows.h>
+// #include <windows.h>
 #pragma warning (push)			// prevent "warning C4091: 'typedef ': ignored on left of 'tagGPFIDL_FLAGS' when no variable is declared"
 #pragma warning (disable:4091)	// VC bug when using XP enabled toolsets.
-#include <shlobj.h>
+// #include <shlobj.h>
 #pragma warning (pop)
 #include <sstream>
 #include <Poco/Path.h>
 #include <Poco/Process.h>
 #include "paths.h"
-#include "unicoder.h"
+// #include "unicoder.h"
+
+#ifdef Q_OS_LINUX
+	#include <linux/limits.h>
+	#define MAX_PATH PATH_MAX
+#endif
 
 using Poco::Path;
 using Poco::Process;
@@ -27,10 +32,10 @@ namespace env
  * @brief Temp path.
  * Static string used by GetTemporaryPath() for storing temp path.
  */
-static String strTempPath;
-static String strProgPath;
+static QString strTempPath;
+static QString strProgPath;
 
-void SetTemporaryPath(const String& path)
+void SetTemporaryPath(const QString& path)
 {
 	strTempPath = paths::AddTrailingSlash(paths::GetLongPath(path));
 	paths::CreateIfNeeded(strTempPath);
@@ -43,12 +48,12 @@ void SetTemporaryPath(const String& path)
  * @note Temp path is cached after first call.
  * @todo Should we return `nullptr` for error case?
  */
-String GetTemporaryPath()
+QString GetTemporaryPath()
 {
-	if (strTempPath.empty())
+	if (strTempPath.isEmpty())
 	{
 		strTempPath = GetSystemTempPath();
-		if (strTempPath.empty())
+		if (strTempPath.isEmpty())
 			return strTempPath;
 
 		paths::CreateIfNeeded(strTempPath);
@@ -63,43 +68,49 @@ String GetTemporaryPath()
  * @param [out] pnerr Error code if error happened.
  * @return Full path for temporary file or empty string if error happened.
  */
-String GetTemporaryFileName(const String& lpPathName, const String& lpPrefixString, int * pnerr /*= nullptr*/)
+QString GetTemporaryFileName(const QString& lpPathName, const QString& lpPrefixString, int * pnerr /*= nullptr*/)
 {
-	TCHAR buffer[MAX_PATH] = {0};
+	QString buffer; // TCHAR [MAX_PATH] = {0};
 	if (lpPathName.length() > MAX_PATH-14)
-		return _T(""); // failure
-	int rtn = ::GetTempFileName(lpPathName.c_str(), lpPrefixString.c_str(), 0, buffer);
+		return QString(""); // failure
+	//int rtn = ::GetTempFileName(lpPathName, lpPrefixString, 0, buffer);
+	// ToDO
+	int rtn = 1;
 	if (rtn == 0)
 	{
-		int err = GetLastError();
+		// ToDo: GetLast Error
+		// int err = GetLastError();
+		int err = 0;
 		if (pnerr != nullptr)
 			*pnerr = err;
-		return _T("");
+		return QString("");
 	}
 	return buffer;
 }
 
-String GetTempChildPath()
+QString GetTempChildPath()
 {
-	String path;
+	QString path;
 	do
 	{
-		path = paths::ConcatPath(GetTemporaryPath(), strutils::format(_T("%08x"), rand()));
+		path = paths::ConcatPath(GetTemporaryPath(), QString("%08x").arg(rand()));
 	} while (paths::IsDirectory(path) || !paths::CreateIfNeeded(path));
 	return path;
 }
 
-void SetProgPath(const String& path)
+void SetProgPath(const QString& path)
 {
 	strProgPath = paths::AddTrailingSlash(path);
 }
 
-String GetProgPath()
+QString GetProgPath()
 {
-	if (strProgPath.empty())
+	if (strProgPath.isEmpty())
 	{
-		TCHAR temp[MAX_PATH] = {0};
-		GetModuleFileName(nullptr, temp, MAX_PATH);
+		QString temp('\0');
+		// TCHAR temp[MAX_PATH] = {0};
+		// ToDO
+		//GetModuleFileName(nullptr, temp, MAX_PATH);
 		strProgPath = paths::GetPathOnly(temp);
 	}
 	return strProgPath;
@@ -109,11 +120,13 @@ String GetProgPath()
  * @brief Get Windows directory.
  * @return Windows directory.
  */
-String GetWindowsDirectory()
+QString GetWindowsDirectory()
 {
-	TCHAR path[MAX_PATH];
-	path[0] = _T('\0');
-	::GetWindowsDirectory(path, MAX_PATH);
+	QString path('\0');
+	// ToDo port
+	//TCHAR path[MAX_PATH];
+	//path[0] = _T('\0');
+	// ::GetWindowsDirectory(path, MAX_PATH);
 	return path;
 }
 
@@ -122,11 +135,12 @@ String GetWindowsDirectory()
  * This function returns full path to User's My Documents -folder.
  * @return Full path to My Documents -folder.
  */
-String GetMyDocuments()
+QString GetMyDocuments()
 {
-	TCHAR path[MAX_PATH];
-	path[0] = _T('\0');
-	SHGetFolderPath(nullptr, CSIDL_PERSONAL, nullptr, 0, path);
+	QString path('\0');
+	// path[0] = ();
+	// ToDo port
+	//SHGetFolderPath(nullptr, CSIDL_PERSONAL, nullptr, 0, path);
 	return path;
 }
 
@@ -137,32 +151,34 @@ String GetMyDocuments()
  * @param [in] name Additional name used as part of the string.
  * @return Unique string for the instance.
  */
-String GetPerInstanceString(const String& name)
+QString GetPerInstanceString(const QString& name)
 {
-	std::basic_stringstream<TCHAR> stream;
-	stream << name << Process::id();
-	return stream.str();
+	//std::basic_stringstream<QString> stream;
+	QString stream;
+	stream = name + Process::id();
+	return QString(stream);
 }
 
 /**
  * @brief Get system temporary directory.
  * @return System temporary director.
  */
-String GetSystemTempPath()
+QString GetSystemTempPath()
 {
 	try
 	{
-		return ucr::toTString(Path::temp());
+		return QString::fromStdString(Path::temp());
 	}
 	catch (...)
 	{
-		return _T("");
+		return QString("");
 	}
 }
 
-static bool launchProgram(const String& sCmd, WORD wShowWindow)
+static bool launchProgram(const QString& sCmd, unsigned long wShowWindow)
 {
-	STARTUPINFO stInfo = { sizeof(STARTUPINFO) };
+	// ToDo: Port to Qt
+	/*STARTUPINFO stInfo = { sizeof(STARTUPINFO) };
 	stInfo.dwFlags = STARTF_USESHOWWINDOW;
 	stInfo.wShowWindow = wShowWindow;
 	PROCESS_INFORMATION processInfo;
@@ -172,29 +188,29 @@ static bool launchProgram(const String& sCmd, WORD wShowWindow)
 	if (!retVal)
 		return false;
 	CloseHandle(processInfo.hThread);
-	CloseHandle(processInfo.hProcess);
+	CloseHandle(processInfo.hProcess);*/
 	return true;
 }
 
 /**
  * @brief Load registry keys from .reg file if existing .reg file
  */
-bool LoadRegistryFromFile(const String& sRegFilePath)
+bool LoadRegistryFromFile(const QString& sRegFilePath)
 {
-	if (paths::DoesPathExist(sRegFilePath) != paths::IS_EXISTING_FILE)
+	/*if (paths::DoesPathExist(sRegFilePath) != paths::IS_EXISTING_FILE)
 		return false;
-	return launchProgram(_T("reg.exe import \"") + sRegFilePath + _T("\""), SW_HIDE);
+	return launchProgram(_T("reg.exe import \"") + sRegFilePath + _T("\""), SW_HIDE);*/
 }
 
 /** 
  * @brief Save registry keys to .reg file if existing .reg file
  */
-bool SaveRegistryToFile(const String& sRegFilePath, const String& sRegDir)
+bool SaveRegistryToFile(const QString& sRegFilePath, const QString& sRegDir)
 {
-	if (paths::DoesPathExist(sRegFilePath) != paths::IS_EXISTING_FILE)
+	/*if (paths::DoesPathExist(sRegFilePath) != paths::IS_EXISTING_FILE)
 		return false;
 	DeleteFile(sRegFilePath.c_str());
-	return launchProgram(_T("reg.exe export HKCU\\") + sRegDir + _T(" \"") + sRegFilePath + _T("\""), SW_HIDE);
+	return launchProgram(_T("reg.exe export HKCU\\") + sRegDir + _T(" \"") + sRegFilePath + _T("\""), SW_HIDE);*/
 }
 
 }

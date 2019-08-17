@@ -89,7 +89,17 @@ set ( SOURCES
         diffutils/src/diff.h
         diffutils/src/system.h
         diffutils/config.h
-        // PathContext.cpp
+        FileFilterHelper.h
+        FileFilterHelper.cpp
+        PathContext.cpp
+        #FilterList.h
+        #DirItem.h
+        #FileFilterMgr.h
+        #Environment.h
+        #Environment.cpp
+        #DirItem.cpp
+        #FileFilterMgr.cpp
+        #FilterList.cpp
         # opendialog.cpp
         # openfilesdialog.cpp
         qlabelclick.cpp QOptionsMgr.cpp QOptionsMgr.h)
@@ -200,6 +210,12 @@ set(Poco_DIR "../ext/poco/cmake-build-debug/Poco") # the directory containing "i
 set(PocoFoundation_DIR "../ext/poco/cmake-build-debug/Foundation") # the directory containing "include" and "lib"
 set(PocoNet_DIR "../ext/poco/cmake-build-debug/Net") # the directory containing "include" and "lib"
 
+set(BOOST_ROOT "../ext/boost_1_70_0")
+
+set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+
 # Include a library search using find_package()
 # via REQUIRED, specify that libraries are required
 find_package(Qt5Core REQUIRED)
@@ -207,6 +223,7 @@ find_package(Qt5Gui REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 find_package(OpenMP REQUIRED)
 find_package(Poco REQUIRED Foundation Net )
+find_package(Boost 1.70.0 COMPONENTS filesystem regex)
 
 # include( ${QT_USE_FILE} )
 add_definitions( ${QT_DEFINITIONS} )
@@ -235,6 +252,8 @@ target_link_libraries(${PROJECT_NAME} Qt5::Gui)
 target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 target_link_libraries(${PROJECT_NAME} ${OpenMP_CXX_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} Poco::Foundation Poco::Net)
+target_link_libraries(${PROJECT_NAME} Boost::filesystem Boost::regex)
+
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)

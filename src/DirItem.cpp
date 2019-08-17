@@ -20,10 +20,10 @@
  * @brief Implementation for DirItem routines
  */
 
-#include "stdafx.h"
+// #include "stdafx.h"
 #include "DirItem.h"
-#include <windows.h>
-#include "UnicodeString.h"
+// #include <windows.h>
+//#include "UnicodeString.h"
 #include "paths.h"
 #include "TFile.h"
 
@@ -37,9 +37,9 @@
 	* shown in the GUI.
 	* @return File flags as a string.
 	*/
-String FileFlags::ToString() const
+QString FileFlags::ToString() const
 {
-	String sflags;
+	QString sflags;
 	if (attributes & FILE_ATTRIBUTE_READONLY)
 		sflags += _T("R");
 	if (attributes & FILE_ATTRIBUTE_HIDDEN)
@@ -55,11 +55,11 @@ String FileFlags::ToString() const
  * @brief Set filename and path for the item.
  * @param [in] fullpath Full path to file to set to item.
  */
-void DirItem::SetFile(const String &fullPath)
+void DirItem::SetFile(const QString &fullPath)
 {
-	String ext, filename2, path2;
+	QString ext, filename2, path2;
 	paths::SplitFilename(fullPath, &path2, &filename2, &ext);
-	filename2 += _T(".");
+	filename2 += QString(".");
 	filename2 += ext;
 	filename = filename2;
 	path = path2;
@@ -69,7 +69,7 @@ void DirItem::SetFile(const String &fullPath)
  * @brief Get the full path of the item.
  * @return fullpath
  */
-String DirItem::GetFile() const
+QString DirItem::GetFile() const
 {
 	return paths::ConcatPath(path.get(), filename.get());
 }
@@ -81,7 +81,7 @@ String DirItem::GetFile() const
  * @param [in] sFilePath Full path to file/directory to update
  * @return true if information was updated (item was found).
  */
-bool DirItem::Update(const String &sFilePath)
+bool DirItem::Update(const QString &sFilePath)
 {
 	bool retVal = false;
 
@@ -89,7 +89,7 @@ bool DirItem::Update(const String &sFilePath)
 	flags.reset();
 	mtime = 0;
 
-	if (!sFilePath.empty())
+	if (!sFilePath.isEmpty())
 	{
 		try
 		{

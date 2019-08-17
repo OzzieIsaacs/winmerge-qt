@@ -34,11 +34,11 @@ THE SOFTWARE.
 #include <memory>
 #include <Poco/SharedMemory.h>
 #include <Poco/Exception.h>
-#include "UnicodeString.h"
-#include "unicoder.h"
+// #include "UnicodeString.h"
+// #include "unicoder.h"
 #include "paths.h" // paths::GetLongbPath()
 #include "TFile.h"
-#include <windows.h>
+// #include <windows.h>
 
 using Poco::SharedMemory;
 using Poco::Exception;

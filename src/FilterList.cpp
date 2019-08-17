@@ -7,7 +7,7 @@
 #include "FilterList.h"
 #include <vector>
 #include <Poco/RegularExpression.h>
-#include "unicoder.h"
+// #include "unicoder.h"
 
 using Poco::RegularExpression;
 
@@ -78,7 +78,8 @@ bool FilterList::Match(const std::string& string, int codepage/*=CP_UTF8*/)
 	const size_t count = m_list.size();
 
 	// convert string into UTF-8
-	ucr::buffer buf(string.length() * 2);
+	//ucr::buffer buf(string.length() * 2);
+	// QString buf;
 
 	if (codepage != ucr::CP_UTF_8)
 			ucr::convert(ucr::NONE, codepage, reinterpret_cast<const unsigned char *>(string.c_str()), 

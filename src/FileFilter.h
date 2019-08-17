@@ -25,7 +25,8 @@
 #include <memory>
 #define POCO_NO_UNWINDOWS 1
 #include <Poco/RegularExpression.h>
-#include "UnicodeString.h"
+// #include "UnicodeString.h"
+#include <QString>
 
 /**
  * @brief FileFilter rule.
@@ -61,9 +62,9 @@ typedef std::shared_ptr<FileFilterElement> FileFilterElementPtr;
 struct FileFilter
 {
 	bool default_include;	/**< If true, filter rules are inclusive by default */
-	String name;			/**< Filter name (shown in UI) */
-	String description;	/**< Filter description text */
-	String fullpath;		/**< Full path to filter file */
+	QString name;			/**< Filter name (shown in UI) */
+	QString description;	/**< Filter description text */
+	QString fullpath;		/**< Full path to filter file */
 	std::vector<FileFilterElementPtr> filefilters; /**< List of rules for files */
 	std::vector<FileFilterElementPtr> dirfilters;  /**< List of rules for directories */
 	FileFilter() : default_include(true) { }

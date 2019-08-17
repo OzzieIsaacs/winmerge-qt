@@ -20,8 +20,9 @@
 #pragma once
 
 #include <vector>
-#include "UnicodeString.h"
+// #include "UnicodeString.h"
 #include "FileFilter.h"
+#include <QString>
 
 /**
  * @brief Return values for many filter functions.
@@ -52,28 +53,28 @@ private:
 public:
 	~FileFilterMgr();
 	// Reload filter array from specified directory (passed to CFileFind)
-	void LoadFromDirectory(const String& dir, const String& szPattern, const String& szExt);
+	void LoadFromDirectory(const QString& dir, const QString& szPattern, const QString& szExt);
 	// Reload an edited filter
 	int ReloadFilterFromDisk(FileFilter * pfilter);
-	int ReloadFilterFromDisk(const String& szFullPath);
+	int ReloadFilterFromDisk(const QString& szFullPath);
 	// Load a filter from a string
-	void LoadFilterString(const String& szFilterString);
-	int AddFilter(const String& szFilterFile);
-	void RemoveFilter(const String& szFilterFile);
+	void LoadFilterString(const QString& szFilterString);
+	int AddFilter(const QString& szFilterFile);
+	void RemoveFilter(const QString& szFilterFile);
 
 	// access to array of filters
 	int GetFilterCount() const { return (int) m_filters.size(); }
-	String GetFilterName(int i) const;
-	String GetFilterName(const FileFilter *pFilter) const;
-	String GetFilterPath(int i) const;
-	String GetFilterDesc(int i) const;
-	String GetFilterDesc(const FileFilter *pFilter) const;
-	FileFilter * GetFilterByPath(const String& szFilterName);
-	String GetFullpath(FileFilter * pfilter) const;
+	QString GetFilterName(int i) const;
+	QString GetFilterName(const FileFilter *pFilter) const;
+	QString GetFilterPath(int i) const;
+	QString GetFilterDesc(int i) const;
+	QString GetFilterDesc(const FileFilter *pFilter) const;
+	FileFilter * GetFilterByPath(const QString& szFilterName);
+	QString GetFullpath(FileFilter * pfilter) const;
 
 	// methods to actually use filter
-	bool TestFileNameAgainstFilter(const FileFilter * pFilter, const String& szFileName) const;
-	bool TestDirNameAgainstFilter(const FileFilter * pFilter, const String& szDirName) const;
+	bool TestFileNameAgainstFilter(const FileFilter * pFilter, const QString& szFileName) const;
+	bool TestDirNameAgainstFilter(const FileFilter * pFilter, const QString& szDirName) const;
 
 	void DeleteAllFilters();
 
@@ -81,7 +82,7 @@ public:
 protected:
 	// Clear the list of known filters
 	// Load a filter from a file (if syntax is valid)
-	FileFilter * LoadFilterFile(const String& szFilepath, int & errorcode);
+	FileFilter * LoadFilterFile(const QString& szFilepath, int & errorcode);
 
 // Implementation data
 private:
@@ -89,5 +90,5 @@ private:
 };
 
 
-bool TestAgainstRegList(const std::vector<FileFilterElementPtr> *filterList, const String& szTest);
+bool TestAgainstRegList(const std::vector<FileFilterElementPtr> *filterList, const QString& szTest);
 void EmptyFilterList(std::vector<FileFilterElementPtr> *filterList);

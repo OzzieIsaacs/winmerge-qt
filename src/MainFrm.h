@@ -7,9 +7,11 @@
 #include <memory>
 #include "QOptionsMgr.h"
 #include "MergeCmdLineInfo.h"
+#include "FileFilterHelper.h"
 // #include <QMenuBar>
 
-class COptionsMgr;
+// class COptionsMgr;
+//class FileFilterHelper;
 
 namespace Ui {
 class MainWindow;
@@ -44,13 +46,28 @@ public:
 	QMenuBar* NewImgMergeViewMenu();
 	QMenuBar* NewOpenViewMenu();
 	QMenuBar* NewDefaultMenu(int ID = 0);
+	bool m_bNeedIdleTimer;
+	/*CMultiDocTemplate* m_pOpenTemplate;
+	CMultiDocTemplate* m_pDiffTemplate;
+	CMultiDocTemplate* m_pHexMergeTemplate;
+	CMultiDocTemplate* m_pDirTemplate;*/
+	std::unique_ptr<FileFilterHelper> m_pGlobalFileFilter;
+	// std::unique_ptr<SyntaxColors> m_pSyntaxColors; /**< Syntax color container */
+	// std::unique_ptr<CCrystalTextMarkers> m_pMarkers; /**< Marker container */
+	QString m_strSaveAsPath; /**< "3rd path" where output saved if given */
+	bool m_bEscShutdown; /**< If commandline switch -e given ESC closes appliction */
+	// SyntaxColors * GetMainSyntaxColors() { return m_pSyntaxColors.get(); }
+	// CCrystalTextMarkers * GetMainMarkers() const { return m_pMarkers.get(); }
+	MergeCmdLineInfo::ExitNoDiff m_bExitIfNoDiff; /**< Exit if files are identical? */
+  	// std::unique_ptr<LineFiltersList> m_pLineFilters; /**< List of linefilters */
+	// std::unique_ptr<FilterCommentsManager> m_pFilterCommentsManager;
+
 
 
 	virtual bool WriteProfileString(QString& lpszSection, QString& lpszEntry, QVariant& lpszValue);
 
 	// Public implementation data
 	bool m_bFirstTime; /**< If first time frame activated, get  pos from reg */
-	bool m_bNeedIdleTimer;
 
 
 public slots:

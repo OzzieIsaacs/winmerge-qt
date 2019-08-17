@@ -121,6 +121,7 @@ ui(new Ui::MainWindow)
 	// Create exclusion mutex name
 	/*TCHAR szDesktopName[MAX_PATH] = _T("Win9xDesktop");
 	DWORD dwLengthNeeded;
+	// ToDo Handle single instance
 	GetUserObjectInformation(GetThreadDesktop(GetCurrentThreadId()), UOI_NAME,
 							 szDesktopName, sizeof(szDesktopName), &dwLengthNeeded);
 	TCHAR szMutexName[MAX_PATH + 40];
@@ -149,27 +150,27 @@ ui(new Ui::MainWindow)
 				return FALSE;
 			}
 		}
-	}
+	}*/
 
-	LoadStdProfileSettings(GetOptionsMgr()->GetInt(OPT_MRU_MAX));  // Load standard INI file options (including MRU)
+	//LoadStdProfileSettings(GetOptionsMgr()->GetInt(OPT_MRU_MAX));  // Load standard INI file options (including MRU)
 
 	InitializeFileFilters();
 
 	// Read last used filter from registry
 	// If filter fails to set, reset to default
-	const String filterString = m_pOptions->GetString(OPT_FILEFILTER_CURRENT);
+	const QString filterString = m_options.value(OPT_FILEFILTER_CURRENT).toString();
 	bool bFilterSet = m_pGlobalFileFilter->SetFilter(filterString);
 	if (!bFilterSet)
 	{
-		String filter = m_pGlobalFileFilter->GetFilterNameOrMask();
-		m_pOptions->SaveOption(OPT_FILEFILTER_CURRENT, filter);
+		QString filter = m_pGlobalFileFilter->GetFilterNameOrMask();
+		m_options.setValue(OPT_FILEFILTER_CURRENT, filter);
 	}
 
-	charsets_init();
+	//charsets_init();
 	UpdateCodepageModule();
 
-	FileTransform::g_UnpackerMode = static_cast<PLUGIN_MODE>(GetOptionsMgr()->GetInt(OPT_PLUGINS_UNPACKER_MODE));
-	FileTransform::g_PredifferMode = static_cast<PLUGIN_MODE>(GetOptionsMgr()->GetInt(OPT_PLUGINS_PREDIFFER_MODE));
+	/*FileTransform::g_UnpackerMode = static_cast<PLUGIN_MODE>(m_options.value(OPT_PLUGINS_UNPACKER_MODE).toInt());
+	FileTransform::g_PredifferMode = static_cast<PLUGIN_MODE>(m_options.value(OPT_PLUGINS_PREDIFFER_MODE).toInt());
 
 	NONCLIENTMETRICS ncm = { sizeof NONCLIENTMETRICS };
 	if (SystemParametersInfo(SPI_GETNONCLIENTMETRICS, sizeof NONCLIENTMETRICS, &ncm, 0))
@@ -677,13 +678,13 @@ bool MainWindow::OnIdle(long int lCount)
  */
 void MainWindow::InitializeFileFilters()
 {
-	/*QString filterPath = GetOptionsMgr()->GetString(OPT_FILTER_USERPATH);
+	QString filterPath = m_options.value(OPT_FILTER_USERPATH).toString();
 
-	if (!filterPath.empty())
+	if (!filterPath.isEmpty())
 	{
 		m_pGlobalFileFilter->SetUserFilterPath(filterPath);
 	}
-	m_pGlobalFileFilter->LoadAllFileFilters();*/
+	m_pGlobalFileFilter->LoadAllFileFilters();
 }
 
 void MainWindow::ApplyCommandLineConfigOptions(MergeCmdLineInfo& cmdInfo)
