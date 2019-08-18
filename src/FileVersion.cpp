@@ -5,7 +5,8 @@
  */
 
 #include "FileVersion.h"
-#include "UnicodeString.h"
+// #include "UnicodeString.h"
+#include <QString>
 
 #ifndef HIWORD
 #define LOWORD(l) ((unsigned short)((l) & 0xffff))
@@ -45,13 +46,13 @@ void FileVersion::SetFileVersion(unsigned versionMS, unsigned versionLS)
  * @return File version number as a string. Returns empty string if there is
  * no version number for the file.
  */
-String FileVersion::GetFileVersionString() const
+QString FileVersion::GetFileVersionString() const
 {
-	if (m_fileVersionMS == 0xffffffff && m_fileVersionLS >= 0xfffffffe)
-		return _T("");
+	//if (m_fileVersionMS == 0xffffffff && m_fileVersionLS >= 0xfffffffe)
+		return QString("");
 
-	return strutils::format(_T("%u.%u.%u.%u"), HIWORD(m_fileVersionMS),
+	/*return QString("%u.%u.%u.%u").arg(HIWORD(m_fileVersionMS),
 		LOWORD(m_fileVersionMS), HIWORD(m_fileVersionLS),
-		LOWORD(m_fileVersionLS));
+		LOWORD(m_fileVersionLS));*/
 }
 

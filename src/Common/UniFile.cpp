@@ -36,14 +36,15 @@ THE SOFTWARE.
 #include <Poco/Exception.h>
 // #include "UnicodeString.h"
 // #include "unicoder.h"
-#include "paths.h" // paths::GetLongbPath()
+#include "paths.h" // paths::GetLongPath()
 #include "TFile.h"
+#include "tchar.h"
 // #include <windows.h>
 
 using Poco::SharedMemory;
 using Poco::Exception;
 
-static void Append(String &strBuffer, const TCHAR *pchTail, size_t cchTail,
+static void Append(QString &strBuffer, const TCHAR *pchTail, size_t cchTail,
 		size_t cchBufferMin = 1024);
 
 /**

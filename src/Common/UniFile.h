@@ -9,6 +9,7 @@
 #pragma once
 
 // #include "unicoder.h"
+#include <QString>
 
 namespace Poco { class SharedMemory; }
 

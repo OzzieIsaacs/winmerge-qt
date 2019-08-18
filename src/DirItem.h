@@ -25,9 +25,12 @@
 #include <Poco/File.h>
 #include <Poco/Timestamp.h>
 #include <boost/flyweight.hpp>
+// #include <boost/winapi/file_management.hpp>
 // #include "UnicodeString.h"
 #include "FileVersion.h"
 #include <QString>
+#include <iostream>
+#include "TFile.h"
 
 /**
  * @brief Class for fileflags.
@@ -54,8 +57,10 @@ struct DirItem
 	Poco::Timestamp ctime; /**< time of creation */
 	Poco::Timestamp mtime; /**< time of last modify */
 	Poco::File::FileSize size; /**< file size in bytes, FILE_SIZE_NONE (== -1) means file does not exist*/
-	boost::flyweight<QString> filename; /**< filename for this item */
-	boost::flyweight<QString> path; /**< full path (excluding filename) for the item */
+	// boost::flyweight<std::string> filename; /**< filename for this item */
+	QString filename;
+	// boost::flyweight<std::string> path; /**< full path (excluding filename) for the item */
+	QString path;
 	FileVersion version; /**< string of fixed file version, eg, 1.2.3.4 */
 	FileFlags flags; /**< file attributes */
 	
@@ -65,4 +70,5 @@ struct DirItem
 	QString GetFile() const;
 	bool Update(const QString &sFilePath);
 	void ClearPartial();
+	unsigned getAttributes(TFile& filename);
 };

@@ -22,11 +22,12 @@
 
 #include "FileFilterHelper.h"
 #include "paths.h"
+#include <QDebug>
 
-/*#include "FilterList.h"
+#include "FilterList.h"
 #include "DirItem.h"
 #include "FileFilterMgr.h"
-#include "Environment.h"*/
+#include "Environment.h"
 // #include "UnicodeString.h"
 // #include "unicoder.h"
 
@@ -36,10 +37,10 @@ using std::vector;
  * @brief Constructor, creates new filtermanager.
  */
 FileFilterHelper::FileFilterHelper()
-/*: m_pMaskFilter(nullptr)
+: m_pMaskFilter(nullptr)
 , m_bUseMask(true)
-//, m_fileFilterMgr(new FileFilterMgr) ToDo
-, m_currentFilter(nullptr)*/
+, m_fileFilterMgr(new FileFilterMgr) // ToDo
+, m_currentFilter(nullptr)
 {
 }
 
@@ -53,11 +54,11 @@ FileFilterHelper::~FileFilterHelper()
 /** 
  * @brief Return filtermanager used.
  */
- //ToDo revert
-/*FileFilterMgr * FileFilterHelper::GetManager() const
+
+FileFilterMgr * FileFilterHelper::GetManager() const
 {
 	return m_fileFilterMgr.get();
-}*/
+}
 
 /**
  * @brief Store current filter path.
@@ -70,7 +71,7 @@ void FileFilterHelper::SetFileFilterPath(const QString& szFileFilterPath)
 {
 	// Use none as default path
 	m_sFileFilterPath.clear();
-/*
+
 	if (m_fileFilterMgr == nullptr)
 		return;
 
@@ -80,7 +81,7 @@ void FileFilterHelper::SetFileFilterPath(const QString& szFileFilterPath)
 		m_currentFilter = m_fileFilterMgr->GetFilterByPath(szFileFilterPath);
 		if (m_currentFilter != nullptr)
 			m_sFileFilterPath = szFileFilterPath;
-	}*/
+	}
 }
 
 /**
@@ -194,8 +195,10 @@ void FileFilterHelper::UseMask(bool bUseMask)
  */
 void FileFilterHelper::SetMask(const QString& strMask)
 {
+	qDebug() << m_bUseMask;
 	if (!m_bUseMask)
 	{
+
 		throw "Filter mask tried to set when masks disabled!";
 	}
 	m_sMask = strMask;

@@ -53,5 +53,6 @@ src/cmake-build-debug
 build-src-Desktop-Vorgabe
 src/old
 ext/poco/cmake-build/
+ext/boost_1_70_0/stage/
 ext/poco/cmake-build-debug/
 *.qm

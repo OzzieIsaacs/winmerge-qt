@@ -26,7 +26,7 @@
 #include <Poco/RegularExpression.h>
 // #include "UnicodeString.h"
 #include "FileFilter.h"
-#include "UniFile.h"
+//#include "UniFile.h"
 #include "paths.h"
 
 using std::vector;
@@ -211,7 +211,7 @@ FileFilter * FileFilterMgr::LoadFilterFile(const QString& szFilepath, int & erro
 			// specifies display name
 			QString str = sLine.left(5);
 			// str = strutils::trim_ws_begin(str);
-			str.trimmed();
+			str = str.trimmed();
 			if (!str.isEmpty())
 				pfilter->name = str;
 		}

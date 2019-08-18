@@ -27,10 +27,17 @@
 #include "paths.h"
 #include "TFile.h"
 
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
+enum {
+	FILE_ATTRIBUTE_READONLY = 1,
+	FILE_ATTRIBUTE_HIDDEN = 2,
+	FILE_ATTRIBUTE_SYSTEM = 4,
+	FILE_ATTRIBUTE_ARCHIVE = 8
+};
 /**
 	* @brief Convert file flags to string presentation.
 	* This function converts file flags to a string presentation that can be
@@ -41,13 +48,13 @@ QString FileFlags::ToString() const
 {
 	QString sflags;
 	if (attributes & FILE_ATTRIBUTE_READONLY)
-		sflags += _T("R");
+		sflags += ("R");
 	if (attributes & FILE_ATTRIBUTE_HIDDEN)
-		sflags += _T("H");
+		sflags += ("H");
 	if (attributes & FILE_ATTRIBUTE_SYSTEM)
-		sflags += _T("S");
+		sflags += ("S");
 	if (attributes & FILE_ATTRIBUTE_ARCHIVE)
-		sflags += _T("A");
+		sflags += ("A");
 	return sflags;
 }
 
@@ -59,7 +66,7 @@ void DirItem::SetFile(const QString &fullPath)
 {
 	QString ext, filename2, path2;
 	paths::SplitFilename(fullPath, &path2, &filename2, &ext);
-	filename2 += QString(".");
+	filename2 += (".");
 	filename2 += ext;
 	filename = filename2;
 	path = path2;
@@ -71,7 +78,7 @@ void DirItem::SetFile(const QString &fullPath)
  */
 QString DirItem::GetFile() const
 {
-	return paths::ConcatPath(path.get(), filename.get());
+	return paths::ConcatPath(path, filename);
 }
 
 /**
@@ -106,7 +113,8 @@ bool DirItem::Update(const QString &sFilePath)
 			if (!file.isDirectory())
 				size = file.getSize();
 
-			flags.attributes = GetFileAttributes(TFile(sFilePath).wpath().c_str());
+			TFile fileAttrib = TFile(sFilePath);
+			flags.attributes = getAttributes(fileAttrib);
 
 			retVal = true;
 		}
@@ -137,4 +145,19 @@ void DirItem::ClearPartial()
 	size = DirItem::FILE_SIZE_NONE;
 	version.Clear();
 	flags.reset();
+}
+
+unsigned DirItem::getAttributes(TFile& filename){
+	unsigned helper =0;
+	if (filename.canRead()){
+		helper+= 16;
+	}
+	if (filename.canWrite()){
+		helper+= FILE_ATTRIBUTE_READONLY;
+	}
+	if (filename.isHidden()){
+		helper+= FILE_ATTRIBUTE_HIDDEN;
+	}
+	return helper;
+
 }

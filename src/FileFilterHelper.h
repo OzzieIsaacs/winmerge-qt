@@ -25,11 +25,11 @@
 #include <memory>
 // #include "UnicodeString.h"
 #include <QString>
-// #include "DirItem.h"
+#include "DirItem.h"
 
-// class FileFilterMgr; ToDo revert
-// class FilterList;
-// struct FileFilter;
+class FileFilterMgr;
+class FilterList;
+struct FileFilter;
 
 /**
  * @brief File extension of file filter files.
@@ -49,7 +49,7 @@ struct FileFilterInfo
 	QString name; 			/**< Name of filter */
 	QString description; 	/**< Description of filter (shown in UI) */
 	QString fullpath;		/**< Full path to filter file */
-	// DirItem fileinfo;		/**< For tracking if file has been modified */ ToDo revert
+	DirItem fileinfo;		/**< For tracking if file has been modified */
 };
 
 /// Interface for testing files & directories for exclusion, as diff traverses file tree
@@ -125,7 +125,7 @@ public:
 	QString GetGlobalFilterPathWithCreate() const;
 	QString GetUserFilterPathWithCreate() const;
 
-	// FileFilterMgr * GetManager() const; todo revert
+	FileFilterMgr * GetManager() const;
 	void SetFileFilterPath(const QString& szFileFilterPath);
 	void GetFileFilters(std::vector<FileFilterInfo> * filters, QString & selected) const;
 	QString GetFileFilterName(const QString& filterPath) const;
@@ -151,10 +151,9 @@ protected:
 	QString ParseExtensions(const QString &extensions) const;
 
 private:
-	// toDo revert
-	//std::unique_ptr<FilterList> m_pMaskFilter;       /*< Filter for filemasks (*.cpp) */
-	//FileFilter * m_currentFilter;     /*< Currently selected filefilter */
-	//std::unique_ptr<FileFilterMgr> m_fileFilterMgr;  /*< Associated FileFilterMgr */
+	std::unique_ptr<FilterList> m_pMaskFilter;       /*< Filter for filemasks (*.cpp) */
+	FileFilter * m_currentFilter;     /*< Currently selected filefilter */
+	std::unique_ptr<FileFilterMgr> m_fileFilterMgr;  /*< Associated FileFilterMgr */
 	QString m_sFileFilterPath;        /*< Path to current filter */
 	QString m_sMask;   /*< File mask (if defined) "*.cpp *.h" etc */
 	bool m_bUseMask;   /*< If `true` file mask is used, filter otherwise */

@@ -93,13 +93,18 @@ set ( SOURCES
         FileFilterHelper.cpp
         PathContext.cpp
         #FilterList.h
-        #DirItem.h
-        #FileFilterMgr.h
-        #Environment.h
-        #Environment.cpp
-        #DirItem.cpp
-        #FileFilterMgr.cpp
-        #FilterList.cpp
+        DirItem.h
+        DirItem.cpp
+        FileVersion.h
+        FileVersion.cpp
+        FileFilterMgr.h
+        Environment.h
+        Environment.cpp
+        FileFilterMgr.cpp
+        FilterList.h
+        FilterList.cpp
+        Common/UniFile.h
+        # Common/UniFile.cpp
         # opendialog.cpp
         # openfilesdialog.cpp
         qlabelclick.cpp QOptionsMgr.cpp QOptionsMgr.h)
