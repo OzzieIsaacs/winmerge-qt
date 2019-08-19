@@ -39,6 +39,7 @@ public:
 	void OpenFileToExternalEditor(const QString& file, int nLineNumber = 1);
 	bool CreateBackup(bool bFolder, const QString& pszPath);
 	int HandleReadonlySave(QString& strSavePath, bool bMultiFile, bool &bApplyToAll);
+	FileFilterHelper * GetGlobalFileFilter() { return m_pGlobalFileFilter.get(); }
 
 	QMenuBar* NewDirViewMenu();
 	QMenuBar* NewMergeViewMenu();

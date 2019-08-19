@@ -61,7 +61,7 @@ UniFile::UniError::UniError()
  */
 bool UniFile::UniError::HasError() const
 {
-	return !desc.empty();
+	return !desc.isEmpty();
 }
 
 /**
@@ -69,14 +69,14 @@ bool UniFile::UniError::HasError() const
  */
 void UniFile::UniError::ClearError()
 {
-	desc.erase();
+	desc.clear();
 }
 
 /**
  * @brief Get the error string.
  * @return Error string.
  */
-String UniFile::UniError::GetError() const
+QString UniFile::UniError::GetError() const
 {
 	return desc;
 }
@@ -96,12 +96,12 @@ void UniLocalFile::Clear()
 {
 	m_statusFetched = 0;
 	m_filesize = 0;
-	m_filepath.erase();
-	m_filename.erase();
+	m_filepath.clear();
+	m_filename.clear();
 	m_lineno = -1;
-	m_unicoding = ucr::NONE;
+	m_unicoding = 0; // ucr::NONE; ToDo
 	m_charsize = 1;
-	m_codepage = ucr::getDefaultCodepage();
+	m_codepage = 0; // ucr::getDefaultCodepage(); ToDo
 	m_txtstats.clear();
 	m_bom = false;
 	m_bUnicodingChecked = false;
@@ -133,11 +133,11 @@ bool UniLocalFile::DoGetFileStatus()
 			// use GetCompressedFileSize() to get the file size of the symbolic link target whether the file is symbolic link or not.
 			// if the file is not symbolic link, GetCompressedFileSize() will return zero.
 			// NOTE: GetCompressedFileSize() returns error for pre-W2K windows versions
-			DWORD dwFileSizeLow, dwFileSizeHigh;
+			/*DWORD dwFileSizeLow, dwFileSizeHigh;
 			
 			dwFileSizeLow = GetCompressedFileSize(TFile(m_filepath).wpath().c_str(), &dwFileSizeHigh);
 			if (GetLastError() == 0)
-				m_filesize = ((int64_t)dwFileSizeHigh << 32) + dwFileSizeLow;
+				m_filesize = ((int64_t)dwFileSizeHigh << 32) + dwFileSizeLow;*/
 		}
 		m_statusFetched = 1;
 
@@ -147,7 +147,7 @@ bool UniLocalFile::DoGetFileStatus()
 	{
 		m_filesize = 0;
 		m_statusFetched = 1; // Yep, done for this file still
-		LastErrorCustom(ucr::toTString(e.displayText()));
+		LastErrorCustom(QString::fromStdString(e.displayText()));
 		return false;
 	}
 }
@@ -167,7 +167,7 @@ bool UniLocalFile::IsUnicode()
 }
 
 /** @brief Record a custom error */
-void UniLocalFile::LastErrorCustom(const String& desc)
+void UniLocalFile::LastErrorCustom(const QString& desc)
 {
 	m_lastError.ClearError();
 
@@ -219,19 +219,19 @@ bool UniMemFile::GetFileStatus()
 }
 
 /** @brief Open file for generic read-only access */
-bool UniMemFile::OpenReadOnly(const String& filename)
+bool UniMemFile::OpenReadOnly(const QString& filename)
 {
 	return Open(filename, AM_READ);
 }
 
 /** @brief Open file for generic read-write access */
-bool UniMemFile::Open(const String& filename)
+bool UniMemFile::Open(const QString& filename)
 {
 	return Open(filename, AM_WRITE);
 }
 
 /** @brief Open file with specified arguments */
-bool UniMemFile::Open(const String& filename, AccessMode mode)
+bool UniMemFile::Open(const QString& filename, AccessMode mode)
 {
 	// We use an internal workhorse to make it easy to close on any error
 	if (!DoOpen(filename, mode))
@@ -243,7 +243,7 @@ bool UniMemFile::Open(const String& filename, AccessMode mode)
 }
 
 /** @brief Internal implementation of Open */
-bool UniMemFile::DoOpen(const String& filename, AccessMode mode)
+bool UniMemFile::DoOpen(const QString& filename, AccessMode mode)
 {
 	Close();
 
@@ -269,7 +269,7 @@ bool UniMemFile::DoOpen(const String& filename, AccessMode mode)
 	}
 	catch (Exception& e)
 	{
-		LastErrorCustom(ucr::toTString(e.displayText()));
+		LastErrorCustom(QString::fromStdString(e.displayText()));
 		m_hMapping = nullptr;
 		return false;
 	}
@@ -323,7 +323,7 @@ bool UniMemFile::ReadBom()
 	bool unicode = false;
 	bool bom = false;
 
-	m_unicoding = ucr::DetermineEncoding(lpByte, m_filesize, &bom);
+	/*m_unicoding = ucr::DetermineEncoding(lpByte, m_filesize, &bom);
 	switch (m_unicoding)
 	{
 	case ucr::UCS2LE:
@@ -349,7 +349,7 @@ bool UniMemFile::ReadBom()
 		break;
 	default:
 		break;
-	}
+	}*/
 
 	m_bom = bom;
 	m_current = m_data;
@@ -381,9 +381,9 @@ void UniMemFile::SetBom(bool bom)
  * @param [out] lossy `true` if there were lossy encoding.
  * @return `true` if there is more lines to read, `false` when last line is read.
  */
-bool UniMemFile::ReadString(String & line, bool * lossy)
+bool UniMemFile::ReadString(QString & line, bool * lossy)
 {
-	String eol;
+	QString eol;
 	return ReadString(line, eol, lossy);
 }
 
@@ -398,7 +398,7 @@ bool UniMemFile::ReadString(String & line, bool * lossy)
  * @param [in] cchBufferMin Minimum size for the buffer.
  * @return New length of the string.
  */
-static void Append(String &strBuffer, const TCHAR *pchTail,
+static void Append(QString &strBuffer, const TCHAR *pchTail,
 		size_t cchTail, size_t cchBufferMin)
 {
 	size_t cchBuffer = strBuffer.capacity();
@@ -412,8 +412,8 @@ static void Append(String &strBuffer, const TCHAR *pchTail,
 		if (cchBuffer < cchBufferMin)
 			cchBuffer = cchBufferMin;
 	}
-	strBuffer.reserve(cchBuffer);
-	strBuffer.append(pchTail, cchTail);
+	//strBuffer.reserve(cchBuffer);
+	//strBuffer.append(pchTail, cchTail);
 }
 
 /**
@@ -431,10 +431,10 @@ static void RecordZero(UniFile::txtstats & txstats, size_t offset)
  * @param [out] lossy `true` if there were lossy encoding.
  * @return true if there is more lines to read, false when last line is read.
  */
-bool UniMemFile::ReadString(String & line, String & eol, bool * lossy)
+bool UniMemFile::ReadString(QString & line, QString & eol, bool * lossy)
 {
-	line.erase();
-	eol.erase();
+	line.clear();
+	eol.clear();
 	const TCHAR * pchLine = (const TCHAR *)m_current;
 	
 	// shortcut methods in case file is in the same encoding as our Strings
@@ -486,7 +486,7 @@ bool UniMemFile::ReadString(String & line, String & eol, bool * lossy)
 		return true;
 	}
 #else
-	if (m_unicoding == ucr::NONE && ucr::EqualCodepages(m_codepage, GetACP()))
+	/*if (m_unicoding == ucr::NONE && ucr::EqualCodepages(m_codepage, GetACP()))
 	{
 		int cchLine = 0;
 		// If there aren't any bytes left in the file, return `false` to indicate EOF
@@ -530,14 +530,14 @@ bool UniMemFile::ReadString(String & line, String & eol, bool * lossy)
 		}
 		line.assign(pchLine, cchLine);
 		return true;
-	}
+	}*/
 #endif
 
 	if (m_current - m_base + (m_charsize - 1) >= m_filesize)
 		return false;
 
 	// Handle 8-bit strings in line chunks because of multibyte codings (eg, 936)
-	if (m_unicoding == ucr::NONE)
+	if (m_unicoding == 0)		// ToDo
 	{
 		bool eof = true;
 		unsigned char *eolptr = nullptr;
@@ -555,7 +555,7 @@ bool UniMemFile::ReadString(String & line, String & eol, bool * lossy)
 				RecordZero(m_txtstats, offset);
 			}
 		}
-		bool success = ucr::maketstring(line, (const char *)m_current, eolptr-m_current, m_codepage, lossy);
+		bool success = false; // TODo ucr::maketstring(line, (const char *)m_current, eolptr-m_current, m_codepage, lossy);
 		if (!success)
 		{
 			return false;
@@ -590,7 +590,7 @@ bool UniMemFile::ReadString(String & line, String & eol, bool * lossy)
 		int  utf8len = 0;
 		bool doneline = false;
 
-		if (m_unicoding == ucr::UTF8)
+		/*if (m_unicoding == ucr::UTF8)
 		{
 			// check for end in middle of UTF-8 character
 			utf8len = ucr::Utf8len_fromLeadByte(*m_current);
@@ -615,17 +615,17 @@ bool UniMemFile::ReadString(String & line, String & eol, bool * lossy)
 		else
 		{
 			ch = ucr::get_unicode_char(m_current, (ucr::UNICODESET)m_unicoding, m_codepage);
-		}
+		}*/
 		// convert from Unicode codepoint to TCHAR string
 		// could be multicharacter if decomposition took place, for example
 		bool lossy1 = false; // try to avoid lossy conversion
-		String sch;
-		ucr::maketchar(sch, ch, lossy1);
+		QString sch;
+		/*ucr::maketchar(sch, ch, lossy1);
 		if (lossy1)
 			++m_txtstats.nlosses;
 		if (sch.length() >= 1)
 			ch = sch[0];
-		else
+		else*/
 			ch = 0;
 
 
@@ -639,11 +639,11 @@ bool UniMemFile::ReadString(String & line, String & eol, bool * lossy)
 			{
 				// For UTF-8, this ch1 will be wrong if character is non-ASCII
 				// but we only check it against \n here, so it doesn't matter
-				unsigned ch1 = ucr::get_unicode_char(m_current + m_charsize, (ucr::UNICODESET)m_unicoding);
-				if (ch1 == '\n')
+				//unsigned ch1 = ucr::get_unicode_char(m_current + m_charsize, (ucr::UNICODESET)m_unicoding);
+				/*if (ch1 == '\n')
 				{
 					crlf = true;
-				}
+				}*/
 			}
 			if (crlf)
 			{
@@ -669,21 +669,21 @@ bool UniMemFile::ReadString(String & line, String & eol, bool * lossy)
 			RecordZero(m_txtstats, offset);
 		}
 		// always advance to next character
-		if (m_unicoding == ucr::UTF8)
+		/*if (m_unicoding == ucr::UTF8)
 		{
 			m_current += utf8len;
 		}
 		else
 		{
 			m_current += m_charsize;
-		}
+		}*/
 		if (doneline)
 		{
-			if (!eol.empty())
+			if (!eol.isEmpty())
 				++m_lineno;
 			return true;
 		}
-		Append(line, sch.c_str(), sch.length());
+		//Append(line, sch.c_str(), sch.length());
 	}
 	return true;
 }
@@ -691,7 +691,7 @@ bool UniMemFile::ReadString(String & line, String & eol, bool * lossy)
 /**
  * @brief Write one line (doing any needed conversions)
  */
-bool UniMemFile::WriteString(const String & line)
+bool UniMemFile::WriteString(const  QString & line)
 {
 	assert(false); // unimplemented -- currently cannot write to a UniMemFile!
 	return false;
@@ -704,7 +704,7 @@ bool UniMemFile::WriteString(const String & line)
 UniStdioFile::UniStdioFile()
 		: m_fp(nullptr)
 		, m_data(0)
-		, m_ucrbuff(128)
+		//, m_ucrbuff(128)
 {
 }
 
@@ -746,23 +746,23 @@ bool UniStdioFile::GetFileStatus()
 	return DoGetFileStatus();
 }
 
-bool UniStdioFile::OpenReadOnly(const String& filename)
+bool UniStdioFile::OpenReadOnly(const QString& filename)
 {
-	return Open(filename, _T("rb"));
+	return Open(filename, QString("rb"));
 }
-bool UniStdioFile::OpenCreate(const String& filename)
+bool UniStdioFile::OpenCreate(const QString& filename)
 {
-	return Open(filename, _T("w+b"));
+	return Open(filename, QString("w+b"));
 }
-bool UniStdioFile::OpenCreateUtf8(const String& filename)
+bool UniStdioFile::OpenCreateUtf8(const QString& filename)
 {
 	if (!OpenCreate(filename))
 		return false;
-	SetUnicoding(ucr::UTF8);
+	SetUnicoding(0);	// ToDo
 	return true;
 
 }
-bool UniStdioFile::Open(const String& filename, const String& mode)
+bool UniStdioFile::Open(const QString& filename, const QString& mode)
 {
 	if (!DoOpen(filename, mode))
 	{
@@ -772,7 +772,7 @@ bool UniStdioFile::Open(const String& filename, const String& mode)
 	return true;
 }
 
-bool UniStdioFile::DoOpen(const String& filename, const String& mode)
+bool UniStdioFile::DoOpen(const QString& filename, const QString& mode)
 {
 	Close();
 
@@ -783,7 +783,7 @@ bool UniStdioFile::DoOpen(const String& filename, const String& mode)
 	// But we don't care since size is set to 0 anyway.
 	GetFileStatus();
 
-	if (_tfopen_s(&m_fp, m_filepath.c_str(), mode.c_str()) != 0)
+	/*if (_tfopen_s(&m_fp, m_filepath, mode) != 0)*/
 		return false;
 
 #ifndef _WIN64
@@ -803,7 +803,7 @@ bool UniStdioFile::DoOpen(const String& filename, const String& mode)
 }
 
 /** @brief Record a custom error */
-void UniStdioFile::LastErrorCustom(const String& desc)
+void UniStdioFile::LastErrorCustom(const QString& desc)
 {
 	m_lastError.ClearError();
 
@@ -832,7 +832,7 @@ bool UniStdioFile::ReadBom()
 	bool unicode = false;
 	bool bom = false;
 
-	m_unicoding = ucr::DetermineEncoding(&buff[0], bytes, &bom);
+	/*m_unicoding = ucr::DetermineEncoding(&buff[0], bytes, &bom);
 	switch (m_unicoding)
 	{
 	case ucr::UCS2LE:
@@ -857,7 +857,7 @@ bool UniStdioFile::ReadBom()
 		break;
 	default:
 		break;
-	}
+	}*/
 
 	fseek(m_fp, (long)m_data, SEEK_SET);
 	m_bom = bom;
@@ -883,13 +883,13 @@ void UniStdioFile::SetBom(bool bom)
 }
 
 
-bool UniStdioFile::ReadString(String & line, bool * lossy)
+bool UniStdioFile::ReadString(QString & line, bool * lossy)
 {
 	assert(false); // unimplemented -- currently cannot read from a UniStdioFile!
 	return false;
 }
 
-bool UniStdioFile::ReadString(String & line, String & eol, bool * lossy)
+bool UniStdioFile::ReadString(QString & line, QString & eol, bool * lossy)
 {
 	assert(false); // unimplemented -- currently cannot read from a UniStdioFile!
 	return false;
@@ -898,7 +898,7 @@ bool UniStdioFile::ReadString(String & line, String & eol, bool * lossy)
 /** @brief Write BOM (byte order mark) if Unicode file */
 int UniStdioFile::WriteBom()
 {
-	if (m_unicoding == ucr::UCS2LE && m_bom)
+	/*if (m_unicoding == ucr::UCS2LE && m_bom)
 	{
 		unsigned char bom[] = "\xFF\xFE";
 		fseek(m_fp, 0, SEEK_SET);
@@ -923,38 +923,38 @@ int UniStdioFile::WriteBom()
 	{
 		m_data = 0;
 	}
-	return (int)m_data;
+	return (int)m_data;*/
 }
 
 /**
  * @brief Write one line (doing any needed conversions)
  */
-bool UniStdioFile::WriteString(const String & line)
+bool UniStdioFile::WriteString(const QString & line)
 {
 	// shortcut the easy cases
 #ifdef _UNICODE
 	if (m_unicoding == ucr::UCS2LE)
 #else
-	if (m_unicoding == ucr::NONE && ucr::EqualCodepages(m_codepage, GetACP()))
+	//if (m_unicoding == ucr::NONE && ucr::EqualCodepages(m_codepage, GetACP()))
 #endif
-	{
+	/*{
 		size_t bytes = line.length() * sizeof(TCHAR);
 		size_t wbytes = fwrite(line.c_str(), 1, bytes, m_fp);
 		if (wbytes != bytes)
 			return false;
 		return true;
-	}
+	}*/
 
-	ucr::UNICODESET unicoding1 = ucr::NONE;
+	/*ucr::UNICODESET unicoding1 = ucr::NONE;
 	int codepage1 = 0;
-	ucr::getInternalEncoding(&unicoding1, &codepage1); // What String & TCHARs represent
+	//ucr::getInternalEncoding(&unicoding1, &codepage1); // What String & TCHARs represent
 	const unsigned char * src = (const unsigned char *)line.c_str();
 	size_t srcbytes = line.length() * sizeof(TCHAR);
-	bool lossy = ucr::convert(unicoding1, codepage1, src, srcbytes, (ucr::UNICODESET)m_unicoding, m_codepage, &m_ucrbuff);
+	//bool lossy = ucr::convert(unicoding1, codepage1, src, srcbytes, (ucr::UNICODESET)m_unicoding, m_codepage, &m_ucrbuff);
 	// TODO: What to do about lossy conversion ?
 	size_t wbytes = fwrite(m_ucrbuff.ptr, 1, m_ucrbuff.size, m_fp);
 	if (wbytes != m_ucrbuff.size)
-		return false;
+		return false;*/
 	return true;
 }
 

@@ -101,10 +101,12 @@ set ( SOURCES
         Environment.h
         Environment.cpp
         FileFilterMgr.cpp
+        FileFilter.h
+        FileFilter.cpp
         FilterList.h
         FilterList.cpp
         Common/UniFile.h
-        # Common/UniFile.cpp
+        Common/UniFile.cpp
         # opendialog.cpp
         # openfilesdialog.cpp
         qlabelclick.cpp QOptionsMgr.cpp QOptionsMgr.h)

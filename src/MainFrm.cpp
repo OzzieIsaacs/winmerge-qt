@@ -51,6 +51,7 @@ static const QString BACKUP_FILE_EXT("bak");
 
 MainWindow::MainWindow(QWidget *parent) :
 QMainWindow(parent),
+m_pGlobalFileFilter(new FileFilterHelper),
 ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
@@ -80,6 +81,7 @@ ui(new Ui::MainWindow)
 	ui->listWidget->addItem("IDD_SHARED_FILTER");
 	ui->listWidget->addItem("IDD_TEST_FILTER");
 	ui->listWidget->addItem("IDD_WMGOTO");
+
 
 	// Parse command-line arguments.
 	MergeCmdLineInfo cmdInfo(QCoreApplication::arguments()); //QStringListGetCommandLine());

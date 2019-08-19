@@ -26,7 +26,7 @@
 #include <Poco/RegularExpression.h>
 // #include "UnicodeString.h"
 #include "FileFilter.h"
-//#include "UniFile.h"
+#include "UniFile.h"
 #include "paths.h"
 
 using std::vector;

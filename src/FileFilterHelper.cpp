@@ -30,7 +30,7 @@
 #include "Environment.h"
 // #include "UnicodeString.h"
 // #include "unicoder.h"
-
+#include <QDebug>
 using std::vector;
 
 /** 
@@ -42,6 +42,8 @@ FileFilterHelper::FileFilterHelper()
 , m_fileFilterMgr(new FileFilterMgr) // ToDo
 , m_currentFilter(nullptr)
 {
+	qDebug() << "HElp";
+	qDebug() << m_bUseMask;
 }
 
 /** 
@@ -175,7 +177,7 @@ void FileFilterHelper::SetUserFilterPath(const QString & filterPath)
  */
 void FileFilterHelper::UseMask(bool bUseMask)
 {
-/*	m_bUseMask = bUseMask;
+	m_bUseMask = bUseMask;
 	if (m_bUseMask)
 	{
 		if (m_pMaskFilter == nullptr)
@@ -186,7 +188,7 @@ void FileFilterHelper::UseMask(bool bUseMask)
 	else
 	{
 		m_pMaskFilter.reset();
-	}*/
+	}
 }
 
 /** 
@@ -218,7 +220,7 @@ void FileFilterHelper::SetMask(const QString& strMask)
  */
 bool FileFilterHelper::includeFile(const QString& szFileName) const
 {
-	/*if (m_bUseMask)
+	if (m_bUseMask)
 	{
 		if (m_pMaskFilter == nullptr)
 		{
@@ -240,7 +242,7 @@ bool FileFilterHelper::includeFile(const QString& szFileName) const
 		if (m_fileFilterMgr == nullptr || m_currentFilter ==nullptr)
 			return true;
 		return m_fileFilterMgr->TestFileNameAgainstFilter(m_currentFilter, szFileName);
-	}*/
+	}
 }
 
 /**
@@ -258,14 +260,14 @@ bool FileFilterHelper::includeDir(const QString& szDirName) const
 	}
 	else
 	{
-		/*if (m_fileFilterMgr == nullptr || m_currentFilter == nullptr)
+		if (m_fileFilterMgr == nullptr || m_currentFilter == nullptr)
 			return true;
 
 		// Add a backslash
 		QString strDirName("\\");
 		strDirName += szDirName;
 
-		return m_fileFilterMgr->TestDirNameAgainstFilter(m_currentFilter, strDirName);*/
+		return m_fileFilterMgr->TestDirNameAgainstFilter(m_currentFilter, strDirName);
 	}
 }
 
@@ -277,7 +279,7 @@ bool FileFilterHelper::includeDir(const QString& szDirName) const
  */
 void FileFilterHelper::LoadFileFilterDirPattern(const QString& dir, const QString& szPattern)
 {
-	// m_fileFilterMgr->LoadFromDirectory(dir, szPattern, FileFilterExt);
+	m_fileFilterMgr->LoadFromDirectory(dir, szPattern, FileFilterExt);
 }
 
 /** 

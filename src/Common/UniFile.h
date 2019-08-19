@@ -85,8 +85,8 @@ public:
 	virtual QString GetFullyQualifiedPath() const { return m_filepath; }
 	virtual const UniError & GetLastUniError() const { return m_lastError; }
 
-	//virtual ucr::UNICODESET GetUnicoding() const { return m_unicoding; }
-	// virtual void SetUnicoding(ucr::UNICODESET unicoding) { m_unicoding = unicoding; }
+	virtual unsigned int GetUnicoding() const { return m_unicoding; }		// ToDo check
+	virtual void SetUnicoding(unsigned int unicoding) { m_unicoding = unicoding; } // ToDo check
 	virtual int GetCodepage() const { return m_codepage; }
 	virtual void SetCodepage(int codepage) { 
 		m_codepage = codepage;
@@ -127,7 +127,7 @@ protected:
 	QString m_filename;
 	int m_lineno; // current 0-based line of m_current
 	UniError m_lastError;
-	// ucr::UNICODESET m_unicoding;
+	unsigned int m_unicoding;		// ToDo check
 	int m_charsize; // 2 for UCS-2, else 1
 	int m_codepage; // only valid if m_unicoding==ucr::NONE;
 	txtstats m_txtstats;
@@ -226,5 +226,5 @@ protected:
 private:
 	FILE * m_fp;
 	int64_t m_data; // offset after any initial BOM
-	// ucr::buffer m_ucrbuff;
+	char* m_ucrbuff;	// ToDo
 };
