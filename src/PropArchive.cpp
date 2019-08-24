@@ -12,12 +12,13 @@
 #include "ui_QPropArchive.h"
 #include "OptionsDef.h"
 
-QPropArchive::QPropArchive(QWidget *parent) :
+QPropArchive::QPropArchive(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropArchive)
 {
 	ui->setupUi(this);
 	connect(ui->IDC_ARCHIVE_ENABLE, SIGNAL(clicked()), this, SLOT(OnEnableClicked()));
+	m_options = options;
 }
 QPropArchive::~QPropArchive()
 {
@@ -29,11 +30,11 @@ QPropArchive::~QPropArchive()
  */
 void QPropArchive::ReadOptions()
 {
-	ui->IDC_ARCHIVE_ENABLE->setChecked(m_options.value(OPT_ARCHIVE_ENABLE).toBool());
+	ui->IDC_ARCHIVE_ENABLE->setChecked(m_options->value(OPT_ARCHIVE_ENABLE).toBool());
 
 	//int enable = GetOptionsMgr()->GetInt(OPT_ARCHIVE_ENABLE);
 	// m_bEnableSupport = enable > 0;
-	ui->IDC_ARCHIVE_DETECTTYPE->setChecked(m_options.value(OPT_ARCHIVE_PROBETYPE).toBool());
+	ui->IDC_ARCHIVE_DETECTTYPE->setChecked(m_options->value(OPT_ARCHIVE_PROBETYPE).toBool());
 	//m_bProbeType = GetOptionsMgr()->GetBool(OPT_ARCHIVE_PROBETYPE);
 	UpdateControls();
 }
@@ -43,8 +44,8 @@ void QPropArchive::ReadOptions()
  */
 void QPropArchive::WriteOptions()
 {
-	m_options.setValue(OPT_ARCHIVE_ENABLE, ui->IDC_ARCHIVE_ENABLE->isChecked());
-	m_options.setValue(OPT_ARCHIVE_PROBETYPE, ui->IDC_ARCHIVE_DETECTTYPE->isChecked());
+	m_options->setValue(OPT_ARCHIVE_ENABLE, ui->IDC_ARCHIVE_ENABLE->isChecked());
+	m_options->setValue(OPT_ARCHIVE_PROBETYPE, ui->IDC_ARCHIVE_DETECTTYPE->isChecked());
 	//GetOptionsMgr()->SaveOption(OPT_ARCHIVE_ENABLE, (int)(m_bEnableSupport ? 1 : 0));
 	//GetOptionsMgr()->SaveOption(OPT_ARCHIVE_PROBETYPE, m_bProbeType);
 }

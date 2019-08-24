@@ -10,7 +10,7 @@
 #include "OptionsDef.h"
 // #include "OptionsCustomColors.h"
 
-QPropMergeColors::QPropMergeColors(QWidget *parent) :
+QPropMergeColors::QPropMergeColors(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropMergeColors)
 {
@@ -55,6 +55,8 @@ QPropMergeColors::QPropMergeColors(QWidget *parent) :
 	connect(ui->IDC_SEL_WORDDIFF_DELETED_COLOR, SIGNAL(clicked()), this, SLOT(OnSelWordDiffDeletedColor()));
 	//connect(ui->IDC_SEL_WORDDIFF_USE_TEXT_COLOR, SIGNAL(clicked()), this, SLOT(OnUseTextColor<IDC_SEL_WORDDIFF_USE_TEXT_COLOR, IDC_SEL_WORDDIFF_TEXT_COLOR>()));
 	connect(ui->IDC_SEL_WORDDIFF_TEXT_COLOR, SIGNAL(clicked()), this, SLOT(OnSelWordDiffTextColor()));
+
+	m_options = options;
 }
 QPropMergeColors::~QPropMergeColors()
 {

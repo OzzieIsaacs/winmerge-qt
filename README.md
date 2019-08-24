@@ -19,11 +19,18 @@ in shell/command prompt. To create VS project files, run:
 in Visual Studio command prompt.
 
 Installed:
-QT5-default
-qtcreator
 
+## Compiling qmake
+qt 5.9.5 Linux Mint
+qmake 3.1
 
 ## Compiling cmake
+
+tested using gcc 7.4 on linux mint
+- qt5-default and Qttools5-dev-tools
+using boost 1.70.0 and poco 
+cmake 3.13.2 (min 3.9)
+
 
 # Current status
 

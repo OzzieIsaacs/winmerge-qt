@@ -40,7 +40,7 @@ private:
 };*/
 
 
-QPropCompareBinary::QPropCompareBinary(QWidget *parent) :
+QPropCompareBinary::QPropCompareBinary(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropCompareBinary)
 {
@@ -50,6 +50,8 @@ QPropCompareBinary::QPropCompareBinary(QWidget *parent) :
 	connect(ui->IDC_COMPAREBINARY_BINARYMODE, SIGNAL(clicked()), this, SLOT(OnBinaryMode()));
 	connect(ui->IDC_COMPAREBINARY_CHARACTERSET, SIGNAL(clicked()), this, SLOT(OnCharacterSet()));
 	connect(ui->IDC_COMPAREBINARY_DEFAULTS, SIGNAL(clicked()), this, SLOT(OnDefaults()));
+	
+	m_options = options;
 
 }
 QPropCompareBinary::~QPropCompareBinary()
@@ -64,7 +66,7 @@ QPropCompareBinary::~QPropCompareBinary()
  */
 void QPropCompareBinary::ReadOptions()
 {
-	ui->IDC_COMPAREBINARY_PATTERNS->setText(m_options.value(OPT_CMP_BIN_FILEPATTERNS).toString());
+	ui->IDC_COMPAREBINARY_PATTERNS->setText(m_options->value(OPT_CMP_BIN_FILEPATTERNS).toString());
 	//m_sFilePatterns = GetOptionsMgr()->GetString(OPT_CMP_BIN_FILEPATTERNS);
 }
 
@@ -75,7 +77,7 @@ void QPropCompareBinary::ReadOptions()
  */
 void QPropCompareBinary::WriteOptions()
 {
-	m_options.setValue(OPT_CMP_BIN_FILEPATTERNS,  ui->IDC_COMPAREBINARY_PATTERNS->toPlainText());
+	m_options->setValue(OPT_CMP_BIN_FILEPATTERNS,  ui->IDC_COMPAREBINARY_PATTERNS->toPlainText());
 	//GetOptionsMgr()->SaveOption(OPT_CMP_BIN_FILEPATTERNS, m_sFilePatterns);
 }
 

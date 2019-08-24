@@ -24,6 +24,7 @@
 #define IDD_PROPPAGE_SYSTEM_H
 #include <QDialog>
 #include <QSettings>
+#include "QOptionsMgr.h"
 
 namespace Ui {
 class QPropRegistry;
@@ -40,7 +41,7 @@ class QPropRegistry : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropRegistry(QWidget *parent = nullptr);
+	explicit QPropRegistry(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropRegistry();
 
 	// Implement IOptionsPanel
@@ -54,7 +55,7 @@ private slots:
 
 private:
 	Ui::QPropRegistry *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 
 };
 #endif // IDD_PROPPAGE_SYSTEM_H

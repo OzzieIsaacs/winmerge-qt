@@ -9,6 +9,7 @@
 #define IDD_PROPPAGE_COMPARE_FOLDER_H
 #include <QDialog>
 #include <QSettings>
+#include "QOptionsMgr.h"
 
 namespace Ui {
 class QPropCompareFolder;
@@ -18,7 +19,7 @@ class QPropCompareFolder : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropCompareFolder(QWidget *parent = nullptr);
+	explicit QPropCompareFolder(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropCompareFolder();
 
 	// Implement IOptionsPanel
@@ -34,7 +35,7 @@ private slots:
 
 private:
 	Ui::QPropCompareFolder *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 
 };
 #endif // IDD_PROPPAGE_COMPARE_FOLDER_H

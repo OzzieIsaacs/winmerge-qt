@@ -10,6 +10,7 @@
 #include <QDialog>
 #include <QString>
 #include <QSettings>
+#include "QOptionsMgr.h"
 
 namespace Ui {
 class QPropCompareImage;
@@ -19,7 +20,7 @@ class QPropCompareImage : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropCompareImage(QWidget *parent = nullptr);
+	explicit QPropCompareImage(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropCompareImage();
 
 	// Implement IOptionsPanel
@@ -37,6 +38,6 @@ private slots:
 
 private:
 	Ui::QPropCompareImage *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 };
 #endif // IDD_PROPPAGE_COMPARE_IMAGE_H

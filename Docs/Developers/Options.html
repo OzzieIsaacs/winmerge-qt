@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Option</title>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <style type="text/css">
+  <!--
+    body {
+      font-family: Verdana,Helvetica,Arial,sans-serif;
+      font-size: small;
+    }
+    code,pre {
+      font-family: "Courier New",Courier,monospace;
+      font-size: 1em;
+    }
+    h3 {
+      padding: 2px;
+      border-left: 4px solid #FFCC00;
+      border-bottom: 1px solid #FFCC00;
+    }
+    pre {
+      margin-left: 25px;
+      margin-right: 25px;
+      padding: 5px;
+      background-color: #EEEEEE;
+      border-left: 10px solid #CCCCCC;
+    }
+  -->
+  </style>
+</head>
+<body>
+<h2>WinMerge Options system</h2>
+
+<p>WinMerge stores options into registry:</p>
+<pre>HKCU/Software/Thingamahoochie/WinMerge</pre>
+<p>Several subkeys exists for different kind of options. <code>Settings</code> subkey is
+good place for most options. There are several subkeys for different sets of options,
+e.g. custom colors have their own subkey. If you need one single new option, put it
+top <code>Settings</code> subkey. If you need a new set of options for e.g. font setting,
+create a new subkey for them.</p>
+
+
+<h3>Accessing options</h3>
+<p>Two ways to read and save options:</p>
+<ol>
+  <li>
+    Direct access with WinAPI (<code>GetProfileInt()</code>, <code>GetProfileString</code>,
+    <code>WriteProfileInt()</code> &amp; <code>WriteProfileString()</code>).
+  </li>
+  <li>Using <code>COptionsMgr</code> class (recommended)</li>
+</ol>
+
+<h3>Direct access with WinAPI</h3>
+<p>This is handy for settings needed in few events or cases. Especially when
+<code>COptionsMgr</code> is not available, e.g. early in startup of WinMerge.
+However this method misses all advantages of COptionsMgr, like import/export and
+caching. So it should be used only when really necessary.</p>
+
+<h3>COptionsMgr</h3>
+<p>Using <code>COptionsMgr</code> is recommended for all new options. Also all options
+visible in Options-dialog must use <code>COptionsMgr</code>. Currently there is one
+<code>COptionsMgr</code> (or actually <code>CRegOptionsMgr</code>) instance in <code>CMergeApp</code>.
+</p>
+
+<p>Using <code>COptionsMgr</code> is pretty simple and straightforward:</p>
+<ul>
+  <li>All options are accessed by constant names, listed in <code>OptionsDef.h</code>.</li>
+  <li>
+    Options are initialized in <code>CMergeApp::OptionsInit()</code>, located in <code>OptionsInit.cpp</code>.
+    When initialised, type is determined and default value given. If option with that name
+    does not yet exist, new one is created.
+  </li>
+  <li>Option value is read using <code>COptionsMgr::GetBool()</code>, <code>GetInt()</code> or <code>GetString()</code>.</li>
+  <li>Option value is stored using <code>COptionsMgr::SaveOption()</code>. Note that value is saved to registry immediately.</li>
+  <li>Option value can be reset to default value using <code>COptionsMgr::GetDefault()</code></li>
+  <li>Option value can be removed using <code>COptionsMgr::RemoveOption()</code></li>
+</ul>
+
+<h3>Adding a new option</h3>
+<ol>
+  <li>
+    Add option name and registry path into <code>OptionsDef.h</code>. Please try to keep
+    options organised in registry, although all existing options aren't.
+    And use meaningful names for options.
+  </li>
+  <li>
+    Add option initialiser to <code>CMergeApp::OptionsInit()</code>, with sensible
+    default value. Remember default value is what most users see when first
+    time using WinMerge or new feature using it. So it really must be good
+    for normal use.
+  </li>
+  <li>Use <code>GetX()</code> functions to read values and <code>SaveOption()</code> to store values.</li>
+</ol>
+
+<h3>Caching</h3>
+<p>There are some very frequently used option values, like color values for
+editor syntax highlight. Reading and writing these kind of values through
+<code>COptionsMgr</code> every time would be pretty inefficient. So we only read them
+to local variables when needed and store when they are changed.</p>
+
+<h3>Options dialog</h3>
+<p>OptionsDialog (<code>CPreferencesDlg</code>) receives pointer to <code>COptionsMgr</code> when
+initialised for access to options.</p>
+
+<p><b>Note:</b>All propertypages in OptionsDialog may not have GUI initialized, so remember
+to check window existence before trying to access it (get values/update it).</p>
+
+<p>Options-propertypages implement <code>IOptionsPanel</code> interface. <code>ReadOptions()</code>
+and <code>WriteOptions()</code> must be implemented by all options-propertypages. Their functionality
+should be clear... <code>CPreferencesDlg</code> calls those functions when loading and saving options.</p>
+
+<p>If propertypage has 'Defaults' button it needs pointer to <code>COptionsMgr</code>. Usually it is
+easiest to give it in constructor. Then page can call <code>COptionsMgr::GetDefault()</code> for options it
+wants to reset to defaults when button is selected.</p>
+</body>
+</html>

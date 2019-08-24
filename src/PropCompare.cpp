@@ -6,12 +6,13 @@
 #define new DEBUG_NEW
 #endif
 
-QPropCompare::QPropCompare(QWidget *parent) :
+QPropCompare::QPropCompare(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropCompare)
 {
 	ui->setupUi(this);
 	connect(ui->IDC_COMPARE_DEFAULTS, SIGNAL(clicked()), this, SLOT(OnDefaults()));
+	m_options = options;
 }
 QPropCompare::~QPropCompare()
 {
@@ -25,7 +26,7 @@ QPropCompare::~QPropCompare()
  */
 void QPropCompare::ReadOptions()
 {
-	int m_nIgnoreWhite = m_options.value(OPT_CMP_IGNORE_WHITESPACE).toInt();
+	int m_nIgnoreWhite = m_options->value(OPT_CMP_IGNORE_WHITESPACE).toInt();
 	switch (m_nIgnoreWhite)
 	{
 		case 0:
@@ -39,13 +40,13 @@ void QPropCompare::ReadOptions()
 			break;
 
 	}
-	ui->IDC_IGNBLANKS_CHECK->setChecked(m_options.value(OPT_CMP_IGNORE_BLANKLINES).toBool());
-	ui->IDC_FILTERCOMMENTS_CHECK->setChecked(m_options.value(OPT_CMP_FILTER_COMMENTLINES).toBool());
-	ui->IDC_IGNCASE_CHECK->setChecked(m_options.value(OPT_CMP_IGNORE_CASE).toBool());
-	ui->IDC_EOL_SENSITIVE->setChecked(m_options.value(OPT_CMP_IGNORE_EOL).toBool());
-	ui->IDC_CP_SENSITIVE->setChecked(m_options.value(OPT_CMP_IGNORE_CODEPAGE).toBool());
-	ui->IDC_MOVED_BLOCKS->setChecked(m_options.value(OPT_CMP_MOVED_BLOCKS).toBool());
-	ui->IDC_MATCH_SIMILAR_LINES->setChecked(m_options.value(OPT_CMP_MATCH_SIMILAR_LINES).toBool());
+	ui->IDC_IGNBLANKS_CHECK->setChecked(m_options->value(OPT_CMP_IGNORE_BLANKLINES).toBool());
+	ui->IDC_FILTERCOMMENTS_CHECK->setChecked(m_options->value(OPT_CMP_FILTER_COMMENTLINES).toBool());
+	ui->IDC_IGNCASE_CHECK->setChecked(m_options->value(OPT_CMP_IGNORE_CASE).toBool());
+	ui->IDC_EOL_SENSITIVE->setChecked(m_options->value(OPT_CMP_IGNORE_EOL).toBool());
+	ui->IDC_CP_SENSITIVE->setChecked(m_options->value(OPT_CMP_IGNORE_CODEPAGE).toBool());
+	ui->IDC_MOVED_BLOCKS->setChecked(m_options->value(OPT_CMP_MOVED_BLOCKS).toBool());
+	ui->IDC_MATCH_SIMILAR_LINES->setChecked(m_options->value(OPT_CMP_MATCH_SIMILAR_LINES).toBool());
 
 }
 
@@ -69,15 +70,15 @@ void QPropCompare::WriteOptions()
 	{
 		m_nIgnoreWhite = 2;
 	}
-	m_options.setValue(OPT_CMP_IGNORE_WHITESPACE,m_nIgnoreWhite);
+	m_options->setValue(OPT_CMP_IGNORE_WHITESPACE,m_nIgnoreWhite);
 
-	m_options.setValue(OPT_CMP_IGNORE_BLANKLINES, ui->IDC_IGNBLANKS_CHECK->isChecked());
-	m_options.setValue(OPT_CMP_FILTER_COMMENTLINES, ui->IDC_FILTERCOMMENTS_CHECK->isChecked());
-	m_options.setValue(OPT_CMP_IGNORE_CODEPAGE, ui->IDC_IGNCASE_CHECK->isChecked());
-	m_options.setValue(OPT_CMP_IGNORE_EOL, ui->IDC_EOL_SENSITIVE->isChecked());
-	m_options.setValue(OPT_CMP_IGNORE_CASE, ui->IDC_CP_SENSITIVE->isChecked());
-	m_options.setValue(OPT_CMP_MOVED_BLOCKS, ui->IDC_MOVED_BLOCKS->isChecked());
-	m_options.setValue(OPT_CMP_MATCH_SIMILAR_LINES, ui->IDC_MATCH_SIMILAR_LINES->isChecked());
+	m_options->setValue(OPT_CMP_IGNORE_BLANKLINES, ui->IDC_IGNBLANKS_CHECK->isChecked());
+	m_options->setValue(OPT_CMP_FILTER_COMMENTLINES, ui->IDC_FILTERCOMMENTS_CHECK->isChecked());
+	m_options->setValue(OPT_CMP_IGNORE_CODEPAGE, ui->IDC_IGNCASE_CHECK->isChecked());
+	m_options->setValue(OPT_CMP_IGNORE_EOL, ui->IDC_EOL_SENSITIVE->isChecked());
+	m_options->setValue(OPT_CMP_IGNORE_CASE, ui->IDC_CP_SENSITIVE->isChecked());
+	m_options->setValue(OPT_CMP_MOVED_BLOCKS, ui->IDC_MOVED_BLOCKS->isChecked());
+	m_options->setValue(OPT_CMP_MATCH_SIMILAR_LINES, ui->IDC_MATCH_SIMILAR_LINES->isChecked());
 
 }
 

@@ -10,6 +10,7 @@
 #define IDD_PROPPAGE_EDITOR_H
 #include <QDialog>
 #include <QSettings>
+#include "QOptionsMgr.h"
 
 namespace Ui {
 class QPropEditor;
@@ -19,7 +20,7 @@ class QPropEditor : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropEditor(QWidget *parent = nullptr);
+	explicit QPropEditor(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropEditor();
 
 	// Implement IOptionsPanel
@@ -37,6 +38,6 @@ private slots:
 
 private:
 	Ui::QPropEditor *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 };
 #endif // IDD_PROPPAGE_EDITOR_H

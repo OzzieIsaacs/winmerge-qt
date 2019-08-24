@@ -7,6 +7,8 @@
 #define IDD_PROPPAGE_COMPARE_BINARY_H
 #include <QDialog>
 #include <QSettings>
+#include "QOptionsMgr.h"
+
 namespace Ui {
 class QPropCompareBinary;
 }
@@ -15,7 +17,7 @@ class QPropCompareBinary : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropCompareBinary(QWidget *parent = nullptr);
+	explicit QPropCompareBinary(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropCompareBinary();
 
 	// Implement IOptionsPanel
@@ -30,6 +32,6 @@ private slots:
 
 private:
 	Ui::QPropCompareBinary *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 };
 #endif // IDD_PROPPAGE_COMPARE_BINARY_H

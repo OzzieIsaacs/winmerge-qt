@@ -46,13 +46,13 @@ struct LANGUAGEANDCODEPAGE
  * not several strings there are. This saves some time.
  * @param [in] bVersionOnly If `true` only version numbers are read.
  */
-/*CVersionInfo::CVersionInfo(bool bVersionOnly)
+CVersionInfo::CVersionInfo(bool bVersionOnly)
 : m_wLanguage(0)
 , m_bVersionOnly(bVersionOnly)
 , m_bDllVersion(false)
 {
 	GetVersionInfo();
-}*/
+}
 
 /** 
  * @brief Constructor for asking version infor when language is known.

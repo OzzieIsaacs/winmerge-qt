@@ -62,7 +62,7 @@ private:
 	QString m_strPrivateBuild;
 
 public:
-	//explicit CVersionInfo(bool bVersionOnly);
+	explicit CVersionInfo(bool bVersionOnly);
 	//explicit CVersionInfo(WORD wLanguage);
 	/*CVersionInfo(LPCTSTR szFileToVersion,
 				   bool bDllVersion);

@@ -10,6 +10,7 @@
 #define IDD_PROPPAGE_COLORS_WINMERGE_H
 #include <QDialog>
 #include <QSettings>
+#include "QOptionsMgr.h"
 //#include "ColorButton.h"
 
 namespace Ui {
@@ -20,7 +21,7 @@ class QPropMergeColors : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropMergeColors(QWidget *parent = nullptr);
+	explicit QPropMergeColors(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropMergeColors();
 
 	// Implement IOptionsPanel
@@ -78,6 +79,6 @@ private slots:
 
 private:
 	Ui::QPropMergeColors *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 };
 #endif // IDD_PROPPAGE_COLORS_WINMERGE_H

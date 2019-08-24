@@ -7,8 +7,13 @@
 #include "PropEditor.h"
 #include "ui_QPropEditor.h"
 #include "OptionsDef.h"
+#include <QMessageBox>
 
-QPropEditor::QPropEditor(QWidget *parent) :
+/** @brief Maximum size for tabs in spaces. */
+static const int MAX_TABSIZE = 64;
+
+
+QPropEditor::QPropEditor(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropEditor)
 {
@@ -20,8 +25,11 @@ QPropEditor::QPropEditor(QWidget *parent) :
 	connect(ui->IDC_VIEW_LINE_DIFFERENCES, SIGNAL(clicked()), this, SLOT(OnLineDiffControlClicked()));
 	connect(ui->IDC_EDITOR_CHARLEVEL, SIGNAL(clicked()), this, SLOT(OnLineDiffControlClicked()));
 	connect(ui->IDC_EDITOR_WORDLEVEL, SIGNAL(clicked()), this, SLOT(OnLineDiffControlClicked()));
+
 	//ToDo: Implement Focus out handling
 	//connect(ui->IDC_TAB_EDIT, SIGNAL(focusOutEvent()), this, SLOT(OnEnKillfocusTabEdit()));
+
+	m_options = options;
 }
 QPropEditor::~QPropEditor()
 {
@@ -33,17 +41,35 @@ QPropEditor::~QPropEditor()
  */
 void QPropEditor::ReadOptions()
 {
-	// ToDo Port
-	/*
-	m_nTabSize = GetOptionsMgr()->GetInt(OPT_TAB_SIZE);
-	m_nTabType = GetOptionsMgr()->GetInt(OPT_TAB_TYPE);
-	m_bAutomaticRescan = GetOptionsMgr()->GetBool(OPT_AUTOMATIC_RESCAN);
-	m_bHiliteSyntax = GetOptionsMgr()->GetBool(OPT_SYNTAX_HIGHLIGHT);
-	m_bAllowMixedEol = GetOptionsMgr()->GetBool(OPT_ALLOW_MIXED_EOL);
-	m_bViewLineDifferences = GetOptionsMgr()->GetBool(OPT_WORDDIFF_HIGHLIGHT);
-	m_bBreakOnWords = GetOptionsMgr()->GetBool(OPT_BREAK_ON_WORDS);
-	m_nBreakType = GetOptionsMgr()->GetInt(OPT_BREAK_TYPE);
-	m_breakChars = GetOptionsMgr()->GetString(OPT_BREAK_SEPARATORS);*/
+	ui->IDC_TAB_EDIT->setPlainText(m_options->value(OPT_TAB_SIZE).toString());
+	bool tabType = m_options->value(OPT_TAB_TYPE).toBool();
+	if (tabType){
+		ui->IDC_PROP_INSERT_TABS->setChecked(true);
+	}
+	else
+	{
+		ui->IDC_PROP_INSERT_SPACES->setChecked(true);
+	}
+	ui->IDC_AUTOMRESCAN_CHECK->setChecked(m_options->value(OPT_AUTOMATIC_RESCAN).toBool());
+	ui->IDC_HILITE_CHECK->setChecked(m_options->value(OPT_SYNTAX_HIGHLIGHT).toBool());
+	ui->IDC_MIXED_EOL->setChecked(m_options->value(OPT_ALLOW_MIXED_EOL).toBool());
+	ui->IDC_VIEW_LINE_DIFFERENCES->setChecked(m_options->value(OPT_WORDDIFF_HIGHLIGHT).toBool());
+	ui->IDC_HILITE_CHECK->setChecked(m_options->value(OPT_SYNTAX_HIGHLIGHT).toBool());
+	ui->IDC_HILITE_CHECK->setChecked(m_options->value(OPT_SYNTAX_HIGHLIGHT).toBool());
+
+	bool breakSeperator = m_options->value(OPT_BREAK_ON_WORDS).toBool();
+	if (breakSeperator){
+		ui->IDC_EDITOR_CHARLEVEL->setChecked(true);
+	}
+	else
+	{
+		ui->IDC_EDITOR_WORDLEVEL->setChecked(true);
+	}
+	ui->IDC_BREAK_CHARS->setPlainText(m_options->value(OPT_BREAK_SEPARATORS).toString());
+
+	// 	m_nBreakType = GetOptionsMgr()->GetInt(OPT_BREAK_TYPE);
+
+
 }
 
 /**
@@ -75,11 +101,8 @@ void QPropEditor::WriteOptions()
  */
 void QPropEditor::LoadBreakTypeStrings()
 {
-	// ToDo Port
-	/*
-	CComboBox * cbo = (CComboBox *)GetDlgItem(IDC_BREAK_TYPE);
-	cbo->AddString(_("Break at whitespace").c_str());
-	cbo->AddString(_("Break at whitespace or punctuation").c_str());*/
+	ui->IDC_BREAK_TYPE->addItem(tr("Break at whitespace"));
+	ui->IDC_BREAK_TYPE->addItem(tr("Break at whitespace or punctuation"));
 }
 
 /**
@@ -110,14 +133,10 @@ void QPropEditor::UpdateLineDiffControls()
  */
 void QPropEditor::OnEnKillfocusTabEdit()
 {
-	// ToDo Port
-	/*
-	unsigned value = GetDlgItemInt(IDC_TAB_EDIT);
+	unsigned value = ui->IDC_TAB_EDIT->toPlainText().toInt();
 	if (value < 1 || value > MAX_TABSIZE)
 	{
-		String msg = strutils::format_string1(
-				_("Value in Tab size -field is not in range WinMerge accepts.\n\nPlease use values 1 - %1."),
-				strutils::to_str(MAX_TABSIZE));
-		AfxMessageBox(msg.c_str(), MB_ICONWARNING);
-	}*/
+		QString msg = tr("Value in Tab size -field is not in range WinMerge accepts.\n\nPlease use values 1 - %1.").arg(MAX_TABSIZE);
+		QMessageBox::warning(nullptr, QObject::tr("Warning"), msg);
+	}
 }

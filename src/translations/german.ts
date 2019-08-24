@@ -7132,48 +7132,49 @@ Aktualisieren (F5)</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../MainFrm.cpp" line="1308"/>
-        <location filename="../MergeApp.cpp" line="133"/>
+        <location filename="../MainFrm.cpp" line="1312"/>
+        <location filename="../MergeApp.cpp" line="145"/>
         <source>Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MainFrm.cpp" line="1308"/>
+        <location filename="../MainFrm.cpp" line="1312"/>
         <source>You are now entering Merge Mode. If you want to turn off Merge Mode, press F9 key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="123"/>
+        <location filename="../MergeApp.cpp" line="135"/>
         <source>Error</source>
         <translation type="unfinished">Fehler</translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="128"/>
+        <location filename="../MergeApp.cpp" line="140"/>
+        <location filename="../PropEditor.cpp" line="140"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="148"/>
+        <location filename="../MergeApp.cpp" line="160"/>
         <source>Version %1</source>
         <translation type="unfinished">Version %1 - Deutsch</translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="168"/>
+        <location filename="../MergeApp.cpp" line="180"/>
         <source>Unicode</source>
         <translation type="unfinished">Unicode</translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="187"/>
+        <location filename="../MergeApp.cpp" line="199"/>
         <source>WinMerge comes with ABSOLUTELY NO WARRANTY. This is free software and you are welcome to redistribute it under certain circumstances; see the GNU General Public License in the Help menu for details.</source>
         <translation type="unfinished">WinMerge kommt mit ABSOLUT KEINER GARANTIE. Es ist freie Software und Sie können sie unter bestimmten Bedingungen weiter vertreiben; für Details sehen Sie sich die GNU General Public License unter dem Hilfe-Menü an.</translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="190"/>
+        <location filename="../MergeApp.cpp" line="202"/>
         <source> - All rights reserved.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="194"/>
+        <location filename="../MergeApp.cpp" line="206"/>
         <source>Developers:
 </source>
         <translation type="unfinished"></translation>
@@ -7635,6 +7636,25 @@ Aktualisieren (F5)</translation>
         <location filename="../qt_ui/QPropEditor.ui" line="77"/>
         <source>&amp;Preserve original EOL chars</source>
         <translation type="unfinished">&amp;Mischen der Zeilenumbruch-Formate erlauben</translation>
+    </message>
+    <message>
+        <location filename="../PropEditor.cpp" line="104"/>
+        <source>Break at whitespace</source>
+        <translation type="unfinished">An Leerzeichen abbrechen</translation>
+    </message>
+    <message>
+        <location filename="../PropEditor.cpp" line="105"/>
+        <source>Break at whitespace or punctuation</source>
+        <translation type="unfinished">An Leerzeichen oder Interpunktion abbrechen</translation>
+    </message>
+    <message>
+        <location filename="../PropEditor.cpp" line="139"/>
+        <source>Value in Tab size -field is not in range WinMerge accepts.
+
+Please use values 1 - %1.</source>
+        <translation type="unfinished">Der Wert im Feld der Tabulator-Größe ist nicht im Bereich den WinMerge akzeptiert.
+
+Bitte benutzen Sie Werte von 1 - %1.</translation>
     </message>
 </context>
 <context>

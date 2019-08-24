@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="winmerge_gui"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\ext\;CMake Files\..\ext\poco\;CMake Files\..\ext\poco\cmake-build-debug\;CMake Files\..\ext\poco\cmake-build-debug\Poco\;CMake Files\..\ext\poco\cmake-build-debug\Foundation\;CMake Files\..\ext\poco\cmake-build-debug\Net\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="winmerge_gui">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/src/winmerge_gui" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/."/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/../lib"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/../ext/libxdiff/xdiff"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/Common"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/diffutils/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/diffutils"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/poco/Foundation/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/poco/Net/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/boost_1_70_0"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 winmerge_gui"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="winmerge_gui/fast">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/src/winmerge_gui" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/."/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/../lib"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/../ext/libxdiff/xdiff"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/Common"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/diffutils/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/src/diffutils"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/poco/Foundation/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/poco/Net/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/boost_1_70_0"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 winmerge_gui/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matthias/Entwicklung/winmerge-qt/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/Version.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/lib/dircompare.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/lib/dircompare.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/lib/filecompare.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/lib/filecompare.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/lib/libxdiff_tools.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/lib/libxdiff_tools.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/AboutDlg.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/AboutDlg.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/Common/UniFile.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/Common/UniFile.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/Common/VersionInfo.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/Common/VersionInfo.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/Common/varprop.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/Common/varprop.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/CompareOptions.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/DirItem.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/DirItem.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/Environment.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/Environment.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/FileFilter.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/FileFilter.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/FileFilterHelper.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/FileFilterHelper.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/FileFilterMgr.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/FileFilterMgr.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/FileVersion.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/FileVersion.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/FilterList.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/FilterList.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_COMPARE_STATISTICS.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_COMPARE_STATISTICS.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_COMPARE_STATISTICS3.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_COMPARE_STATISTICS3.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_CONFIRM_COPY.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_CONFIRM_COPY.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_DIRCMP_REPORT.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_DIRCMP_REPORT.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_DIRCOLS.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_DIRCOLS.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_DIRCOMP_PROGRESS.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_DIRCOMP_PROGRESS.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_DIR_FILTER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_DIR_FILTER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_EDITOR_HEADERBAR.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_EDITOR_HEADERBAR.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_EDIT_FIND.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_EDIT_FIND.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_EDIT_MARKER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_EDIT_MARKER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_EDIT_REPLACE.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_EDIT_REPLACE.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_ENCODINGERROR.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_ENCODINGERROR.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_FILEFILTERS.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_FILEFILTERS.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_GENERATE_PATCH.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_GENERATE_PATCH.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_LOAD_SAVE_CODEPAGE.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_LOAD_SAVE_CODEPAGE.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_OPEN.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_OPEN.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_PLUGINS_LIST.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_PLUGINS_LIST.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_PROPPAGE_COLORS_DIR.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_PROPPAGE_COLORS_DIR.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_PROPPAGE_FILTER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_PROPPAGE_FILTER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_SAVECLOSING.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_SAVECLOSING.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_SELECTUNPACKER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_SELECTUNPACKER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_SHARED_FILTER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_SHARED_FILTER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_TEST_FILTER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_TEST_FILTER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_WMGOTO.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/IDD_WMGOTO.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/MainFrm.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/MainFrm.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/MainMenu.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/MainMenu.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/MergeApp.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/MergeApp.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/MergeCmdLineInfo.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/MergeCmdLineInfo.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/OptionsDef.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/OptionsDef.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/OptionsDiffColors.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/OptionsDiffColors.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/OptionsDiffOptions.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/OptionsDiffOptions.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/OptionsFont.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/OptionsFont.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/OptionsInit.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/OptionsInit.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PathContext.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PathContext.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PreferencesDlg.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PreferencesDlg.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropArchive.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropArchive.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropBackups.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropBackups.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropCodepage.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropCodepage.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropCompare.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropCompare.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropCompareBinary.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropCompareBinary.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropCompareFolder.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropCompareFolder.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropCompareImage.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropCompareImage.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropEditor.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropEditor.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropGeneral.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropGeneral.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropMarkerColors.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropMarkerColors.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropMergeColors.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropMergeColors.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropRegistry.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropRegistry.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropShell.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropShell.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropSyntaxColors.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropSyntaxColors.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropTextColors.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/PropTextColors.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/QOptionsMgr.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/QOptionsMgr.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/diffutils/config.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/diffutils/src/diff.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/diffutils/src/system.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/gui.qrc">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/main.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_AboutDlg.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_AboutDlg.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_COMPARE_STATISTICS.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_COMPARE_STATISTICS.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_COMPARE_STATISTICS3.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_COMPARE_STATISTICS3.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_CONFIRM_COPY.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_CONFIRM_COPY.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_DIRCMP_REPORT.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_DIRCMP_REPORT.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_DIRCOLS.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_DIRCOLS.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_DIRCOMP_PROGRESS.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_DIRCOMP_PROGRESS.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_DIR_FILTER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_DIR_FILTER.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_EDITOR_HEADERBAR.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_EDITOR_HEADERBAR.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_EDIT_FIND.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_EDIT_FIND.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_EDIT_MARKER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_EDIT_MARKER.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_EDIT_REPLACE.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_EDIT_REPLACE.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_ENCODINGERROR.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_ENCODINGERROR.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_FILEFILTERS.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_FILEFILTERS.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_GENERATE_PATCH.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_GENERATE_PATCH.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_LOAD_SAVE_CODEPAGE.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_LOAD_SAVE_CODEPAGE.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_OPEN.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_OPEN.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_PLUGINS_LIST.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_PLUGINS_LIST.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_PROPPAGE_COLORS_DIR.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_PROPPAGE_COLORS_DIR.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_PROPPAGE_FILTER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_PROPPAGE_FILTER.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_SAVECLOSING.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_SAVECLOSING.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_SELECTUNPACKER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_SELECTUNPACKER.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_SHARED_FILTER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_SHARED_FILTER.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_TEST_FILTER.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_TEST_FILTER.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_WMGOTO.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_IDD_WMGOTO.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_MainFrm.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_MainFrm.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_MainMenu.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_MainMenu.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PreferencesDlg.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PreferencesDlg.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropArchive.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropArchive.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropBackups.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropBackups.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropCodepage.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropCodepage.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropCompare.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropCompare.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropCompareBinary.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropCompareBinary.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropCompareFolder.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropCompareFolder.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropCompareImage.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropCompareImage.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropEditor.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropEditor.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropGeneral.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropGeneral.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropMarkerColors.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropMarkerColors.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropMergeColors.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropMergeColors.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropRegistry.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropRegistry.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropShell.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropShell.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropSyntaxColors.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropSyntaxColors.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropTextColors.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_PropTextColors.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_qlabelclick.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/moc_qlabelclick.cpp.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/paths.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/paths.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qlabelclick.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qlabelclick.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qrc_gui.cpp">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_COMPARE_STATISTICS.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_COMPARE_STATISTICS3.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_CONFIRM_COPY.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_DIRCMP_REPORT.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_DIRCOLS.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_DIRCOMP_PROGRESS.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_DIR_FILTER.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_EDITOR_HEADERBAR.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_EDIT_FIND.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_EDIT_MARKER.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_EDIT_REPLACE.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_ENCODINGERROR.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_FILEFILTERS.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_GENERATE_PATCH.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_LOAD_SAVE_CODEPAGE.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_OPEN.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_PLUGINS_LIST.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_PROPPAGE_COLORS_DIR.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_PROPPAGE_FILTER.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_SAVECLOSING.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_SELECTUNPACKER.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_SHARED_FILTER.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_TEST_FILTER.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/IDD_WMGOTO.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QAboutDlg.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QMainMenu.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPreferencesDlg.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropArchive.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropBackups.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropCodepage.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropCompare.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropCompareBinary.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropCompareFolder.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropCompareImage.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropEditor.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropGeneral.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropMarkerColors.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropMergeColors.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropRegistry.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropShell.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropSyntaxColors.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/QPropTextColors.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/qt_ui/mainwindow.ui">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/translations/german.qm.rule">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_COMPARE_STATISTICS.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_COMPARE_STATISTICS3.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_CONFIRM_COPY.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_DIRCMP_REPORT.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_DIRCOLS.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_DIRCOMP_PROGRESS.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_DIR_FILTER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_EDITOR_HEADERBAR.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_EDIT_FIND.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_EDIT_MARKER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_EDIT_REPLACE.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_ENCODINGERROR.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_FILEFILTERS.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_GENERATE_PATCH.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_LOAD_SAVE_CODEPAGE.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_OPEN.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_PLUGINS_LIST.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_PROPPAGE_COLORS_DIR.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_PROPPAGE_FILTER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_SAVECLOSING.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_SELECTUNPACKER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_SHARED_FILTER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_TEST_FILTER.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_IDD_WMGOTO.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QAboutDlg.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QMainMenu.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPreferencesDlg.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropArchive.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropBackups.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropCodepage.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropCompare.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropCompareBinary.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropCompareFolder.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropCompareImage.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropEditor.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropGeneral.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropMarkerColors.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropMergeColors.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropRegistry.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropShell.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropSyntaxColors.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_QPropTextColors.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/ui_mainwindow.h">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/version.rc">
+			<Option target="winmerge_gui"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/gui.qrc">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../ext/poco/cmake-build-debug/Poco/PocoConfig.cmake">
+			<Option virtualFolder="CMake Files\..\ext\poco\cmake-build-debug\Poco\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../ext/poco/cmake-build-debug/Poco/PocoConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\ext\poco\cmake-build-debug\Poco\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../ext/poco/cmake-build-debug/Foundation/PocoFoundationConfig.cmake">
+			<Option virtualFolder="CMake Files\..\ext\poco\cmake-build-debug\Foundation\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../ext/poco/cmake-build-debug/Foundation/PocoFoundationConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\ext\poco\cmake-build-debug\Foundation\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../ext/poco/cmake-build-debug/Foundation/PocoFoundationTargets.cmake">
+			<Option virtualFolder="CMake Files\..\ext\poco\cmake-build-debug\Foundation\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../ext/poco/cmake-build-debug/Net/PocoNetConfig.cmake">
+			<Option virtualFolder="CMake Files\..\ext\poco\cmake-build-debug\Net\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../ext/poco/cmake-build-debug/Net/PocoNetConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\ext\poco\cmake-build-debug\Net\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/src/../ext/poco/cmake-build-debug/Net/PocoNetTargets.cmake">
+			<Option virtualFolder="CMake Files\..\ext\poco\cmake-build-debug\Net\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

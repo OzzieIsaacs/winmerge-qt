@@ -12,7 +12,7 @@
 static LPCTSTR f_RegValuePath = _T("Executable");*/
 
 
-QPropRegistry::QPropRegistry(QWidget *parent) :
+QPropRegistry::QPropRegistry(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropRegistry)
 {
@@ -20,6 +20,8 @@ QPropRegistry::QPropRegistry(QWidget *parent) :
 	connect(ui->IDC_EXT_EDITOR_BROWSE, SIGNAL(clicked()), this, SLOT(OnBrowseEditor()));
 	connect(ui->IDC_FILTER_USER_BROWSE, SIGNAL(clicked()), this, SLOT(OnBrowseFilterPath()));
 	connect(ui->IDC_TMPFOLDER_BROWSE, SIGNAL(clicked()), this, SLOT(OnBrowseTmpFolder()));
+
+	m_options = options;
 	/*m_tooltips.Create(this);
 	m_tooltips.SetMaxTipWidth(600);
 	m_tooltips.AddTool(GetDlgItem(IDC_EXT_EDITOR_PATH),
@@ -38,16 +40,16 @@ QPropRegistry::~QPropRegistry()
  */
 void QPropRegistry::ReadOptions()
 {
-	ui->IDC_EXT_EDITOR_PATH->setText(m_options.value(OPT_EXT_EDITOR_CMD).toString());
-	ui->IDC_USE_RECYCLE_BIN->setChecked(m_options.value(OPT_USE_RECYCLE_BIN).toBool());
-	ui->IDC_FILTER_USER_PATH->setText(m_options.value(OPT_FILTER_USERPATH).toString());
-	if (m_options.value(OPT_USE_SYSTEM_TEMP_PATH).toBool()){
+	ui->IDC_EXT_EDITOR_PATH->setText(m_options->value(OPT_EXT_EDITOR_CMD).toString());
+	ui->IDC_USE_RECYCLE_BIN->setChecked(m_options->value(OPT_USE_RECYCLE_BIN).toBool());
+	ui->IDC_FILTER_USER_PATH->setText(m_options->value(OPT_FILTER_USERPATH).toString());
+	if (m_options->value(OPT_USE_SYSTEM_TEMP_PATH).toBool()){
 		ui->IDC_TMPFOLDER_SYSTEM->setChecked(1);
 	} else {
 		ui->IDC_TMPFOLDER_CUSTOM->setChecked(1);
 	}
 
-	ui->IDC_TMPFOLDER_NAME->setText(m_options.value(OPT_CUSTOM_TEMP_PATH).toString());
+	ui->IDC_TMPFOLDER_NAME->setText(m_options->value(OPT_CUSTOM_TEMP_PATH).toString());
 
 
 	/*m_strEditorPath = GetOptionsMgr()->GetString(OPT_EXT_EDITOR_CMD);
@@ -62,28 +64,28 @@ void QPropRegistry::ReadOptions()
  */
 void QPropRegistry::WriteOptions()
 {
-	m_options.setValue(OPT_USE_RECYCLE_BIN, ui->IDC_USE_RECYCLE_BIN->isChecked());
+	m_options->setValue(OPT_USE_RECYCLE_BIN, ui->IDC_USE_RECYCLE_BIN->isChecked());
 	// GetOptionsMgr()->SaveOption(OPT_USE_RECYCLE_BIN, m_bUseRecycleBin);
 
 	QString sExtEditor = ui->IDC_EXT_EDITOR_PATH->toPlainText().trimmed(); // strutils::trim_ws(m_strEditorPath);
 	if (sExtEditor.isEmpty())
 		sExtEditor = "";// ToDo: Implement defaultValue storage class
 		// GetOptionsMgr()->GetDefault<String>(OPT_EXT_EDITOR_CMD);
-	m_options.setValue(OPT_EXT_EDITOR_CMD, sExtEditor);
+	m_options->setValue(OPT_EXT_EDITOR_CMD, sExtEditor);
 	// GetOptionsMgr()->SaveOption(OPT_EXT_EDITOR_CMD, sExtEditor);
 
 	// String sFilterPath = strutils::trim_ws(m_strUserFilterPath);
 	QString sFilterPath = ui->IDC_FILTER_USER_PATH->toPlainText().trimmed();
-	m_options.setValue(OPT_FILTER_USERPATH, sFilterPath);
+	m_options->setValue(OPT_FILTER_USERPATH, sFilterPath);
 	// GetOptionsMgr()->SaveOption(OPT_FILTER_USERPATH, sFilterPath);
 
 	//bool useSysTemp = ui->IDC_TMPFOLDER_SYSTEM->isChecked() == 0;
-	m_options.setValue(OPT_USE_SYSTEM_TEMP_PATH, ui->IDC_TMPFOLDER_SYSTEM->isChecked());
+	m_options->setValue(OPT_USE_SYSTEM_TEMP_PATH, ui->IDC_TMPFOLDER_SYSTEM->isChecked());
 	// GetOptionsMgr()->SaveOption(OPT_USE_SYSTEM_TEMP_PATH, useSysTemp);
 
 	// String tempFolder = strutils::trim_ws(m_tempFolder);
 	QString tempFolder = ui->IDC_TMPFOLDER_NAME->toPlainText().trimmed();
-	m_options.setValue(OPT_CUSTOM_TEMP_PATH, tempFolder);
+	m_options->setValue(OPT_CUSTOM_TEMP_PATH, tempFolder);
 	// GetOptionsMgr()->SaveOption(OPT_CUSTOM_TEMP_PATH, tempFolder);
 }
 

@@ -9,6 +9,7 @@
 #define IDD_PROPPAGE_SHELL_H
 #include <QDialog>
 #include <QSettings>
+#include "QOptionsMgr.h"
 
 namespace Ui {
 class QPropShell;
@@ -18,7 +19,7 @@ class QPropShell : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropShell(QWidget *parent = nullptr);
+	explicit QPropShell(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropShell();
 
 // Implement IOptionsPanel
@@ -38,7 +39,7 @@ private slots:
 
 private:
 	Ui::QPropShell *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 
 	//void OnTimer(UINT_PTR nIDEvent);
 

@@ -14,12 +14,14 @@
 #define new DEBUG_NEW
 #endif
 
-QPropBackups::QPropBackups(QWidget *parent) :
+QPropBackups::QPropBackups(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropBackups)
 {
 	ui->setupUi(this);
 	connect(ui->IDC_BACKUP_BROWSE, SIGNAL(clicked()), this, SLOT(OnBnClickedBackupBrowse()));
+	
+	m_options = options;
 }
 QPropBackups::~QPropBackups()
 {
@@ -31,16 +33,16 @@ QPropBackups::~QPropBackups()
  */
 void QPropBackups::ReadOptions()
 {
-	ui->IDC_BACKUP_FOLDER->setText(m_options.value(OPT_BACKUP_GLOBALFOLDER).toString());
-	ui->IDC_BACKUP_FOLDERCMP->setChecked(m_options.value(OPT_BACKUP_FOLDERCMP).toBool());
-	ui->IDC_BACKUP_FILECMP->setChecked(m_options.value(OPT_BACKUP_FILECMP).toBool());
-	if (m_options.value(OPT_BACKUP_LOCATION).toBool()){
+	ui->IDC_BACKUP_FOLDER->setText(m_options->value(OPT_BACKUP_GLOBALFOLDER).toString());
+	ui->IDC_BACKUP_FOLDERCMP->setChecked(m_options->value(OPT_BACKUP_FOLDERCMP).toBool());
+	ui->IDC_BACKUP_FILECMP->setChecked(m_options->value(OPT_BACKUP_FILECMP).toBool());
+	if (m_options->value(OPT_BACKUP_LOCATION).toBool()){
 		ui->IDC_BACKUP_ORIGFOLD->setChecked(true);
 	} else {
 		ui->IDC_BACKUP_GLOBALFOLD->setChecked(true);
 	}
-	ui->IDC_BACKUP_APPEND_BAK->setChecked(m_options.value(OPT_BACKUP_ADD_BAK).toBool());
-	ui->IDC_BACKUP_APPEND_TIME->setChecked(m_options.value(OPT_BACKUP_ADD_TIME).toBool());
+	ui->IDC_BACKUP_APPEND_BAK->setChecked(m_options->value(OPT_BACKUP_ADD_BAK).toBool());
+	ui->IDC_BACKUP_APPEND_TIME->setChecked(m_options->value(OPT_BACKUP_ADD_TIME).toBool());
 
 
 }
@@ -54,13 +56,13 @@ void QPropBackups::WriteOptions()
 	QString sGlobalFolder = ui->IDC_BACKUP_FOLDER->toPlainText().trimmed();
 	if (sGlobalFolder.length() > 3)
 		sGlobalFolder = paths::AddTrailingSlash(sGlobalFolder);
-	m_options.setValue(OPT_BACKUP_GLOBALFOLDER, sGlobalFolder);
+	m_options->setValue(OPT_BACKUP_GLOBALFOLDER, sGlobalFolder);
 
-	m_options.setValue(OPT_BACKUP_FOLDERCMP, ui->IDC_BACKUP_FOLDERCMP->isChecked());
-	m_options.setValue(OPT_BACKUP_FILECMP, ui->IDC_BACKUP_FILECMP->isChecked());
-	m_options.setValue(OPT_BACKUP_LOCATION, ui->IDC_BACKUP_ORIGFOLD->isChecked());
-	m_options.setValue(OPT_BACKUP_ADD_BAK, ui->IDC_BACKUP_APPEND_BAK->isChecked());
-	m_options.setValue(OPT_BACKUP_ADD_TIME, ui->IDC_BACKUP_APPEND_TIME->isChecked());
+	m_options->setValue(OPT_BACKUP_FOLDERCMP, ui->IDC_BACKUP_FOLDERCMP->isChecked());
+	m_options->setValue(OPT_BACKUP_FILECMP, ui->IDC_BACKUP_FILECMP->isChecked());
+	m_options->setValue(OPT_BACKUP_LOCATION, ui->IDC_BACKUP_ORIGFOLD->isChecked());
+	m_options->setValue(OPT_BACKUP_ADD_BAK, ui->IDC_BACKUP_APPEND_BAK->isChecked());
+	m_options->setValue(OPT_BACKUP_ADD_TIME, ui->IDC_BACKUP_APPEND_TIME->isChecked());
 
 }
 

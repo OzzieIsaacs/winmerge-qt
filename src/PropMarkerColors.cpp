@@ -10,13 +10,15 @@
 //#include "OptionsCustomColors.h"
 
 
-QPropMarkerColors::QPropMarkerColors(QWidget *parent) :
+QPropMarkerColors::QPropMarkerColors(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropMarkerColors)
 {
 	ui->setupUi(this);
 	//connect(ui->IDC_TREEOPT_EXPORT, SIGNAL(clicked()), this, SLOT(OnExportButton()));
 	//ON_COMMAND_RANGE(IDC_MARKER0_BKGD_COLOR, IDC_MARKER3_BKGD_COLOR, OnMarkerColors)
+
+	m_options = options;
 }
 QPropMarkerColors::~QPropMarkerColors()
 {

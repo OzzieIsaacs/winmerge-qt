@@ -15,7 +15,7 @@
 static const int Mega = 1024 * 1024;
 
 
-QPropCompareFolder::QPropCompareFolder(QWidget *parent) :
+QPropCompareFolder::QPropCompareFolder(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropCompareFolder)
 {
@@ -32,6 +32,7 @@ QPropCompareFolder::QPropCompareFolder(QWidget *parent) :
 	connect(ui->IDC_COMPAREMETHODCOMBO, SIGNAL(currentIndexChanged(const QString&)), this, SLOT(OnCbnSelchangeComparemethodcombo(const QString&)));
 	connect(ui->IDC_RECURS_CHECK, SIGNAL(clicked()), this, SLOT(OnBnClickedRecursCheck()));
 
+	m_options = options;
 }
 QPropCompareFolder::~QPropCompareFolder()
 {
@@ -44,16 +45,16 @@ QPropCompareFolder::~QPropCompareFolder()
  * into members.
  */
 void QPropCompareFolder::ReadOptions() {
-	ui->IDC_COMPAREMETHODCOMBO->setCurrentIndex(m_options.value(OPT_CMP_METHOD).toInt());
+	ui->IDC_COMPAREMETHODCOMBO->setCurrentIndex(m_options->value(OPT_CMP_METHOD).toInt());
 
-	ui->IDC_COMPARE_STOPFIRST->setChecked(m_options.value(OPT_CMP_STOP_AFTER_FIRST).toBool());
-	ui->IDC_IGNORE_SMALLTIMEDIFF->setChecked(m_options.value(OPT_IGNORE_SMALL_FILETIME).toBool());
-	ui->IDC_COMPARE_WALKSUBDIRS->setChecked(m_options.value(OPT_CMP_WALK_UNIQUE_DIRS).toBool());
-	ui->IDC_RECURS_CHECK->setChecked(m_options.value(OPT_CMP_INCLUDE_SUBDIRS).toBool());
-	ui->IDC_EXPAND_SUBDIRS->setChecked(m_options.value(OPT_DIRVIEW_EXPAND_SUBDIRS).toBool());
-	ui->IDC_IGNORE_REPARSEPOINTS->setChecked(m_options.value(OPT_CMP_IGNORE_REPARSE_POINTS).toBool());
-	ui->IDC_COMPARE_QUICKC_LIMIT->setText(QString::number(m_options.value(OPT_CMP_QUICK_LIMIT).toInt()/Mega));
-	ui->IDC_COMPARE_THREAD_COUNT->setText(m_options.value(OPT_CMP_COMPARE_THREADS).toString());
+	ui->IDC_COMPARE_STOPFIRST->setChecked(m_options->value(OPT_CMP_STOP_AFTER_FIRST).toBool());
+	ui->IDC_IGNORE_SMALLTIMEDIFF->setChecked(m_options->value(OPT_IGNORE_SMALL_FILETIME).toBool());
+	ui->IDC_COMPARE_WALKSUBDIRS->setChecked(m_options->value(OPT_CMP_WALK_UNIQUE_DIRS).toBool());
+	ui->IDC_RECURS_CHECK->setChecked(m_options->value(OPT_CMP_INCLUDE_SUBDIRS).toBool());
+	ui->IDC_EXPAND_SUBDIRS->setChecked(m_options->value(OPT_DIRVIEW_EXPAND_SUBDIRS).toBool());
+	ui->IDC_IGNORE_REPARSEPOINTS->setChecked(m_options->value(OPT_CMP_IGNORE_REPARSE_POINTS).toBool());
+	ui->IDC_COMPARE_QUICKC_LIMIT->setText(QString::number(m_options->value(OPT_CMP_QUICK_LIMIT).toInt()/Mega));
+	ui->IDC_COMPARE_THREAD_COUNT->setText(m_options->value(OPT_CMP_COMPARE_THREADS).toString());
 }
 
 /**
@@ -63,20 +64,20 @@ void QPropCompareFolder::ReadOptions() {
  */
 void QPropCompareFolder::WriteOptions()
 {
-	m_options.setValue(OPT_CMP_METHOD, ui->IDC_COMPAREMETHODCOMBO->currentIndex());
-	m_options.setValue(OPT_CMP_STOP_AFTER_FIRST, ui->IDC_COMPARE_STOPFIRST->isChecked());
-	m_options.setValue(OPT_IGNORE_SMALL_FILETIME, ui->IDC_IGNORE_SMALLTIMEDIFF->isChecked());
-	m_options.setValue(OPT_CMP_WALK_UNIQUE_DIRS, ui->IDC_COMPARE_WALKSUBDIRS->isChecked());
-	m_options.setValue(OPT_CMP_INCLUDE_SUBDIRS, ui->IDC_RECURS_CHECK->isChecked());
-	m_options.setValue(OPT_DIRVIEW_EXPAND_SUBDIRS, ui->IDC_EXPAND_SUBDIRS->isChecked());
-	m_options.setValue(OPT_CMP_IGNORE_REPARSE_POINTS, ui->IDC_IGNORE_REPARSEPOINTS->isChecked());
+	m_options->setValue(OPT_CMP_METHOD, ui->IDC_COMPAREMETHODCOMBO->currentIndex());
+	m_options->setValue(OPT_CMP_STOP_AFTER_FIRST, ui->IDC_COMPARE_STOPFIRST->isChecked());
+	m_options->setValue(OPT_IGNORE_SMALL_FILETIME, ui->IDC_IGNORE_SMALLTIMEDIFF->isChecked());
+	m_options->setValue(OPT_CMP_WALK_UNIQUE_DIRS, ui->IDC_COMPARE_WALKSUBDIRS->isChecked());
+	m_options->setValue(OPT_CMP_INCLUDE_SUBDIRS, ui->IDC_RECURS_CHECK->isChecked());
+	m_options->setValue(OPT_DIRVIEW_EXPAND_SUBDIRS, ui->IDC_EXPAND_SUBDIRS->isChecked());
+	m_options->setValue(OPT_CMP_IGNORE_REPARSE_POINTS, ui->IDC_IGNORE_REPARSEPOINTS->isChecked());
 
 	int nQuickCompareLimit = ui->IDC_COMPARE_QUICKC_LIMIT->toPlainText().toInt();
 	if (nQuickCompareLimit > 2000)
 		nQuickCompareLimit = 2000;
-	m_options.setValue(OPT_CMP_QUICK_LIMIT, nQuickCompareLimit * Mega);
+	m_options->setValue(OPT_CMP_QUICK_LIMIT, nQuickCompareLimit * Mega);
 
-	m_options.setValue(OPT_CMP_COMPARE_THREADS, ui->IDC_COMPARE_THREAD_COUNT->toPlainText().toInt());
+	m_options->setValue(OPT_CMP_COMPARE_THREADS, ui->IDC_COMPARE_THREAD_COUNT->toPlainText().toInt());
 }
 
 

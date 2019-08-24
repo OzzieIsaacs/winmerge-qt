@@ -10,18 +10,16 @@
 #endif
 
 
-QPropShell::QPropShell(QWidget *parent) :
+QPropShell::QPropShell(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
+	m_bContextAdded(false),
+	m_bContextAdvanced(false),
 	ui(new Ui::QPropShell) {
 	ui->setupUi(this);
 
 #ifndef BCM_SETSHIELD
 #define BCM_SETSHIELD            (0x1600/*BCM_FIRST*/ + 0x000C)
 #endif
-	// ToDo: Port
-	/*
-	SendDlgItemMessage(IDC_REGISTER_SHELLEXTENSION, BCM_SETSHIELD, 0, TRUE);
-	SendDlgItemMessage(IDC_UNREGISTER_SHELLEXTENSION, BCM_SETSHIELD, 0, TRUE);*/
 
 	// Update shell extension checkboxes
 	UpdateButtons();
@@ -203,13 +201,11 @@ void QPropShell::SaveMergePath()
 /// Enable/Disable "Advanced menu" checkbox.
 void QPropShell::AdvancedContextMenuCheck()
 {
-	// ToDo: Port easy
-	/*
-	if (!IsDlgButtonChecked(IDC_EXPLORER_CONTEXT))
+	if (!ui->IDC_EXPLORER_CONTEXT->isChecked())
 	{
-		CheckDlgButton(IDC_EXPLORER_ADVANCED, FALSE);
+		ui->IDC_EXPLORER_ADVANCED->setChecked(false);
 		m_bContextAdvanced = false;
-	}*/
+	}
 }
 
 void QPropShell::UpdateButtons()

@@ -30,7 +30,7 @@
 #include "ui_QPropGeneral.h"
 
 
-QPropGeneral::QPropGeneral(QWidget *parent) :
+QPropGeneral::QPropGeneral(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropGeneral)
 {
@@ -43,6 +43,7 @@ QPropGeneral::QPropGeneral(QWidget *parent) :
 	ui->IDC_AUTO_COMPLETE_SOURCE->addItem("From file system");
 	ui->IDC_AUTO_COMPLETE_SOURCE->addItem("From MRU list");
 
+	m_options = options;
 	/*m_ctlLangList.SetDroppedWidth(600);
 	m_ctlLangList.EnableWindow(FALSE);
 	m_pLoadLanguagesThread = AfxBeginThread(LoadLanguagesThreadProc, this, 0, 0, CREATE_SUSPENDED);
@@ -62,15 +63,15 @@ QPropGeneral::~QPropGeneral()
  */
 void QPropGeneral::ReadOptions()
 {
-	ui->IDC_SCROLL_CHECK->setChecked(m_options.value(OPT_SCROLL_TO_FIRST).toBool());
-	ui->IDC_ESC_CLOSES_WINDOW->setChecked( m_options.value(OPT_CLOSE_WITH_ESC).toBool());
-	ui->IDC_VERIFY_OPEN_PATHS->setChecked(m_options.value(OPT_VERIFY_OPEN_PATHS).toBool());
-	ui->IDC_SINGLE_INSTANCE->setChecked(m_options.value(OPT_SINGLE_INSTANCE).toBool());
-	ui->IDC_ASK_MULTIWINDOW_CLOSE->setChecked( m_options.value(OPT_ASK_MULTIWINDOW_CLOSE).toBool());
-	ui->IDC_PRESERVE_FILETIME->setChecked(m_options.value(OPT_PRESERVE_FILETIMES).toBool());
-	ui->IDC_STARTUP_FOLDER_SELECT->setChecked(m_options.value(OPT_SHOW_SELECT_FILES_AT_STARTUP).toBool());
-	ui->IDC_CLOSE_WITH_OK->setChecked(m_options.value(OPT_CLOSE_WITH_OK).toBool());
-	ui->IDC_AUTO_COMPLETE_SOURCE->setCurrentIndex(m_options.value(OPT_AUTO_COMPLETE_SOURCE).toInt());
+	ui->IDC_SCROLL_CHECK->setChecked(m_options->value(OPT_SCROLL_TO_FIRST).toBool());
+	ui->IDC_ESC_CLOSES_WINDOW->setChecked( m_options->value(OPT_CLOSE_WITH_ESC).toBool());
+	ui->IDC_VERIFY_OPEN_PATHS->setChecked(m_options->value(OPT_VERIFY_OPEN_PATHS).toBool());
+	ui->IDC_SINGLE_INSTANCE->setChecked(m_options->value(OPT_SINGLE_INSTANCE).toBool());
+	ui->IDC_ASK_MULTIWINDOW_CLOSE->setChecked( m_options->value(OPT_ASK_MULTIWINDOW_CLOSE).toBool());
+	ui->IDC_PRESERVE_FILETIME->setChecked(m_options->value(OPT_PRESERVE_FILETIMES).toBool());
+	ui->IDC_STARTUP_FOLDER_SELECT->setChecked(m_options->value(OPT_SHOW_SELECT_FILES_AT_STARTUP).toBool());
+	ui->IDC_CLOSE_WITH_OK->setChecked(m_options->value(OPT_CLOSE_WITH_OK).toBool());
+	ui->IDC_AUTO_COMPLETE_SOURCE->setCurrentIndex(m_options->value(OPT_AUTO_COMPLETE_SOURCE).toInt());
 }
 
 /**
@@ -78,15 +79,15 @@ void QPropGeneral::ReadOptions()
  */
 void QPropGeneral::WriteOptions()
 {
-	m_options.setValue(OPT_SCROLL_TO_FIRST, ui->IDC_SCROLL_CHECK->isChecked());
-	m_options.setValue(OPT_SINGLE_INSTANCE, ui->IDC_SINGLE_INSTANCE->isChecked());
-	m_options.setValue(OPT_VERIFY_OPEN_PATHS, ui->IDC_VERIFY_OPEN_PATHS->isChecked());
-    m_options.setValue(OPT_CLOSE_WITH_ESC, ui->IDC_ESC_CLOSES_WINDOW->isChecked());
-	m_options.setValue(OPT_ASK_MULTIWINDOW_CLOSE, ui->IDC_ASK_MULTIWINDOW_CLOSE->isChecked());
-	m_options.setValue(OPT_AUTO_COMPLETE_SOURCE, ui->IDC_AUTO_COMPLETE_SOURCE->currentIndex());
-	m_options.setValue(OPT_PRESERVE_FILETIMES, ui->IDC_PRESERVE_FILETIME->isChecked());
-	m_options.setValue(OPT_SHOW_SELECT_FILES_AT_STARTUP, ui->IDC_STARTUP_FOLDER_SELECT->isChecked());
-	m_options.setValue(OPT_CLOSE_WITH_OK, ui->IDC_CLOSE_WITH_OK->isChecked());
+	m_options->setValue(OPT_SCROLL_TO_FIRST, ui->IDC_SCROLL_CHECK->isChecked());
+	m_options->setValue(OPT_SINGLE_INSTANCE, ui->IDC_SINGLE_INSTANCE->isChecked());
+	m_options->setValue(OPT_VERIFY_OPEN_PATHS, ui->IDC_VERIFY_OPEN_PATHS->isChecked());
+    m_options->setValue(OPT_CLOSE_WITH_ESC, ui->IDC_ESC_CLOSES_WINDOW->isChecked());
+	m_options->setValue(OPT_ASK_MULTIWINDOW_CLOSE, ui->IDC_ASK_MULTIWINDOW_CLOSE->isChecked());
+	m_options->setValue(OPT_AUTO_COMPLETE_SOURCE, ui->IDC_AUTO_COMPLETE_SOURCE->currentIndex());
+	m_options->setValue(OPT_PRESERVE_FILETIMES, ui->IDC_PRESERVE_FILETIME->isChecked());
+	m_options->setValue(OPT_SHOW_SELECT_FILES_AT_STARTUP, ui->IDC_STARTUP_FOLDER_SELECT->isChecked());
+	m_options->setValue(OPT_CLOSE_WITH_OK, ui->IDC_CLOSE_WITH_OK->isChecked());
 	//ToDo: Enable language settings
 	/*int index = m_ctlLangList.GetCurSel();
 	if (index >= 0)

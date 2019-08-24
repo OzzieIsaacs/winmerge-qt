@@ -11,6 +11,7 @@
 #include <QDialog>
 #include <QSettings>
 #include <array>
+#include "QOptionsMgr.h"
 //#include "ColorButton.h"
 
 namespace Ui {
@@ -21,7 +22,7 @@ class QPropMarkerColors : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropMarkerColors(QWidget *parent = nullptr);
+	explicit QPropMarkerColors(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropMarkerColors();
 
 	// Implement IOptionsPanel
@@ -38,7 +39,7 @@ private slots:
 
 private:
 	Ui::QPropMarkerColors *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 
 };
 #endif // IDD_PROPPAGE_COLORS_MARKER_H

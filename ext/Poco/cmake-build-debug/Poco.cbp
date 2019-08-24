@@ -1,0 +1,3637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Poco"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\Foundation\;CMake Files\Foundation\cmake\;CMake Files\XML\;CMake Files\XML\cmake\;CMake Files\JSON\;CMake Files\JSON\cmake\;CMake Files\Util\;CMake Files\Util\cmake\;CMake Files\Net\;CMake Files\Net\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="package">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 package"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="package_source">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 package_source"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Foundation">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/lib/libPocoFoundationd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Foundation"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPOCO_OS_FAMILY_UNIX"/>
+					<Add option="-D_XOPEN_SOURCE=500"/>
+					<Add option="-D_REENTRANT"/>
+					<Add option="-D_THREAD_SAFE"/>
+					<Add option="-D_LARGEFILE64_SOURCE"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DPCRE_STATIC"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Foundation/Makefile&quot;  VERBOSE=1 Foundation"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Foundation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Foundation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Foundation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Foundation/fast">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/lib/libPocoFoundationd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Foundation"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPOCO_OS_FAMILY_UNIX"/>
+					<Add option="-D_XOPEN_SOURCE=500"/>
+					<Add option="-D_REENTRANT"/>
+					<Add option="-D_THREAD_SAFE"/>
+					<Add option="-D_LARGEFILE64_SOURCE"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DPCRE_STATIC"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Foundation/Makefile&quot;  VERBOSE=1 Foundation/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Foundation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Foundation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Foundation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="XML">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/lib/libPocoXMLd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/XML"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPOCO_OS_FAMILY_UNIX"/>
+					<Add option="-D_XOPEN_SOURCE=500"/>
+					<Add option="-D_REENTRANT"/>
+					<Add option="-D_THREAD_SAFE"/>
+					<Add option="-D_LARGEFILE64_SOURCE"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DXML_NS"/>
+					<Add option="-DXML_DTD"/>
+					<Add option="-DHAVE_EXPAT_CONFIG_H"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/XML/Makefile&quot;  VERBOSE=1 XML"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/XML/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/XML/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/XML/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="XML/fast">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/lib/libPocoXMLd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/XML"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPOCO_OS_FAMILY_UNIX"/>
+					<Add option="-D_XOPEN_SOURCE=500"/>
+					<Add option="-D_REENTRANT"/>
+					<Add option="-D_THREAD_SAFE"/>
+					<Add option="-D_LARGEFILE64_SOURCE"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DXML_NS"/>
+					<Add option="-DXML_DTD"/>
+					<Add option="-DHAVE_EXPAT_CONFIG_H"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/XML/Makefile&quot;  VERBOSE=1 XML/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/XML/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/XML/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/XML/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="JSON">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/lib/libPocoJSONd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/JSON"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPOCO_OS_FAMILY_UNIX"/>
+					<Add option="-D_XOPEN_SOURCE=500"/>
+					<Add option="-D_REENTRANT"/>
+					<Add option="-D_THREAD_SAFE"/>
+					<Add option="-D_LARGEFILE64_SOURCE"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/JSON/Makefile&quot;  VERBOSE=1 JSON"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/JSON/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/JSON/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/JSON/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="JSON/fast">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/lib/libPocoJSONd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/JSON"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPOCO_OS_FAMILY_UNIX"/>
+					<Add option="-D_XOPEN_SOURCE=500"/>
+					<Add option="-D_REENTRANT"/>
+					<Add option="-D_THREAD_SAFE"/>
+					<Add option="-D_LARGEFILE64_SOURCE"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/JSON/Makefile&quot;  VERBOSE=1 JSON/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/JSON/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/JSON/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/JSON/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Util">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/lib/libPocoUtild.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Util"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPOCO_OS_FAMILY_UNIX"/>
+					<Add option="-D_XOPEN_SOURCE=500"/>
+					<Add option="-D_REENTRANT"/>
+					<Add option="-D_THREAD_SAFE"/>
+					<Add option="-D_LARGEFILE64_SOURCE"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Util/Makefile&quot;  VERBOSE=1 Util"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Util/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Util/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Util/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Util/fast">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/lib/libPocoUtild.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Util"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPOCO_OS_FAMILY_UNIX"/>
+					<Add option="-D_XOPEN_SOURCE=500"/>
+					<Add option="-D_REENTRANT"/>
+					<Add option="-D_THREAD_SAFE"/>
+					<Add option="-D_LARGEFILE64_SOURCE"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Util/Makefile&quot;  VERBOSE=1 Util/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Util/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Util/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Util/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Net">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/lib/libPocoNetd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Net"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPOCO_OS_FAMILY_UNIX"/>
+					<Add option="-D_XOPEN_SOURCE=500"/>
+					<Add option="-D_REENTRANT"/>
+					<Add option="-D_THREAD_SAFE"/>
+					<Add option="-D_LARGEFILE64_SOURCE"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Net/Makefile&quot;  VERBOSE=1 Net"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Net/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Net/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Net/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Net/fast">
+				<Option output="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/lib/libPocoNetd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Net"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPOCO_OS_FAMILY_UNIX"/>
+					<Add option="-D_XOPEN_SOURCE=500"/>
+					<Add option="-D_REENTRANT"/>
+					<Add option="-D_THREAD_SAFE"/>
+					<Add option="-D_LARGEFILE64_SOURCE"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src"/>
+					<Add directory="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Net/Makefile&quot;  VERBOSE=1 Net/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Net/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Net/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug/Net/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ASCIIEncoding.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AbstractCache.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AbstractDelegate.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AbstractEvent.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AbstractObserver.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AbstractPriorityDelegate.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AbstractStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AccessExpirationDecorator.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AccessExpireCache.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AccessExpireLRUCache.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AccessExpireStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ActiveDispatcher.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ActiveMethod.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ActiveResult.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ActiveRunnable.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ActiveStarter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Activity.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Alignment.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Any.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ArchiveStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Array.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Ascii.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AsyncChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AtomicCounter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AutoPtr.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/AutoReleasePool.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Base32Decoder.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Base32Encoder.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Base64Decoder.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Base64Encoder.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/BasicEvent.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/BinaryReader.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/BinaryWriter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Buffer.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/BufferAllocator.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/BufferedBidirectionalStreamBuf.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/BufferedStreamBuf.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Bugcheck.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ByteOrder.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Channel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Checksum.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ClassLibrary.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ClassLoader.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Clock.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Condition.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Config.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Configurable.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ConsoleChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/CountingStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DateTime.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DateTimeFormat.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DateTimeFormatter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DateTimeParser.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Debugger.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DefaultStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DeflatingStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Delegate.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DigestEngine.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DigestStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DirectoryIterator.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DirectoryIteratorStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DirectoryIterator_UNIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DirectoryIterator_VMS.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DirectoryIterator_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DirectoryIterator_WIN32U.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DirectoryWatcher.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Dynamic/Pair.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Dynamic/Struct.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Dynamic/Var.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Dynamic/VarHolder.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Dynamic/VarIterator.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DynamicAny.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DynamicAnyHolder.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DynamicFactory.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/DynamicStruct.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Environment.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Environment_UNIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Environment_VMS.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Environment_VX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Environment_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Environment_WIN32U.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Environment_WINCE.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Error.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ErrorHandler.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Event.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/EventArgs.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/EventLogChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Event_POSIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Event_VX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Event_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Exception.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ExpirationDecorator.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Expire.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ExpireCache.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ExpireLRUCache.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ExpireStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FIFOBuffer.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FIFOBufferStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FIFOEvent.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FIFOStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FPEnvironment.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FPEnvironment_C99.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FPEnvironment_DEC.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FPEnvironment_DUMMY.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FPEnvironment_SUN.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FPEnvironment_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/File.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FileChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FileStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FileStreamFactory.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FileStream_POSIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FileStream_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/File_UNIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/File_VMS.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/File_VX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/File_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/File_WIN32U.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/File_WINCE.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Format.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Formatter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FormattingChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Foundation.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FunctionDelegate.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/FunctionPriorityDelegate.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Glob.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/HMACEngine.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Hash.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/HashFunction.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/HashMap.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/HashSet.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/HashStatistic.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/HashTable.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/HexBinaryDecoder.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/HexBinaryEncoder.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/InflatingStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Instantiator.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/KeyValueArgs.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LRUCache.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LRUStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Latin1Encoding.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Latin2Encoding.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Latin9Encoding.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LineEndingConverter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LinearHashTable.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ListMap.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LocalDateTime.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LogFile.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LogFile_STD.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LogFile_VMS.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LogFile_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LogFile_WIN32U.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LogStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Logger.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LoggingFactory.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/LoggingRegistry.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/MD4Engine.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/MD5Engine.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Manifest.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/MemoryPool.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/MemoryStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Message.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/MetaObject.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/MetaProgramming.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Mutex.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Mutex_POSIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Mutex_VX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Mutex_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Mutex_WINCE.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NObserver.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedEvent.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedEvent_Android.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedEvent_UNIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedEvent_VMS.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedEvent_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedEvent_WIN32U.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedMutex.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedMutex_Android.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedMutex_UNIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedMutex_VMS.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedMutex_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedMutex_WIN32U.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NamedTuple.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NestedDiagnosticContext.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Notification.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NotificationCenter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NotificationQueue.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NotificationStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NullChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NullStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Nullable.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NumberFormatter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NumberParser.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/NumericString.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ObjectPool.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Observer.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/OpcomChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Optional.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PBKDF2Engine.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Path.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Path_UNIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Path_VMS.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Path_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Path_WIN32U.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Path_WINCE.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PatternFormatter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Pipe.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PipeImpl.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PipeImpl_DUMMY.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PipeImpl_POSIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PipeImpl_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PipeStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Platform.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Platform_POSIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Platform_VMS.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Platform_VX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Platform_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Poco.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PriorityDelegate.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PriorityEvent.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PriorityExpire.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PriorityNotificationQueue.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PriorityStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Process.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Process_UNIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Process_VMS.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Process_VX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Process_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Process_WIN32U.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Process_WINCE.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/PurgeStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RWLock.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RWLock_Android.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RWLock_POSIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RWLock_VX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RWLock_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RWLock_WINCE.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Random.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RandomStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RecursiveDirectoryIterator.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RecursiveDirectoryIteratorImpl.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RefCountedObject.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RegularExpression.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RotateStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Runnable.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/RunnableAdapter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SHA1Engine.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ScopedLock.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ScopedUnlock.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Semaphore.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Semaphore_POSIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Semaphore_VX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Semaphore_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedLibrary.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedLibrary_HPUX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedLibrary_UNIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedLibrary_VMS.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedLibrary_VX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedLibrary_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedLibrary_WIN32U.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedMemory.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedMemory_DUMMY.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedMemory_POSIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedMemory_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SharedPtr.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SignalHandler.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SimpleFileChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SimpleHashTable.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SingletonHolder.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SortedDirectoryIterator.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SplitterChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Stopwatch.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/StrategyCollection.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/StreamChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/StreamConverter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/StreamCopier.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/StreamTokenizer.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/StreamUtil.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/String.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/StringTokenizer.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SynchronizedObject.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/SyslogChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Task.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/TaskManager.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/TaskNotification.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/TeeStream.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/TemporaryFile.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/TextBufferIterator.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/TextConverter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/TextEncoding.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/TextIterator.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Thread.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ThreadLocal.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ThreadPool.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ThreadTarget.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Thread_POSIX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Thread_VX.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Thread_WIN32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Thread_WINCE.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/TimedNotificationQueue.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Timer.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Timespan.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Timestamp.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Timezone.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Token.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Tuple.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/TypeList.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Types.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/URI.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/URIStreamFactory.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/URIStreamOpener.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UTF16Encoding.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UTF32Encoding.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UTF8Encoding.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UTF8String.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UTFString.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UUID.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UUIDGenerator.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UnWindows.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UnbufferedStreamBuf.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Unicode.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UnicodeConverter.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UniqueAccessExpireCache.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UniqueAccessExpireLRUCache.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UniqueAccessExpireStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UniqueExpireCache.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UniqueExpireLRUCache.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/UniqueExpireStrategy.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/ValidArgs.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Version.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Void.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Windows1250Encoding.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Windows1251Encoding.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/Windows1252Encoding.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/WindowsConsoleChannel.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/zconf.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/include/Poco/zlib.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/ASCIIEncoding.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/AbstractObserver.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/ActiveDispatcher.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/ArchiveStrategy.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Ascii.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/AsyncChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/AtomicCounter.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Base32Decoder.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Base32Encoder.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Base64Decoder.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Base64Encoder.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/BinaryReader.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/BinaryWriter.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Bugcheck.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/ByteOrder.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Channel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Checksum.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Clock.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Condition.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Configurable.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/ConsoleChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/CountingStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DateTime.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DateTimeFormat.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DateTimeFormatter.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DateTimeParser.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Debugger.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DeflatingStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DigestEngine.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DigestStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DirectoryIterator.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DirectoryIteratorStrategy.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DirectoryIterator_UNIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DirectoryIterator_VMS.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DirectoryIterator_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DirectoryIterator_WIN32U.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/DirectoryWatcher.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Environment.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Environment_UNIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Environment_VMS.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Environment_VX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Environment_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Environment_WIN32U.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Environment_WINCE.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Error.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/ErrorHandler.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Event.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/EventArgs.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/EventLogChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Event_POSIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Event_VX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Event_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Exception.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FIFOBufferStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FPEnvironment.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FPEnvironment_C99.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FPEnvironment_DEC.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FPEnvironment_DUMMY.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FPEnvironment_SUN.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FPEnvironment_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/File.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FileChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FileStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FileStreamFactory.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FileStream_POSIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FileStream_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/File_UNIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/File_VMS.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/File_VX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/File_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/File_WIN32U.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/File_WINCE.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Format.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Formatter.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/FormattingChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Glob.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Hash.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/HashStatistic.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/HexBinaryDecoder.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/HexBinaryEncoder.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/InflatingStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Latin1Encoding.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Latin2Encoding.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Latin9Encoding.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/LineEndingConverter.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/LocalDateTime.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/LogFile.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/LogFile_STD.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/LogFile_VMS.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/LogFile_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/LogFile_WIN32U.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/LogStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Logger.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/LoggingFactory.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/LoggingRegistry.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/MD4Engine.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/MD5Engine.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Manifest.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/MemoryPool.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/MemoryStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Message.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Mutex.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Mutex_POSIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Mutex_VX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Mutex_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Mutex_WINCE.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedEvent.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedEvent_Android.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedEvent_UNIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedEvent_VMS.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedEvent_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedEvent_WIN32U.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedMutex.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedMutex_Android.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedMutex_UNIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedMutex_VMS.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedMutex_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NamedMutex_WIN32U.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NestedDiagnosticContext.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Notification.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NotificationCenter.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NotificationQueue.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NullChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NullStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NumberFormatter.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NumberParser.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/NumericString.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/OpcomChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Path.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Path_UNIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Path_VMS.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Path_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Path_WIN32U.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Path_WINCE.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/PatternFormatter.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Pipe.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/PipeImpl.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/PipeImpl_DUMMY.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/PipeImpl_POSIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/PipeImpl_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/PipeStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/PriorityNotificationQueue.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Process.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Process_UNIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Process_VMS.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Process_VX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Process_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Process_WIN32U.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Process_WINCE.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/PurgeStrategy.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/RWLock.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/RWLock_Android.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/RWLock_POSIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/RWLock_VX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/RWLock_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/RWLock_WINCE.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Random.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/RandomStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/RefCountedObject.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/RegularExpression.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/RotateStrategy.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Runnable.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SHA1Engine.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Semaphore.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Semaphore_POSIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Semaphore_VX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Semaphore_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SharedLibrary.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SharedLibrary_HPUX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SharedLibrary_UNIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SharedLibrary_VMS.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SharedLibrary_VX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SharedLibrary_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SharedLibrary_WIN32U.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SharedMemory.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SharedMemory_DUMMY.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SharedMemory_POSIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SharedMemory_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SignalHandler.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SimpleFileChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SortedDirectoryIterator.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SplitterChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Stopwatch.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/StreamChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/StreamConverter.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/StreamCopier.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/StreamTokenizer.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/String.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/StringTokenizer.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SynchronizedObject.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/SyslogChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Task.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/TaskManager.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/TaskNotification.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/TeeStream.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/TemporaryFile.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/TextBufferIterator.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/TextConverter.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/TextEncoding.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/TextIterator.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Thread.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/ThreadLocal.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/ThreadPool.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/ThreadTarget.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Thread_POSIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Thread_VX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Thread_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Thread_WINCE.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/TimedNotificationQueue.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Timer.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Timespan.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Timestamp.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Timezone.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Timezone_UNIX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Timezone_VX.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Timezone_WIN32.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Timezone_WINCE.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Token.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/URI.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/URIStreamFactory.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/URIStreamOpener.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/UTF16Encoding.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/UTF32Encoding.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/UTF8Encoding.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/UTF8String.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/UUID.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/UUIDGenerator.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Unicode.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/UnicodeConverter.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Var.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/VarHolder.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/VarIterator.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Void.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Windows1250Encoding.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Windows1251Encoding.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/Windows1252Encoding.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/WindowsConsoleChannel.cpp">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/adler32.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/compress.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/crc32.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/crc32.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/deflate.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/deflate.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/infback.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/inffast.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/inffast.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/inflate.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/inflate.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/inftrees.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/inftrees.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_byte_order.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_chartables.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_compile.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_config.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_config.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_dfa_exec.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_exec.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_fullinfo.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_get.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_globals.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_jit_compile.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_maketables.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_newline.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_ord2utf8.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_refcount.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_string_utils.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_study.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_tables.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_ucd.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_valid_utf8.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_version.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/pcre_xclass.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/trees.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/trees.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/zutil.c">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/src/zutil.h">
+			<Option target="Foundation"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/Array.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/Handler.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/JSON.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/JSONException.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/Object.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/ParseHandler.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/Parser.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/PrintHandler.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/Query.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/Stringifier.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/Template.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/include/Poco/JSON/TemplateCache.h">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src/Array.cpp">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src/Handler.cpp">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src/JSONException.cpp">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src/Object.cpp">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src/ParseHandler.cpp">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src/Parser.cpp">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src/PrintHandler.cpp">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src/Query.cpp">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src/Stringifier.cpp">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src/Template.cpp">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/src/TemplateCache.cpp">
+			<Option target="JSON"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/AbstractHTTPRequestHandler.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/DNS.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/DatagramSocket.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/DatagramSocketImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/DialogSocket.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/FTPClientSession.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/FTPStreamFactory.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/FilePartSource.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTMLForm.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPAuthenticationParams.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPBasicCredentials.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPBasicStreamBuf.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPBufferAllocator.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPChunkedStream.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPClientSession.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPCookie.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPCredentials.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPDigestCredentials.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPFixedLengthStream.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPHeaderStream.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPIOStream.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPMessage.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPRequest.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPRequestHandler.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPRequestHandlerFactory.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPResponse.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPServer.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPServerConnection.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPServerConnectionFactory.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPServerParams.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPServerRequest.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPServerRequestImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPServerResponse.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPServerResponseImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPServerSession.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPSession.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPSessionFactory.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPSessionInstantiator.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPStream.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HTTPStreamFactory.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/HostEntry.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/ICMPClient.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/ICMPEventArgs.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/ICMPPacket.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/ICMPPacketImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/ICMPSocket.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/ICMPSocketImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/ICMPv4PacketImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/IPAddress.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/IPAddressImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/MailMessage.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/MailRecipient.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/MailStream.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/MediaType.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/MessageHeader.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/MulticastSocket.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/MultipartReader.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/MultipartWriter.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/NTPClient.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/NTPEventArgs.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/NTPPacket.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/NameValueCollection.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/Net.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/NetException.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/NetworkInterface.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/NullPartHandler.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/OAuth10Credentials.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/OAuth20Credentials.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/POP3ClientSession.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/ParallelSocketAcceptor.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/ParallelSocketReactor.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/PartHandler.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/PartSource.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/PartStore.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/QuotedPrintableDecoder.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/QuotedPrintableEncoder.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/RawSocket.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/RawSocketImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/RemoteSyslogChannel.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/RemoteSyslogListener.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SMTPChannel.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SMTPClientSession.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/ServerSocket.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/ServerSocketImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/Socket.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SocketAcceptor.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SocketAddress.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SocketAddressImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SocketConnector.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SocketDefs.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SocketImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SocketNotification.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SocketNotifier.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SocketReactor.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/SocketStream.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/StreamSocket.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/StreamSocketImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/StringPartSource.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/TCPServer.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/TCPServerConnection.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/TCPServerConnectionFactory.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/TCPServerDispatcher.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/TCPServerParams.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/WebSocket.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/include/Poco/Net/WebSocketImpl.h">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/AbstractHTTPRequestHandler.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/DNS.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/DatagramSocket.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/DatagramSocketImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/DialogSocket.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/FTPClientSession.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/FTPStreamFactory.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/FilePartSource.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTMLForm.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPAuthenticationParams.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPBasicCredentials.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPBufferAllocator.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPChunkedStream.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPClientSession.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPCookie.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPCredentials.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPDigestCredentials.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPFixedLengthStream.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPHeaderStream.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPIOStream.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPMessage.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPRequest.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPRequestHandler.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPRequestHandlerFactory.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPResponse.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPServer.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPServerConnection.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPServerConnectionFactory.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPServerParams.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPServerRequest.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPServerRequestImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPServerResponse.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPServerResponseImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPServerSession.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPSession.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPSessionFactory.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPSessionInstantiator.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPStream.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HTTPStreamFactory.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/HostEntry.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/ICMPClient.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/ICMPEventArgs.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/ICMPPacket.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/ICMPPacketImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/ICMPSocket.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/ICMPSocketImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/ICMPv4PacketImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/IPAddress.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/IPAddressImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/MailMessage.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/MailRecipient.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/MailStream.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/MediaType.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/MessageHeader.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/MulticastSocket.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/MultipartReader.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/MultipartWriter.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/NTPClient.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/NTPEventArgs.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/NTPPacket.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/NameValueCollection.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/Net.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/NetException.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/NetworkInterface.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/NullPartHandler.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/OAuth10Credentials.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/OAuth20Credentials.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/POP3ClientSession.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/PartHandler.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/PartSource.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/PartStore.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/QuotedPrintableDecoder.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/QuotedPrintableEncoder.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/RawSocket.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/RawSocketImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/RemoteSyslogChannel.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/RemoteSyslogListener.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/SMTPChannel.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/SMTPClientSession.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/ServerSocket.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/ServerSocketImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/Socket.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/SocketAddress.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/SocketAddressImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/SocketImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/SocketNotification.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/SocketNotifier.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/SocketReactor.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/SocketStream.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/StreamSocket.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/StreamSocketImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/StringPartSource.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/TCPServer.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/TCPServerConnection.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/TCPServerConnectionFactory.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/TCPServerDispatcher.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/TCPServerParams.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/WebSocket.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/src/WebSocketImpl.cpp">
+			<Option target="Net"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/AbstractConfiguration.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/Application.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/ConfigurationMapper.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/ConfigurationView.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/FilesystemConfiguration.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/HelpFormatter.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/IniFileConfiguration.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/IntValidator.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/JSONConfiguration.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/LayeredConfiguration.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/LoggingConfigurator.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/LoggingSubsystem.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/MapConfiguration.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/Option.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/OptionCallback.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/OptionException.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/OptionProcessor.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/OptionSet.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/PropertyFileConfiguration.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/RegExpValidator.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/ServerApplication.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/Subsystem.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/SystemConfiguration.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/Timer.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/TimerTask.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/TimerTaskAdapter.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/Units.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/Util.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/Validator.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/WinRegistryConfiguration.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/WinRegistryKey.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/WinService.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/include/Poco/Util/XMLConfiguration.h">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/AbstractConfiguration.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/Application.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/ConfigurationMapper.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/ConfigurationView.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/FilesystemConfiguration.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/HelpFormatter.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/IniFileConfiguration.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/IntValidator.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/JSONConfiguration.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/LayeredConfiguration.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/LoggingConfigurator.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/LoggingSubsystem.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/MapConfiguration.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/Option.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/OptionCallback.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/OptionException.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/OptionProcessor.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/OptionSet.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/PropertyFileConfiguration.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/RegExpValidator.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/ServerApplication.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/Subsystem.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/SystemConfiguration.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/Timer.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/TimerTask.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/Validator.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/WinRegistryConfiguration.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/WinRegistryKey.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/WinService.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/src/XMLConfiguration.cpp">
+			<Option target="Util"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/AbstractContainerNode.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/AbstractNode.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/Attr.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/AttrMap.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/AutoPtr.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/CDATASection.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/CharacterData.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/ChildNodesList.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/Comment.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/DOMBuilder.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/DOMException.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/DOMImplementation.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/DOMObject.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/DOMParser.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/DOMSerializer.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/DOMWriter.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/DTDMap.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/Document.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/DocumentEvent.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/DocumentFragment.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/DocumentType.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/Element.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/ElementsByTagNameList.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/Entity.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/EntityReference.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/Event.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/EventDispatcher.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/EventException.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/EventListener.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/EventTarget.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/MutationEvent.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/NamedNodeMap.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/Node.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/NodeAppender.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/NodeFilter.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/NodeIterator.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/NodeList.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/Notation.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/ProcessingInstruction.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/Text.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/DOM/TreeWalker.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/Attributes.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/AttributesImpl.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/ContentHandler.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/DTDHandler.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/DeclHandler.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/DefaultHandler.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/EntityResolver.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/EntityResolverImpl.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/ErrorHandler.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/InputSource.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/LexicalHandler.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/Locator.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/LocatorImpl.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/NamespaceSupport.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/SAXException.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/SAXParser.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/WhitespaceFilter.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/XMLFilter.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/XMLFilterImpl.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/SAX/XMLReader.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/XML/Name.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/XML/NamePool.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/XML/NamespaceStrategy.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/XML/ParserEngine.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/XML/XML.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/XML/XMLException.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/XML/XMLStream.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/XML/XMLString.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/XML/XMLWriter.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/XML/expat.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/include/Poco/XML/expat_external.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/AbstractContainerNode.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/AbstractNode.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Attr.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/AttrMap.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Attributes.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/AttributesImpl.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/CDATASection.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/CharacterData.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/ChildNodesList.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Comment.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/ContentHandler.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DOMBuilder.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DOMException.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DOMImplementation.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DOMObject.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DOMParser.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DOMSerializer.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DOMWriter.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DTDHandler.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DTDMap.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DeclHandler.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DefaultHandler.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Document.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DocumentEvent.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DocumentFragment.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/DocumentType.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Element.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/ElementsByTagNameList.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Entity.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/EntityReference.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/EntityResolver.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/EntityResolverImpl.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/ErrorHandler.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Event.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/EventDispatcher.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/EventException.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/EventListener.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/EventTarget.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/InputSource.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/LexicalHandler.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Locator.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/LocatorImpl.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/MutationEvent.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Name.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/NamePool.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/NamedNodeMap.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/NamespaceStrategy.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/NamespaceSupport.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Node.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/NodeAppender.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/NodeFilter.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/NodeIterator.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/NodeList.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Notation.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/ParserEngine.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/ProcessingInstruction.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/SAXException.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/SAXParser.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/Text.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/TreeWalker.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/WhitespaceFilter.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/XMLException.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/XMLFilter.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/XMLFilterImpl.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/XMLReader.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/XMLString.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/XMLWriter.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/xmlparse.cpp">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/xmlrole.c">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/xmlrole.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/xmltok.c">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/xmltok.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/xmltok_impl.c">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/xmltok_impl.h">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/src/xmltok_ns.c">
+			<Option target="XML"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake/FindAPR.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake/FindApache2.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake/PocoConfig.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake/PocoMacros.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Foundation\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Foundation/cmake/PocoFoundationConfig.cmake">
+			<Option virtualFolder="CMake Files\Foundation\cmake\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\XML\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/XML/cmake/PocoXMLConfig.cmake">
+			<Option virtualFolder="CMake Files\XML\cmake\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\JSON\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/JSON/cmake/PocoJSONConfig.cmake">
+			<Option virtualFolder="CMake Files\JSON\cmake\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Util\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Util/cmake/PocoUtilConfig.cmake">
+			<Option virtualFolder="CMake Files\Util\cmake\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Net\"/>
+		</Unit>
+		<Unit filename="/home/matthias/Entwicklung/winmerge-qt/ext/Poco/Net/cmake/PocoNetConfig.cmake">
+			<Option virtualFolder="CMake Files\Net\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

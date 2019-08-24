@@ -8,6 +8,7 @@
 #define IDD_PROPPAGE_GENERAL_H
 #include <QDialog>
 #include <QSettings>
+#include "QOptionsMgr.h"
 
 namespace Ui {
 class QPropGeneral;
@@ -17,7 +18,7 @@ class QPropGeneral : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropGeneral(QWidget *parent = nullptr);
+	explicit QPropGeneral(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropGeneral();
 
 	virtual void ReadOptions();
@@ -30,6 +31,6 @@ public:
 
 private:
 	Ui::QPropGeneral *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 };
 #endif // IDD_PROPPAGE_GENERAL_H

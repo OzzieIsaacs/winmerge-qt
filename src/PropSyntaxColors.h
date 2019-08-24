@@ -13,6 +13,7 @@
 #include <array>
 #include <QDialog>
 #include <QSettings>
+#include "QOptionsMgr.h"
 
 namespace Ui {
 class QPropSyntaxColors;
@@ -22,7 +23,7 @@ class QPropSyntaxColors : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropSyntaxColors(QWidget *parent = nullptr);
+	explicit QPropSyntaxColors(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropSyntaxColors();
 
 	// Implement IOptionsPanel
@@ -41,7 +42,7 @@ private slots:
 
 private:
 	Ui::QPropSyntaxColors *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 
 	/*std::array<CColorButton, COLORINDEX_LAST + 1> m_colorButtons;
 	std::array<int, COLORINDEX_LAST + 1> m_nBolds;

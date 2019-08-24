@@ -4,8 +4,8 @@ project(winmerge_gui)
 set(CMAKE_CXX_STANDARD 17)
 
 include_directories(.)
-include_directories(../lib)
-include_directories(../ext/libxdiff/xdiff)
+# include_directories(../lib)
+# include_directories(../ext/libxdiff/xdiff)
 include_directories(SYSTEM Common)
 include_directories(SYSTEM diffutils/src)
 include_directories(SYSTEM diffutils)
@@ -13,12 +13,6 @@ include_directories(SYSTEM diffutils)
 set ( SOURCES
         Common/VersionInfo.cpp
         Common/VersionInfo.h
-        ../lib/libxdiff_tools.cpp
-        ../lib/libxdiff_tools.h
-        ../lib/dircompare.h
-        ../lib/dircompare.cpp
-        ../lib/filecompare.cpp
-        ../lib/filecompare.h
         ../Version.h
         MergeApp.cpp
         MergeApp.h
@@ -80,7 +74,6 @@ set ( SOURCES
         OptionsDiffOptions.h
         OptionsDiffColors.cpp
         OptionsDiffColors.h
-        # CompareOptions.cpp
         OptionsFont.h
         OptionsFont.cpp
         CompareOptions.h
@@ -92,7 +85,6 @@ set ( SOURCES
         FileFilterHelper.h
         FileFilterHelper.cpp
         PathContext.cpp
-        #FilterList.h
         DirItem.h
         DirItem.cpp
         FileVersion.h
@@ -213,15 +205,17 @@ set ( RESOURCES
         )
 
 # set the POCO paths and libs
-set(Poco_DIR "../ext/poco/cmake-build-debug/Poco") # the directory containing "include" and "lib"
-set(PocoFoundation_DIR "../ext/poco/cmake-build-debug/Foundation") # the directory containing "include" and "lib"
-set(PocoNet_DIR "../ext/poco/cmake-build-debug/Net") # the directory containing "include" and "lib"
+set(Poco_DIR "../ext/Poco/cmake-build-debug/Poco")
+set(PocoFoundation_DIR "../ext/Poco/cmake-build-debug/Foundation") # the directory containing "include" and "lib"
+set(PocoNet_DIR "../ext/Poco/cmake-build-debug/Net") # the directory containing "include" and "lib"
 
 set(BOOST_ROOT "../ext/boost_1_70_0")
 
 set(Boost_USE_STATIC_LIBS OFF)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
+
+SET(_moc ${CMAKE_CURRENT_BINARY_DIR}/${_current_MOC})
 
 # Include a library search using find_package()
 # via REQUIRED, specify that libraries are required
@@ -234,7 +228,6 @@ find_package(Boost 1.70.0 COMPONENTS filesystem regex)
 
 # include( ${QT_USE_FILE} )
 add_definitions( ${QT_DEFINITIONS} )
-
 
 # Next, using precompiler, compiler and linker
 
@@ -250,17 +243,25 @@ add_custom_command(
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
 )
 
+link_directories("${CMAKE_SOURCE_DIR}/../ext/libxdiff/lib")
+
 add_executable( winmerge_gui ${SOURCES} ${MOC_SRCS} ${RES_SOURCES} ${UI_HEADERS} version.rc)
 
+set_target_properties( winmerge_gui
+        PROPERTIES
+        ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+        LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+        )
+
 # specify which libraries to connect
-target_link_libraries(winmerge_gui /home/matthias/Entwicklung/WinMergeqt_clion/ext/libxdiff/liblibxdiff.a)
+target_link_libraries(${PROJECT_NAME} xdiff)
 target_link_libraries(${PROJECT_NAME} Qt5::Core)
 target_link_libraries(${PROJECT_NAME} Qt5::Gui)
 target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 target_link_libraries(${PROJECT_NAME} ${OpenMP_CXX_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} Poco::Foundation Poco::Net)
 target_link_libraries(${PROJECT_NAME} Boost::filesystem Boost::regex)
-
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)

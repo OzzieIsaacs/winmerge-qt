@@ -29,6 +29,8 @@
 #include "PropCompareBinary.h"
 #include "PropCompareImage.h"
 
+#include "QOptionsMgr.h"
+
 /*#include "PropertyPageHost.h"*/
 // #include <QWidget>
 //#include "OptionsMgr.h"
@@ -43,7 +45,7 @@ class QPreferencesDlg : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPreferencesDlg(QWidget *parent = nullptr);
+	explicit QPreferencesDlg(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPreferencesDlg();
 
 	// void SetSyntaxColors(SyntaxColors *pColors);
@@ -92,6 +94,6 @@ private slots:
 
 private:
 	Ui::QPreferencesDlg *ui;
-	// QSettings m_OptionsMgr;
+	// QOptionsMgr* m_OptionsMgr;
 };
 #endif // IDD_PREFERENCES_H

@@ -35,6 +35,8 @@
 #include "OptionsDef.h"
 #include <QMessageBox>
 #include "resource.h"
+#include "Environment.h"
+#include "MergeApp.h"
 #include <QApplication>
 // #include "MergeCmdLineInfo.h"
 
@@ -203,31 +205,31 @@ ui(new Ui::MainWindow)
 			m_pLineFilters->Import(oldFilter);
 	}
 
-	// Check if filter folder is set, and create it if not
-	String pathMyFolders = GetOptionsMgr()->GetString(OPT_FILTER_USERPATH);
-	if (pathMyFolders.empty())
+	// Check if filter folder is set, and create it if not*/
+	QString pathMyFolders = m_options.value(OPT_FILTER_USERPATH).toString();
+	if (pathMyFolders.isEmpty())
 	{
 		// No filter path, set it to default and make sure it exists.
-		pathMyFolders = GetOptionsMgr()->GetDefault<String>(OPT_FILTER_USERPATH);
-		GetOptionsMgr()->SaveOption(OPT_FILTER_USERPATH, pathMyFolders);
-		theApp.m_pGlobalFileFilter->SetUserFilterPath(pathMyFolders);
+		pathMyFolders = m_options.getDefault(OPT_FILTER_USERPATH).toString();
+		m_options.setValue(OPT_FILTER_USERPATH, pathMyFolders);
+		m_pGlobalFileFilter->SetUserFilterPath(pathMyFolders);
 	}
 	if (!paths::CreateIfNeeded(pathMyFolders))
 	{
 		// Failed to create a folder, check it didn't already
 		// exist.
-		DWORD errCode = GetLastError();
-		if (errCode != ERROR_ALREADY_EXISTS)
+		int errCode = GetSystemError();
+		if (errCode != Q_ERROR_ALREAD_EXISTS)
 		{
 			// Failed to create a folder for filters, fallback to
 			// "My Documents"-folder. It is not worth the trouble to
 			// bother user about this or user more clever solutions.
-			GetOptionsMgr()->SaveOption(OPT_FILTER_USERPATH, env::GetMyDocuments());
+			m_options.setValue(OPT_FILTER_USERPATH, env::GetMyDocuments());
 		}
 	}
-
+	/*
 	strdiff::Init(); // String diff init
-	strdiff::SetBreakChars(GetOptionsMgr()->GetString(OPT_BREAK_SEPARATORS).c_str());
+	strdiff::SetBreakChars(m_options.value(OPT_BREAK_SEPARATORS).toString());
 	*/
 	// m_bMergingMode = GetOptionsMgr()->GetBool(OPT_MERGE_MODE);
 	m_bMergingMode = m_options.value(OPT_MERGE_MODE).toBool();
@@ -532,7 +534,7 @@ void MainWindow::OnFileOpenProject()
 void MainWindow::OnOptions() {
 	// Using singleton shared syntax colors
 	// IDD_PREFERENCES dlg(GetOptionsMgr(), theApp.GetMainSyntaxColors());
-	QPreferencesDlg dlg(this);
+	QPreferencesDlg dlg(this, &m_options);
 	dlg.exec();
 	// Using singleton shared syntax colors
 	/*INT_PTR rv = dlg.DoModal();

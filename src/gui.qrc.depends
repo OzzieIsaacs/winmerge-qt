@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/icon.png</file>
+        <file>res/open-files.png</file>
+        <file>res/open-directories.png</file>
+        <file>res/exit.png</file>
+        <file>res/new.png</file>
+        <file>res/language.png</file>
+        <file>res/splash.jpg</file>
+        <file>translations/german.qm</file>
+        <file>res/open_conflict.bmp</file>
+    </qresource>
+</RCC>

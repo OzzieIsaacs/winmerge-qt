@@ -8,11 +8,12 @@
 #include "ui_QPropCompareImage.h"
 #include "OptionsDef.h"
 
-QPropCompareImage::QPropCompareImage(QWidget *parent) :
+QPropCompareImage::QPropCompareImage(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropCompareImage)
 {
 	ui->setupUi(this);
+	m_options = options;
 }
 QPropCompareImage::~QPropCompareImage()
 {
@@ -38,7 +39,7 @@ void QPropCompareImage::OnDefaults()
  */
 void QPropCompareImage::ReadOptions()
 {
-	ui->IDC_COMPAREIMAGE_PATTERNS->setText(m_options.value(OPT_CMP_IMG_FILEPATTERNS).toString());
+	ui->IDC_COMPAREIMAGE_PATTERNS->setText(m_options->value(OPT_CMP_IMG_FILEPATTERNS).toString());
 	//m_sFilePatterns = GetOptionsMgr()->GetString(OPT_CMP_IMG_FILEPATTERNS);
 }
 
@@ -49,7 +50,7 @@ void QPropCompareImage::ReadOptions()
  */
 void QPropCompareImage::WriteOptions()
 {
-	m_options.setValue(OPT_CMP_IMG_FILEPATTERNS, ui->IDC_COMPAREIMAGE_PATTERNS->toPlainText());
+	m_options->setValue(OPT_CMP_IMG_FILEPATTERNS, ui->IDC_COMPAREIMAGE_PATTERNS->toPlainText());
 	//GetOptionsMgr()->SaveOption(OPT_CMP_IMG_FILEPATTERNS, m_sFilePatterns);
 }
 

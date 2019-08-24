@@ -9,6 +9,7 @@
 #define IDD_PROPPAGE_CODEPAGE_H
 #include <QDialog>
 #include <QSettings>
+#include "QOptionsMgr.h"
 
 namespace Ui {
 class QPropCodepage;
@@ -18,7 +19,7 @@ class QPropCodepage : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropCodepage(QWidget *parent = nullptr);
+	explicit QPropCodepage(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropCodepage();
 
 // Implement IOptionsPanel
@@ -35,6 +36,6 @@ private slots:
 
 private:
 	Ui::QPropCodepage *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 };
 #endif // IDD_PROPPAGE_CODEPAGE_H

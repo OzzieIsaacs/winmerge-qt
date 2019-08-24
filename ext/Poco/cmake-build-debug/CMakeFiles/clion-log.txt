@@ -1,0 +1,16 @@
+/opt/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5 -G "CodeBlocks - Unix Makefiles" /home/matthias/Entwicklung/winmerge-qt/ext/Poco
+-- Poco package version: 1.6.0 (2014-12-22)
+-- Setting Poco build type - Debug
+-- Building without tests & samples
+-- Build with using internal copy of sqlite, libz, pcre, expat, ...
+-- CMake 3.13.2 successfully configured Poco using Unix Makefiles generator
+-- Installation target path: /usr/local
+-- C_FLAGS:  =
+-- CXX_FLAGS:=
+-- Building: XML
+-- Building: JSON
+-- Building: Util
+-- Building: Net
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/matthias/Entwicklung/winmerge-qt/ext/Poco/cmake-build-debug

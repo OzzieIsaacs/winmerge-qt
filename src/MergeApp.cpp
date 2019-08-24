@@ -22,15 +22,15 @@
 #include "MainFrm.h"
 
 // Get user language description of error, if available
-QString GetSysError(int nerr /* =-1 */)
+QString GetSysError(int nerr  =-1 )
 {
 	QString str = "?";
-#ifdef __linux__
+#ifdef Q_OS_LINUX
 	str = strerror(errno);
 #else
 	if (nerr == -1)
 		nerr = GetLastError();
-	LPVOID lpMsgBuf;
+	/*LPVOID lpMsgBuf;
 	String str = _T("?");
 	if (FormatMessage( 
 		FORMAT_MESSAGE_ALLOCATE_BUFFER | 
@@ -47,9 +47,21 @@ QString GetSysError(int nerr /* =-1 */)
 		str = (LPCTSTR)lpMsgBuf;
 		// Free the buffer.
 		LocalFree( lpMsgBuf );
-	}
+	}*/
 #endif
 	return str;
+}
+
+// Get user language description of error, if available
+int GetSystemError()
+{
+	int nerr = 0;
+#ifdef Q_OS_LINUX
+	nerr = (errno);
+#else
+	nerr = GetLastError();
+#endif
+	return nerr;
 }
 
 

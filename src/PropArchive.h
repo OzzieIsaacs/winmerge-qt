@@ -10,6 +10,7 @@
 #define PROPARCHIVE_H
 #include <QDialog>
 #include <QSettings>
+#include "QOptionsMgr.h"
 
 namespace Ui {
 class QPropArchive;
@@ -19,7 +20,7 @@ class QPropArchive : public QDialog
 	Q_OBJECT
 
 public:
-	explicit QPropArchive(QWidget *parent = nullptr);
+	explicit QPropArchive(QWidget *parent = nullptr, QOptionsMgr* options = nullptr);
 	~QPropArchive();
 
 	// Implement IOptionsPanel
@@ -32,6 +33,6 @@ private slots:
 
 private:
 	Ui::QPropArchive *ui;
-	QSettings m_options;
+	QOptionsMgr* m_options;
 };
 #endif // IDD_PROP_ARCHIVE_H

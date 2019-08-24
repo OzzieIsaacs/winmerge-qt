@@ -15,11 +15,12 @@
 #define new DEBUG_NEW
 #endif
 
-QPropTextColors::QPropTextColors(QWidget *parent) :
+QPropTextColors::QPropTextColors(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropTextColors)
 {
 	ui->setupUi(this);
+	m_options = options;
 }
 QPropTextColors::~QPropTextColors()
 {

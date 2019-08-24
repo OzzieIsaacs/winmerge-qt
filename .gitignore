@@ -50,9 +50,12 @@ debug/
 release/
 .idea/
 src/cmake-build-debug
+/cmake-build-debug
 build-src-Desktop-Vorgabe
 src/old
 ext/poco/cmake-build/
 ext/boost_1_70_0/stage/
 ext/poco/cmake-build-debug/
+ext/libxdiff/cmake-build-debug/
+ext/libxdiff/lib/
 *.qm

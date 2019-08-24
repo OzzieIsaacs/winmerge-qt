@@ -15,7 +15,7 @@
 #endif
 
 
-QPropSyntaxColors::QPropSyntaxColors(QWidget *parent) :
+QPropSyntaxColors::QPropSyntaxColors(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropSyntaxColors)
 {
@@ -41,6 +41,7 @@ QPropSyntaxColors::QPropSyntaxColors(QWidget *parent) :
 	connect(ui->IDC_SCOLOR_USER1_BOLD, SIGNAL(clicked()), this, SLOT(OnBnClickedBoldButton<IDC_SCOLOR_USER1_BOLD, COLORINDEX_USER1>()));
 	connect(ui->IDC_SCOLOR_USER2_BOLD, SIGNAL(clicked()), this, SLOT(OnBnClickedBoldButton<IDC_SCOLOR_USER2_BOLD, COLORINDEX_USER2>()));
 	 */
+	m_options = options;
 }
 QPropSyntaxColors::~QPropSyntaxColors()
 {

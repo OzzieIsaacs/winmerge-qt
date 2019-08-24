@@ -33,7 +33,7 @@
 #include "OptionsDef.h"
 #include "charsets.h"
 
-QPropCodepage::QPropCodepage(QWidget *parent) :
+QPropCodepage::QPropCodepage(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropCodepage)
 {
@@ -43,6 +43,8 @@ QPropCodepage::QPropCodepage(QWidget *parent) :
 	connect(ui->IDC_CP_CUSTOM, SIGNAL(clicked()), this, SLOT(OnCpCustom()));
 	connect(ui->IDC_DETECT_CODEPAGE2, SIGNAL(clicked()), this, SLOT(OnDetectCodepage2()));
 	connect(ui->IDC_CP_UI, SIGNAL(clicked()), this, SLOT(OnCpUi()));
+	
+	m_options = options;
 }
 QPropCodepage::~QPropCodepage()
 {
@@ -54,7 +56,7 @@ QPropCodepage::~QPropCodepage()
  */
 void QPropCodepage::ReadOptions()
 {
-	int CodePageDefault = m_options.value(OPT_CP_DEFAULT_MODE).toInt();
+	int CodePageDefault = m_options->value(OPT_CP_DEFAULT_MODE).toInt();
 	switch (CodePageDefault) {
 		case 0:
 			ui->IDC_CP_SYSTEM->setChecked(1);
@@ -67,11 +69,11 @@ void QPropCodepage::ReadOptions()
 			break;
 	}
 
-	ui->IDC_CUSTOM_CP_NUMBER->setCurrentIndex(m_options.value(OPT_CP_DEFAULT_CUSTOM).toInt());
-	ui->IDC_DETECT_CODEPAGE->setChecked(m_options.value(OPT_CP_DETECT).toInt()& 1);
-	ui->IDC_DETECT_CODEPAGE2->setChecked((m_options.value(OPT_CP_DETECT).toInt()& 2) != 0);
+	ui->IDC_CUSTOM_CP_NUMBER->setCurrentIndex(m_options->value(OPT_CP_DEFAULT_CUSTOM).toInt());
+	ui->IDC_DETECT_CODEPAGE->setChecked(m_options->value(OPT_CP_DETECT).toInt()& 1);
+	ui->IDC_DETECT_CODEPAGE2->setChecked((m_options->value(OPT_CP_DETECT).toInt()& 2) != 0);
 
-	int nAutodetectType = m_options.value(OPT_CP_DETECT).toInt();
+	int nAutodetectType = m_options->value(OPT_CP_DETECT).toInt();
 	if (nAutodetectType == 0)
 		nAutodetectType = 50001;
 
@@ -144,18 +146,18 @@ void QPropCodepage::WriteOptions()
 		nCodepage = 2;
 	}
 
-	ui->IDC_DETECT_CODEPAGE2->setChecked((m_options.value(OPT_CP_DETECT).toInt()& 2) != 0);
+	ui->IDC_DETECT_CODEPAGE2->setChecked((m_options->value(OPT_CP_DETECT).toInt()& 2) != 0);
 
-	m_options.setValue(OPT_CP_DEFAULT_MODE, nCodepage);
+	m_options->setValue(OPT_CP_DEFAULT_MODE, nCodepage);
 	//GetOptionsMgr()->SaveOption(OPT_CP_DEFAULT_MODE, (int)m_nCodepageSystem);
 	GetEncodingCodePageFromNameString();
-	m_options.setValue(OPT_CP_DEFAULT_CUSTOM, ui->IDC_CUSTOM_CP_NUMBER->currentIndex());
+	m_options->setValue(OPT_CP_DEFAULT_CUSTOM, ui->IDC_CUSTOM_CP_NUMBER->currentIndex());
 
 	int nAutodetectType = 0; //ui->IDC_CUSTOM_CP_NUMBER->itemData(ui->IDC_CUSTOM_CP_NUMBER->currentIndex()); ToDO: Fix
 	bool bDetectCodepage = ui->IDC_DETECT_CODEPAGE->isChecked();
 	bool bDetectCodepage2  = ui->IDC_DETECT_CODEPAGE2->isChecked();
 
-	m_options.setValue(OPT_CP_DETECT, (bDetectCodepage ? 1 : 0) | (bDetectCodepage2 << 1) | (nAutodetectType << 16));
+	m_options->setValue(OPT_CP_DETECT, (bDetectCodepage ? 1 : 0) | (bDetectCodepage2 << 1) | (nAutodetectType << 16));
 	// GetOptionsMgr()->SaveOption(OPT_CP_DEFAULT_CUSTOM, (int)m_nCustomCodepageValue);
 	// GetOptionsMgr()->SaveOption(OPT_CP_DETECT, (m_bDetectCodepage ? 1 : 0) | (m_bDetectCodepage2 << 1) | (m_nAutodetectType << 16));
 }
