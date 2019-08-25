@@ -10,9 +10,9 @@
 #include "OptionsDef.h"
 #include "paths.h"
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
+//#ifdef _DEBUG
+//#define new DEBUG_NEW
+//#endif
 
 QPropBackups::QPropBackups(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),

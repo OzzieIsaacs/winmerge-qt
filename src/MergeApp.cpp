@@ -1,11 +1,12 @@
-#ifdef __linux__
+#ifdef Q_OS_LINUX
 #include <cerrno>
 #include <iostream>
-#define TRACE(ARG) std::cout << #ARG << std::endl; ARG
+
 #else
-#include "StdAfx.h"
+// #include "StdAfx.h"
 
 #endif
+#define TRACE(ARG) std::cout << #ARG << std::endl; ARG
 
 #include "MergeApp.h"
 // #include "Merge.h"
@@ -155,7 +156,7 @@ void AppErrorMessageBox(const QString& msg)
 
 AboutInfo::AboutInfo()
 {
-    CVersionInfo verinfo;
+    CVersionInfo verinfo(false);
 	// version = strutils::format_string1("Version %1", );
 	version = QString(QObject::tr("Version %1")).arg(verinfo.GetProductVersion());
 	private_build = verinfo.GetPrivateBuild();

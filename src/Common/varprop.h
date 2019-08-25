@@ -7,7 +7,6 @@
 
 #include <ctime>
 // #include "UnicodeString.h"
-#include "tchar.h"
 #include <QString>
 
 namespace varprop
@@ -49,7 +48,7 @@ public:
 	void SetBool(bool v);
 	void SetInt(int v);
 	void SetFloat(double v);
-	void SetString(const TCHAR *sz);
+	void SetString(const char *sz);
 	void SetString(const QString& sz);
 	void SetTime(time_t v);
 

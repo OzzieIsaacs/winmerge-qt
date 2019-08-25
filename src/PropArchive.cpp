@@ -4,9 +4,9 @@
  * @brief Implementation of PropArchive propertysheet
  */
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
+//#ifdef _DEBUG
+//#define new DEBUG_NEW
+//#endif
 
 #include "PropArchive.h"
 #include "ui_QPropArchive.h"

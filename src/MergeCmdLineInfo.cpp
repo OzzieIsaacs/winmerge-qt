@@ -47,10 +47,10 @@ void MergeCmdLineInfo::EatParam(const QString& p, QString &param, bool *flag /*=
 	bool parameter = false;
 	param = p.trimmed();
 
-	if (param.at(0) == "\"" or param.at(0) == "'"){
+	if (param.at(0) == "\"" || param.at(0) == "'"){
 		param.remove(0,1);
 	}
-	if (param.at(param.length()-1) == "\"" or param.at(param.length()-1) == "'"){
+	if (param.at(param.length()-1) == "\"" || param.at(param.length()-1) == "'"){
 		param.chop(1);
 	}
 

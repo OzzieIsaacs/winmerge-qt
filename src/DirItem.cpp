@@ -28,15 +28,11 @@
 #include "TFile.h"
 
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
-
-enum {
-	FILE_ATTRIBUTE_READONLY = 1,
-	FILE_ATTRIBUTE_HIDDEN = 2,
-	FILE_ATTRIBUTE_SYSTEM = 4,
-	FILE_ATTRIBUTE_ARCHIVE = 8
+enum eFileAttribs {
+	_FILE_ATTRIBUTE_READONLY = 1,
+	_FILE_ATTRIBUTE_HIDDEN = 2,
+	_FILE_ATTRIBUTE_SYSTEM = 4,
+	_FILE_ATTRIBUTE_ARCHIVE = 8
 };
 /**
 	* @brief Convert file flags to string presentation.
@@ -47,13 +43,13 @@ enum {
 QString FileFlags::ToString() const
 {
 	QString sflags;
-	if (attributes & FILE_ATTRIBUTE_READONLY)
+	if (attributes & _FILE_ATTRIBUTE_READONLY)
 		sflags += ("R");
-	if (attributes & FILE_ATTRIBUTE_HIDDEN)
+	if (attributes & _FILE_ATTRIBUTE_HIDDEN)
 		sflags += ("H");
-	if (attributes & FILE_ATTRIBUTE_SYSTEM)
+	if (attributes & _FILE_ATTRIBUTE_SYSTEM)
 		sflags += ("S");
-	if (attributes & FILE_ATTRIBUTE_ARCHIVE)
+	if (attributes & _FILE_ATTRIBUTE_ARCHIVE)
 		sflags += ("A");
 	return sflags;
 }
@@ -153,10 +149,10 @@ unsigned DirItem::getAttributes(TFile& filename){
 		helper+= 16;
 	}
 	if (filename.canWrite()){
-		helper+= FILE_ATTRIBUTE_READONLY;
+		helper+= _FILE_ATTRIBUTE_READONLY;
 	}
 	if (filename.isHidden()){
-		helper+= FILE_ATTRIBUTE_HIDDEN;
+		helper+= _FILE_ATTRIBUTE_HIDDEN;
 	}
 	return helper;
 

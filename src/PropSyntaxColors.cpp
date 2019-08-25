@@ -10,9 +10,9 @@
 //#include "OptionsSyntaxColors.h"
 //#include "OptionsCustomColors.h"
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
+//#ifdef _DEBUG
+//#define new DEBUG_NEW
+//#endif
 
 
 QPropSyntaxColors::QPropSyntaxColors(QWidget *parent, QOptionsMgr* options) :
@@ -124,4 +124,5 @@ int QPropSyntaxColors::GetCheckVal(unsigned int nColorIndex)
 		return BST_CHECKED;
 	else
 		return BST_UNCHECKED;*/
+	return 0;
 }

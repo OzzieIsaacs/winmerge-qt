@@ -9,28 +9,31 @@
 #ifdef Q_OS_LINUX
 #include <linux/limits.h>
 #include <stdint.h>
-#include "tchar.h"
+#include "Common/tchar.h"
+#include "coretypes.h"
+#define MAX_PATH PATH_MAX
+
+
+#elif Q_OS_WIN
+#include <windows.h>
+#include <tchar.h>
+#endif
+
 #ifndef  LOWORD
-	#define LOWORD(l) ((unsigned short)(l))
+#define LOWORD(l) ((unsigned short)(l))
 #endif
 
 #ifndef  HIWORD
-	#define HIWORD(l) ((unsigned short)(((unsigned long)(l) >> 16) & 0xFFFF))
-#endif
-
-#define MAX_PATH PATH_MAX
-#elif Q_OS_WIN
-#include <windows.h>
-#include <strsafe.h>
+#define HIWORD(l) ((unsigned short)(((unsigned long)(l) >> 16) & 0xFFFF))
 #endif
 
 #include <cstdio>
-#include "Common/tchar.h"
+
 #include <cassert>
-#include "coretypes.h"
-// #include "UnicodeString.h"
+
 // #include "TFile.h"
 #include <QString>
+#include <QCoreApplication>
 /**
  * @brief Structure used to store language and codepage.
  */
@@ -50,6 +53,8 @@ CVersionInfo::CVersionInfo(bool bVersionOnly)
 : m_wLanguage(0)
 , m_bVersionOnly(bVersionOnly)
 , m_bDllVersion(false)
+, m_dwFileVersionMS(0)
+, m_dwFileVersionLS(0)
 {
 	GetVersionInfo();
 }
@@ -63,13 +68,15 @@ CVersionInfo::CVersionInfo(bool bVersionOnly)
  * version information.
  * @param [in] wLanguage Language-ID for which the version info is wanted.
  */
-/*CVersionInfo::CVersionInfo(WORD wLanguage)
+CVersionInfo::CVersionInfo(WORD wLanguage)
 : m_wLanguage(wLanguage)
 , m_bVersionOnly(false)
 , m_bDllVersion(false)
+, m_dwFileVersionMS(0)
+, m_dwFileVersionLS(0)
 {
 	GetVersionInfo();
-}*/
+}
 
 /** 
  * @brief Constructor.
@@ -93,12 +100,14 @@ CVersionInfo::CVersionInfo(bool bVersionOnly)
  * @param [in] szLanguage Language for version.
  * @param [in] szCodePage Codepage for version.
  */
-//CVersionInfo::CVersionInfo(LPCTSTR szFileToVersion /* = nullptr*/,
-//						   LPCTSTR szLanguage /* = nullptr*/,
-//						   LPCTSTR szCodepage /* = nullptr*/)
-/*: m_wLanguage(0)
+CVersionInfo::CVersionInfo(char* szFileToVersion /* = nullptr*/,
+						   char* szLanguage /* = nullptr*/,
+						   char* szCodepage /* = nullptr*/)
+: m_wLanguage(0)
 , m_bVersionOnly(false)
 , m_bDllVersion(false)
+, m_dwFileVersionMS(0)
+, m_dwFileVersionLS(0)
 {
 	if (szFileToVersion != nullptr)
 		m_strFileName = szFileToVersion;
@@ -107,7 +116,7 @@ CVersionInfo::CVersionInfo(bool bVersionOnly)
 	if (szCodepage != nullptr)
 		m_strCodepage = szCodepage;
 	GetVersionInfo();
-}*/
+}
 
 /** 
  * @brief Constructor for asking version number from known module.
@@ -129,9 +138,8 @@ CVersionInfo::CVersionInfo(bool bVersionOnly)
  */
 CVersionInfo::CVersionInfo()
 {
-	//TCHAR szFileName[MAX_PATH];
-	//GetModuleFileName(hModule, szFileName, MAX_PATH);
-	//m_strFileName = szFileName;
+	QString szFileName;
+	m_strFileName = QCoreApplication::applicationDirPath();
 	GetVersionInfo();
 }
 
@@ -234,37 +242,20 @@ QString CVersionInfo::GetProductVersion() const
  * @param [in] Last two numbers for version number.
  * @return Formatted version string.
  */
-static QString MakeVersionString(DWORD hi, DWORD lo)
+static QString MakeVersionString(unsigned int hi, unsigned int lo)
 {
-	TCHAR ver[50];
+	QString ver;
 	if (LOWORD(lo) == 0)
 	{
-		/*StringCchPrintf(ver, countof(ver) - 1, _T("%d.%d.%d"), HIWORD(hi),
-				LOWORD(hi), HIWORD(lo));*/
-		sprintf(ver,"%d.%d.%d", HIWORD(hi),LOWORD(hi), HIWORD(lo));
+		ver = QString("%1.%2.%3").arg(HIWORD(hi),LOWORD(hi), HIWORD(lo));
 	}
 	else
 	{
-		/*StringCchPrintf(ver, countof(ver) - 1, _T("%d.%d.%d.%d"), HIWORD(hi),
-				LOWORD(hi), HIWORD(lo), LOWORD(lo));*/
-		sprintf(ver,"%d.%d.%d.%d", HIWORD(hi),LOWORD(hi), HIWORD(lo), LOWORD(lo));
+		ver = QString("%1.%2.%3.%4").arg(HIWORD(hi)).arg(LOWORD(hi)).arg(HIWORD(lo)).arg(LOWORD(lo));
 	}
-	QString sver(ver);
-	return sver;
+	return ver;
 }
 
-/** 
- * @brief Return numeric product's version number.
- * This function returns version number given as a number in version info.
- * @return Product's version number as string.
- */
-QString CVersionInfo::GetFixedProductVersion()
-{
-	if (!m_bVersionFound)
-		return _T("");
-	return MakeVersionString(m_FixedFileInfo.dwProductVersionMS
-		, m_FixedFileInfo.dwProductVersionLS);
-}
 
 /** 
  * @brief Return numeric file's version number.
@@ -274,9 +265,9 @@ QString CVersionInfo::GetFixedProductVersion()
 QString CVersionInfo::GetFixedFileVersion()
 {
 	if (!m_bVersionFound)
-		return _T("");
-	return MakeVersionString(m_FixedFileInfo.dwFileVersionMS
-		, m_FixedFileInfo.dwFileVersionLS);
+		return QString("");
+	return m_strFileVersion; /*MakeVersionString(m_FixedFileInfo.dwFileVersionMS
+		, m_FixedFileInfo.dwFileVersionLS);*/
 }
 
 /** 
@@ -290,8 +281,8 @@ bool CVersionInfo::GetFixedFileVersion(unsigned& versionMS, unsigned& versionLS)
 {
 	if (m_bVersionFound)
 	{
-		versionMS = m_FixedFileInfo.dwFileVersionMS;
-		versionLS = m_FixedFileInfo.dwFileVersionLS;
+		versionMS = m_dwFileVersionMS;
+		versionLS = m_dwFileVersionLS;
 		return true;
 	}
 	return false;
@@ -393,6 +384,7 @@ void CVersionInfo::QueryStrings()
 			m_strCodepage = temp;
 		}
 	}*/
+
 	m_strCompanyName = QString::fromUtf8(COMPANYNAME);
 	m_strFileDescription = FILEDESCRIPTION;
 	m_strFileVersion = STRFILEVER;
@@ -404,49 +396,8 @@ void CVersionInfo::QueryStrings()
 	m_strComments = COMMENTS;
 	m_strSpecialBuild = "";
 	m_strPrivateBuild = QString::fromUtf8(STRPRIVATEBUILD);
-	/*QueryValue(_T("CompanyName"), m_strCompanyName);
-	QueryValue(_T("FileDescription"), m_strFileDescription);
-	QueryValue(_T("FileVersion"), m_strFileVersion); 
-	QueryValue(_T("InternalName"), m_strInternalName); 
-	QueryValue(_T("LegalCopyright"), m_strLegalCopyright); 
-	QueryValue(_T("OriginalFilename"), m_strOriginalFilename); 
-	QueryValue(_T("ProductName"), m_strProductName); 
-	QueryValue(_T("ProductVersion"), m_strProductVersion); 
-	QueryValue(_T("Comments"), m_strComments);
-	QueryValue(_T("SpecialBuild"), m_strSpecialBuild);
-	QueryValue(_T("PrivateBuild"), m_strPrivateBuild);*/
 }
 
-/** 
- * @brief Read value from version info data.
- * @param [in] szId Name of value/string to read.
- * @param [out] Value read.
- */
-/*void CVersionInfo::QueryValue(LPCTSTR szId, String& s)
-{
-	assert(m_pVffInfo != nullptr);
-	LPTSTR   lpVersion;			// String pointer to 'version' text
-	UINT    uVersionLen;
-	bool    bRetCode;
-
-	TCHAR szSelector[256];
-	StringCchPrintf(szSelector, countof(szSelector) - 1,
-			_T("\\StringFileInfo\\%s%s\\%s"),
-			m_strLanguage.c_str(), m_strCodepage.c_str(), szId);
-	bRetCode = !!VerQueryValue((LPVOID)m_pVffInfo.get(),
-		szSelector,
-		(LPVOID *)&lpVersion,
-		&uVersionLen);
-	
-	if (bRetCode)
-	{
-		s = lpVersion;
-		if (!s.empty())
-			s = strutils::trim_ws(s);
-	}
-	else
-		s.clear();
-}*/
 
 /** 
  * @brief Read numeric version information.
@@ -490,9 +441,9 @@ bool CVersionInfo::GetCodepageForLanguage(WORD wLanguage, WORD & wCodePage)
 	// Read the file description for each language and code page.
 
 	const int nLangCount = cbTranslate / sizeof(LANGUAGEANDCODEPAGE);
-	int i = 0;
+	int i = 0;*/
 	bool bFound = false;
-	while (!bFound && i < nLangCount)
+	/*while (!bFound && i < nLangCount)
 	{
 		if (lpTranslate[i].wLanguage == wLanguage)
 		{
@@ -501,6 +452,6 @@ bool CVersionInfo::GetCodepageForLanguage(WORD wLanguage, WORD & wCodePage)
 		}
 		else
 			++i;
-	}
-	return bFound;*/
+	}*/
+	return bFound;
 }

@@ -3,9 +3,7 @@
 #include "OptionsDef.h"
 #include <QFileDialog>
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
+
 
 // registry values
 /*static LPCTSTR f_RegValueEnabled = _T("ContextMenuEnabled");

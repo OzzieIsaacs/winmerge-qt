@@ -2,9 +2,9 @@
 #include "ui_QPropCompare.h"
 #include "OptionsDef.h"
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
+//#ifdef _DEBUG
+//#define new DEBUG_NEW
+//#endif
 
 QPropCompare::QPropCompare(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),

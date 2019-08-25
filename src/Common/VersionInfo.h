@@ -5,10 +5,7 @@
  */ 
 #pragma once
 
-//#include <shlwapi.h>
 #include <memory>
-// #include "UnicodeString.h"
-#include "types.h"
 #include <QString>
 
 /**
@@ -19,8 +16,9 @@
  * only reading version numbers. That constructor is suggested to be used
  * if string information is not needed.
  */
- 
- typedef struct tagVS_FIXEDFILEINFO {
+#ifdef Q_OS_LINUX
+#include "types.h"
+typedef struct tagVS_FIXEDFILEINFO {
   DWORD dwSignature;
   DWORD dwStrucVersion;
   DWORD dwFileVersionMS;
@@ -35,6 +33,11 @@
   DWORD dwFileDateMS;
   DWORD dwFileDateLS;
 } VS_FIXEDFILEINFO;
+#else
+//#include <Verrsrc.h>
+#include <tchar.h>
+#include <windows.h>
+#endif
 
 class CVersionInfo
 {
@@ -45,6 +48,8 @@ private:
 	bool m_bDllVersion; /**< Dll file version is being queried */
 	WORD m_wLanguage; /**< Language-ID to use (if given) */
 	bool m_bVersionFound; /**< Was version info found from file? */
+	DWORD m_dwFileVersionMS;
+	DWORD m_dwFileVersionLS;
 
 	QString m_strFileName;
 	QString m_strLanguage;
@@ -63,12 +68,12 @@ private:
 
 public:
 	explicit CVersionInfo(bool bVersionOnly);
-	//explicit CVersionInfo(WORD wLanguage);
+	explicit CVersionInfo(WORD wLanguage);
 	/*CVersionInfo(LPCTSTR szFileToVersion,
-				   bool bDllVersion);
-	CVersionInfo(LPCTSTR szFileToVersion = nullptr,
-				   LPCTSTR szLanguage = nullptr,
-				   LPCTSTR szCodepage = nullptr);*/
+				   bool bDllVersion);*/
+	CVersionInfo(char* szFileToVersion = nullptr,
+				 char* szLanguage = nullptr,
+				 char* szCodepage = nullptr);
     // explicit CVersionInfo(HINSTANCE hModule);
 	CVersionInfo();
 	QString GetFileVersion() const;

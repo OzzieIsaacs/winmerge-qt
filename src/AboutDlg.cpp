@@ -2,8 +2,15 @@
 #include "ui_QAboutDlg.h"
 #include "qlabelclick.h"
 #include <QPalette>
-// #include <cstring>
+#include <QPushButton>
+#include "Constants.h"
+#include <QFile>
+#include <QDir>
 
+#ifdef Q_OS_WIN
+#include <windows.h>
+#include <ShellApi.h>
+#endif
 
 QAboutDlg::QAboutDlg(QWidget *parent) :
 	QDialog(parent),
@@ -20,7 +27,7 @@ QAboutDlg::QAboutDlg(QWidget *parent) :
 	this->setPalette(pal);
 
 	// Signals and Slots
-    connect(ui->IDOK, SIGNAL(clicked()), this, SLOT(close()));
+    connect(ui->IDC_OK, SIGNAL(clicked()), this, SLOT(close()));
 	connect(ui->IDC_OPEN_CONTRIBUTORS, SIGNAL(clicked()), this, SLOT(OnBnClickedOpenContributors()));
 	connect(ui->IDC_WWW, SIGNAL(clicked()), this, SLOT(OnClickedWWW()));
 
@@ -53,20 +60,20 @@ void QAboutDlg::onClickedOk()
 
 void QAboutDlg::OnBnClickedOpenContributors()
 {
-	#ifdef __linux__
-		system(("xdg-open ./../../AUTHORS" ));
+	#ifdef Q_OS_LINUX
+		QFile spath(QCoreApplication::applicationDirPath() + QDir::separator() + ContributorsPath);
+		system(("xdg-open " + spath.fileName().toStdString()).c_str());
 	#else
-		ShellExecute(nullptr, _T("open"), m_info.website, nullptr, nullptr, SW_SHOWNORMAL );
+		ShellExecute(nullptr, ("open"), m_info.website.toStdString().c_str(), nullptr, nullptr, SW_SHOWNORMAL );
 		//ShellExecute(nullptr, _T("open"), pNMLink->item.szUrl, nullptr, nullptr, SW_SHOWNORMAL);
 	#endif
 }
 
 void QAboutDlg::OnClickedWWW()
 {
-	#ifdef __linux__
+	#ifdef Q_OS_LINUX
 		system(("xdg-open " + m_info.website.toStdString()).c_str());
 	#else
-		ShellExecute(nullptr, _T("open"), m_info.website, nullptr, nullptr, SW_SHOWNORMAL );
-	//ShellExecute(nullptr, _T("open"), pNMLink->item.szUrl, nullptr, nullptr, SW_SHOWNORMAL);
+		ShellExecute(nullptr, ("open"), m_info.website.toStdString().c_str(), nullptr, nullptr, SW_SHOWNORMAL );
 	#endif
 }

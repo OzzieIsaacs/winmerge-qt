@@ -8,9 +8,7 @@
 #include "ui_QPropCompareFolder.h"
 #include "OptionsDef.h"
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
+
 
 static const int Mega = 1024 * 1024;
 

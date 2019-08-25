@@ -9,9 +9,7 @@
 #include "OptionsDef.h"
 //#include "heksedit.h"
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
+
 /*class Heksedit
 {
 public:

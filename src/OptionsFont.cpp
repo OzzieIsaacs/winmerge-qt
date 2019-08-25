@@ -139,6 +139,7 @@ QFont* Load(const QOptionsMgr *pOptionsMgr, const QString& name)
 		pOptionsMgr->GetString(name + OPT_FONT_FACENAME).c_str(), sizeof(lfnew.lfFaceName)/sizeof(lfnew.lfFaceName[0]));
 	ReleaseDC(nullptr, hDC);
 	return lfnew;*/
+	return nullptr;
 }
 
 void Save(QOptionsMgr *pOptionsMgr, const QString& name, const QFont* lf, bool bUseCustom)

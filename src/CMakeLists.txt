@@ -10,6 +10,12 @@ include_directories(SYSTEM Common)
 include_directories(SYSTEM diffutils/src)
 include_directories(SYSTEM diffutils)
 
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC_SEARCH_PATHS qt_ui)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
 set ( SOURCES
         Common/VersionInfo.cpp
         Common/VersionInfo.h
@@ -211,7 +217,7 @@ set(PocoNet_DIR "../ext/Poco/cmake-build-debug/Net") # the directory containing 
 
 set(BOOST_ROOT "../ext/boost_1_70_0")
 
-set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 
@@ -243,6 +249,7 @@ add_custom_command(
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
 )
 
+
 link_directories("${CMAKE_SOURCE_DIR}/../ext/libxdiff/lib")
 
 add_executable( winmerge_gui ${SOURCES} ${MOC_SRCS} ${RES_SOURCES} ${UI_HEADERS} version.rc)
@@ -263,8 +270,22 @@ target_link_libraries(${PROJECT_NAME} ${OpenMP_CXX_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} Poco::Foundation Poco::Net)
 target_link_libraries(${PROJECT_NAME} Boost::filesystem Boost::regex)
 
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTORCC ON)
-set(CMAKE_AUTOUIC_SEARCH_PATHS qt_ui)
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set (FileList contributors.txt COPYING LICENSE README.md)
+
+#add_custom_command(
+#        TARGET winmerge_gui POST_BUILD
+#        COMMAND_EXPAND_LISTS
+#        COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/${FileList} ${CMAKE_BINARY_DIR}/bin/.
+        # COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/AUTHORS ${CMAKE_BINARY_DIR}/bin/AUTHORS
+#)
+
+foreach( file_i ${FileList})
+    add_custom_command(
+            TARGET winmerge_gui POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/${file_i} ${CMAKE_BINARY_DIR}/bin
+    )
+endforeach( file_i )
+
+add_custom_command(TARGET winmerge_gui POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/Docs/Users ${CMAKE_BINARY_DIR}/bin/Docs
+        )

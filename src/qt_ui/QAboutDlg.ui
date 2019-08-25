@@ -94,7 +94,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="IDOK">
+  <widget class="QPushButton" name="IDC_OK">
    <property name="geometry">
     <rect>
      <x>410</x>

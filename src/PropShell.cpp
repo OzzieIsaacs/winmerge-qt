@@ -5,10 +5,6 @@
 //#include "Environment.h"
 #include "paths.h"
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
-
 
 QPropShell::QPropShell(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
@@ -97,6 +93,7 @@ static bool RegisterShellExtension(bool unregister)
 		sei.lpParameters = args.c_str();
 		return !!ShellExecuteEx(&sei);
 	}*/
+	return false;
 }
 
 

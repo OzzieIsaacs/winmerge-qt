@@ -23,9 +23,7 @@
 #include "stdafx.h"
 #include "DiffFileInfo.h"
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
+
 
 /**
  * @brief Clears FileInfo data.

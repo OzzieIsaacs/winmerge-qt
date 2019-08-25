@@ -924,6 +924,7 @@ int UniStdioFile::WriteBom()
 		m_data = 0;
 	}
 	return (int)m_data;*/
+	return 0;
 }
 
 /**

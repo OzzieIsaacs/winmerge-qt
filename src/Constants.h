@@ -5,55 +5,55 @@
  *
  */
 #pragma once
-#include "Common/tchar.h"
+#include <QString>
 
 /** @brief URL for hyperlink in About-dialog. */
-const TCHAR WinMergeURL[] = _T("http://winmerge.org/");
+const QString WinMergeURL = ("https://winmerge.org/");
 
 /**
  * @brief URL to help index in internet.
  * We use internet help when local help file is not found (not installed).
  */
-const TCHAR DocsURL[] = _T("http://manual.winmerge.org/index.html");
+const QString DocsURL = ("https://manual.winmerge.org/index.html");
 
 /** @brief URL to translations page in internet. */
-const TCHAR TranslationsUrl[] = _T("http://winmerge.org/translations/");
+const QString TranslationsUrl = ("http://winmerge.org/translations/");
 
 /** @brief URL of the GPL license. */
-const TCHAR LicenceUrl[] = _T("http://www.gnu.org/licenses/gpl-2.0.html");
+const QString LicenceUrl = ("http://www.gnu.org/licenses/gpl-2.0.html");
 
 /** @brief Relative (to WinMerge executable ) path to local help file. */
-const TCHAR DocsPath[] = _T("Docs/WinMerge%s.chm");
+const QString DocsPath = ("Docs/WinMerge%s.chm");
 
 /** @brief Contributors list. */
-const TCHAR ContributorsPath[] = _T("contributors.txt");
+const QString ContributorsPath = ("contributors.txt");
 
 /** @brief Release notes in HTML format. */
-const TCHAR RelNotes[] = _T("\\Docs\\ReleaseNotes.html");
+const QString RelNotes = ("\\Docs\\ReleaseNotes.html");
 
 /** @brief GPL Licence local file name. */
-const TCHAR LicenseFile[] = _T("Copying");
+const QString LicenseFile = ("Copying");
 
 /** @brief WinMerge folder in My Folders-folder. */
-const TCHAR WinMergeDocumentsFolder[] = _T("WinMerge");
+const QString WinMergeDocumentsFolder = ("WinMerge");
 
 /**
  * @brief Default relative path to "My Documents" for private filters.
  * We want to use WinMerge folder as general user-file folder in future.
  * So it makes sense to have own subfolder for filters.
  */
-const TCHAR DefaultRelativeFilterPath[] = _T("WinMerge/Filters");
+const QString DefaultRelativeFilterPath = ("WinMerge/Filters");
 
 /** @brief Executable Filename for ANSI build. */
-const TCHAR ExecutableFilename[] = _T("WinMerge.exe");
+const QString ExecutableFilename = ("WinMerge.exe");
 /** @brief Executable Filename for Unicode build. */
-const TCHAR ExecutableFilenameU[] = _T("WinMergeU.exe");
+const QString ExecutableFilenameU = ("WinMergeU.exe");
 
 /** @brief Temp folder name prefix for WinMerge temp folders. */
-const TCHAR TempFolderPrefix[] = _T("WinMerge_TEMP_");
+const QString TempFolderPrefix = ("WinMergeEMP_");
 
 /** @brief registry dir to WinMerge */
-const TCHAR RegDir[] = _T("Software\\Thingamahoochie\\WinMerge");
+const QString RegDir = ("Software\\Thingamahoochie\\WinMerge");
 
 /**
  * @brief Flags used when opening files

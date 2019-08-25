@@ -107,7 +107,7 @@ QString GetProgPath()
 {
 	if (strProgPath.isEmpty())
 	{
-		QString temp('\0');
+		QString temp("\0");
 		// TCHAR temp[MAX_PATH] = {0};
 		// ToDO
 		//GetModuleFileName(nullptr, temp, MAX_PATH);
@@ -122,7 +122,7 @@ QString GetProgPath()
  */
 QString GetWindowsDirectory()
 {
-	QString path('\0');
+	QString path("\0");
 	// ToDo port
 	//TCHAR path[MAX_PATH];
 	//path[0] = _T('\0');
@@ -137,7 +137,7 @@ QString GetWindowsDirectory()
  */
 QString GetMyDocuments()
 {
-	QString path('\0');
+	QString path("\0");
 	// path[0] = ();
 	// ToDo port
 	//SHGetFolderPath(nullptr, CSIDL_PERSONAL, nullptr, 0, path);
@@ -200,6 +200,7 @@ bool LoadRegistryFromFile(const QString& sRegFilePath)
 	/*if (paths::DoesPathExist(sRegFilePath) != paths::IS_EXISTING_FILE)
 		return false;
 	return launchProgram(_T("reg.exe import \"") + sRegFilePath + _T("\""), SW_HIDE);*/
+	return false;
 }
 
 /** 
@@ -211,6 +212,7 @@ bool SaveRegistryToFile(const QString& sRegFilePath, const QString& sRegDir)
 		return false;
 	DeleteFile(sRegFilePath.c_str());
 	return launchProgram(_T("reg.exe export HKCU\\") + sRegDir + _T(" \"") + sRegFilePath + _T("\""), SW_HIDE);*/
+	return false;
 }
 
 }

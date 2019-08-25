@@ -40,9 +40,11 @@
 #include <QApplication>
 // #include "MergeCmdLineInfo.h"
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
+#ifdef Q_OS_WIN
+#include <windows.h>
+#include <ShellApi.h>
 #endif
+
 
 /** @brief Location for command line help to open. */
 static const QString CommandLineHelpLocation("::/htmlhelp/Command_line.html");
@@ -583,18 +585,18 @@ void MainWindow::OnOptions() {
 
 }
 
-void MainWindow::OpenFileOrUrl(QFile& file, const TCHAR* szUrl)
+void MainWindow::OpenFileOrUrl(QFile& file, const QString& szUrl)
 {
-#ifdef __linux__
+#ifdef Q_OS_LINUX
 	if (file.exists())
 		system(("xdg-open " + file.fileName().toStdString()).c_str());
 	else
 		system((QString("xdg-open ") + szUrl).toStdString().c_str());
 #else
-	if (paths::DoesPathExist(szFile) == paths::IS_EXISTING_FILE)
-		ShellExecute(nullptr, _T("open"), _T("notepad.exe"), szFile, nullptr, SW_SHOWNORMAL);
+	if (paths::DoesPathExist(szUrl) == paths::IS_EXISTING_FILE)
+		ShellExecute(nullptr, ("open"), ("notepad.exe"), szUrl.toStdString().c_str(), nullptr, SW_SHOWNORMAL);
 	else
-		ShellExecute(nullptr, _T("open"), szUrl, nullptr, nullptr, SW_SHOWNORMAL);
+		ShellExecute(nullptr, ("open"), szUrl.toStdString().c_str(), nullptr, nullptr, SW_SHOWNORMAL);
 #endif
 }
 
@@ -672,6 +674,7 @@ bool MainWindow::OnIdle(long int lCount)
 	static_cast<CRegOptionsMgr *>(GetOptionsMgr())->CloseHandles();
 
 	return FALSE;*/
+	return false;
 }
 
 /**
@@ -1015,6 +1018,7 @@ bool MainWindow::CreateBackup(bool bFolder, const QString& pszPath)
 
 	// we got here because we're either not backing up of there was nothing to backup
 	return true;*/
+	return true;
 }
 
 /**
@@ -1119,6 +1123,7 @@ int MainWindow::HandleReadonlySave(QString& strSavePath, bool bMultiFile,
 		}
 	}
 	return nRetVal;*/
+	return 0;
 }
 
 /**
@@ -1134,6 +1139,7 @@ bool MainWindow::IsProjectFile(const QString& filepath) const
 		return true;
 	else
 		return false;*/
+	return false;
 }
 
 /*bool MainWindow::LoadProjectFile(const QString& sProject, ProjectFile &project)
@@ -1230,6 +1236,7 @@ bool MainWindow::LoadAndOpenProjectFile(const QString& sProject, const QString& 
 
 	AddToRecentProjectsMRU(sProject.c_str());
 	return rtn;*/
+	return false;
 }
 
 /**
@@ -1718,7 +1725,7 @@ HMENU CMainFrame::GetPrediffersSubmenu(HMENU mainMenu)
  * @param [in] ID Menu's resource ID.
  * @return Menu for the view.
  */
-QMenuBar MainWindow::NewMenu(int view, int ID)
+QMenuBar* MainWindow::NewMenu(int view, int ID)
 {
 	int menu_view, index;
 	/*if (m_pMenus[view] == nullptr)
@@ -1767,7 +1774,7 @@ QMenuBar MainWindow::NewMenu(int view, int ID)
 	m_pMenus[view]->LoadToolbar(IDR_MAINFRAME);
 
 	return (m_pMenus[view]->Detach());*/
-
+	return nullptr;
 }
 /**
 * @brief Create new default (CMainFrame) menu.
@@ -3222,6 +3229,7 @@ bool MainWindow::CreateToolbar()
 	}
 
 	return TRUE;*/
+	return true;
 }
 
 /** @brief Load toolbar images from the resource. */

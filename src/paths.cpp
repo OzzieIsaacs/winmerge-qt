@@ -74,7 +74,7 @@ PATH_EXISTENCE DoesPathExist(const QString& szPath, bool (*IsArchiveFile)(const 
 {
 	if (szPath.isEmpty())
 		return DOES_NOT_EXIST;
-
+	return DOES_NOT_EXIST;
 	// Expand environment variables:
 	// Convert "%userprofile%\My Documents" to "C:\Documents and Settings\username\My Documents"
 	// ToDo: Port
@@ -122,6 +122,7 @@ QString FindFileName(const QString& path)
 		filename = slash + 1;
 	}
 	return filename;*/
+	return QString("");
 }
 
 /**
@@ -192,8 +193,8 @@ static bool GetDirName(const QString& sDir, QString& sName)
 	if (h == INVALID_HANDLE_VALUE)
 		return false;
 	sName = ffd.cFileName;
-	FindClose(h);
-	return true;*/
+	FindClose(h);*/
+	return true;
 }
 
 /**
@@ -389,8 +390,8 @@ bool CreateIfNeeded(const QString& szPath)
 		// if not finished, restore directory string we're working in
 		if (ptr != nullptr)
 			*end = '\\';
-	}
-	return true;*/
+	}*/
+	return true;
 }
 
 /** 
@@ -464,7 +465,8 @@ PATH_EXISTENCE GetPairComparability(const PathContext & paths, bool (*IsArchiveF
 bool IsDirectory(const QString &path)
 {
 	// ToDo: Port
-	// return !!PathIsDirectory(path);
+	//return !!PathIsDirectory(path);
+	return false;
 }
 
 //////////////////////////////////////////////////////////////////
@@ -590,8 +592,8 @@ QString GetParentPath(const QString& path)
 	{
 		// Do not remove trailing slash from root directories
 		parentPath.resize(pos == 2 ? pos + 1 : pos);
-	}
-	return parentPath;*/
+	}*/
+	return parentPath;
 }
 
 /** 
@@ -618,8 +620,8 @@ QString GetLastSubdir(const QString & path)
 	// Find last part of path
 	size_t pos = parentPath.find_last_of('\\');
 	if (pos >= 2 && pos != String::npos)
-		parentPath.erase(0, pos);
-	return parentPath;*/
+		parentPath.erase(0, pos);*/
+	return parentPath;
 }
 
 /** 
@@ -631,7 +633,7 @@ bool IsPathAbsolute(const QString &path)
 {
 	if (path.length() < 3)
 		return false;
-
+	return false;
 	//ToDo: Port
 	/*size_t pos = path.find_last_of('\\');
 

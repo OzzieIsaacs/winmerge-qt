@@ -86,12 +86,12 @@ void Init(QOptionsMgr* pOptions)
 	pOptions->setDefault(OPT_SPLIT_HORIZONTALLY, false);
 
 	pOptions->setDefault(OPT_WORDDIFF_HIGHLIGHT, true);
-	pOptions->setDefault(OPT_BREAK_SEPARATORS, _T(".,:;?[](){}<>`'!\"#$%&^~\\|@+-*/"));
+	pOptions->setDefault(OPT_BREAK_SEPARATORS, (".,:;?[](){}<>`'!\"#$%&^~\\|@+-*/"));
 
 	pOptions->setDefault(OPT_BACKUP_FOLDERCMP, false);
 	pOptions->setDefault(OPT_BACKUP_FILECMP, true);
 	pOptions->setDefault(OPT_BACKUP_LOCATION, (int)0);
-	pOptions->setDefault(OPT_BACKUP_GLOBALFOLDER, _T(""));
+	pOptions->setDefault(OPT_BACKUP_GLOBALFOLDER, (""));
 	pOptions->setDefault(OPT_BACKUP_ADD_BAK, true);
 	pOptions->setDefault(OPT_BACKUP_ADD_TIME, false);
 
@@ -136,9 +136,9 @@ void Init(QOptionsMgr* pOptions)
 	pOptions->setDefault(OPT_CMP_IGNORE_CODEPAGE, true);
 	pOptions->setDefault(OPT_CMP_INCLUDE_SUBDIRS, true);
 
-	pOptions->setDefault(OPT_CMP_BIN_FILEPATTERNS, _T("*.bin;*.frx"));
+	pOptions->setDefault(OPT_CMP_BIN_FILEPATTERNS, ("*.bin;*.frx"));
 
-	pOptions->setDefault(OPT_CMP_IMG_FILEPATTERNS, _T("*.bmp;*.cut;*.dds;*.exr;*.g3;*.gif;*.hdr;*.ico;*.iff;*.lbm;*.j2k;*.j2c;*.jng;*.jp2;*.jpg;*.jif;*.jpeg;*.jpe;*.jxr;*.wdp;*.hdp;*.koa;*.mng;*.pcd;*.pcx;*.pfm;*.pct;*.pict;*.pic;*.png;*.pbm;*.pgm;*.ppm;*.psd;*.ras;*.sgi;*.rgb;*.rgba;*.bw;*.tga;*.targa;*.tif;*.tiff;*.wap;*.wbmp;*.wbm;*.webp;*.xbm;*.xpm"));
+	pOptions->setDefault(OPT_CMP_IMG_FILEPATTERNS, ("*.bmp;*.cut;*.dds;*.exr;*.g3;*.gif;*.hdr;*.ico;*.iff;*.lbm;*.j2k;*.j2c;*.jng;*.jp2;*.jpg;*.jif;*.jpeg;*.jpe;*.jxr;*.wdp;*.hdp;*.koa;*.mng;*.pcd;*.pcx;*.pfm;*.pct;*.pict;*.pic;*.png;*.pbm;*.pgm;*.ppm;*.psd;*.ras;*.sgi;*.rgb;*.rgba;*.bw;*.tga;*.targa;*.tif;*.tiff;*.wap;*.wbmp;*.wbm;*.webp;*.xbm;*.xpm"));
 	pOptions->setDefault(OPT_CMP_IMG_SHOWDIFFERENCES, true);
 	pOptions->setDefault(OPT_CMP_IMG_OVERLAYMOVE, 0);
 	pOptions->setDefault(OPT_CMP_IMG_OVERLAYALPHA, 30);
@@ -150,12 +150,12 @@ void Init(QOptionsMgr* pOptions)
 	pOptions->setDefault(OPT_CMP_IMG_DIFFCOLORALPHA, 70);
 	pOptions->setDefault(OPT_CMP_IMG_THRESHOLD, 0);
 
-	pOptions->setDefault(OPT_PROJECTS_PATH, _T(""));
+	pOptions->setDefault(OPT_PROJECTS_PATH, (""));
 	pOptions->setDefault(OPT_USE_SYSTEM_TEMP_PATH, true);
-	pOptions->setDefault(OPT_CUSTOM_TEMP_PATH, _T(""));
+	pOptions->setDefault(OPT_CUSTOM_TEMP_PATH, (""));
 
 	pOptions->setDefault(OPT_LINEFILTER_ENABLED, false);
-	pOptions->setDefault(OPT_FILEFILTER_CURRENT, _T("*.*"));
+	pOptions->setDefault(OPT_FILEFILTER_CURRENT, ("*.*"));
 	// CMainFrame initializes this when it is empty.
 //	pOptions->setDefault(OPT_FILTER_USERPATH, paths::ConcatPath(env::GetMyDocuments(), DefaultRelativeFilterPath));
 	pOptions->setDefault(OPT_FILEFILTER_SHARED, false);
@@ -179,7 +179,7 @@ void Init(QOptionsMgr* pOptions)
 	pOptions->setDefault(OPT_ARCHIVE_FILTER_INDEX, 1);
 
 	pOptions->setDefault(OPT_PLUGINS_ENABLED, true);
-	pOptions->setDefault(OPT_PLUGINS_DISABLED_LIST, _T(""));
+	pOptions->setDefault(OPT_PLUGINS_DISABLED_LIST, (""));
 	//pOptions->setDefault(OPT_PLUGINS_UNPACKER_MODE, PLUGIN_MANUAL);
 	//pOptions->setDefault(OPT_PLUGINS_PREDIFFER_MODE, PLUGIN_MANUAL);
 	pOptions->setDefault(OPT_PLUGINS_UNPACK_DONT_CHECK_EXTENSION, false);

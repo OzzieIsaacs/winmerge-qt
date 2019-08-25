@@ -86,7 +86,7 @@ public slots:
 	void OnMergingMode();
     void on_listWidget_doubleClicked(const QModelIndex &index);
 
-    void OpenFileOrUrl(QFile& file, const TCHAR* szUrl);
+    void OpenFileOrUrl(QFile& file, const QString& szUrl);
 
 protected:
 	virtual bool OnIdle(long int lCount);
@@ -133,7 +133,7 @@ private:
 	QOptionsMgr m_options;
 	bool m_bMergingMode; /**< Merging or Edit mode */
 
-	QMenuBar NewMenu(int view, int ID);
+	QMenuBar* NewMenu(int view, int ID);
 	bool CreateToolbar();
 	void LoadToolbarImages();
 

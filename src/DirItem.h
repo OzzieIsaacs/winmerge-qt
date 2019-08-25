@@ -24,7 +24,7 @@
 #define POCO_NO_UNWINDOWS 1
 #include <Poco/File.h>
 #include <Poco/Timestamp.h>
-#include <boost/flyweight.hpp>
+// #include <boost/flyweight.hpp>
 // #include <boost/winapi/file_management.hpp>
 // #include "UnicodeString.h"
 #include "FileVersion.h"

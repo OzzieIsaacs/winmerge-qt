@@ -11,10 +11,6 @@
 #include "OptionsDef.h"
 
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
-
 QPropTextColors::QPropTextColors(QWidget *parent, QOptionsMgr* options) :
 	QDialog(parent),
 	ui(new Ui::QPropTextColors)
