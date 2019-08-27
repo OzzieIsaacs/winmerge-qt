@@ -59,3 +59,4 @@ ext/poco/cmake-build-debug/
 ext/libxdiff/cmake-build-debug/
 ext/libxdiff/lib/
 *.qm
+*.log

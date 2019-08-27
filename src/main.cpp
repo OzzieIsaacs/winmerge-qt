@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     QTranslator t;
 
-    t.load(":/translations/german.qm");
+    t.load(":/translations/German.qm");
     app.installTranslator(&t);
 
 

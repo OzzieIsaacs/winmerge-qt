@@ -7132,49 +7132,49 @@ Aktualisieren (F5)</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../MainFrm.cpp" line="1312"/>
-        <location filename="../MergeApp.cpp" line="145"/>
+        <location filename="../MainFrm.cpp" line="1319"/>
+        <location filename="../MergeApp.cpp" line="146"/>
         <source>Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MainFrm.cpp" line="1312"/>
+        <location filename="../MainFrm.cpp" line="1319"/>
         <source>You are now entering Merge Mode. If you want to turn off Merge Mode, press F9 key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="135"/>
+        <location filename="../MergeApp.cpp" line="136"/>
         <source>Error</source>
         <translation type="unfinished">Fehler</translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="140"/>
+        <location filename="../MergeApp.cpp" line="141"/>
         <location filename="../PropEditor.cpp" line="140"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="160"/>
+        <location filename="../MergeApp.cpp" line="161"/>
         <source>Version %1</source>
         <translation type="unfinished">Version %1 - Deutsch</translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="180"/>
+        <location filename="../MergeApp.cpp" line="181"/>
         <source>Unicode</source>
         <translation type="unfinished">Unicode</translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="199"/>
+        <location filename="../MergeApp.cpp" line="200"/>
         <source>WinMerge comes with ABSOLUTELY NO WARRANTY. This is free software and you are welcome to redistribute it under certain circumstances; see the GNU General Public License in the Help menu for details.</source>
         <translation type="unfinished">WinMerge kommt mit ABSOLUT KEINER GARANTIE. Es ist freie Software und Sie können sie unter bestimmten Bedingungen weiter vertreiben; für Details sehen Sie sich die GNU General Public License unter dem Hilfe-Menü an.</translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="202"/>
+        <location filename="../MergeApp.cpp" line="203"/>
         <source> - All rights reserved.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MergeApp.cpp" line="206"/>
+        <location filename="../MergeApp.cpp" line="207"/>
         <source>Developers:
 </source>
         <translation type="unfinished"></translation>
@@ -7522,32 +7522,32 @@ Aktualisieren (F5)</translation>
         <translation type="unfinished">Vorgaben</translation>
     </message>
     <message>
-        <location filename="../PropCompareFolder.cpp" line="24"/>
+        <location filename="../PropCompareFolder.cpp" line="22"/>
         <source>Full Contents</source>
         <translation type="unfinished">Voller Inhalt</translation>
     </message>
     <message>
-        <location filename="../PropCompareFolder.cpp" line="25"/>
+        <location filename="../PropCompareFolder.cpp" line="23"/>
         <source>Quick Contents</source>
         <translation type="unfinished">Schneller Inhalt</translation>
     </message>
     <message>
-        <location filename="../PropCompareFolder.cpp" line="26"/>
+        <location filename="../PropCompareFolder.cpp" line="24"/>
         <source>Binary Contents</source>
         <translation type="unfinished">Binärer Inhalt</translation>
     </message>
     <message>
-        <location filename="../PropCompareFolder.cpp" line="27"/>
+        <location filename="../PropCompareFolder.cpp" line="25"/>
         <source>Modified Date</source>
         <translation type="unfinished">Änderungsdatum</translation>
     </message>
     <message>
-        <location filename="../PropCompareFolder.cpp" line="28"/>
+        <location filename="../PropCompareFolder.cpp" line="26"/>
         <source>Modified Date and Size</source>
         <translation type="unfinished">Änderungsdatum und Größe</translation>
     </message>
     <message>
-        <location filename="../PropCompareFolder.cpp" line="29"/>
+        <location filename="../PropCompareFolder.cpp" line="27"/>
         <source>Size</source>
         <translation type="unfinished">Größe</translation>
     </message>
@@ -8054,6 +8054,35 @@ Bitte benutzen Sie Werte von 1 - %1.</translation>
         <location filename="../qt_ui/QPropTextColors.ui" line="69"/>
         <source>&amp;Use customized text colors</source>
         <translation type="unfinished">&amp;Benutzerdefinierte Textfarben verwenden</translation>
+    </message>
+</context>
+<context>
+    <name>mMainWindow</name>
+    <message>
+        <source>&amp;File</source>
+        <translation type="obsolete">&amp;Datei</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation type="obsolete">&amp;Hilfe</translation>
+    </message>
+    <message>
+        <source>&amp;View</source>
+        <translation type="obsolete">&amp;Ansicht</translation>
+    </message>
+</context>
+<context>
+    <name>mOpenDlg</name>
+    <message>
+        <source>Browse...</source>
+        <translation type="obsolete">Suchen...</translation>
+    </message>
+</context>
+<context>
+    <name>mOpenFilesDlg</name>
+    <message>
+        <source>Browse...</source>
+        <translation type="obsolete">Suchen...</translation>
     </message>
 </context>
 </TS>

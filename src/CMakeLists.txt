@@ -208,6 +208,7 @@ set ( UIS
 
 set ( RESOURCES
         gui.qrc
+        translations.qrc
         )
 
 # set the POCO paths and libs
@@ -231,6 +232,7 @@ find_package(Qt5Widgets REQUIRED)
 find_package(OpenMP REQUIRED)
 find_package(Poco REQUIRED Foundation Net )
 find_package(Boost 1.70.0 COMPONENTS filesystem regex)
+find_package(Qt5LinguistTools)
 
 # include( ${QT_USE_FILE} )
 add_definitions( ${QT_DEFINITIONS} )
@@ -242,13 +244,15 @@ QT5_ADD_RESOURCES( RES_SOURCES ${RESOURCES} )
 QT5_WRAP_UI( UI_HEADERS ${UIS} )
 QT5_WRAP_CPP( MOC_SRCS ${MOC_HEADERS} )
 
-add_custom_command(
-        OUTPUT  ${CMAKE_SOURCE_DIR}/translations/german.qm
-        COMMAND COMMAND lupdate -verbose src.pro
-        COMMAND lrelease src.pro
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-)
+FILE(GLOB translations_IN ${CMAKE_CURRENT_SOURCE_DIR}/translations/*.ts)
+string(REGEX REPLACE "[.]ts" ".qm" OUTPUT_Translations "${translations_IN}")
 
+add_custom_command(
+        OUTPUT   ${OUTPUT_Translations}
+        COMMAND ${Qt5_LUPDATE_EXECUTABLE} -verbose ${translations_IN}
+        COMMAND ${Qt5_LRELEASE_EXECUTABLE} ${translations_IN}
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)
 
 link_directories("${CMAKE_SOURCE_DIR}/../ext/libxdiff/lib")
 
@@ -272,17 +276,10 @@ target_link_libraries(${PROJECT_NAME} Boost::filesystem Boost::regex)
 
 set (FileList contributors.txt COPYING LICENSE README.md)
 
-#add_custom_command(
-#        TARGET winmerge_gui POST_BUILD
-#        COMMAND_EXPAND_LISTS
-#        COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/${FileList} ${CMAKE_BINARY_DIR}/bin/.
-        # COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/AUTHORS ${CMAKE_BINARY_DIR}/bin/AUTHORS
-#)
-
 foreach( file_i ${FileList})
     add_custom_command(
             TARGET winmerge_gui POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/${file_i} ${CMAKE_BINARY_DIR}/bin
+            COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/${file_i} ${PROJECT_BINARY_DIR}/bin
     )
 endforeach( file_i )
 
